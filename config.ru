@@ -39,7 +39,7 @@ toto = Toto::Server.new do
   #
   # Add your settings here
   # set [:setting], [value]
-  # 
+  
   set :url,       ENV['RACK_ENV'] == 'development' ? "http://localhost:3000" : "http://awardwinnginfjords.com"
   set :author,    "Thomas Reynolds"                         # blog author
   set :title,     "Award Winning Fjords"                    # site title
