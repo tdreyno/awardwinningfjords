@@ -1,0 +1,52 @@
+@import base.sass
+
+!total_cols = 18
+
+@import susy/susy.sass
+
+#post
+  +container
+  background: transparent
+  p, h1
+    +pad(4.5, 5)
+  hr
+    margin-left: 0
+    width= columns(18) + "%"
+  pre
+    margin: 0
+    background-image: none
+  ul
+    padding: 0
+    margin: 0
+    +no-bullets
+    li
+      padding-bottom: 30px
+      +clearfix
+      .cover
+        +columns(4.5)
+        +alpha(true)
+        /*
+          img
+            -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.85, transparent), to(rgba(255,255,255,0.45)))
+            */
+      .content
+        +columns(8.5)
+        h6, h2
+          width: auto
+          margin: 0
+          padding: 0
+        p
+          padding: 0
+      .player
+        +columns(5)
+        +omega(true)
+        padding-top: 20px
+        h6
+          width: auto
+          margin: 0
+          font-size: 3em
+          +opacity(0.3)
+          padding: 10px 0 20px 60px
+          
+#comments
+  display: none

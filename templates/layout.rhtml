@@ -1,17 +1,116 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
   <head>
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
-    <title><%= title %></title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=' name='verify-v1' />
+    <link href='http://www.myopenid.com/server' rel='openid.server' />
+    <link href='http://tdreyno.myopenid.com/' rel='openid.delegate' />
+    <link href='http://tdreyno.myopenid.com' rel='openid2.local_id' />
+    <link href='http://www.myopenid.com/server' rel='openid2.provider' />
+    <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml' />
+    <meta content='IE=8;chrome=1' http-equiv='X-UA-Compatible' />
+    <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
+    <title><%= title %> &laquo; Thomas Reynolds</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <%#= yield :head -%>
   </head>
-  <body>
-    <section>
-      <%= yield %> 
-    </section>
-    <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
-    </footer>
-  </body>
-</html>
+  <body class="post">
+    <div id="header">
+      <h2><a href="/">Award-Winning <strong>Fjords</strong></a></h2>
+      <p>Words &amp; Wisdom by Thomas Reynolds</p>
+    </div>
+    
+    <div id="available">
+      <p>
+        Available for new work starting in <%= (Date.today + 31).strftime("%B, %Y") %>.
+        <a href="mailto:thomas@awardwinningfjords.com">Contact me</a>.
+      </p>
+    </div>
+    
+    <div id="post">
+      <%= yield %>
 
+      <div id="comments">
+        <h2>Comments?</h2>
+        <p>Let me know at <a href="mailto:thomas@awardwinningfjords.com">thomas@awardwinningfjords.com</a> and I'll amend the article as necessary.</p>
+      </div>
+    </div>
+    
+    <div id="footer">
+      <div id="etc"><div class="wrapper">
+        <div id="older">
+          <h3>Previous</h3>
+          <hr />
+          <dl>
+            <% @articles.each do |article| %>
+              <dt><%= article[:date].strftime('%b %e') %></dt>
+              <dd><a href="<%= article.url %>"><%= article.title %></a></dd>
+            <% end %>
+          </dl>
+        </div>
+
+        <div id="about">
+          <%= markdown(File.read(File.expand_path(File.dirname(__FILE__), "templates/about.txt"))) %>
+        </div>
+          
+        <div id="twitter">
+          <h3><a href="http://twitter.com/tdreyno">Twitter</a></h3>
+          <hr style="margin-bottom: 0;" />
+          <style type="text/css">
+            .twtr-hd, .twtr-ft, .twtr-user { display: none !important; }
+            .twtr-tweet { padding: 4px 0 8px 0; }
+            .twtr-avatar { padding: 7px 0 0 0; }
+            .twtr-widget .twtr-tweet-wrap { padding: 0 0 10px 0; }
+            .twtr-widget .twtr-tweet { border-bottom: 1px solid #B09E8B; }
+          </style>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+            new TWTR.Widget({
+              version: 2,
+              type: 'profile',
+              rpp: 5,
+              interval: 6000,
+              width: 'auto',
+              height: 300,
+              theme: {
+                shell: {
+                  background: 'transparent',
+                  color: '#b09e8b'
+                },
+                tweets: {
+                  background: 'transparent',
+                  color: '#b09e8b',
+                  links: '#f9f3e8'
+                }
+              },
+              features: {
+                scrollbar: false,
+                loop: false,
+                live: false,
+                hashtags: false,
+                timestamp: true,
+                avatars: true,
+                behavior: 'all'
+              }
+            }).render().setUser('tdreyno').start();
+          </script>
+        </div>
+      </div></div>
+    </div>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-90027-9']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+      'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+    })();
+  </script>
+</body>
+</html>

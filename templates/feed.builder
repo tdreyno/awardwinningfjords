@@ -1,11 +1,14 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
   xml.title @config[:title]
+  xml.subtitle "Words &amp; Wisdom by Thomas Reynolds"
   xml.id @config[:url]
-  xml.updated articles.first[:date].iso8601 unless articles.empty?
+  xml.link "href" => "http://awardwinningfjords.com/"
+  xml.link "href" => "http://awardwinningfjords.com/atom.xml", "rel" => "self"
+  xml.updated @articles.first[:date].iso8601 unless @articles.empty?
   xml.author { xml.name @config[:author] }
 
-  articles.each do |article|
+  @articles.each do |article|
     xml.entry do
       xml.title article.title
       xml.link "rel" => "alternate", "href" => article.url
@@ -18,4 +21,3 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
     end
   end
 end
-

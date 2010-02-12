@@ -1,0 +1,152 @@
+@import base.sass
+
++susy
+
+body
+  background: #F9F3E8
+  font-family= !font_family
+  color= !font_color
+  +reset-box-model
+
+//+baseline-base-defaults
+//+baseline-type-defaults
+
+a
+  font-weight: bold
+  +link-colors(!link_color)
+
+h1, h2, h3
+  font-family= !header_font_family
+  font-weight: 200
+  color= !header_color
+  word-spacing: 0
+  a
+    text-decoration: none
+    color= !header_color !important
+    font-weight: 200
+
+p
+  margin-bottom: 1.3em
+p+p
+  text-indent: 0
+
+#header
+  height: 108px
+  overflow: hidden
+  background: #6B4419
+  background: #6B4419 -webkit-gradient(linear, 0 bottom, 0 98, from(rgba(0,0,0,0.1)), to(transparent))
+  h2
+    margin: 0
+    top: 0
+    a
+      display: block
+      height: 98px
+      +replace-text("header.gif", 50%, 0)
+  p
+    display: none
+
+#available p
+  background: #8f704d
+  color: #fff
+  text-align: center
+  line-height: 2.2em
+  margin: 0
+  top: 0
+  a
+    font-weight: normal
+    +link-colors(#cec1b2)
+
+#post
+  +container
+  padding-top: 1.5em
+  background= inline_image("title-embellishment.gif") "no-repeat" columns(0.8) + "%" 2.5em
+  h1, h2, p, ul, ol, pre, form, .table, .flash
+    +pad(1.75, 1.75)
+  hr
+    margin-left= columns(2) + "%"
+    width= columns(13) + "%"
+  strong
+    color= !darker_font_color
+  pre
+    font-size: 12px
+    font-family= !fixed_font_family
+    color= !darker_font_color
+    background= #F2EADD inline_image("code.gif") "no-repeat" "bottom" "right"
+    overflow: visible
+    padding: 1.5em
+    +border-radius(0.5em)
+    border: 1px solid #d0d0d0
+    margin-top: 2em
+    margin-bottom: 2em
+    margin-left= columns(2) + "%"
+    margin-right= columns(2) + "%"
+    strong
+      font-weight: normal
+      color: #000
+
+#comments
+  padding-top: 1em
+  h2
+    color: #543616
+    border-bottom= px2em(2) + "em solid" !border_color
+    margin= 0 columns(2) + "%" 0.5em columns(2) + "%"
+    padding: 0
+
+#nextprev
+  padding-top: 1em
+  +clearfix
+  a
+    text-decoration: none
+    span
+      text-decoration: underline
+  .prev
+    +float-left
+  .next
+    +float-right
+
+#etc
+  background: #603D17
+  background: #603D17 -webkit-gradient(linear, 0 0, 0 10, from(rgba(0,0,0,0.20)), to(transparent))
+  color: #B09E8B
+  padding-bottom: 1.5em
+  padding-top: 1.25em
+  .wrapper
+    +container
+  h3
+    font-size: 1.4em
+    color: #F9F3E8
+    a
+      color: #F9F3E8 !important
+  hr
+    background: #B09E8B
+    color: #B09E8B
+    height: 1px
+    margin: 0.5em 0 1em 0
+  dl, p
+    a
+      +link-colors(#B09E8B, #F9F3E8)
+      font-weight: normal
+
+#older
+  +prefix(0.5)
+  +columns(7)
+  +alpha(true)
+  dl
+    margin: 0 !important
+  dt
+    +columns(1.25, 7)
+    font-weight: normal
+  dd
+    +columns(5.75, 7)
+    margin-right: 0
+    margin-left: 0
+    margin-bottom: 1em
+
+#about
+  +columns(4.25)
+  +prefix(0.25)
+
+#twitter
+  +columns(4.25)
+  +prefix(0.25)
+  +omega(true)
