@@ -16,87 +16,31 @@
     <%#= yield :head -%>
   </head>
   <body class="post">
-    <div id="header">
-      <h2><a href="/">Award-Winning <strong>Fjords</strong></a></h2>
-      <p>Words &amp; Wisdom by Thomas Reynolds</p>
-    </div>
-    
-    <div id="available">
-      <p>
-        Available for new work starting in <%= (Date.today + 31).strftime("%B, %Y") %>.
-        <a href="mailto:thomas@awardwinningfjords.com">Contact me</a>.
-      </p>
-    </div>
-    
-    <div id="post">
-      <%= yield %>
+    <div id="frame">
+      <div id="header">
+        <h1><a href="/">Award-Winning Fjords</a></h1>
+        <h2>Words &amp; Wisdom by Thomas Reynolds</h2>
 
-      <div id="comments">
-        <h2>Comments?</h2>
-        <p>Let me know at <a href="mailto:thomas@awardwinningfjords.com">thomas@awardwinningfjords.com</a> and I'll amend the article as necessary.</p>
+        <p id="social">
+          <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://porfolio.awardwinningfjords.com">Portfolio</a><br />
+          Available for new work.
+          <a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
+        </p>
       </div>
-    </div>
     
-    <div id="footer">
-      <div id="etc"><div class="wrapper">
-        <div id="older">
-          <h3>Previous</h3>
-          <hr />
-          <dl>
-            <% @articles.each do |article| %>
-              <dt><%= article[:date].strftime('%b %e') %></dt>
-              <dd><a href="<%= article.url %>"><%= article.title %></a></dd>
-            <% end %>
-          </dl>
-        </div>
-
-        <div id="about">
-          <%= markdown(File.read(File.expand_path(File.dirname(__FILE__), "templates/about.txt"))) %>
-        </div>
-          
-        <div id="twitter">
-          <h3><a href="http://twitter.com/tdreyno">Twitter</a></h3>
-          <hr style="margin-bottom: 0;" />
-          <style type="text/css">
-            .twtr-hd, .twtr-ft, .twtr-user { display: none !important; }
-            .twtr-tweet { padding: 4px 0 8px 0; }
-            .twtr-avatar { padding: 7px 0 0 0; }
-            .twtr-widget .twtr-tweet-wrap { padding: 0 0 10px 0; }
-            .twtr-widget .twtr-tweet { border-bottom: 1px solid #B09E8B; }
-          </style>
-          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-          <script>
-            new TWTR.Widget({
-              version: 2,
-              type: 'profile',
-              rpp: 5,
-              interval: 6000,
-              width: 'auto',
-              height: 300,
-              theme: {
-                shell: {
-                  background: 'transparent',
-                  color: '#b09e8b'
-                },
-                tweets: {
-                  background: 'transparent',
-                  color: '#b09e8b',
-                  links: '#f9f3e8'
-                }
-              },
-              features: {
-                scrollbar: false,
-                loop: false,
-                live: false,
-                hashtags: false,
-                timestamp: true,
-                avatars: true,
-                behavior: 'all'
-              }
-            }).render().setUser('tdreyno').start();
-          </script>
-        </div>
-      </div></div>
+      <div id="post">
+        <%= yield %>
+      </div>
+    
+      <div id="footer">
+        <h3>Previously</h3>
+        <dl>
+          <% @articles.each do |article| %>
+            <dt><%= article[:date].strftime('%b %e') %></dt>
+            <dd><a href="<%= article.url %>"><%= article.title %></a></dd>
+          <% end %>
+        </dl>
+      </div>
     </div>
 
   <script type="text/javascript">
