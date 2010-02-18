@@ -36,7 +36,7 @@ Then, save and close ~/.profile and run:
 
     source ~/.profile
     
-You are now read to go.
+Now, you are ready to go.
 
 Commands
 --------
