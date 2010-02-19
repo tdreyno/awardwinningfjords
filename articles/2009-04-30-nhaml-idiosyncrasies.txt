@@ -50,6 +50,7 @@ Given the following Haml
 
 NHaml will render this as:
 
+    :::HTML
     <ul>
       <li>
         Text

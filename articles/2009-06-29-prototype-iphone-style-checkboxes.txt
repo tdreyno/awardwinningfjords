@@ -2,12 +2,16 @@ title: iPhone-style Checkboxes for Prototype
 slug: prototype-iphone-style-checkboxes
 date: 2009/06/29
 
-[Elijah Miller]: http://jqr.github.com/
+[Elijah Miller]:        http://jqr.github.com/
+[download the package]: http://github.com/tdreyno/iphone-style-checkboxes/zipball/master
+[original]:             /2009/06/16/iphone-style-checkboxes.html
+[http://github.com/tdreyno/iphone-style-checkboxes]: http://github.com/tdreyno/iphone-style-checkboxes
 
 Big thanks to [Elijah Miller] for stepping up and finishing the work on the Prototype version of the iPhone-style checkboxes. Elijah now has write-access to the official repository at GitHub and will be maintaining it alongside my jQuery version.
 
 Examples
 --------
+
 <div class='table'>
   <table>
     <tr>
@@ -38,8 +42,6 @@ Examples
   //]]>
 </script>
 
-[download the package]: http://cloud.github.com/downloads/tdreyno/iphone-style-checkboxes/iphone-style-checkboxes.zip
-
 Download and implement
 ----------------------
 
@@ -47,6 +49,7 @@ As with the jQuery version, [download the package], unzip it and place the javas
 
 Once the files are available to your site, activating the script is very easy:
 
+    :::HTML
     <head>
       <script src="prototype.js" type="text/javascript"></script>
       <script src="scriptaculous.js" type="text/javascript"></script>
@@ -65,6 +68,7 @@ The initialization method takes a handful of options.
 
 For example:
 
+    :::Javascript
     new iPhoneStyle('input[type=checkbox]', {
       checkedLabel: 'YES',
       uncheckedLabel: 'NO'
@@ -95,9 +99,6 @@ For example:
     new iPhoneStyle('#post input[type=checkbox].yesno', { checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
   //]]>
 </script>
-
-[original]: /2009/06/16/iphone-style-checkboxes.html
-[http://github.com/tdreyno/iphone-style-checkboxes]: http://github.com/tdreyno/iphone-style-checkboxes
 
 Original version and Contributing
 ---------------------------------

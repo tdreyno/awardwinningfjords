@@ -15,7 +15,8 @@ Now when I use the image_url() method for the header on this site:
 
 It will generate this CSS:
 
-  h1 {
-    background: url(/images/title-embellishment.gif) no-repeat 17px 7px; }
+    :::CSS
+    h1 {
+      background: url(/images/title-embellishment.gif) no-repeat 17px 7px; }
 
 This makes it trivial to change image paths for the entire site with one line in config.rb. Never again worry about relative paths, ../../images/ and the like.
