@@ -13,7 +13,9 @@
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
     <title><%= title %> &laquo; Thomas Reynolds</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <%#= yield :head -%>
+    <style type="text/css">
+      <%= CodeRay::Encoders[:html]::CSS.new.stylesheet %>
+    </style>
   </head>
   <body class="post">
     <div id="frame">

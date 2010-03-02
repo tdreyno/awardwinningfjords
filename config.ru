@@ -17,8 +17,7 @@ end
 require 'coderay'
 require 'rack/codehighlighter'
 
-use Rack::Codehighlighter, :coderay, :markdown => true, 
-  :theme => "minimal_theme", :lines => false, :element => "pre>code", 
+use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", 
   :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, :logging => false
   
 class NoWww
