@@ -37,9 +37,7 @@ Examples
 <script src='/iphone-style-checkboxes/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
 <link charset='utf-8' href='/iphone-style-checkboxes/style.css' media='screen' rel='stylesheet' type='text/css' />
 <script type='text/javascript'>
-  //<![CDATA[
-    $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
-  //]]>
+  $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
 </script>
 
 Download and implement
@@ -100,9 +98,7 @@ For example:
   </table>
 </div>
 <script type='text/javascript'>
-  //<![CDATA[
-    $('#post :checkbox.yesno').iphoneStyle({ checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
-  //]]>
+  $('#post :checkbox.yesno').iphoneStyle({ checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
 </script>
 
 Contribute
