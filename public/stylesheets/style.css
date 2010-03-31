@@ -22,8 +22,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
   line-height: 1;
-  color: #000;
-  background: #fff; }
+  color: black;
+  background: white; }
 
 ol, ul {
   list-style: none; }
@@ -51,7 +51,6 @@ section, article, aside, header, footer, nav, dialog, figure {
   display: block; }
 
 /* @end */
-
 body {
   font-size: 75%;
   line-height: 1.5em; }
@@ -63,14 +62,14 @@ body {
   text-align: center; }
 
 body {
-  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", arial, sans-serif;
   color: #413f3d; }
 
 a {
   color: #af512c; }
 
 h1, h2, h3 {
-  font-family: 'Gill Sans Light', GillSans-Light, 'Gill Sans', sans-serif;
+  font-family: "Gill Sans Light", GillSans-Light, "Gill Sans", sans-serif;
   color: #272624;
   font-weight: 200; }
 
@@ -114,7 +113,7 @@ p, pre, ul, ol, .flash, .table {
   #header h1 a {
     text-decoration: none; }
   #header #social {
-    font-family: 'Gill Sans', GillSans, sans-serif;
+    font-family: "Gill Sans", GillSans, sans-serif;
     text-align: right;
     position: absolute;
     right: 0;
@@ -124,8 +123,7 @@ p, pre, ul, ol, .flash, .table {
     #header #social a {
       color: #a8a5a2;
       text-decoration: none; }
-      #header #social a:hover,
-      #header #social a#contact {
+      #header #social a:hover, #header #social a#contact {
         text-decoration: underline; }
 
 #post {
@@ -138,7 +136,7 @@ p, pre, ul, ol, .flash, .table {
   #post strong {
     color: #4e4c49; }
   #post pre {
-    font-family: 'Monaco', 'Andale Mono', 'Lucida Console', monospace;
+    font-family: "Monaco", "Andale Mono", "Lucida Console", monospace;
     color: #4e4c49;
     background: #f2eadd url('data:image/gif;base64,R0lGODlhPwAzAMQAAPPr39nLuN7RwOjezu/m2O3j1eHVxfDo2+rg0ePXx+TZydzPvevi09/TwubczNrNu9fJtvLq3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAA/ADMAAAX/IBCNZGmeaKquqMi+cMy6cm2/9K3vY87/Mh9wuBISjyYjcqlcHpvOITT6m1J31ustq61xu7EvGDd+lonicyq9IzAYBR5bZ4BADPLxIWBH5MEDdgFVYwJ2CYRdBHYQcX9HBH4lCnYLI3A6cygIDRACJg92DiOUCwMHXkAECXx2nyQMjKgRlIIGjmQ7A4aMdngkdRANJA69laczN6utjAG3JXt9JcvGzrgnYgi8vaazJYEQgyi7xhCmLTXb4c8pnRCIKtS96DLbD9cni3b4KAQL89jSGRMwIEUxcyw4laMXo4ABZoISEAAlKgUBBaGMGWDAUMYBcsa6RSgg64RCYw8cSngL2IbVwAjBhpmo1Wxjrh8gPUVoJWkSI5EwNOVjRVAQCgXWbAhNUQCBAgU9p60MogbI0qpX1WQ9s7VM1zFfwYTtMlZL2StnqYQAADs=') no-repeat bottom right;
     overflow: visible;
@@ -154,11 +152,11 @@ p, pre, ul, ol, .flash, .table {
     padding-bottom: 1.417em; }
     #post pre strong {
       font-weight: normal;
-      color: #000; }
+      color: black; }
 
 #footer {
   background: #4b3012;
-  color: #B09E8B;
+  color: #b09e8b;
   border-top-right-radius: 0.5em;
   -moz-border-radius-topright: 0.5em;
   -webkit-border-top-right-radius: 0.5em;
@@ -174,10 +172,10 @@ p, pre, ul, ol, .flash, .table {
   #footer {
     display: block; }
   #footer h3 {
-    color: #F9F3E8;
+    color: #f9f3e8;
     margin-top: 1.5em; }
     #footer h3 a {
-      color: #F9F3E8 !important; }
+      color: #f9f3e8 !important; }
   #footer dl {
     border-top-width: 0.083em;
     padding-top: 1.417em;
