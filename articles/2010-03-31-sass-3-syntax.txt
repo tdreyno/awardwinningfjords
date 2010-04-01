@@ -3,6 +3,11 @@ title: Sass 3 Syntax
 date: 31/03/2010
 
 [Sass 3 Changelog]: http://beta.sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0-syntax-changes
+[Chris Eppstein]: http://twitter.com/chriseppstein
+[Compass]: http://compass-style.org/
+[Susy]: http://www.oddbird.net/susy/
+
+**Edit: Added section on hyphens and underscores as requested by [Chris Eppstein]**
 
 Today a beta for Sass 3 was released. It comes with some interesting new syntax options so let's get it installed and dive into the new syntax and directives.
 
@@ -74,6 +79,29 @@ Before:
 After:
 
     $font_size: 12px !default
+
+New Syntax #4: Interchangeable underscores and hyphens
+------------------------------------------------------
+
+In the past, variables in Sass would only work with underscores used to separate the different "parts" of the variable name. This format is very Ruby-like, but I personally prefer to use hyphens in my CSS. Sass 3 allows both underscores and hyphens to be used, but there is an interesting twist. Sass 3 will allow their use interchangeably. If the variable is defined with underscores, it can still be called with hyphens. This should save some frustration for those using a Sass framework like [Compass] or [Susy]. You can use whichever form you want and Sass will find the correct variable.
+
+Before:
+
+    !body_background_color= #000000
+    
+    body
+      background= !body_background_color
+
+After (either will work):
+
+    $body_background_color: #000000
+    $text-color: #ffffff
+    
+    body
+      background: $body-background-color
+      background: $body_background_color
+      color: $text-color
+      color: $text_color
 
 Conclusion
 ----------

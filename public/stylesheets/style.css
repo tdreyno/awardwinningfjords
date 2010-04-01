@@ -91,6 +91,9 @@ h1+p {
 p, pre, ul, ol, .flash, .table {
   margin-bottom: 1.5em; }
 
+p strong {
+  font-weight: bold; }
+
 #frame {
   overflow: hidden;
   display: inline-block;
