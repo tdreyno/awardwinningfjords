@@ -106,8 +106,7 @@ p strong {
     display: block; }
 
 #header {
-  border-top-width: 0.083em;
-  padding-top: 1.417em;
+  padding-top: 1.5em;
   border-bottom: 1px solid #d0d0d0;
   position: relative;
   clear: both;
@@ -149,8 +148,10 @@ p strong {
     border: 1px solid #d0d0d0;
     padding-left: 1.961%;
     padding-right: 1.961%;
+    border-top-style: solid;
     border-top-width: 0.083em;
     padding-top: 1.417em;
+    border-bottom-style: solid;
     border-bottom-width: 0.083em;
     padding-bottom: 1.417em; }
     #post pre strong {
@@ -166,8 +167,10 @@ p strong {
   border-top-left-radius: 0.5em;
   -moz-border-radius-topleft: 0.5em;
   -webkit-border-top-left-radius: 0.5em;
+  border-left-style: solid;
   border-left-width: 0.083em;
   padding-left: 1.417em;
+  border-right-style: solid;
   border-right-width: 0.083em;
   padding-right: 1.417em;
   overflow: hidden;
@@ -176,10 +179,11 @@ p strong {
     display: block; }
   #footer h3 {
     color: #f9f3e8;
-    margin-top: 1.5em; }
+    padding-top: 1.5em; }
     #footer h3 a {
       color: #f9f3e8 !important; }
   #footer dl {
+    border-top-style: solid;
     border-top-width: 0.083em;
     padding-top: 1.417em;
     border-top: 1px solid #d0d0d0; }
@@ -190,15 +194,17 @@ p strong {
         color: #f9f3e8; }
     #footer dl dt {
       display: inline;
-      float: left;
+      float: "left";
       width: 7.843%;
       margin-right: 1.961%;
+      float: left;
       font-weight: normal; }
     #footer dl dd {
       display: inline;
-      float: left;
+      float: "left";
       width: 86.275%;
       margin-right: 1.961%;
+      float: left;
       margin-right: 0;
       margin-left: 0;
       margin-bottom: 1em; }

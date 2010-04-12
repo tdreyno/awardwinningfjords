@@ -1,18 +1,18 @@
-@import base.sass
-@import susy/reset.sass
+@import base
+@import susy/reset
 
 +susy
 
 body
-  font-family: $font_family
-  color: $font_color
+  font-family: $font-family
+  color: $font-color
 
 a
-  +link-colors($link_color)
+  +link-colors($link-color)
 
 h1, h2, h3
-  font-family: $header_font_family
-  color: $header_color
+  font-family: $header-font-family
+  color: $header-color
   font-weight: 200
 
 h1
@@ -37,8 +37,8 @@ p strong
   +container
 
 #header
-  +top-border(1px, 1)
-  border-bottom: 1px solid $border_color
+  +padding-leader
+  border-bottom: 1px solid $border-color
   position: relative
   +full
   h1 a
@@ -50,9 +50,9 @@ p strong
     right: 0
     bottom: 0.6em
     margin: 0
-    color: lighten($font_color, 40)
+    color: lighten($font-color, 40)
     a
-      color: lighten($font_color, 40)
+      color: lighten($font-color, 40)
       text-decoration: none
       &:hover,
       &#contact
@@ -62,22 +62,22 @@ p strong
   +leader
   ul, ol
     list-style-type: disc
-    margin-left: side_gutter() + 5%
+    margin-left: side-gutter() + 5%
   h1, h2, h3, p, .flash, .table
     +alpha
   strong
-    color: $darker_font_color
+    color: $darker-font-color
   pre
-    font-family: $fixed_font_family
-    color: $darker_font_color
-    background: #f2eadd inline_image("code.gif") no-repeat bottom right
+    font-family: $fixed-font-family
+    color: $darker-font-color
+    background: #f2eadd inline-image("code.gif") no-repeat bottom right
     overflow: visible
     +border-radius(0.5em)
-    border: 1px solid $border_color
-    padding-left: side_gutter()
-    padding-right: side_gutter()
-    +top-border(1px, 1)
-    +bottom-border(1px, 1)
+    border: 1px solid $border-color
+    padding-left: side-gutter()
+    padding-right: side-gutter()
+    +leading-border(1px, 1)
+    +trailing-border(1px, 1)
     strong
       font-weight: normal
       color: black
@@ -87,25 +87,27 @@ p strong
   color: #b09e8b
   +border-top-right-radius(0.5em)
   +border-top-left-radius(0.5em)
-  +border("left")
-  +border("right")
+  +apply-side-rhythm-border("left")
+  +apply-side-rhythm-border("right")
   +clearfix
   h3
     color: #f9f3e8
-    +leader
+    +padding-leader
     a
       color: #f9f3e8 !important
   dl
-    +top-border(1px)
-    border-top: 1px solid $border_color
+    +leading-border(1px)
+    border-top: 1px solid $border-color
     a
       +link-colors(#b09e8b, #f9f3e8)
       font-weight: normal
     dt
       +columns(1)
+      float: left
       font-weight: normal
     dd
       +columns(9)
+      float: left
       margin-right: 0
       margin-left: 0
       margin-bottom: 1em

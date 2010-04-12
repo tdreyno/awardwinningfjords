@@ -1,7 +1,9 @@
 #post ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
   #post ul li {
+    list-style-image: none;
     list-style-type: none;
     margin-left: 0px; }
   #post ul li {
@@ -12,18 +14,19 @@
     display: inline-block;
     margin-bottom: 1.5em;
     border-top: 1px solid #d0d0d0;
+    border-top-style: solid;
     border-top-width: 0.083em;
     padding-top: 1.417em; }
     #post ul li {
       display: block; }
     #post ul li .cover {
       display: inline;
-      float: left;
+      float: "left";
       width: 37.255%;
       margin-right: 1.961%; }
     #post ul li .content {
       display: inline;
-      float: left;
+      float: "left";
       width: 47.059%;
       margin-right: 1.961%; }
       #post ul li .content h2 {
@@ -40,7 +43,7 @@
         margin-right: 0 !important; }
     #post ul li .player {
       display: inline;
-      float: left;
+      float: "left";
       width: 7.843%;
       margin-right: 1.961%;
       margin-top: 1.5em;
