@@ -21,12 +21,12 @@
       display: block; }
     #post ul li .cover {
       display: inline;
-      float: "left";
+      float: left;
       width: 37.255%;
       margin-right: 1.961%; }
     #post ul li .content {
       display: inline;
-      float: "left";
+      float: left;
       width: 47.059%;
       margin-right: 1.961%; }
       #post ul li .content h2 {
@@ -43,7 +43,7 @@
         margin-right: 0 !important; }
     #post ul li .player {
       display: inline;
-      float: "left";
+      float: left;
       width: 7.843%;
       margin-right: 1.961%;
       margin-top: 1.5em;
@@ -51,7 +51,7 @@
       float: right;
       margin-right: 1.961%;
       /* ugly hacks for IE6-7 */
-      #margin-left: -1%;
+      #margin-left: -1em;
       /* end ugly hacks */ }
       #post ul li .player h6 {
         opacity: 0.3;

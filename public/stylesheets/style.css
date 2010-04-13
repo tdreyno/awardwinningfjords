@@ -194,17 +194,15 @@ p strong {
         color: #f9f3e8; }
     #footer dl dt {
       display: inline;
-      float: "left";
+      float: left;
       width: 7.843%;
       margin-right: 1.961%;
-      float: left;
       font-weight: normal; }
     #footer dl dd {
       display: inline;
-      float: "left";
+      float: left;
       width: 86.275%;
       margin-right: 1.961%;
-      float: left;
       margin-right: 0;
       margin-left: 0;
       margin-bottom: 1em; }
