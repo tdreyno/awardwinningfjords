@@ -1,0 +1,19 @@
+--- 
+title: Apple-style Gradient Text Headlines in SCSS/SASS
+date: 13/04/2010
+
+Apple's effect looks like this:
+
+<img src="http://dl.dropbox.com/u/102356/Screenshot.png" />
+
+This effect only works in Webkit-based browsers like Safari and Chrome at this time and requires Sass 3 and the most recent version of Compass:
+
+    h1 {
+      @include linear-gradient(color-stops(#999, black));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+Which renders as:
+
+<img src="http://dl.dropbox.com/u/102356/Screenshot-1.png" />
