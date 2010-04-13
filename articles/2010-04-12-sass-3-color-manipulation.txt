@@ -13,11 +13,11 @@ Read about [Powerful Color Manipulation with Sass] on his blog.
 
 Just for kicks, here is a relavant portion of Sass colors that I use on this blog:
 
-    $font_color:         darken(#4e4c49, 5)
-    $darker_font_color:  #4e4c49
-    $header_color:       darken($font_color, 10)
-    $border_color:       #d0d0d0
-    $link_color:         #af512c
+    $font-color:         darken(#4e4c49, 5)
+    $darker-font-color:  #4e4c49
+    $header-color:       darken($font-color, 10)
+    $border-color:       #d0d0d0
+    $link-color:         #af512c
           
     #social
       color: lighten($font-color, 40)
