@@ -10,6 +10,8 @@ date: 21/05/2010
 [JavascriptMVC Getting Started Guide]: http://v3.javascriptmvc.com/index.html#&who=getstarted
 [blog post on JavascriptMVC's impressed unit/functional testing system]: http://jupiterjs.com/pages/javascriptmvc#news/too-enterprisey
 
+*[Updated]: Changed some file and class names after a suggestion from JavascriptMVC developer Justin Meyer.
+
 For those who don't know, JavascriptMVC 3 is a framework for building complex web applications based on jQuery. jQuery is a wonderful tool for manipulating the DOM, but it doesn't provide any system for dependency resolution, file organization or a separation of concerns. JavascriptMVC 3, which is currently in a very solid alpha form, provides a strong MVC foundation for oragnizing your code.
 
 The View component supports Ejs (a javascript variant of Erb), Jaml (a javascript templating system inspired by Haml) and a basic template implementation based on [John Resig's blog post] called Micro.
@@ -40,7 +42,8 @@ Okay, so we have a model and now we need to add the new store system:
     jQuery.Model.extend("MyModel",
     {
       setup: function(){
-        this.storeType = HTMLSessionStore; // Alternatively, use HTMLLocalStore
+        // Alternatively, use TR.HTML5ModelStore.Local
+        this.storeType = TR.HTML5ModelStore.Session; 
         this._super.apply(this, arguments);
       }
     },
