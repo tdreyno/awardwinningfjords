@@ -10,7 +10,7 @@ date: 21/05/2010
 [JavascriptMVC Getting Started Guide]: http://v3.javascriptmvc.com/index.html#&who=getstarted
 [blog post on JavascriptMVC's impressed unit/functional testing system]: http://jupiterjs.com/pages/javascriptmvc#news/too-enterprisey
 
-*[Updated]: Changed some file and class names after a suggestion from JavascriptMVC developer Justin Meyer.
+**[Updated]: Changed some file and class names after a suggestion from JavascriptMVC developer Justin Meyer. The new class names are TR.HTML5ModelStore.Local and TR.HTML5ModelStore.Session**
 
 For those who don't know, JavascriptMVC 3 is a framework for building complex web applications based on jQuery. jQuery is a wonderful tool for manipulating the DOM, but it doesn't provide any system for dependency resolution, file organization or a separation of concerns. JavascriptMVC 3, which is currently in a very solid alpha form, provides a strong MVC foundation for oragnizing your code.
 
