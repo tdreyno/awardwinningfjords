@@ -1,0 +1,12 @@
+--- 
+title: Finite State Machine Controller for JavascriptMVC
+date: 27/05/2010
+
+Once upon a time...
+
+
+
+The traditional demo for a Finite State Machine is a vending machine which accepts various coins until it accrues the cost of the item and vends it to the customer. I'm going to go a different route and describe something that front-end developers keep rewriting over and over.
+
+Say you have a dynamic website. Information is loaded when an item is focused, run through a templating system, added to the DOM and then displayed to the user unless the user has gotten bored and moved on to another item in the meantime.
+
