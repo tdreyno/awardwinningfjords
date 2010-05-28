@@ -4,7 +4,7 @@ date: 21/05/2010
 
 [John Resig's blog post]: http://ejohn.org/blog/javascript-micro-templating/
 [OpenAjax]: http://www.openajax.org/index.php
-[hosted on Github]: http://github.com/tdreyno/JavascriptMVC-Plugins/tree/master/tr/html5_model_store/
+[Checkout my Github repository]: http://github.com/tdreyno/JavascriptMVC-Plugins/tree/master/tr/html5_model_store/
 [Yahuda Katz' jquery-offline]: http://github.com/wycats/jquery-offline
 [current version of JavascriptMVC 3 from their site]: http://v3.javascriptmvc.com/index.html
 [JavascriptMVC Getting Started Guide]: http://v3.javascriptmvc.com/index.html#&who=getstarted
@@ -29,7 +29,7 @@ How Do I Use It?
 
 First, get the [current version of JavascriptMVC 3 from their site].
 
-Checkout my Github repository and move the <tt>tr</tt> folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
+[Checkout my Github repository] and move the <tt>tr</tt> folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
 
 Next, create a Site and a Model (see the [JavascriptMVC Getting Started Guide]).
 
