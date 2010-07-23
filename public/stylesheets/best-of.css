@@ -51,14 +51,15 @@
       float: right;
       margin-right: 1.961%;
       /* ugly hacks for IE6-7 */
-      #margin-left: -1em;
-      /* end ugly hacks */ }
+      #margin-left: -1em; }
       #post ul li .player h6 {
-        opacity: 0.3;
         -moz-opacity: 0.3;
+        -webkit-opacity: 0.3;
+        -o-opacity: 0.3;
         -khtml-opacity: 0.3;
+        opacity: 0.3;
         -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-        filter: alpha(opacity=30);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
         font-size: 2.083em;
         line-height: 1.44em;
         text-align: right; }
