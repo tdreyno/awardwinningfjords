@@ -2,9 +2,11 @@
 title: State Machine Controller for JavascriptMVC
 date: 27/05/2010
 
-[Checkout my Github repository]: http://github.com/tdreyno/JavascriptMVC-Plugins/tree/master/tr/state_machine/
+[Checkout the Github repository]: http://github.com/secondstory/secondstoryjs-statemachine
 [current version of JavascriptMVC 3 from their site]: http://v3.javascriptmvc.com/index.html
 [JavascriptMVC Getting Started Guide]: http://v3.javascriptmvc.com/index.html#&who=getstarted
+
+**[Updated]: The repository has moved to http://github.com/secondstory/secondstoryjs-statemachine. The main class has been renamed to SS.Controller.StateMachine**
 
 I've been attempting to write this article for a week, but I've been unable to justify the usefulness of Finite State Machines in words. I tried written up some typical examples, such as the classic vending machine, but it kept getting very obtuse very quickly. Instead, let me just say, that I love Finite State Machines. I think they are the only technique I learned at school and when I am able to replace dozens of <tt>if</tt> statements with a Finite State Machine, it makes me very happy and feel secure. Being able to monitor an object's state, rather than just querying its instance variables, makes testing simpler and helps me find bugs.
 
@@ -17,7 +19,7 @@ The goal of the following controller is to have widgets or panels which are made
 
 A state machine can respond to jQuery events, global OpenAjax messages and internal "publishState" commands. The destination states define which state we are moved into on an event. Finally, "onEnter" and "onExit" can point to either instance methods or global OpenAjax messages.
 
-    TR.StateMachine.Controller.extend("MyNavigation", {}, {
+    SS.Controller.StateMachine.extend("MyNavigation", {}, {
       states: {
         // Any click of the a.close element will close everything
         global:         { "a.close click":            "initial" },
@@ -59,17 +61,25 @@ How Do I Get It?
 
 First, get the [current version of JavascriptMVC 3 from their site].
 
-[Checkout my Github repository] and move the <tt>tr</tt> folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
+[Checkout the Github repository] and move it inside a <tt>ss</tt> folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
 
+
+Your folder structure should look like this:
+
+    .
+    |-- jquery
+    |-- ss
+    |   `-- controller
+    |       `-- state_machine
+    `-- steal
+    
 Next, create a Site and a Controller (see the [JavascriptMVC Getting Started Guide]).
 
 We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:
 
-    .plugins("tr/state_machine/controller")
+    .plugins("ss/controller/state_machine")
 
-Now you can extend your Controllers from <tt>TR.StateMachine.Controller</tt>.
-
-There is also a generic <tt>TR.StateMachine</tt> extended from jQuery.Class which does can be used with any class, not just controllers. For example, it could be used to add a loading state machine to jQuery.Model.
+Now you can extend your Controllers from <tt>SS.Controller.StateMachine</tt>.
 
 Other/Better Examples?
 ----------------------
