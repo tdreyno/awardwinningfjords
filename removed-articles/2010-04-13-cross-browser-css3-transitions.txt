@@ -1,6 +1,0 @@
---- 
-title: Cross-browser CSS3 Transitions
-date: 13/04/2010
-
-Once upon a time...
-
