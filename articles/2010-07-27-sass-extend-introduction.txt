@@ -5,7 +5,7 @@ date: 27/07/2010
 Sass (and SCSS) version 3 added support for the @extend directive which provides a means of class inheritance and combats the duplication of CSS which Sass mixins create. The earlier features of Sass were basically macros. They grabbed a piece of CSS from either a mixin definition or an external file and inserted that CSS into the output. @extend actually manipulates the selectors and uses CSS's own cascading inheritance system simplify code and avoid duplication. Let's look at some simple examples.
 
 Multiple Sidebars and Fighting Class-itis
-=========================================
+-----------------------------------------
 
 Imagine you have a sidebar with 3 boxes. The first box is logging in, the second box is for an already logged in user and the third box is simply a series of links (a tag cloud, maybe). All three boxes should be styled similarly so let's start with the basics:
 
