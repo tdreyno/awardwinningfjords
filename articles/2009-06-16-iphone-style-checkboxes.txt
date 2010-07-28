@@ -3,12 +3,14 @@ slug: iphone-style-checkboxes
 date: 2009/06/16
 
 [Prototype version]:    /2009/06/29/prototype-iphone-style-checkboxes.html
+[ExtJS version]:        http://github.com/steelThread/ExtJs-ToggleSlide
 [Download the package]: http://github.com/tdreyno/iphone-style-checkboxes/zipball/master
 [http://github.com/tdreyno/iphone-style-checkboxes]: http://github.com/tdreyno/iphone-style-checkboxes
 
 Ever wanted those flash iPhone on/off toggle switches on your webpage? Love jQuery? Well then I've got something special for you. iphone-style-checkboxes implements the iPhone toggles as replacements for standard HTML checkboxes. Simply run the script and your site will be updated with these specialized controls. Best of all, the underlying checkbox is not touched and backend system will never know the difference. The change is purely visual.
 
 [UPDATED: Now with Prototype-based version here.][Prototype version]
+[UPDATED2: Now with ExtJS-based version here.][ExtJS version]
 
 Examples
 --------

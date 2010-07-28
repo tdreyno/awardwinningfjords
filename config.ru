@@ -24,11 +24,11 @@ if ENV['RACK_ENV'] == 'development'
   use Rack::ShowExceptions
 end
 
-# require 'coderay'
-# require 'rack/codehighlighter'
-# 
-# use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", 
-#   :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, :logging => false
+require 'coderay'
+require 'rack/codehighlighter'
+
+use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", 
+  :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, :logging => false
   
 class NoWww
   def initialize(app)
