@@ -40,6 +40,7 @@ Now, we can keep our HTML simple and continue with another @extend:
 
 This requires only an <tt>id</tt> on the three boxes, but we don't repeat ourselves. You'll also notice that the plain CSS classes are still available to place on <tt>div</tt> elements for rapid development or if custom id attributes are not needed. For those who are curious what the output looks like, here it is: 
 
+    :::CSS
     .sidebar-box, 
     .sidebar-auth-box, 
     #login-box, 
