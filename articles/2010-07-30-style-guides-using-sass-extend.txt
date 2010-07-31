@@ -26,11 +26,11 @@ First I setup variables for our color palatte.
 Next I create some simple mixins to handle usage of custom fonts.
 
     =custom-font
-      font-family: $custom-font
+      font-family: "Droid Sans"
       font-weight: normal
       
     =bold-custom-font
-      font-family: $custom-font-bold
+      font-family: "Droid Sans Bold"
       font-weight: bold
 
 Finally, I start defining the styles as classes. As you can see, I am using @extend to avoid repeating myself. I'm going to omit some of the styles in the guide for the sake of brevity.
