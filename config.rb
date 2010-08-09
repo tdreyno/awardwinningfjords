@@ -11,5 +11,4 @@ http_images_dir = "images"
 
 output_style = :nested
 
-cache = false
 line_comments = false

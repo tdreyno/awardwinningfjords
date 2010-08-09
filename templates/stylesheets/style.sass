@@ -1,5 +1,5 @@
-@import base
-@import susy/reset
+@import "base"
+@import "susy/reset"
 
 +susy
 
@@ -89,7 +89,6 @@ p strong
   +border-top-left-radius(0.5em)
   +apply-side-rhythm-border("left")
   +apply-side-rhythm-border("right")
-  +clearfix
   h3
     color: #f9f3e8
     +padding-leader
@@ -98,14 +97,32 @@ p strong
   dl
     +leading-border(1px)
     border-top: 1px solid $border-color
+    +clearfix
     a
       +link-colors(#b09e8b, #f9f3e8)
       font-weight: normal
     dt
-      +columns(1)
+      +columns(1.5)
       font-weight: normal
     dd
-      +columns(9)
+      +columns(8.75)
       margin-right: 0
       margin-left: 0
       margin-bottom: 1em
+  #showmore
+    dl
+      display: none
+      border: 0
+      padding: 0
+    p
+      +prefix(1.5)
+      padding-bottom: 1em
+      margin: 0
+      a
+        +link-colors(#b09e8b, #f9f3e8)
+        font-weight: normal
+    &:target
+      p
+        display: none !important
+      dl
+        display: block

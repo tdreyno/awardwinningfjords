@@ -13,9 +13,9 @@
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
     <title><%= title %> &laquo; Thomas Reynolds</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <style type="text/css">
+    <!--style type="text/css">
       <%#= CodeRay::Encoders[:html]::CSS.new.stylesheet %>
-    </style>
+    </style-->
   </head>
   <body class="post">
     <div id="frame">
@@ -25,7 +25,6 @@
 
         <p id="social">
           <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br />
-          <!--Available for new work.-->
           <a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
         </p>
       </div>
@@ -37,26 +36,37 @@
       <div id="footer">
         <h3>Previously</h3>
         <dl>
+          <% old_mode = false %>
           <% @articles.each do |article| %>
-            <dt><%= article[:date].strftime('%b %e') %></dt>
+            <% 
+              if (!old_mode && article[:date].year != Time.now.year) 
+                old_mode = true
+            %>
+              </dl>
+              <div id="showmore">
+              <p><a href="#showmore">Show more</a></p>
+              <dl>
+            <% end %>
+            
+            <dt><%= article[:date].strftime('%b %e %Y') %></dt>
             <dd><a href="<%= article.url %>"><%= article.title %></a></dd>
           <% end %>
-        </dl>
+        </dl></div>
       </div>
     </div>
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-90027-9']);
-    _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-9']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-    var ga = document.createElement('script');
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
-      'http://www') + '.google-analytics.com/ga.js';
-    ga.setAttribute('async', 'true');
-    document.documentElement.firstChild.appendChild(ga);
-    })();
-  </script>
-</body>
+      (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+  </body>
 </html>

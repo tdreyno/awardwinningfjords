@@ -11,14 +11,12 @@
     margin-right: 1.961%;
     margin-left: 1.961%;
     overflow: hidden;
-    display: inline-block;
+    *zoom: 1;
     margin-bottom: 1.5em;
     border-top: 1px solid #d0d0d0;
     border-top-style: solid;
     border-top-width: 0.083em;
     padding-top: 1.417em; }
-    #post ul li {
-      display: block; }
     #post ul li .cover {
       display: inline;
       float: left;
@@ -53,10 +51,6 @@
       /* ugly hacks for IE6-7 */
       #margin-left: -1em; }
       #post ul li .player h6 {
-        -moz-opacity: 0.3;
-        -webkit-opacity: 0.3;
-        -o-opacity: 0.3;
-        -khtml-opacity: 0.3;
         opacity: 0.3;
         -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
