@@ -1,0 +1,21 @@
+--- 
+title: Mustache for JavascriptMVC 3
+date: 09/08/2010
+
+[the Github repository]: http://github.com/secondstory/secondstoryjs-mustache
+
+If you're a fan of the Mustache templating language, here's a plugin to integrate it with JavascriptMVC 3.
+
+Grab the code from [the Github repository]:
+
+    git clone git://github.com/secondstory/secondstoryjs-mustache.git
+
+Include it in your app:
+
+    :::JavaScript
+    steal.plugins("mustache")
+
+Create some <tt>.mustache</tt> files and use them normally:
+
+    :::JavaScript
+    $("#elem").html("//views/template.mustache", { variable: "Value" })
