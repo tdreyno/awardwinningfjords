@@ -6,9 +6,13 @@ date: 09/08/2010
 
 If you're a fan of the Mustache templating language, here's a plugin to integrate it with JavascriptMVC 3.
 
-Grab the code from [the Github repository]:
+There are two ways of grabbing the code. If you have a very recent version of JavascriptMVC 3 you can use the new <tt>getjs</tt> method of installing plugins. The command, from your project folder, looks like this:
 
-    git clone git://github.com/tdreyno/mustache-javascriptmvc.git
+    ./js steal/getjs http://github.com/tdreyno/mustache-javascriptmvc -n mustache
+
+Alternatively, you can grab the code from [the Github repository]:
+
+    git clone git://github.com/tdreyno/mustache-javascriptmvc.git mustache
 
 Include it in your app:
 
