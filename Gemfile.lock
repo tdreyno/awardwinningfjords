@@ -1,0 +1,25 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (2.1.2)
+    coderay (0.9.3)
+    nokogiri (1.4.3.1)
+    rack (1.2.1)
+    rack-codehighlighter (0.4.6)
+      nokogiri (>= 1.4.1)
+      rack (>= 1.0.0)
+    rdiscount (1.6.5)
+    toto (0.4.6)
+      builder
+      rack
+      rdiscount
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  builder
+  coderay
+  rack-codehighlighter
+  rdiscount
+  toto (>= 0.4.6)
