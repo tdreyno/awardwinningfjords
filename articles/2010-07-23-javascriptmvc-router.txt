@@ -78,17 +78,9 @@ SS.Router
 
 The Secondstory router class uses <tt>jquery/controller/history</tt> to listen to the location change events, then it matches against the Routes you have setup and finally sends a new OpenAjax event containing the value of the <tt>.to()</tt> method you setup when definition the route. It also contains logic for making sure multiple events aren't published for the same location if a user clicks the same link twice, for example.
 
-First, [grab the code from GitHub as a download] or check it out with git:
+First, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:
 
-    git clone git://github.com/secondstory/secondstoryjs-router.git
-
-Either way, put the <tt>router</tt> directory in a <tt>ss</tt> directory along side JavascriptMVC. Your folder structure should look like this:
-
-    .
-    |-- jquery
-    |-- ss
-    |   `-- router
-    `-- steal
+    ./steal/js steal/getjs ss/router
     
 So let's go back to our project configuration file:
 

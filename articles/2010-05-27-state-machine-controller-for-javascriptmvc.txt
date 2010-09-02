@@ -62,17 +62,9 @@ How Do I Get It?
 
 First, get the [current version of JavascriptMVC 3 from their site].
 
-[Checkout the Github repository] and move it inside a <tt>ss</tt> folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
+Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:
 
-
-Your folder structure should look like this:
-
-    .
-    |-- jquery
-    |-- ss
-    |   `-- controller
-    |       `-- state_machine
-    `-- steal
+    ./steal/js steal/getjs ss/state_machine
     
 Next, create a Site and a Controller (see the [JavascriptMVC Getting Started Guide]).
 

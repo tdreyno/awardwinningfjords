@@ -10,7 +10,7 @@ date: 21/05/2010
 [JavascriptMVC Getting Started Guide]: http://v3.javascriptmvc.com/index.html#&who=getstarted
 [blog post on JavascriptMVC's impressed unit/functional testing system]: http://jupiterjs.com/pages/javascriptmvc#news/too-enterprisey
 
-**[Updated]: The new Github repository location is: http://github.com/secondstory/secondstoryjs-html5storage. The new class names are SS.Model.LocalStore and SS.Model.SessionStore**
+**[Updated]: The new Github repository location is: http://github.com/secondstory/secondstoryjs-html5storage. The new class names are SS.Model.HTML5Store.Local and SS.Model.HTML5Store.Session**
 
 For those who don't know, JavascriptMVC 3 is a framework for building complex web applications based on jQuery. jQuery is a wonderful tool for manipulating the DOM, but it doesn't provide any system for dependency resolution, file organization or a separation of concerns. JavascriptMVC 3, which is currently in a very solid alpha form, provides a strong MVC foundation for oragnizing your code.
 
@@ -29,22 +29,16 @@ How Do I Use It?
 
 First, get the [current version of JavascriptMVC 3 from their site].
 
-[Checkout the Github repository] and place in a <tt>ss</tt> folder folder alongside JavascriptMVC's folders. If the future, JavascriptMVC will provide a plugin download system like RubyGems, but for now, we have to do it manually.
+Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:
 
-Your folder structure should look like this:
-
-    .
-    |-- jquery
-    |-- ss
-    |   `-- model
-    `-- steal
+    ./steal/js steal/getjs ss/model/html5store
 
 Next, create a Site and a Model (see the [JavascriptMVC Getting Started Guide]).
 
 We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:
 
     :::JavaScript
-    .plugins("ss/model")
+    .plugins("ss/model/html5store")
 
 Okay, so we have a model and now we need to add the new store system:
 
@@ -52,8 +46,8 @@ Okay, so we have a model and now we need to add the new store system:
     jQuery.Model.extend("MyModel",
     {
       setup: function(){
-        // Alternatively, use SS.Model.LocalStore
-        this.storeType = SS.Model.SessionStore; 
+        // Alternatively, use SS.Model.HTML5Store.Local
+        this.storeType = SS.Model.HTML5Store.Session; 
         this._super.apply(this, arguments);
       }
     },
