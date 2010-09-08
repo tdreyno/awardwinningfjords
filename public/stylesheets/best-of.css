@@ -48,7 +48,6 @@
       display: inline;
       float: right;
       margin-right: 1.961%;
-      /* ugly hacks for IE6-7 */
       #margin-left: -1em; }
       #post ul li .player h6 {
         opacity: 0.3;

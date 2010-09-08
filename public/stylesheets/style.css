@@ -44,7 +44,7 @@ a img {
   border: none; }
 
 /* HTML5 Reset --------------------------------------------------------------*/
-section, article, aside, header, footer, nav, dialog, figure {
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
 body {
@@ -53,9 +53,6 @@ body {
 
 html > body {
   font-size: 12px; }
-
-body {
-  text-align: center; }
 
 body {
   font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", arial, sans-serif;
@@ -91,13 +88,18 @@ p strong {
   font-weight: bold; }
 
 #frame {
-  overflow: hidden;
   *zoom: 1;
-  text-align: left;
   margin-left: auto;
   margin-right: auto;
   width: 51em;
   max-width: 100%; }
+  #frame:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
 
 #header {
   padding-top: 1.5em;
