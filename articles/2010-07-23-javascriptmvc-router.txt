@@ -7,6 +7,8 @@ date: 23/07/2010
 [grab the code from GitHub as a download]: http://github.com/secondstory/secondstoryjs-router/zipball/master
 [Secondstory]: http://secondstory.com/
 
+**[Edit]: The SecondStoryJS Router now has a documentation website at <a href="http://secondstory.github.com/secondstoryjs-router/">http://secondstory.github.com/secondstoryjs-router/</a>**
+
 Modern web applications should function as naturally as their static page-based predecessors. As developers, we may need to store state in the location bar, but the user shouldn't be able to tell the difference, except, hopefully, the Ajaxified version should be faster and smoother.
 
 To accomplish this, we need to move a lot of the libraries we've used on the backend into the world of Javascript. JavascriptMVC handles models, views and controllers, but it doesn't provide a router. A router takes a string which contains state, such as <tt>/articles/my-first-article</tt> and activates a specific piece of code which can respond to the request.
