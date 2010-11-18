@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,6 +46,10 @@ a img {
 
 /* HTML5 Reset --------------------------------------------------------------*/
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
   display: block; }
 
 body {
@@ -129,8 +134,10 @@ p strong {
   #post ul, #post ol {
     list-style-type: disc;
     margin-left: 6.961%; }
-  #post h1, #post h2, #post h3, #post p, #post .flash, #post .table {
+  #post h1, #post h2, #post h3, #post p, #post .flash, #post .table, #post #disqus_thread {
     margin-left: 1.961%; }
+  #post .dsq-options, #post .dsq-comments-title, #post .dsq-new-post h3 {
+    display: none; }
   #post strong {
     color: #4e4c49; }
   #post pre {
