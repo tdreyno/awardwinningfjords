@@ -136,7 +136,7 @@ p strong {
     margin-left: 6.961%; }
   #post h1, #post h2, #post h3, #post p, #post .flash, #post .table, #post #disqus_thread {
     margin-left: 1.961%; }
-  #post #dsq-options, #post #dsq-comments-title, #post #dsq-new-post h3 {
+  #post .dsq-options, #post #dsq-comments-title, #post #dsq-new-post h3 {
     display: none; }
   #post strong {
     color: #4e4c49; }
