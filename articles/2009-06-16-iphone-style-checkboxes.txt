@@ -5,7 +5,7 @@ date: 2009/06/16
 [Prototype version]:    /2009/06/29/prototype-iphone-style-checkboxes.html
 [ExtJS version]:        http://github.com/steelThread/ExtJs-ToggleSlide
 [Download the package]: http://github.com/tdreyno/iphone-style-checkboxes/zipball/master
-[http://github.com/tdreyno/iphone-style-checkboxes]: http://github.com/tdreyno/iphone-style-checkboxes
+[https://github.com/tdreyno/iphone-style-checkboxes]: https://github.com/tdreyno/iphone-style-checkboxes
 
 Ever wanted those flash iPhone on/off toggle switches on your webpage? Love jQuery? Well then I've got something special for you. iphone-style-checkboxes implements the iPhone toggles as replacements for standard HTML checkboxes. Simply run the script and your site will be updated with these specialized controls. Best of all, the underlying checkbox is not touched and backend system will never know the difference. The change is purely visual.
 
@@ -38,7 +38,7 @@ Examples
 </div>
 <script src='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/jquery/jquery-1.4.js' type='text/javascript'></script>
 <script src='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
-<link charset='utf-8' href='http://github.com/tdreyno/iphone-style-checkboxes/raw/master/style.css' media='screen' rel='stylesheet' type='text/css' />
+<link charset='utf-8' href='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/style.css' media='screen' rel='stylesheet' type='text/css' />
 <script type='text/javascript'>
   $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
 </script>
@@ -108,5 +108,5 @@ Contribute
 ----------
 
 The source is available, and forkable, on GitHub at
-[http://github.com/tdreyno/iphone-style-checkboxes].
+[https://github.com/tdreyno/iphone-style-checkboxes].
 Please direct comments, support requests, bug reporting and pull requests to there.
