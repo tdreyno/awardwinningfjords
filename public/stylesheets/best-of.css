@@ -23,6 +23,11 @@
       float: left;
       width: 37.255%;
       margin-right: 1.961%; }
+    #post ul li .cover_small {
+      display: inline;
+      float: left;
+      width: 17.647%;
+      margin-right: 1.961%; }
     #post ul li .content {
       display: inline;
       float: left;

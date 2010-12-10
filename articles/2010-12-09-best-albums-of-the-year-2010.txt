@@ -1,0 +1,183 @@
+--- 
+title: "Best Albums of the Year: 2010"
+date: 09/12/2010
+
+<link rel="stylesheet" href="/stylesheets/best-of.css" type="text/css" media="screen" />
+
+It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a "Top 14" list, but instead it's "Top 10" and some honorable mentions. Let's get started.
+
+## Honorable Mentions:
+
+<ul>
+  <li>
+    <div class='cover_small'>
+      <img src='/albums/2010/14.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Gogol Bordello</h6>
+      <h2>Trans-Continental Hustle</h2>
+    </div>
+  </li>
+  <li>
+    <div class='cover_small'>
+      <img src='/albums/2010/13.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Janelle Monae</h6>
+      <h2>The ArchAndroid</h2>
+    </div>
+  </li>
+  <li>
+    <div class='cover_small'>
+      <img src='/albums/2010/12.jpg' />
+    </div>
+    <div class='content'>
+      <h6>The Black Keys</h6>
+      <h2>Brothers</h2>
+    </div>
+  </li>
+  <li>
+    <div class='cover_small'>
+      <img src='/albums/2010/11.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Broken Bells</h6>
+      <h2>Broken Bells</h2>
+    </div>
+  </li>
+</ul>
+
+# Top 10:
+
+<ul>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/10.jpg' />
+    </div>
+    <div class='content'>
+      <h6>United Nations</h6>
+      <h2>Nevermind The Bombings, Here's Your Six Figures </h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#10</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/9.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Envy</h6>
+      <h2>Recitation</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#9</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/8.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Portugal. The Man</h6>
+      <h2>American Ghetto</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#8</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/7.jpg' />
+    </div>
+    <div class='content'>
+      <h6>B.o.B</h6>
+      <h2>B.o.B Presents: The Adventures of Bobby Ray </h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#7</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/6.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Cee Lo Green</h6>
+      <h2>The Lady Killer</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#6</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/5.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Big Boi</h6>
+      <h2>Sir Lucious Left Foot: The Son of Chico Dusty</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#5</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/4.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Girl Talk</h6>
+      <h2>All Day</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#4</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/3.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Fang Island</h6>
+      <h2>Fang Island</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#3</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/2.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Kanye West</h6>
+      <h2>My Beautiful Dark Twisted Fantasy </h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#2</h6>
+    </div>
+  </li>
+  <li>
+    <div class='cover'>
+      <img src='/albums/2010/1.jpg' />
+    </div>
+    <div class='content'>
+      <h6>Gorillaz</h6>
+      <h2>Plastic Beach</h2>
+      <p></p>
+    </div>
+    <div class='player'>
+      <h6>#1</h6>
+    </div>
+  </li>
+</ul>
