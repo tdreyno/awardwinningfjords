@@ -79,22 +79,24 @@ h1, h2, h3
           background-size: 100% 100%
           +opacity(0.5)
           +border-radius(3px)
-      .content
-        +columns(5)
+      .content, .content_small
         h2
-          +leader(0.5)
           +adjust-font-size-to(22px, 1.4)
-          margin-bottom: 3px
+          +trailer(0.5)
         h6, h2
           margin-left: 0
           margin-right: 0
           padding: 0
         h6
-          +trailer(1)
+          +leader(0.5)
         p
           padding: 0
           margin-left: 0 !important
           margin-right: 0 !important
+      .content
+        +columns(5)
+      .content_small
+        +columns(8)
       .player
         +columns(1)
         +omega
