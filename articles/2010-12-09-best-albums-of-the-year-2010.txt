@@ -148,6 +148,16 @@ It's that time of year again! I don't want a personal live journal all year, but
 <ul>
   <li>
     <div class='cover_small'>
+      <img src='/albums/2010/15.jpg' /><div></div>
+    </div>
+    <div class='content_small'>
+      <h6>Amia Venera Landscape</h6>
+      <h2>The Long Procession</h2>
+      <p>Absolutely huge metal album. If it'd been released earlier in the year, it would probably be in my top 10.</p>
+    </div>
+  </li>
+  <li>
+    <div class='cover_small'>
       <img src='/albums/2010/14.jpg' /><div></div>
     </div>
     <div class='content_small'>
