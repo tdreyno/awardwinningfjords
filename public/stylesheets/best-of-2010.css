@@ -10,7 +10,7 @@ body {
   color: #c6c6c6;
   background: #2f2f2f; }
 
-h1, h2, h3 {
+h1, h1 a, h2, h2 a, h3, h3 a {
   font-family: "Gill Sans Light", GillSans-Light, "Gill Sans", sans-serif;
   color: #dadbb1;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25); }
