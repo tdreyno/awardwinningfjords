@@ -2,7 +2,7 @@ title: Best Albums of the Decade
 slug: best-of-the-decade
 date: 2009/12/04
 
-<link rel="stylesheet" href="/stylesheets/best-of-2010.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/stylesheets/best-of-2010.css?v2" type="text/css" media="screen" />
 <p>In 1990, I was 7 years old. Needless to say, by 17 I still didn't have the most refined musical tastes. I'm just now getting into Pavement, Jawbox and My Bloody Valentine. So, this past decade has been my first where I can remember listening to each of the following albums when they were released. Most of the lists I've seen so far are exceptionally myopic, with albums mostly from the past 3-4 years and enjoy Radiohead to look cool. My list is hopefully more diverse. I've also used my actual listening habits (courtesy of last.fm) for ranking, rather than pretending I actually listened to The White Stripes ever single day like some lists.</p>
 <p>Let's get started, with numbers 50-26:</p>
 <ul>
