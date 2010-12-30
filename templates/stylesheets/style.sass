@@ -11,15 +11,20 @@ a
   +link-colors($link-color)
 
 h1, h2, h3
-  font-family: $header-font-family
-  color: $header-color
-  font-weight: 200
+  &, a
+    font-family: $header-font-family
+    color: $header-color
+    font-weight: 200
+    text-decoration: none
 
 h1
-  +adjust-font-size-to(30px)
+  +adjust-font-size-to(30px, 1.6)
 
 h2
-  +adjust-font-size-to(20px)
+  +adjust-font-size-to(22px)
+  border-bottom: 1px solid $border-color
+  +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+  +trailer(0.5)
 
 h3
   +adjust-font-size-to(18px)
@@ -33,38 +38,52 @@ p, pre, ul, ol, .flash, .table
 p strong
   font-weight: bold
   
-#frame
+#frame, .center
   +container
+  position: relative
 
 #header
-  +padding-leader
-  border-bottom: 1px solid $border-color
-  position: relative
-  +full
-  h1 a
-    text-decoration: none
+  +padding-leader(0.75)
+  +padding-trailer(0.75)
+  background: image-url("pixel-gray.gif")
+  +box-shadow(transparentize(black, 0.5), 0, -3px, 12px, 0, inset)
+  h1 
+    +adjust-font-size-to(36px)
+    a
+      color: #DADBB1
+      text-shadow: 2px 2px 2px transparentize(#000, 0.75) 
+  h2
+    +adjust-font-size-to(16px, 1.5)
+    color: #C6C6C6
+    margin: 0
+    border: 0
+    +box-shadow(black, 0, 0, 0)
+    
   #social
+    +padding-leader(0.75)
     font-family: "Gill Sans", GillSans, sans-serif
     text-align: right
     position: absolute
     right: 0
-    bottom: 0.6em
+    top: 0
     margin: 0
-    color: lighten($font-color, 40)
+    color: #C6C6C6
     a
-      color: lighten($font-color, 40)
+      color: #C6C6C6
       text-decoration: none
-      &:hover,
-      &#contact
+      &:hover, &#contact
         text-decoration: underline
-
+  
 #post
-  +leader
+  +leader(2)
+  +columns(8.5)
+  h1 span
+    color: darken(#C6C6C6, 15)
+    +adjust-font-size-to(10px, 1, 30px)
+    white-space: nowrap
   ul, ol
     list-style-type: disc
     margin-left: side-gutter() + 5%
-  h1, h2, h3, p, .flash, .table, #disqus_thread
-    +alpha
   .dsq-options, #dsq-comments-title, #dsq-new-post h3
     display: none
   strong
@@ -72,59 +91,50 @@ p strong
   pre
     font-family: $fixed-font-family
     color: $darker-font-color
-    background: #f2eadd inline-image("code.gif") no-repeat bottom right
-    overflow: visible
+    background: #f2eadd
     +border-radius(0.5em)
     border: 1px solid $border-color
     padding-left: side-gutter()
     padding-right: side-gutter()
     +leading-border(1px, 1)
     +trailing-border(1px, 1)
+    &:hover
+      overflow: visible
     strong
       font-weight: normal
       color: black
-
-#footer
-  background: darken(#603d17, 5)
-  color: #b09e8b
-  +border-top-right-radius(0.5em)
-  +border-top-left-radius(0.5em)
-  +apply-side-rhythm-border("left")
-  +apply-side-rhythm-border("right")
-  h3
-    color: #f9f3e8
-    +padding-leader
-    a
-      color: #f9f3e8 !important
-  dl
-    +leading-border(1px)
-    border-top: 1px solid $border-color
-    +clearfix
-    a
-      +link-colors(#b09e8b, #f9f3e8)
-      font-weight: normal
-    dt
-      +columns(1.5)
-      font-weight: normal
-    dd
-      +columns(8.75)
-      margin-right: 0
-      margin-left: 0
-      margin-bottom: 1em
-  #showmore
-    dl
-      display: none
-      border: 0
-      padding: 0
-    p
-      +prefix(1.5)
-      padding-bottom: 1em
+  #comments
+    +leader(2)
+    +trailer(2)
+    .block
+      border-bottom: 1px solid $border-color
+      +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+      +trailer(1)
+      +clearfix
+    h2
+      +columns(4)
       margin: 0
+      +box-shadow(transparent, 0, 0, 0)
+      border: 0
+    .addthis_toolbox
+      +padding-leader(0.6)
+      +float-right
+      margin-right: 0
+
+#previously
+  +leader(2)
+  +columns(3)
+  +float-right
+  margin-right: 0
+  ol
+    li
+      +adjust-font-size-to(12px, 0.75)
+      +trailer(0.5)
       a
-        +link-colors(#b09e8b, #f9f3e8)
-        font-weight: normal
-    &:target
-      p
-        display: none !important
-      dl
-        display: block
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+      span
+        color: darken(#C6C6C6, 15)
+        +adjust-font-size-to(10px)
+        white-space: nowrap

@@ -1,25 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='en-US' xml:lang='en-US' xmlns='http://www.w3.org/1999/xhtml'>
+<!doctype html>
+<html>
   <head>
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    
+    <!-- Google Setup -->
     <meta content='VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=' name='verify-v1' />
+    
+    <!-- OpenID Setup -->
     <link href='http://www.myopenid.com/server' rel='openid.server' />
     <link href='http://tdreyno.myopenid.com/' rel='openid.delegate' />
     <link href='http://tdreyno.myopenid.com' rel='openid2.local_id' />
     <link href='http://www.myopenid.com/server' rel='openid2.provider' />
-    <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml' />
-    <meta content='IE=8;chrome=1' http-equiv='X-UA-Compatible' />
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
+    
     <title><%= title %> &laquo; Thomas Reynolds</title>
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <!--style type="text/css">
-      <%#= CodeRay::Encoders[:html]::CSS.new.stylesheet %>
-    </style-->
+    
+    <!-- RSS -->
+    <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml' />
   </head>
   <body class="post">
-    <div id="frame">
-      <div id="header">
+    <div id="header">
+      <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
         <h2>Words &amp; Wisdom by Thomas Reynolds</h2>
 
@@ -28,33 +33,23 @@
           <a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
         </p>
       </div>
+    </div>
     
+    <div id="frame">
       <div id="post">
         <%= yield %>
       </div>
-    
-      <div id="footer">
-        <h3>Previously</h3>
-        <dl>
-          <% old_mode = false %>
+      <div id="previously">
+        <h2>Previously</h2>
+        <ol>
           <% @articles.each do |article| %>
-            <% 
-              if (!old_mode && article[:date].year != Time.now.year) 
-                old_mode = true
-            %>
-              </dl>
-              <div id="showmore">
-              <p><a href="#showmore">Show more</a></p>
-              <dl>
-            <% end %>
-            
-            <dt><%= article[:date].strftime('%b %e %Y') %></dt>
-            <dd><a href="<%= article.url %>"><%= article.title %></a></dd>
+            <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article[:date].strftime('%b %e') %></span></li>
           <% end %>
-        </dl></div>
+        </li>
       </div>
     </div>
 
+    <!-- Google Analytics -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-90027-9']);
@@ -68,6 +63,8 @@
       document.documentElement.firstChild.appendChild(ga);
       })();
     </script>
+    
+    <!-- Observer Analytics -->
     <script type="text/javascript" src="http://www.observerapp.com/record.js"></script>
     <script type="text/javascript">
       try { Observerapp.record("4c89426b8725732d24006347"); } catch(e) {};

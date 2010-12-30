@@ -1,3 +1,5 @@
+$total-cols:         10
+
 @import base
 
 $font-color:         #C6C6C6
@@ -22,8 +24,12 @@ h1, h2, h3
   +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
   h2
     color: $font-color
+
+#frame, .center
+  +container
   
 #post
+  +columns(10)
   h2
     padding-bottom: 3px
     border-bottom: 1px solid $border-color
@@ -106,7 +112,7 @@ h1, h2, h3
           +leader(0.4)
           text-align: right
 
-#comments
+#comments, #previously
   display: none
   
 #footer
