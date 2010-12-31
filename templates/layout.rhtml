@@ -22,7 +22,12 @@
     <!-- RSS -->
     <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml' />
   </head>
-  <body class="post">
+  <%
+    body_class = ""
+    body_class = "post" if @context.has_key? :title
+    body_class = "archives" if @context.has_key? :archives
+  %>
+  <body class="<%= body_class %>">
     <div id="header">
       <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
