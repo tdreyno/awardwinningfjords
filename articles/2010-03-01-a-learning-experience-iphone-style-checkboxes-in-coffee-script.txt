@@ -10,7 +10,7 @@ According to the [Coffee Script website], "CoffeeScript is a little language tha
 
 Basically, Coffee Script is compiled into Javascript and attempts to make basic operations simpler and safe. For example, in Ruby you can add a conditional to the end of the current line as a short-hand for a full <tt>if</tt> statement. In Coffee Script this looks like:
 
-    number: -42 if opposite_day
+    number = -42 if opposite_day
 
 Which compiles to:
 
@@ -29,11 +29,11 @@ A lot of the convenience of Coffee Script is only really apparent if you're quit
     expensive ||= do_the_math()
     
     # Treating function arguments as a real array
-    backwards: ->
+    backwards = ->
       alert arguments.reverse()
     
     # Existence conditions
-    solipsism: true if mind? and not world?
+    solipsism = true if mind? and not world?
 
 These are compiled to their Javascript representations.
 
@@ -67,9 +67,9 @@ The method is defined by a series of parameters, a -> symbol and an indented met
 
 A class is just a variation of a function in Javascript. Usually capitalized, it looks like this:
 
-    Account: (customer, cart) ->
-      @customer: customer
-      @cart: cart
+    Account = (customer, cart) ->
+      @customer = customer
+      @cart     = cart
       
 The Account class takes two parameters on it's constructor. The @ sign is used for accessing instance variables. In raw Javascript, this is usually handled by the <tt>this</tt> value. Maybe Javascript event libraries allow anonymous functions as callbacks, but the value of <tt>this</tt> inside these callbacks can be hard to ensure. In Coffee Script, we can force the value of <tt>this</tt>, called binding, to the current object by using a => symbol instead of ->
 
@@ -87,7 +87,7 @@ Next up is Pattern Matching, also known as Destructuring Assignment in the ECMAS
       # Make an Ajax request to fetch the weather...
       [location, 72, "Mostly Sunny"]
 
-    [city, temp, forecast]: weather_report "Berkeley, CA"
+    [city, temp, forecast] = weather_report "Berkeley, CA"
     
 In the above example, the weather_report function returns 3 variables which we then assign to three local variables. The structure of the template on the left-hand side mirrors the value on the right-hand side. So in the example above, we have an array of local variables on the left and an array of results from the function on the right.
 
@@ -107,7 +107,7 @@ Now lets get very complicated. Let's destructure nested objects. This can be ver
     
 Now, we'll pull out the pieces we want into local variables:
 
-    {poet: {name: poet_name, address: [street, city]}}: futurists
+    {poet: {name: poet_name, address: [street, city]}} = futurists
     
 This results in poet_name="F.T. Marinetti", street="Via Roma 42R" and city="Bellagio, Italy 22021"
 
