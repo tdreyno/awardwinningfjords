@@ -177,6 +177,13 @@ p strong {
     display: none; }
   #post strong {
     color: #4e4c49; }
+  #post p img {
+    padding: 3.279%;
+    border: 1px solid #d0d0d0;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 0;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 0;
+    -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 0;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px 0; }
   #post pre {
     font-family: "Monaco", "Andale Mono", "Lucida Console", monospace;
     color: #4e4c49;

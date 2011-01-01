@@ -102,6 +102,10 @@ p strong
     display: none
   strong
     color: $darker-font-color
+  p img
+    padding: 2 * side-gutter()
+    border: 1px solid $border-color
+    +box-shadow(transparentize(black,0.5), 0, 0, 5px)
   pre
     font-family: $fixed-font-family
     color: $darker-font-color
