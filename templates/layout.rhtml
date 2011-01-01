@@ -24,8 +24,9 @@
   </head>
   <%
     body_class = ""
-    body_class = "post" if @context.has_key? :title
     body_class = "archives" if @context.has_key? :archives
+    body_class = "index" if @context.has_key? :articles
+    body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
     <div id="header">
