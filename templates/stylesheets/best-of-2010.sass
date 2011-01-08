@@ -10,111 +10,111 @@ $link-color:         #af512c
 
 +susy
 
-body
+body.post
   color: $font-color
   background: #2F2F2F
 
-h1, h2, h3
-  &, a
-    font-family: $header-font-family
-    color: $header-color
-    text-shadow: 2px 2px 2px transparentize(#000, 0.75)
+  h1, h2, h3
+    &, a
+      font-family: $header-font-family
+      color: $header-color
+      text-shadow: 2px 2px 2px transparentize(#000, 0.75)
 
-#header
-  border-bottom: 1px solid $border-color
-  +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
-  h2
-    color: $font-color
-
-#frame, .center
-  +container
-  
-#post
-  +columns(10)
-  h2
-    padding-bottom: 3px
+  #header
     border-bottom: 1px solid $border-color
     +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
-    +trailer(0.5)
-  ul
-    margin: 0
-    padding: 0
-    +no-bullets
-    li
-      +full
-      +clearfix
-      +trailer
+    h2
+      color: $font-color
+
+  #frame, .center
+    +container
+    
+  #post
+    +columns(10)
+    h2
+      padding-bottom: 3px
       border-bottom: 1px solid $border-color
       +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
-      +trailing-border
-      &.last, h2
-        border-bottom: 0
-        +box-shadow(rgba(0,0,0,0), 0, 0, 0)
-      .cover
-        +columns(4)
-        +alpha(true)
-        margin-bottom: 12px
-        position: relative
-        img
-          margin: 12px 0 0 12px
-          +border-radius(6px)
-        div
-          position: absolute
-          width: 224px
-          height: 224px
-          top: 0
-          left: 0
-          background: image-url("overlay.png") no-repeat
-          background-size: 100% 100%
-          +opacity(0.5)
-          +border-radius(6px)
-      .cover_small
-        +columns(2)
-        +alpha(true)
-        margin-bottom: 6px
-        position: relative
-        img
-          margin: 6px 0 0 6px
-          +border-radius(3px)
-        div
-          position: absolute
-          width: 102px
-          height: 102px
-          top: 0
-          left: 0
-          background: image-url("overlay.png") no-repeat
-          background-size: 100% 100%
-          +opacity(0.5)
-          +border-radius(3px)
-      .content, .content_small
-        h2
-          +adjust-font-size-to(22px, 1.4)
-          +trailer(0.5)
-        h6, h2
-          margin-left: 0
-          margin-right: 0
-          padding: 0
-        h6
-          +leader(0.5)
-        p
-          padding: 0
-          margin-left: 0 !important
-          margin-right: 0 !important
-      .content
-        +columns(5)
-      .content_small
-        +columns(8)
-      .player
-        +columns(1)
-        +omega
-        h6
-          +opacity(0.3)
-          +adjust-font-size-to(25px)
-          +leader(0.4)
-          text-align: right
+      +trailer(0.5)
+    ul
+      margin: 0
+      padding: 0
+      +no-bullets
+      li
+        +full
+        +clearfix
+        +trailer
+        border-bottom: 1px solid $border-color
+        +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+        +trailing-border
+        &.last, h2
+          border-bottom: 0
+          +box-shadow(rgba(0,0,0,0), 0, 0, 0)
+        .cover
+          +columns(4)
+          +alpha(true)
+          margin-bottom: 12px
+          position: relative
+          img
+            margin: 12px 0 0 12px
+            +border-radius(6px)
+          div
+            position: absolute
+            width: 224px
+            height: 224px
+            top: 0
+            left: 0
+            background: image-url("overlay.png") no-repeat
+            background-size: 100% 100%
+            +opacity(0.5)
+            +border-radius(6px)
+        .cover_small
+          +columns(2)
+          +alpha(true)
+          margin-bottom: 6px
+          position: relative
+          img
+            margin: 6px 0 0 6px
+            +border-radius(3px)
+          div
+            position: absolute
+            width: 102px
+            height: 102px
+            top: 0
+            left: 0
+            background: image-url("overlay.png") no-repeat
+            background-size: 100% 100%
+            +opacity(0.5)
+            +border-radius(3px)
+        .content, .content_small
+          h2
+            +adjust-font-size-to(22px, 1.4)
+            +trailer(0.5)
+          h6, h2
+            margin-left: 0
+            margin-right: 0
+            padding: 0
+          h6
+            +leader(0.5)
+          p
+            padding: 0
+            margin-left: 0 !important
+            margin-right: 0 !important
+        .content
+          +columns(5)
+        .content_small
+          +columns(8)
+        .player
+          +columns(1)
+          +omega
+          h6
+            +opacity(0.3)
+            +adjust-font-size-to(25px)
+            +leader(0.4)
+            text-align: right
 
-#comments, #previously
-  display: none
-  
-#footer
-  display: none
+  #comments, #previously
+    display: none
+    
+  #footer
+    display: none

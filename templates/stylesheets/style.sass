@@ -156,6 +156,15 @@ p strong
         @extend .date
 
 
+body.index
+  article
+    border-bottom: 1px solid $border-color
+    +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+    +leader(1)
+    +padding-trailer(1)
+    &.first, &:first-child
+      margin-top: 0 
+  
 body.archives
   ul.archives
     li
