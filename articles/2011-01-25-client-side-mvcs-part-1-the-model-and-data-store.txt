@@ -29,7 +29,7 @@ So far, so good and we&rsquo;re still entirely in the realm of plain old Javascr
 
 ## Data Store
 
-The second part of the Model is the Data Store/Source. Basically you need a way of getting models from a server, working with a list of models and sending updates to the server. If you have each model handle communication with the server itself, you will end up with a lot of duplication. So let&rsquo;s make a data store that gets a list of project using a plain javascript model from above. I&rsquo;m going to use jQuery for the AJAX portion because 
+The second part of the Model is the Data Store/Source. At some point, you will need a way of getting models from a server, working with a list of models and sending updates to the server. If you have each model handle communication with the server itself, you will end up with a lot of duplication. So let&rsquo;s make a data store that gets a list of project using a plain javascript model from above. I&rsquo;m going to use jQuery for the AJAX portion because 
 
     var ProjectList = {
       all: [],
