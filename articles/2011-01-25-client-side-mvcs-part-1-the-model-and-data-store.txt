@@ -54,8 +54,11 @@ Basically, we have a Javascript object which stores a list of our models. When w
 
 [Sproutcore] and [Sencha Touch] provide robust data source libraries for interacting with a wide variety of backends such as REST, XML, JSON or YQL. Their model systems also track which attributes have changed on each object and can intelligently sync with the backend. Still, even without using a framework, this abstraction is very useful.
 
+Ed Spencer has [a great write-up of the Sencha/ExtJS Data Package]. I highly suggest reading it if only to get a grasp on the importance of having solid client-side models.
+
 [Sproutcore]: http://www.sproutcore.com/
 [Capuccino]: http://cappuccino.org/
 [Sencha Touch]: http://www.sencha.com/products/touch/
 [JavascriptMVC]: http://javascriptmvc.com/
 [Backbone]: http://documentcloud.github.com/backbone/
+[a great write-up of the Sencha/ExtJS Data Package]: http://www.sencha.com/blog/2011/01/21/countdown-to-ext-js-4-data-package/
