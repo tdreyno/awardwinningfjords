@@ -16,6 +16,10 @@
     
     <title><%= title %> &laquo; Thomas Reynolds</title>
     
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
     
@@ -29,23 +33,26 @@
     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
-    <div id="header">
+    <header>
       <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
-        <h2>Words &amp; Wisdom by Thomas Reynolds</h2>
+        <h2 class="byline author vcard">
+          Words &amp; Wisdom by 
+          <span class="fn">Thomas Reynolds</span>
+        </h2>
 
         <p id="social">
           <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br />
           <a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
         </p>
       </div>
-    </div>
+    </header>
     
     <div id="frame">
       <div id="post">
         <%= yield %>
       </div>
-      <div id="previously">
+      <aside id="previously">
         <h2>Projects</h2>
         <ol>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
@@ -65,7 +72,7 @@
             <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article[:date].strftime('%b %e') %></span></li>
           <% end %>
         </li>
-      </div>
+      </aside>
     </div>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>

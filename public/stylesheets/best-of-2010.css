@@ -99,9 +99,9 @@ body.post {
             left: 0;
             background: url('/images/overlay.png?1292029128') no-repeat;
             background-size: 100% 100%;
-            opacity: 0.5;
-            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            opacity: 0.5;
             -moz-border-radius: 6px;
             -webkit-border-radius: 6px;
             -o-border-radius: 6px;
@@ -131,9 +131,9 @@ body.post {
             left: 0;
             background: url('/images/overlay.png?1292029128') no-repeat;
             background-size: 100% 100%;
-            opacity: 0.5;
-            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+            opacity: 0.5;
             -moz-border-radius: 3px;
             -webkit-border-radius: 3px;
             -o-border-radius: 3px;
@@ -174,9 +174,9 @@ body.post {
           margin-right: 1.961%;
           #margin-left: -1em; }
           body.post #post ul li .player h6 {
-            opacity: 0.3;
-            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+            opacity: 0.3;
             font-size: 1.786em;
             line-height: 1.68em;
             margin-top: 0.6em;

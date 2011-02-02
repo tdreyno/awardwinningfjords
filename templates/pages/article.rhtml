@@ -1,20 +1,24 @@
-<h1><%= title %> <span><%= article[:date].strftime('%b %e %Y') %></span></h1>
+<article class="hentry">
+  <h1 class="entry-title">
+    <%= title %> 
+    <time class="updated" pubdate><%= article[:date].strftime('%b %e %Y') %></time>
+  </h1>
 
-<div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
-(function() {
-    var s     = document.getElementsByTagName('script')[0],
-        rdb   = document.createElement('script');
-    rdb.type  = 'text/javascript';
-    rdb.async = true;
-    rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
-    s.parentNode.insertBefore(rdb, s);
-})();
-</script>
-
-
-
-
-<%= body %>
+  <div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
+  (function() {
+      var s     = document.getElementsByTagName('script')[0],
+          rdb   = document.createElement('script');
+      rdb.type  = 'text/javascript';
+      rdb.async = true;
+      rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+      s.parentNode.insertBefore(rdb, s);
+  })();
+  </script>
+  
+  <div class="entry-content">
+    <%= body %>
+  </div>
+</article>
 
 <div id="comments">
   <div class="block">
