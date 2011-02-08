@@ -184,6 +184,11 @@ header {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+  #post blockquote {
+    font-size: 1.286em;
+    line-height: 1.633em;
+    border-left: 6px solid #dadbb1;
+    padding-left: 3.279%; }
   #post pre {
     font-family: "Monaco", "Andale Mono", "Lucida Console", monospace;
     color: #4e4c49;
