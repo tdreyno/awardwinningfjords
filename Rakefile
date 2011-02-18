@@ -1,5 +1,4 @@
 require 'toto'
-
 @config = Toto::Config::Defaults
 
 task :default => :new
