@@ -50,14 +50,13 @@ toto = Toto::Server.new do
   set :author,    "Thomas Reynolds"                         # blog author
   set :title,     "Award Winning Fjords"                    # site title
   # set :root,      "index"                                   # page to load on /
-  set :date,      lambda {|now| now.strftime("%Y/%m/%d") }  # date format for articles
+  set :date,     lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }  # date format for articles
   # set :markdown,  :smart                                    # use markdown + smart-mode
   set :disqus,    'awf'                                     # disqus id, or false
-  # set :summary,   :max => 150, :delim => /~/                # length of article summary and delimiter
+  set :summary,   :max => 150, :delim => /READMORE/                # length of article summary and delimiter
   # set :ext,       'txt'                                     # file extension for articles
   set :cache,      2592000                                    # cache duration, in seconds
 
-  set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
 
 run toto
