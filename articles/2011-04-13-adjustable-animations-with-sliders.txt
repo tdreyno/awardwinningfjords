@@ -6,7 +6,7 @@ date: 13/04/2011
 
 Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way. 
 
-However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web. Back in the day, 37Signals would just set the background of an element to yellow and call it a day. If you take a look at [Flow], you'll see some very designed motion. Closing a task results in the checkbox animating to a state, then it picks up and animates along an arc to drop into the "completed" box in your sidebar.
+However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web. READMORE Back in the day, 37Signals would just set the background of an element to yellow and call it a day. If you take a look at [Flow], you'll see some very designed motion. Closing a task results in the checkbox animating to a state, then it picks up and animates along an arc to drop into the "completed" box in your sidebar.
 
 Okay, so, what's the perfect timing for that animation? There are tools for prototyping motion, most notably Adobe Flash, but usually you're designer is going to want to look over your shoulder and tweak the animation until it "feels right."
 
