@@ -25,6 +25,8 @@ The animation looks like:
 
 Simple enough. If I were implementing an animation, vaguely defined in a PSD, I'd setup something like this and then let the designer have a field day. Developers love round numbers and math, but the "best" timing may actually be the combination of an esoteric easing function and a duration of 962.
 
+This gets even more interesting if you're using something like WebGL, Three.js or Box2d.js. Adjust physics engines on the fly makes finding the perfect balance a cinch.
+
 Demo
 ====
 
