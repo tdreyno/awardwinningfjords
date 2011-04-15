@@ -70,7 +70,7 @@ Heavier static systems like Nanoc have a robust system for separating data from 
 
 1. Create a folder in the root of your project named <tt>data</tt>
 2. Create as many <tt>.yml</tt> YAML files as you want
-3. Their contents will be made available in your templates as <tt>settings.data["filename"]</tt>
+3. Their contents will be made available in your templates as <tt>data["filename"]</tt>
 
 For example:
 
@@ -83,7 +83,7 @@ For example:
     // In my template
     %h1 Friends
     %ul
-      - settings.data["people"].friends.each do |f|
+      - data.people.friends.each do |f|
         %li= f
         
 
