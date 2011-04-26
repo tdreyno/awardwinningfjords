@@ -1,187 +1,54 @@
-@charset "UTF-8";
-body {
-  font-size: 87.5%;
-  line-height: 1.5em; }
+/*
+Syntax error: Undefined mixin 'susy'.
+        on line 11 of /Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass, in `susy'
+        from line 11 of /Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass
 
-html > body {
-  font-size: 14px; }
-
-body.post {
-  color: #c6c6c6;
-  background: #2f2f2f; }
-  body.post h1, body.post h1 a, body.post h2, body.post h2 a, body.post h3, body.post h3 a {
-    font-family: "Gill Sans Light", GillSans-Light, "Gill Sans", sans-serif;
-    color: #dadbb1;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25); }
-  body.post #header {
-    border-bottom: 1px solid #1a1a1a;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-    -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05); }
-    body.post #header h2 {
-      color: #c6c6c6; }
-  body.post #frame, body.post .center {
-    *zoom: 1;
-    margin-left: auto;
-    margin-right: auto;
-    width: 51em;
-    max-width: 100%; }
-    body.post #frame:after, body.post .center:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      clear: both;
-      overflow: hidden;
-      visibility: hidden; }
-  body.post #post {
-    display: inline;
-    float: left;
-    width: 96.078%;
-    margin-right: 1.961%; }
-    body.post #post h2 {
-      padding-bottom: 3px;
-      border-bottom: 1px solid #1a1a1a;
-      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      margin-bottom: 0.75em; }
-    body.post #post ul {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-      body.post #post ul li {
-        list-style-image: none;
-        list-style-type: none;
-        margin-left: 0px; }
-      body.post #post ul li {
-        clear: both;
-        margin-right: 1.961%;
-        margin-left: 1.961%;
-        overflow: hidden;
-        *zoom: 1;
-        margin-bottom: 1.5em;
-        border-bottom: 1px solid #1a1a1a;
-        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-        -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-        -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-        border-bottom-style: solid;
-        border-bottom-width: 0.071em;
-        padding-bottom: 1.429em; }
-        body.post #post ul li.last, body.post #post ul li h2 {
-          border-bottom: 0;
-          -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-          -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-          -o-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-          box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
-        body.post #post ul li .cover {
-          display: inline;
-          float: left;
-          width: 37.255%;
-          margin-right: 1.961%;
-          margin-bottom: 12px;
-          position: relative; }
-          body.post #post ul li .cover img {
-            margin: 12px 0 0 12px;
-            -moz-border-radius: 6px;
-            -webkit-border-radius: 6px;
-            -o-border-radius: 6px;
-            -ms-border-radius: 6px;
-            -khtml-border-radius: 6px;
-            border-radius: 6px; }
-          body.post #post ul li .cover div {
-            position: absolute;
-            width: 224px;
-            height: 224px;
-            top: 0;
-            left: 0;
-            background: url('/images/overlay.png?1292029128') no-repeat;
-            background-size: 100% 100%;
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-            opacity: 0.5;
-            -moz-border-radius: 6px;
-            -webkit-border-radius: 6px;
-            -o-border-radius: 6px;
-            -ms-border-radius: 6px;
-            -khtml-border-radius: 6px;
-            border-radius: 6px; }
-        body.post #post ul li .cover_small {
-          display: inline;
-          float: left;
-          width: 17.647%;
-          margin-right: 1.961%;
-          margin-bottom: 6px;
-          position: relative; }
-          body.post #post ul li .cover_small img {
-            margin: 6px 0 0 6px;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -o-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -khtml-border-radius: 3px;
-            border-radius: 3px; }
-          body.post #post ul li .cover_small div {
-            position: absolute;
-            width: 102px;
-            height: 102px;
-            top: 0;
-            left: 0;
-            background: url('/images/overlay.png?1292029128') no-repeat;
-            background-size: 100% 100%;
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-            opacity: 0.5;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-            -o-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -khtml-border-radius: 3px;
-            border-radius: 3px; }
-        body.post #post ul li .content h2, body.post #post ul li .content_small h2 {
-          font-size: 1.571em;
-          line-height: 1.336em;
-          margin-bottom: 0.75em; }
-        body.post #post ul li .content h6, body.post #post ul li .content h2, body.post #post ul li .content_small h6, body.post #post ul li .content_small h2 {
-          margin-left: 0;
-          margin-right: 0;
-          padding: 0; }
-        body.post #post ul li .content h6, body.post #post ul li .content_small h6 {
-          margin-top: 0.75em; }
-        body.post #post ul li .content p, body.post #post ul li .content_small p {
-          padding: 0;
-          margin-left: 0 !important;
-          margin-right: 0 !important; }
-        body.post #post ul li .content {
-          display: inline;
-          float: left;
-          width: 47.059%;
-          margin-right: 1.961%; }
-        body.post #post ul li .content_small {
-          display: inline;
-          float: left;
-          width: 76.471%;
-          margin-right: 1.961%; }
-        body.post #post ul li .player {
-          display: inline;
-          float: left;
-          width: 7.843%;
-          margin-right: 1.961%;
-          display: inline;
-          float: right;
-          margin-right: 1.961%;
-          #margin-left: -1em; }
-          body.post #post ul li .player h6 {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-            opacity: 0.3;
-            font-size: 1.786em;
-            line-height: 1.68em;
-            margin-top: 0.6em;
-            text-align: right; }
-  body.post #comments, body.post #previously {
-    display: none; }
-  body.post #footer {
-    display: none; }
+Backtrace:
+/Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass:11:in `susy'
+/Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass:11
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:169:in `visit_mixin'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/engine.rb:291:in `_render'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/sass-3.1.0/lib/sass/../sass/engine.rb:238:in `render'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:130:in `compile'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:116:in `timed'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:129:in `compile'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/logger.rb:45:in `red'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:128:in `compile'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:108:in `compile_if_required'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:95:in `run'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:93:in `each'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:93:in `run'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:116:in `timed'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/compiler.rb:92:in `run'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/commands/update_project.rb:36:in `perform'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/commands/base.rb:18:in `execute'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/bin/compass:25
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/bin/compass:39:in `call'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/gems/compass-0.11.1/bin/compass:39
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/bin/compass:19:in `load'
+/Users/tdreyno/.rvm/gems/ruby-1.8.7-p330/bin/compass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'susy'.\A         on line 11 of /Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass, in `susy'\A         from line 11 of /Users/tdreyno/Sites/awardwinningfjords/templates/stylesheets/best-of-2010.sass"; }

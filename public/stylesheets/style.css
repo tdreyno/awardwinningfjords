@@ -1,35 +1,32 @@
-@charset "UTF-8";
-/* Reset --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
+  font: inherit;
   vertical-align: baseline; }
 
 body {
-  line-height: 1;
-  color: black;
-  background: white; }
+  line-height: 1; }
 
 ol, ul {
   list-style: none; }
 
 table {
-  border-collapse: separate;
-  border-spacing: 0;
-  vertical-align: middle; }
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 caption, th, td {
   text-align: left;
@@ -37,19 +34,16 @@ caption, th, td {
   vertical-align: middle; }
 
 q, blockquote {
-  quotes: "" ""; }
+  quotes: none; }
   q:before, q:after, blockquote:before, blockquote:after {
-    content: ""; }
+    content: "";
+    content: none; }
 
 a img {
   border: none; }
 
-/* HTML5 Reset --------------------------------------------------------------*/
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
@@ -84,10 +78,10 @@ h2 {
   font-size: 1.571em;
   line-height: 1.336em;
   border-bottom: 1px solid #d0d0d0;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  -o-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
   margin-bottom: 0.75em;
   padding-bottom: 0.375em; }
 
@@ -111,8 +105,7 @@ p strong {
 
 #frame, .center {
   *zoom: 1;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   width: 61em;
   max-width: 100%;
   position: relative; }
@@ -127,11 +120,11 @@ p strong {
 header {
   padding-top: 1.125em;
   padding-bottom: 1.125em;
-  background: url('/images/pixel-gray.gif?1208293414');
-  -moz-box-shadow: inset 0 -3px 12px 0 rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: inset 0 -3px 12px 0 rgba(0, 0, 0, 0.5);
-  -o-box-shadow: inset 0 -3px 12px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 -3px 12px 0 rgba(0, 0, 0, 0.5); }
+  background: url('/images/pixel-gray.gif?1293833854');
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 -3px 12px 0 inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 -3px 12px 0 inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 -3px 12px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 -3px 12px 0 inset; }
   header h1 {
     font-size: 2.571em;
     line-height: 1.167em; }
@@ -145,10 +138,10 @@ header {
     margin: 0;
     border: 0;
     padding: 0;
-    -moz-box-shadow: 0 0 0 black;
-    -webkit-box-shadow: 0 0 0 black;
-    -o-box-shadow: 0 0 0 black;
-    box-shadow: 0 0 0 black; }
+    -moz-box-shadow: black 0 0 0;
+    -webkit-box-shadow: black 0 0 0;
+    -o-box-shadow: black 0 0 0;
+    box-shadow: black 0 0 0; }
   header #social {
     padding-top: 1.125em;
     font-family: "Gill Sans", GillSans, sans-serif;
@@ -180,10 +173,10 @@ header {
   #post p img {
     padding: 3.279%;
     border: 1px solid #d0d0d0;
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 5px; }
   #post blockquote {
     font-size: 1.286em;
     line-height: 1.633em;
@@ -218,10 +211,10 @@ header {
     margin-bottom: 3em; }
     #post #comments .block {
       border-bottom: 1px solid #d0d0d0;
-      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+      -moz-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+      -webkit-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+      -o-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+      box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
       margin-bottom: 1.5em;
       overflow: hidden;
       *zoom: 1; }
@@ -262,10 +255,10 @@ header {
 
 body.index article {
   border-bottom: 1px solid #d0d0d0;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  -o-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  -o-box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
+  box-shadow: rgba(255, 255, 255, 0.05) 0 1px 0;
   margin-top: 1.5em;
   padding-bottom: 1.5em; }
   body.index article.first, body.index article:first-child {

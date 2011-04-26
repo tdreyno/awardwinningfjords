@@ -1,7 +1,8 @@
 @import "base"
-@import "susy/reset"
 
-+susy
++global-reset
++establish-baseline
+//+susy
 
 body
   font-family: $font-family
@@ -27,7 +28,7 @@ h1
 h2
   +adjust-font-size-to(22px, 1.4)
   border-bottom: 1px solid $border-color
-  +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+  +box-shadow(transparentize(#fff, 0.95) 0 1px 0)
   +trailer(0.5)
   +padding-trailer(0.25)
 
@@ -56,7 +57,7 @@ header
   +padding-leader(0.75)
   +padding-trailer(0.75)
   background: image-url("pixel-gray.gif")
-  +box-shadow(transparentize(black, 0.5), 0, -3px, 12px, 0, inset)
+  +box-shadow(transparentize(black, 0.5) 0 -3px 12px 0 inset)
   h1 
     +adjust-font-size-to(36px)
     @extend .antialias
@@ -69,7 +70,7 @@ header
     margin: 0
     border: 0
     padding: 0
-    +box-shadow(black, 0, 0, 0)
+    +box-shadow(black 0 0 0)
     
   #social
     +padding-leader(0.75)
@@ -105,7 +106,7 @@ header
   p img
     padding: 2 * side-gutter()
     border: 1px solid $border-color
-    +box-shadow(transparentize(black,0.5), 0, 0, 5px)
+    +box-shadow(transparentize(black,0.5) 0 0 5px)
   blockquote
     +adjust-font-size-to(18px, 1.4)
     border-left: 6px solid #DADBB1
@@ -131,7 +132,7 @@ header
     +trailer(2)
     .block
       border-bottom: 1px solid $border-color
-      +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+      +box-shadow(transparentize(#fff, 0.95) 0 1px 0)
       +trailer(1)
       +clearfix
     h2
@@ -164,7 +165,7 @@ header
 body.index
   article
     border-bottom: 1px solid $border-color
-    +box-shadow(transparentize(#fff, 0.95), 0, 1px, 0)
+    +box-shadow(transparentize(#fff, 0.95) 0 1px 0)
     +leader(1)
     +padding-trailer(1)
     &.first, &:first-child
