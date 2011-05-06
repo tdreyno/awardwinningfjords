@@ -34,7 +34,7 @@ Included in David DeSandro's excellent [Isotope] library are [csshooks for CSS3 
 
 ## Demo
 
-<iframe width="300" height="650" src="/isoDemo/index.html"></iframe>
+<iframe width="300" height="650" src="/isoDemo/demo.html"></iframe>
 
 ## Full Implementation
 
