@@ -34,7 +34,23 @@ Included in David DeSandro's excellent [Isotope] library are [csshooks for CSS3 
 
 ## Demo
 
-<iframe width="300" height="650" src="/images/iso/demo.html"></iframe>
+    $('.2x').click(function() {
+      $('.square').css({ scale: [2] })
+    });
+    
+    $('.1x').click(function() {
+      $('.square').css({ scale: [1] })
+    });
+
+    $('.right').click(function() {
+      $('.square').css({ translate: [150, 0] })
+    });
+
+    $('.left').click(function() {
+      $('.square').css({ translate: [25, 0] })
+    });
+
+<iframe width="300" height="450" src="/images/iso/demo.html"></iframe>
 
 ## Full Implementation
 
