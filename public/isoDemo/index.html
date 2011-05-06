@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://gist.github.com/raw/959860/343b9d85a316f00b4f5a3e5a02a42b15e206f665/isoTransform.js" type="text/javascript"></script>
+    <style type="text/css">
+      .box { width: 250px; height: 100px; border: 1px solid black; position: relative; }
+      .square { width: 40px; height: 40px; background: red; position: absolute; top: 25px; left: 25px; }
+      .css3 .square {
+        -webkit-transition: all 400ms ease-in-out;
+      }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $('.2x').click(function() {
+          $('.square').css({ scale: [2] })
+        });
+        
+        $('.1x').click(function() {
+          $('.square').css({ scale: [1] })
+        });
+
+        $('.right').click(function() {
+          $('.square').css({ translate: [150, 0] })
+        });
+
+        $('.left').click(function() {
+          $('.square').css({ translate: [25, 0] })
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="controls">
+      <button class="1x">Scale 1x</button>
+      <button class="2x">Scale 2x</button>
+      <button class="right">Translate to 150px Right</button>
+      <button class="left">Translate to 25px Left</button>
+    </div>
+    
+    <h5>No CSS3 Transitions</h6>
+    <div class="box">
+      <div class="square"></div>
+    </div>
+    
+    <h5>CSS3 Transitions</h6>
+    <div class="box css3">
+      <div class="square"></div>
+    </div>
+  </body>
+</html>
