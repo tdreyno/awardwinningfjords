@@ -38,7 +38,9 @@ Included in David DeSandro's excellent [Isotope] library are [csshooks for CSS3 
 
 ## Full Implementation
 
-    <script src="https://gist.github.com/959860.js?file=isoTransform.js"></script>
+Download: https://gist.github.com/959860
+
+<script src="https://gist.github.com/959860.js?file=isoTransform.js"></script>
 
 [csshooks for CSS3 scale and translate]: https://github.com/desandro/isotope/blob/a2a238968347199842dd7e2d552741d5a63c90b9/jquery.isotope.js
 [Isotope]: http://isotope.metafizzy.co/
