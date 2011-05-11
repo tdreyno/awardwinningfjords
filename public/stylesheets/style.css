@@ -56,7 +56,8 @@ html > body {
 body {
   font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", arial, sans-serif;
   color: #413f3d;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  background: url('/images/fabric_1_preview.gif?1304629128'); }
 
 .antialias, header h1, header #social, #post p, #post ul, #post ol, #post pre {
   -webkit-font-smoothing: antialiased; }
