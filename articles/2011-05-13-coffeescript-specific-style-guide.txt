@@ -9,6 +9,8 @@ First, go buy [@topfunky]'s new [CoffeeScript PeepCode screencast]. It's wonderf
 
 One of the most interesting pieces of information to me, as someone who's been writing a lot of CoffeeScript and has written a ton of Javascript in the past, is the subtle tweaks to style in CoffeeScript. Here are some quick preferred styles.
 
+READMORE
+
 Here's a simple piece of jQuery and a test case in plain Javascript.
 
     var elem = $("#myselector").addClass("testing");
