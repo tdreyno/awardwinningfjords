@@ -10,18 +10,18 @@ READMORE
 
     var loadImageCache = {}
     var loadImage = function(imageSrc) {
-      if (typeof loadImageCache[imageSrc] !== "undefined") {
-        return loadImageCache[imageSrc];
-      }
-
-      deferred = $.Deferred();
+      if (typeof loadImageCache[imageSrc] === "undefined") {
+        deferred = $.Deferred();
   
-      preloader         = new Image();
-      preloader.onload  = function() { deferred.resolve(this.src) };
-      preloader.onerror = function() { deferred.reject(this.src)  };
-      preloader.src     = imageSrc;
+        preloader         = new Image();
+        preloader.onload  = function() { deferred.resolve(this.src) };
+        preloader.onerror = function() { deferred.reject(this.src)  };
+        preloader.src     = imageSrc;
 
-      loadImageCache[imageSrc] = deferred;
+        loadImageCache[imageSrc] = deferred;
+      }
+      
+      return loadImageCache[imageSrc];
     }
 
 Requires jQuery 1.5 or newer:
