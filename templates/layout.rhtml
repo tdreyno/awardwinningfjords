@@ -36,6 +36,8 @@
     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
+    <%= $cache.inspect %>
+  
     <%= ENV.keys %>
     
     <%= ENV.inspect %>
