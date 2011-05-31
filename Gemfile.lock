@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/tdreyno/toto.git
+  revision: c8622d556b9d262d0005b9cf12b5a10194827c54
+  specs:
+    toto (0.4.9)
+      builder
+      rack
+      rdiscount
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -32,10 +41,6 @@ GEM
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.14.6)
-    toto (0.4.9)
-      builder
-      rack
-      rdiscount
 
 PLATFORMS
   ruby
@@ -48,4 +53,4 @@ DEPENDENCIES
   rack-codehighlighter
   rdiscount
   thin
-  toto (>= 0.4.6)
+  toto!
