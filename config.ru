@@ -7,7 +7,8 @@ class Toto::Article
 end
 
 # Rack config
-use Rack::Static, :urls => ['/stylesheets', '/javascripts', '/images', '/albums', '/iphone-style-checkboxes', '/pageSlider', '/favicon.ico'], :root => 'public'
+require "rack/contrib/static_cache"
+use Rack::StaticCache, :urls => ['/stylesheets', '/javascripts', '/images', '/albums', '/iphone-style-checkboxes', '/pageSlider', '/favicon.ico'], :root => 'public'
 use Rack::CommonLogger
 
 if ENV['RACK_ENV'] == 'development'
