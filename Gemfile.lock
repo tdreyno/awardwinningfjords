@@ -28,6 +28,8 @@ GEM
     mime-types (1.16)
     nokogiri (1.4.4)
     rack (1.3.0)
+    rack-cache (1.0.2)
+      rack (>= 0.4)
     rack-codehighlighter (0.4.7)
       nokogiri (>= 1.4.1)
       rack (>= 1.0.0)
@@ -50,6 +52,7 @@ DEPENDENCIES
   coderay
   foreman
   heroku
+  rack-cache
   rack-codehighlighter
   rdiscount
   thin
