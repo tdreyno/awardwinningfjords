@@ -6,7 +6,11 @@ gem "rdiscount"
 gem "toto", :git => "git://github.com/tdreyno/toto.git"
 gem "coderay"
 gem "rack-codehighlighter"
-gem "rack-cache"
+
+group :production do
+  gem "dalli"
+  gem "rack-cache"
+end
 
 group :development do
   gem "heroku"

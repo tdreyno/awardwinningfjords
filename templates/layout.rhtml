@@ -26,7 +26,7 @@
     <!-- RSS -->
     <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml' />
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
     <script type="text/javascript" src="/javascripts/jqwidont.js"></script>
   </head>
   <%
@@ -36,6 +36,9 @@
     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
+    <%= ENV.keys %>
+    
+    <%= ENV.inspect %>
     <header>
       <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
