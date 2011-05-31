@@ -39,7 +39,7 @@ end
 use NoWww
 
 if ENV['RACK_ENV'] == 'production'
-  require "rack-cache"
+  require "rack/cache"
   use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
 end
 
