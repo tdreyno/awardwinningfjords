@@ -36,7 +36,6 @@
     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
-    <%#= ENV["MEMCACHE_SERVERS"].inspect %>
     <header>
       <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
@@ -94,27 +93,6 @@
         'http://www') + '.google-analytics.com/ga.js';
       ga.setAttribute('async', 'true');
       document.documentElement.firstChild.appendChild(ga);
-      })();
-    </script>
-    
-    <!-- Observer Analytics -->
-    <script type="text/javascript" src="http://www.observerapp.com/record.js"></script>
-    <script type="text/javascript">
-      try { Observerapp.record("4c89426b8725732d24006347"); } catch(e) {};
-    </script>
-    
-    <!-- Gaug.es -->
-    <script type="text/javascript">
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id',
-                       '4d770721192b0c4ab6000002');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
       })();
     </script>
   </body>
