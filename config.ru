@@ -38,11 +38,13 @@ class NoWww
 end
 use NoWww
 
-# if ENV['RACK_ENV'] == 'production'
+if ENV['RACK_ENV'] == 'production'
   require 'dalli'
   require "rack/cache"
-  # use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
-# end
+  
+  $cache = Dalli::Client.new
+  use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
+end
 
 #
 # Create and configure a toto instance

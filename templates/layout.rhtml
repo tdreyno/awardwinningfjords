@@ -36,11 +36,7 @@
     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
-    <%= $cache.inspect %>
-  
-    <%= ENV.keys %>
-    
-    <%= ENV.inspect %>
+    <%#= ENV["MEMCACHE_SERVERS"].inspect %>
     <header>
       <div class="center">
         <h1><a href="/">Award-Winning Fjords</a></h1>
