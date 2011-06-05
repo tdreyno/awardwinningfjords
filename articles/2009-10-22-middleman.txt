@@ -7,6 +7,11 @@ date: 2009/10/22
 [nanoc-docs]:  http://nanoc.stoneship.org/manual/
 [Slickmap]:    http://astuteo.com/slickmap/
 [mm-config]:   http://wiki.github.com/tdreyno/middleman/configuration
+[Middleman version 1.1 has been released]: /2011/04/15/middleman-v11.html
+[Middleman Support Forum]: https://convore.com/middleman/
+
+**Update: [Middleman version 1.1 has been released]**<br />
+**Update: New [Middleman Support Forum]**
 
 Developing large sites can be a tedious process. First of all, a large portion of each page will contain some amount of shared code. You have site-wide navigation, footers, javascript and CSS. Within those sections you may have other common data such as color schemes, asset paths and tracking codes. Experienced developers will see this problem coming from a mile away and start the project with site-wide constants and common components separated into their own reusable files. This works pretty well if you are developing in the same framework or language that the site will eventually operate under in production, but what if your job is strictly front-end and you have no advanced knowledge of the backend which will display your pages?
 
@@ -160,5 +165,3 @@ Source & bug reports
 The code, as always, is on GitHub at: [http://github.com/tdreyno/middleman].<br />
 There is also a wiki at: [http://wiki.github.com/tdreyno/middleman].<br />
 And finally, please report bugs to: [http://github.com/tdreyno/middleman/issues].
-
-**This is the first public announcement of Middleman. Please contribute or help me add tests.**
