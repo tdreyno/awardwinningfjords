@@ -37,3 +37,27 @@ def ask message
   print message
   STDIN.gets.chomp
 end
+
+def perform_git_push(options = '')
+  cmd = "git push #{options}"
+  out, code = sh_with_code(cmd)
+  raise "Couldn't git push. `#{cmd}' failed with the following output:\n\n#{out}\n" unless code == 0
+end
+
+def sh(cmd, &block)
+  out, code = sh_with_code(cmd, &block)
+  code == 0 ? out : raise(out.empty? ? "Running `#{cmd}' failed. Run this command directly for more detailed output." : out)
+end
+
+def sh_with_code(cmd, &block)
+  cmd << " 2>&1"
+  outbuf = ''
+  Bundler.ui.debug(cmd)
+  Dir.chdir(base) {
+    outbuf = `#{cmd}`
+    if $? == 0
+      block.call(outbuf) if block
+    end
+  }
+  [outbuf, $?]
+end

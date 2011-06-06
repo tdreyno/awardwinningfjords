@@ -1,7 +1,7 @@
 <article class="hentry">
   <h1 class="entry-title">
-    <%= title %> 
-    <time class="updated" pubdate><%= article[:date].strftime('%b %e %Y') %></time>
+    <%= data.page.title %> 
+    <time class="updated" pubdate><%= data.blog.article[:date].strftime('%b %e %Y') %></time>
   </h1>
 
   <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
@@ -16,7 +16,7 @@
   </script-->
   
   <div class="entry-content">
-    <%= body %>
+    <%= yield %>
   </div>
 </article>
 
@@ -33,10 +33,10 @@
     <!-- AddThis Button END -->
   </div>
   
-  <% if @config[:disqus] %>
+  <% if settings.disqus %>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
-      var disqus_shortname = '<%= @config[:disqus] %>';
+      var disqus_shortname = '<%= settings.disqus %>';
 
       // var disqus_identifier = 'unique_dynamic_id_1234';
       var disqus_url = '<%= url %>';

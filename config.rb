@@ -1,5 +1,35 @@
 require "susy"
 
+page "/*", :layout_engine => 'erb', :layout => :article_layout
+
+set :disqus, "awf"
+#activate :blog_engine
+#set :blog_engine_permalink, ":year/:month/:day/:title"
+# set :disqus,    'awf'                                     # disqus id, or false
+#set :summary,   :max => 150, :delim => /READMORE/
+data_content :blog, {
+  :article => {
+    :title => "Sup",
+    :url   => "/hi",
+    :path  => "/hi",
+    :date  => Date.today
+  },
+  :articles => [
+    {
+      :title => "Sup",
+      :url   => "/hi",
+      :path  => "/hi",
+      :date  => Date.today
+    }
+  ]
+}
+
+helpers do 
+  def title
+    "hi"
+  end
+end
+
 require 'coderay'
 require 'rack/codehighlighter'
 

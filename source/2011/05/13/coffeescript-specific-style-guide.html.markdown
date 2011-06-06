@@ -1,6 +1,7 @@
---- 
+---
 title: CoffeeScript-specific Style Guide
 date: 13/05/2011
+---
 
 [@topfunky]: http://twitter.com/topfunky
 [CoffeeScript PeepCode screencast]: https://peepcode.com/products/coffeescript

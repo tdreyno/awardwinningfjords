@@ -31,9 +31,9 @@
   </head>
   <%
     body_class = ""
-    body_class = "archives" if @context.has_key? :archives
-    body_class = "index" if @context.has_key? :articles
-    body_class = "post" if @context.has_key? :title
+    # body_class = "archives" if @context.has_key? :archives
+    #     body_class = "index" if @context.has_key? :articles
+    #     body_class = "post" if @context.has_key? :title
   %>
   <body class="<%= body_class %>">
     <header>
@@ -73,7 +73,7 @@
         
         <h2>Previously</h2>
         <ol>
-          <% @articles[0...15].each do |article| %>
+          <% data.blog.articles[0...15].each do |article| %>
             <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article[:date].strftime('%b %e') %></span></li>
           <% end %>
         </li>
