@@ -1,20 +1,17 @@
 source "http://rubygems.org"
 
-gem "builder"
-gem "rdiscount"
-gem "toto", :git => "git://github.com/tdreyno/toto.git"
-gem "coderay"
-gem "rack-contrib"
-gem "rack-codehighlighter"
-
 gem "unicorn"
 
 group :production do
   gem "dalli"
   gem "rack-cache"
+  gem "rack-contrib"
 end
 
 group :development do
+  gem "builder"
+  gem "rdiscount"
+  gem "middleman", :git => "git://github.com/tdreyno/middleman.git"
   gem "heroku"
   gem "foreman"
 end

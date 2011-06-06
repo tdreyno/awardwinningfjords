@@ -1,0 +1,10 @@
+<% for i in 0...5 %>
+  <% article = articles[i] %>
+  <article class="<%= (i == 0) ? 'first' : '' %>">
+    <h1><a href="<%= article.path %>"><%= article.title %></a> <span><%= article[:date].strftime('%b %e %Y') %></span></h1>
+    <%= article.summary %>
+    
+    <div class="more"><a href="<%= article.path %>">read on &raquo;</a></div>
+  </article>
+<% end %>  
+
