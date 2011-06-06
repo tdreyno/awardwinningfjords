@@ -8,19 +8,8 @@ end
 
 # Rack config
 require "rack/contrib/static_cache"
-use Rack::StaticCache, :urls => ['/stylesheets', '/javascripts', '/images', '/albums', '/iphone-style-checkboxes', '/pageSlider', '/favicon.ico'], :root => 'public'
-use Rack::CommonLogger
+use Rack::StaticCache, :urls => ['/'], :root => 'build'
 
-if ENV['RACK_ENV'] == 'development'
-  use Rack::ShowExceptions
-end
-
-require 'coderay'
-require 'rack/codehighlighter'
-
-use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", 
-  :pattern => /\A:::([-_+\w]+)\s*(\n|&#x000A;)/, :logging => false
-  
 class NoWww
   def initialize(app)
     @app = app
@@ -39,13 +28,11 @@ class NoWww
 end
 use NoWww
 
-if ENV['RACK_ENV'] == 'production'
-  require 'dalli'
-  require "rack/cache"
-  
-  $cache = Dalli::Client.new
-  use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
-end
+# require 'dalli'
+# require "rack/cache"
+# 
+# $cache = Dalli::Client.new
+# use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
 
 #
 # Create and configure a toto instance

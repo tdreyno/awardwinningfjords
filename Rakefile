@@ -1,7 +1,3 @@
-require 'toto'
-
-@config = Toto::Config::Defaults
-
 task :default => :new
 
 desc "Create a new article."
@@ -28,6 +24,8 @@ end
 desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
+  `mm-build`
+  #`commit`
   `git push heroku master`
 end
 
@@ -39,4 +37,3 @@ def ask message
   print message
   STDIN.gets.chomp
 end
-

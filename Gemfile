@@ -14,4 +14,7 @@ group :development do
   gem "middleman", :git => "git://github.com/tdreyno/middleman.git"
   gem "heroku"
   gem "foreman"
+  gem "compass-susy-plugin"
+  gem "rack-codehighlighter"
+  gem "coderay"
 end
