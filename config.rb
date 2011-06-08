@@ -1,11 +1,12 @@
 require "susy"
 
-page "/*", :layout_engine => 'erb', :layout => :article_layout
+# page "/*", :layout_engine => 'erb', :layout => :article_layout
 
+
+activate :blog
+# set :blog_permalink, "/:year/:month/:day/:title.html"
 set :disqus, "awf"
-#activate :blog_engine
-#set :blog_engine_permalink, ":year/:month/:day/:title"
-# set :disqus,    'awf'                                     # disqus id, or false
+
 #set :summary,   :max => 150, :delim => /READMORE/
 data_content :blog, {
   :article => {

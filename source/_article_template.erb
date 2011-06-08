@@ -1,7 +1,7 @@
 <article class="hentry">
   <h1 class="entry-title">
-    <%= data.page.title %> 
-    <time class="updated" pubdate><%= data.blog.article[:date].strftime('%b %e %Y') %></time>
+    <%= current_article_title %> 
+    <time class="updated" pubdate><%= current_article_date.strftime('%b %e %Y') %></time>
   </h1>
 
   <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
@@ -16,7 +16,7 @@
   </script-->
   
   <div class="entry-content">
-    <%= yield %>
+    <%= yield_content :blog_article %>
   </div>
 </article>
 

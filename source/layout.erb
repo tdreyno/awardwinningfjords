@@ -14,7 +14,8 @@
     <link href='http://www.myopenid.com/server' rel='openid2.provider' />
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
     
-    <title><%= title %> &laquo; Thomas Reynolds</title>
+    <!-- <title><%= title %> &laquo; Thomas Reynolds</title> -->
+    <title><%= current_article_title %> &laquo; Thomas Reynolds</title>
     
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -53,7 +54,8 @@
     
     <div id="frame">
       <div id="post">
-        <%= yield %>
+        <% content_for :blog_article, yield %>
+        <%= partial settings.blog_article_template %>
       </div>
       <aside id="previously">
         <p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
@@ -79,6 +81,19 @@
         </li>
       </aside>
     </div>
+    
+    <script type="text/javascript">
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
     
     <!-- Google Analytics -->
     <script type="text/javascript">
