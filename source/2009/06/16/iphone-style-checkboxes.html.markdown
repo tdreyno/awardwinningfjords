@@ -38,9 +38,9 @@ Examples
     </tr>
   </table>
 </div>
-<script src='https://raw.github.com/tdreyno/iphone-style-checkboxes/master/jquery/jquery-1.4.js' type='text/javascript'></script>
-<script src='https://raw.github.com/tdreyno/iphone-style-checkboxes/master/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
-<link href='https://raw.github.com/tdreyno/iphone-style-checkboxes/master/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script src='/iphone-style-checkboxes/jquery/jquery-1.4.js' type='text/javascript'></script>
+<script src='/iphone-style-checkboxes/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
+<link href='/iphone-style-checkboxes/style.css' media='screen' rel='stylesheet' type='text/css'>
 <script type='text/javascript'>
   $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
 </script>
