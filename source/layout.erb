@@ -14,7 +14,11 @@
     <link href='http://www.myopenid.com/server' rel='openid2.provider' />
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location' />
     
-    <title><%= current_article_title %> &laquo; Thomas Reynolds</title>
+    <% if is_blog_article? %>
+      <title><%= current_article_title %> &laquo; Thomas Reynolds</title>
+    <% else %>
+      <title>Award Winning Fjords &laquo; Thomas Reynolds</title>
+    <% end %>
     
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

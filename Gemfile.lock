@@ -1,40 +1,9 @@
-GIT
-  remote: git://github.com/tdreyno/middleman.git
-  revision: 89ccb10452bf317c6daf0f406f3ae34c1f20eaf0
-  specs:
-    middleman (2.0.0.beta1)
-      coffee-filter (~> 0.1.0)
-      coffee-script (~> 2.2.0)
-      compass (~> 0.11.1)
-      haml (~> 3.1.0)
-      httparty (~> 0.7.0)
-      padrino-core (~> 0.9.23)
-      padrino-helpers (~> 0.9.23)
-      rack (~> 1.0)
-      rack-test (~> 0.5.0)
-      sass (~> 3.1.0)
-      shotgun (~> 0.8.0)
-      sinatra (~> 1.2.0)
-      slim (~> 0.9.4)
-      thin (~> 1.2.0)
-      thor (~> 0.14.0)
-      tilt (~> 1.3.1)
-      uglifier (~> 0.5.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (3.0.7)
     builder (3.0.0)
     chunky_png (1.2.0)
     coderay (0.9.8)
-    coffee-filter (0.1.1)
-      coffee-script (>= 2.2.0)
-      haml (>= 3.0.18)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.1.1)
     compass (0.11.1)
       chunky_png (~> 1.1)
       fssm (>= 0.2.7)
@@ -42,82 +11,38 @@ GEM
     compass-susy-plugin (0.9)
       compass (>= 0.11.1)
     configuration (1.2.0)
-    crack (0.1.8)
     daemons (1.1.3)
-    dalli (1.0.5)
     eventmachine (0.12.10)
-    execjs (1.1.0)
-      multi_json (~> 1.0)
     foreman (0.18.0)
       term-ansicolor (~> 1.0.5)
       thor (>= 0.13.6)
     fssm (0.2.7)
-    haml (3.1.1)
-    heroku (2.2.4)
+    heroku (2.2.8)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       term-ansicolor (~> 1.0.5)
-    http_router (0.7.10)
-      rack (>= 1.0.0)
-      url_mount (~> 0.2.1)
-    httparty (0.7.7)
-      crack (= 0.1.8)
-    i18n (0.6.0)
-    kgio (2.4.1)
     launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
     mime-types (1.16)
-    multi_json (1.0.3)
     nokogiri (1.4.4)
-    padrino-core (0.9.29)
-      activesupport (>= 3.0.0)
-      http_router (~> 0.7.8)
-      sinatra (~> 1.2.6)
-      thor (>= 0.14.3)
-      tilt (~> 1.3.0)
-    padrino-helpers (0.9.29)
-      i18n (>= 0.4.1)
-      padrino-core (= 0.9.29)
     rack (1.3.0)
-    rack-cache (1.0.2)
-      rack (>= 0.4)
     rack-codehighlighter (0.4.7)
       nokogiri (>= 1.4.1)
       rack (>= 1.0.0)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
-    rack-test (0.5.7)
-      rack (>= 1.0)
-    rake (0.9.1)
+    rake (0.9.2)
     rdiscount (1.6.8)
     rest-client (1.6.3)
       mime-types (>= 1.16)
     sass (3.1.2)
-    shotgun (0.8)
-      rack (>= 1.0)
-    sinatra (1.2.6)
-      rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
-    slim (0.9.4)
-      temple (~> 0.3.0)
-      tilt (~> 1.2)
-    temple (0.3.0)
     term-ansicolor (1.0.5)
     thin (1.2.11)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.14.6)
-    tilt (1.3.2)
-    uglifier (0.5.4)
-      execjs (>= 0.3.0)
-      multi_json (>= 1.0.2)
-    unicorn (3.6.2)
-      kgio (~> 2.3)
-      rack
-    url_mount (0.2.1)
-      rack
 
 PLATFORMS
   ruby
@@ -126,12 +51,9 @@ DEPENDENCIES
   builder
   coderay
   compass-susy-plugin
-  dalli
   foreman
   heroku
-  middleman!
-  rack-cache
   rack-codehighlighter
   rack-contrib
   rdiscount
-  unicorn
+  thin
