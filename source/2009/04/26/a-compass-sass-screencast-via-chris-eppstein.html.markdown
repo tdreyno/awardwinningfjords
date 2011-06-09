@@ -1,6 +1,8 @@
+---
 title: A Compass &amp; Sass Screencast via Chris Eppstein
 slug: a-compass-sass-screencast-via-chris-eppstein
 date: 2009/04/26
+---
 
 [Compass: A Real Stylesheet Framework]: http://vimeo.com/4335944
 

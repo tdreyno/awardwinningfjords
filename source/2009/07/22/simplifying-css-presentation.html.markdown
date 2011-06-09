@@ -1,6 +1,8 @@
+---
 title: Simplifying CSS with Sass Presentation
 slug: simplifying-css-presentation
 date: 2009/07/22
+---
 
 [Simplifying CSS With Sass]: http://www.slideshare.net/tdreyno/simplifying-css-with-sass
 

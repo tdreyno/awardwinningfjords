@@ -1,5 +1,7 @@
+---
 title: Using RVM to Manage Multiple Ruby Interpreters
 date: 2010/02/17
+---
 
 [Ruby Version Manager]: http://rvm.beginrescueend.com/rvm/install/
 [Middleman]:            http://awardwinningfjords.com/2009/10/22/middleman.html

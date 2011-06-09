@@ -1,6 +1,8 @@
+---
 title: Don't repeat yourself, use Sass mixins
 slug: dont-repeat-yourself-use-sass-modules
 date: 2009/04/02
+---
 
 There are quite a few situations in CSS where you are simply copy &amp; pasting the same set of styles in multiple places. If at some point, you want to tweak these styles, you'll need to track down and update each set of styles. Sass introduces the concept of mixins which are blocks of nested Sass code which can be applied to any selector in your Sass document. Think of them as variables which can hold multiple levels of information. The syntax for defining a module is simple:
 

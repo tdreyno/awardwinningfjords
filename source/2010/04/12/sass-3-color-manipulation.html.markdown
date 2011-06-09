@@ -1,6 +1,7 @@
 --- 
 title: Sass 3 Color Manipulation
 date: 12/04/2010
+---
 
 [Powerful Color Manipulation with Sass]:          http://nex-3.com/posts/89-powerful-color-manipulation-with-sass
 [Brandon Mathis' fantastic Fancy Button library]: http://brandonmathis.com/projects/fancy-buttons/demo/

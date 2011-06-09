@@ -1,6 +1,7 @@
 --- 
 title: UINavigationController implementation for SenchaTouch
 date: 02/07/2010
+---
 
 [SenchaTouch]: http://www.sencha.com/products/touch/
 [several very impressive demos]: http://www.sencha.com/products/touch/demos.php

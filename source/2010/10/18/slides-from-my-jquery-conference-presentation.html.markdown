@@ -1,6 +1,7 @@
 --- 
 title: Slides from my jQuery Conference Presentation
 date: 18/10/2010
+---
 
 [download the PDF directly]: http://dl.dropbox.com/u/102356/organizing-code-with-javascriptmvc.pdf
 

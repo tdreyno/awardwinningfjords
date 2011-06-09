@@ -1,6 +1,7 @@
 --- 
 title: "Best Albums of the Year: 2010"
 date: 09/12/2010
+---
 
 <link rel="stylesheet" href="/stylesheets/best-of-2010.css?v2" type="text/css" media="screen" />
 

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+<!-- Google Setup --><meta content="VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=" name="verify-v1">
+<!-- OpenID Setup --><link href="http://www.myopenid.com/server" rel="openid.server">
+<link href="http://tdreyno.myopenid.com/" rel="openid.delegate">
+<link href="http://tdreyno.myopenid.com" rel="openid2.local_id">
+<link href="http://www.myopenid.com/server" rel="openid2.provider">
+<meta content="http://www.myopenid.com/xrds?username=tdreyno.myopenid.com" http-equiv="X-XRDS-Location">
+<title>Javascript Microframeworks and The Future « Thomas Reynolds</title>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--><!-- Stylesheet --><link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
+<!-- RSS --><link href="http://feeds2.feedburner.com/awf-allposts" rel="alternate" title="Award Winning Fjords" type="application/rss+xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script><!--script type="text/javascript" src="/javascripts/jqwidont.js"></script-->
+</head>
+<body class="post">
+    <header><div class="center">
+        <h1><a href="/">Award-Winning Fjords</a></h1>
+        <h2 class="byline author vcard">
+          Words &amp; Wisdom by 
+          <span class="fn">Thomas Reynolds</span>
+        </h2>
+
+        <p id="social">
+          <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br><a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
+        </p>
+      </div>
+    </header><div id="frame">
+      <div id="post">
+        
+          
+          <article class="hentry"><h1 class="entry-title">
+    Javascript Microframeworks and The Future 
+    <time class="updated" pubdate>May  9 2011</time>
+</h1>
+
+  <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
+  (function() {
+      var s     = document.getElementsByTagName('script')[0],
+          rdb   = document.createElement('script');
+      rdb.type  = 'text/javascript';
+      rdb.async = true;
+      rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+      s.parentNode.insertBefore(rdb, s);
+  })();
+  </script-->
+  
+  <div class="entry-content">
+    <p>Last week at <a href="http://2011.jsconf.us/">jsconf</a>, <a href="http://mir.aculo.us/">Thomas Fuchs</a> continued his argument for small frameworks with the release of <a href="http://microjs.com/">MicroJS</a> which acts as a listing of tiny, single-purpose libraries. The idea being that freedom and choice, combined with optimizing for size will result in a better product than using a larger, monolithic "framework."</p>
+
+<p>But what are we talking about when we say "framework" and what kind of applications can be built with microframeworks?</p>
+
+<p></p>
+
+<h2>The Two Types of HTML Applications</h2>
+
+<p>It is useful to denominate the two kinds of web applications that exist on the web. First, there is the traditional "Progressive Enhancement" apps. These use Javascript to bring additional interaction, animation and life to static HTML/CSS. The benefit is that even if the client has problems with Javascript due to some esoteric IE bug, or their phone doesn't support Javascript, that they can still interact with the site normally. The majority of large sites using jQuery act in this way. They output HTML from the backend and then jQuery adds interaction.</p>
+
+<p>The second type is the MVC application. These frameworks start from a blank slate and use their own Views (templates) to build up the components of an app. This view layer certainly adds complexity (and lines of code) to the framework, but the result is usually a more Desktop-like user experience. The big frameworks of this type are <a href="http://blog.sproutcore.com/">Sproutcore</a>, <a href="http://cappuccino.org/">Cappuccino</a> and to a lesser degree, <a href="http://documentcloud.github.com/backbone/">Backbone.js</a>. <a href="http://skilldrick.co.uk/2011/05/javascript-and-the-end-of-progressive-enhancement/comment-page-1/">Nick Morgan argues that these types of app are the future</a>.</p>
+
+<p>We'll need to keep in mind both types of applications as we think about optimization. What benefits one might not benefit the other and it's important to figure out the kind of app a person is talking about when they are discussing "microframeworks."</p>
+
+<h2>The Problem</h2>
+
+<p>On the web, speed is king. Yahoo and Amazon have shown that every additional millisecond it takes to load your page has a direct result in decreasing sales. Right now, the biggest bottleneck is the way javascript loading blocks rendering in the browser. The modern web craves javascript. The browser is just an empty shell until it is scripted to life. This means the entire stack of web interactivity has to be written in Javascript and it has to be transferred to every single client who views the site. There are 3 solutions to this problem:</p>
+
+<h3>The Great Cache in the Sky</h3>
+
+<p>jQuery is now present on about 44% of websites. jQuery also weighs about 130k (before minification and gzipping). Which means after just a little casual browsing, you've probably downloaded jQuery several times. Browsers cache Javascript based on which domain it was downloaded from, which means your browser is actually storing 1 copy of jQuery for every site you visited that used it. And, even though you have a dozen copies already, it's going to download it again when you change to a new site.</p>
+
+<p>The jQuery project and Google both offer to serve jQuery from their respective CDNs. These CDNs are heavily optimized to get clients a copy of jQuery as quickly as possible and they have the added bonus of using a consistent URL. That means if domaina.com and domainb.com both point to Google's copy of jQuery, then they will share the same file in the cache. This means domainb.com and all subsequent domains you visit using the Google CDN copy of jQuery won't have to be delayed waiting for jQuery to download, it will already be in the cache.</p>
+
+<p>This is a great idea. With jQuery on 44% of the web, it's time to admit that it is the "standard library" of the web. Personally, I think Google Chrome should ship with the last dozen versions of jQuery embedded and have an option to prefer the local copies over downloading a new one. The standard library should ship with the language (in the browser). I think this will happen some day, but until then...</p>
+
+<h3>Load Asynchronously</h3>
+
+<p>There are a handful of popular new tools for loading your Javascript without blocking such as LABjs, RequireJS, StealJS, yepnope and script.js. Of course, these tools are themselves written in Javascript and must be first loaded in a blocking fashion. However, they are usually small enough that this isn't a real issue. Once the script loader is ready, it will begin pulling in your other Javascript files.</p>
+
+<p>Asynchronous script loading works great for apps using "progressive enhancement", you can off-load almost all the Javascript, including jQuery, until later and when it finally loads the page simply gets a little nicer and interactive. However, to the user it looks like the page is loaded and they can begin interacting immediately.</p>
+
+<p>"MVC Applications" require more complicated organization and packaging to work asynchronously. They need to know which parts of the app can be loaded later and which are needed immediately. The larger frameworks, like <a href="http://blog.sproutcore.com/">Sproutcore</a> and <a href="http://javascriptmvc.com/">JavascriptMVC</a>, have already solved this problem, but it does add some conceptual overhead.</p>
+
+<h3>Use Less Code</h3>
+
+<p>Simply put: send less data to the client. Sounds easy? Remember that jQuery is 130k before you even start writing your own code. This is where Thomas Fuchs (and <a href="http://microjs.com/">MicroJS</a>) come in. He argues that "frameworks" are too big and include stuff that you probably don't need. He, and others, seem purposefully vague about which framework they are rebelling against, but let's be honest: it's jQuery.</p>
+
+<p>I've built some large applications of both the Progressive Enhancement and MVC varieties and initially I couldn't understand how a seasoned developer could possibly argue that glueing a dozen plugins together is better than a consistent application framework. Tom Dale, of the Sproutcore team, <a href="http://tomdale.net/2011/04/imagine-a-beowulf-cluster-of-javascript-frameworks/">was similarly flabbergasted</a>. While I agree with everything Tom writes in that article, I think he got hung up on terminology. Thomas Fuchs isn't arguing against Sproutcore, he is covertly arguing against jQuery. I, Thomas Reynolds (let's call this the Mexican Standoff of Javacript Toms), personally love Sproutcore and so I'll spend the rest of this article talking about replacing jQuery for Progressively Enhanced apps.</p>
+
+<h2>Replacing jQuery Piece by Piece</h2>
+
+<p>What is jQuery? Do most developers use everything available? Here are the core functions and their current file sizes:</p>
+
+<ul>
+<li>Selector Engine (33k)</li>
+<li>DOM Manipulation (21k)</li>
+<li>DOM Attributes (16k)</li>
+<li>DOM Data Storage (9k)</li>
+<li>Core Helpers and Plugin Framework: $.each, $.extend, etc (23k)</li>
+<li>CSS reading/writing/animating (26k)</li>
+<li>AJAX (26k)</li>
+<li>Events (32k)</li>
+<li>Deferreds (5k)</li>
+</ul>
+<p>Take a look at that list and then take a look at <a href="http://microjs.com/">MicroJS</a>. Look familiar? The majority of these micro libraries take aim at a specific portion of jQuery and attempt to do it in a smaller file size. Sound great? If you're optimizing for size it does, but let me issue a word of warning.</p>
+
+<p>jQuery is used on 44% of the web. It is better tested, has more users and has better browser support than any other framework. It is a very well organized project which is continuing to improve and increase performance on every release. I agree with Yehuda Katz, the most important piece of any framework is the size, age and knowledge of its community. Therefore, I believe these new micro libraries will be forced to re-learn the same lessons (whether it be browser support or speed optimization) that jQuery has already solved.</p>
+
+<h2>Enter Ender.js</h2>
+
+<p><a href="http://ender.no.de/">Ender.js</a> is a framework framework. It attempts to provide a scaffold roughly shaped like jQuery with places to plugin micro libraries of your choice to fill in the features. Then Ender.js will glue those parts together and produce either a single output file or a file which loads each component asynchronously.</p>
+
+<p>The default jQuery-like bundle is called "jeesh" and includes:</p>
+
+<ul>
+<li>Selector Engine (Qwery)</li>
+<li>DOM Manipulation (Bonzo)</li>
+<li>DOM Attributes (Bonzo)</li>
+<li>DOM Data Storage (Bonzo)</li>
+<li>Core Helpers and Plugin Framework: $.each, $.extend, etc (Underscore &amp; Klass)</li>
+<li>CSS reading/writing/animating (Émile)</li>
+<li>AJAX (Reqwest)</li>
+<li>Events (Bean)</li>
+</ul>
+<p>These pieces fit together nicely and create an almost drop-in replacement for jQuery. The edges are a little rough and you will have to rewrite some code to use it. <a href="http://www.dustindiaz.com/">Dustin Diaz</a> wrote almost all of theses default libraries, so atleast there is some consistency. As Ender.js gets more popular and more libraries are integrated which weren't written by Dustin, I expect the API will get more and more awkward. As I said above, while Dustin is a very smart person (and he's had help from Thomas Fuchs as well), neither can match jQuery's maturity, test suite and institutional knowledge.</p>
+
+<p>Still, if you're optimizing for size on a Progressively Enhanced app, Ender.js is a nice fit. If you're optimizing for consistency and the ability to hire and bring new developers up-to-speed quickly, then you should probably stick with jQuery.</p>
+
+<h3>Anecdotal "Evidence"</h3>
+
+<p>I'm working on a small Progressively Enhanced portfolio site. I've completed the homepage, which uses 2 "plugins" for some slideshows and some helper functions. The initial build was with jQuery and the jQueryUI widget factory. Minified: <u>109k</u>, the majority of that being jQuery which I wasn't really using that many features of.</p>
+
+<p>Next, I ported the site to JavascriptMVC which has a very nice dependency management system and only pulls in the pieces you need (and jQuery). The coding-style was nicer, the code modularized and the minified output was: <u>110k</u>. Makes sense, it has all of jQuery plus a 1k of glue code (Class system + Controllers). I'd really like to see JavascriptMVC (and Sproutcore too), break up jQuery into it's components and rely on those directly. Their dependency management systems can handle this and it should reduce the file system for relatively simple apps.</p>
+
+<p>Finally, I used Ender with Bonzo, Émile, Bean, Qwery and <a href="http://extralogical.net/projects/firmin/">Firmin</a>. I had to change some stuff around and basically invent a micro controller system, but the minified output was only: <u>38k</u>.</p>
+
+<p>So, not a surprise, when competing purely on size, microframeworks and Ender.js win. I didn't really love the code I had to write for the Ender.js version and I don't appreciate opening 4 different documentation pages to figure out the methods. Still, I'll probably stick with it because the project has only a single developer, doesn't require great IE compatibility and my primary goal is speed.</p>
+
+<h2>Conclusion</h2>
+
+<p>People are going to keep talking about microframeworks, but I don't see jQuery's usage decreasing at all. Developer Happiness should be the primary goal, but we can't work on that until these technical issues of memory, cpu usage, gpu usage and blocking scripts are solved. They will be solved and looking back, these will feel like the dark ages.</p>
+
+<p>Here's what I'm looking forward to in the "future." I'd like to see an end-to-end framework written in CoffeeScript. Models, Views and Controllers are the same code and the decision whether to execute code on the client or the server can be optimized. Doing the same database requests? Optimize and cache it on the backend. Rendering the same views? Do it on the backend. I'd like to see the client open a connection to the node.js backend and pipeline scripts and data as needed. If something would be faster on the client side, build it into a module and pipe it to the client on demand.</p>
+
+<p>Honestly, I don't think we'll be waiting too much longer for such a system. A first step can be seen in Shopify's <a href="http://batmanjs.org/">batman.js</a> which made a huge splash at jsconf. Property binding is huge (also at the heart of Sproutcore) and reduces the need for jQuery's DOM manipulation hammer. Can't wait to play with it!</p>
+
+  </div>
+</article><div id="comments">
+  <div class="block">
+    <h2>Comments</h2>
+
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d1d09583a6522e4"></script><!-- AddThis Button END -->
+</div>
+  
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'awf';
+
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      var disqus_url = 'http://example.org/2011/05/09/javascript-microframeworks-and-the-future.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+</div>
+
+        
+      </div>
+      <aside id="previously"><p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
+        
+        <h2>Projects</h2>
+        <ol>
+<li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
+          <li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/jqueryChop/">jQuery Image Chop</a></li>
+          <li><a href="https://github.com/tdreyno/javascriptmvc-pure">Pure templates for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/compass-slickmap">Slickmap for Compass</a></li>
+          <li><a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a></li>
+        </ol>
+<h2>Previously</h2>
+        <ol>
+<li>
+<a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
+</li>
+          
+            <li>
+<a href="/2011/05/09/javascript-microframeworks-and-the-future.html">Javascript Microframeworks and The Future</a> <span>May  9</span>
+</li>
+          
+            <li>
+<a href="/2011/05/06/trigger-css3-animations-with-jquery.html">Trigger CSS3 Animations with jQuery</a> <span>May  6</span>
+</li>
+          
+            <li>
+<a href="/2011/05/03/jquerydeferred-image-preloader.html">jQuery.Deferred Image Preloader</a> <span>May  3</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-launched-pixelunion-v2.html">Just Launched: PixelUnion v2</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-give-a-damn-about-something.html">Just Give a Damn About Something</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/24/crossfit-is-for-nerds.html">CrossFit is for Nerds</a> <span>Apr 24</span>
+</li>
+          
+            <li>
+<a href="/2011/04/23/branching-out-opening-up-and-publishing-more.html">Branching Out, Opening Up and Publishing More</a> <span>Apr 23</span>
+</li>
+          
+            <li>
+<a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
+</li>
+          
+            <li>
+<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
+</li>
+          
+            <li>
+<a href="/2011/04/08/announcing-wouldhirecom.html">Announcing: WouldHire.com</a> <span>Apr  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/18/model-and-data-store-javascriptmvc.html">Model and Data Store: JavascriptMVC</a> <span>Feb 18</span>
+</li>
+          
+            <li>
+<a href="/2011/02/11/aaron-quint-on-javascript-hash-urls.html">Aaron Quint on Javascript Hash URLs</a> <span>Feb 11</span>
+</li>
+          
+            <li>
+<a href="/2011/02/08/andy-rutledge-on-kickstarter.html">Andy Rutledge on Kickstarter</a> <span>Feb  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/06/future-of-middleman-survey.html">Future of Middleman Survey</a> <span>Feb  6</span>
+</li>
+          
+        
+      </ol></aside>
+</div>
+    
+    <script type="text/javascript">
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script><!-- Google Analytics --><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-9']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+</body>
+</html>

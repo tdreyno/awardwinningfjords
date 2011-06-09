@@ -1,6 +1,7 @@
 --- 
 title: A Learning Experience. iPhone-style checkboxes in Coffee-Script
 date: 01/03/2010
+---
 
 [Coffee Script website]: http://jashkenas.github.com/coffee-script/
 [iphone-coffee]: http://github.com/tdreyno/iphone-style-checkboxes/blob/master/coffee/iphone-style-checkboxes.coffee

@@ -1,6 +1,7 @@
 --- 
 title: Trigger CSS3 Animations with jQuery
 date: 06/05/2011
+---
 
 Did you know that jQuery 1.4.3 added a system for adding custom css attributes? For example, any normal style can be applied like so:
 

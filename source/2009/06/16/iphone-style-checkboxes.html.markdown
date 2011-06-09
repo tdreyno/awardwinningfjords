@@ -1,6 +1,8 @@
+---
 title: Introducing iPhone-style Checkboxes
 slug: iphone-style-checkboxes
 date: 2009/06/16
+---
 
 [Prototype version]:    /2009/06/29/prototype-iphone-style-checkboxes.html
 [ExtJS version]:        http://github.com/steelThread/ExtJs-ToggleSlide
@@ -38,7 +40,7 @@ Examples
 </div>
 <script src='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/jquery/jquery-1.4.js' type='text/javascript'></script>
 <script src='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
-<link charset='utf-8' href='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/style.css' media='screen' rel='stylesheet' type='text/css' />
+<link href='https://github.com/tdreyno/iphone-style-checkboxes/raw/master/style.css' media='screen' rel='stylesheet' type='text/css' />
 <script type='text/javascript'>
   $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
 </script>
@@ -49,7 +51,6 @@ Download and implement
 In keeping with the jQuery philosophy, using the iphone-style-checkboxes library is very simple.
 [Download the package],
 unzip it and place the javascript, images and stylesheet where you please. You'll need to update the stylesheet to point to the new location of your images if they have changed relative to the stylesheet.
-
 
 Once the files are available to your site, activating the script is very easy:
 

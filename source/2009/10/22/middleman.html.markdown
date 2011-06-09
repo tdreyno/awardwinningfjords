@@ -1,6 +1,8 @@
+---
 title: The Middleman. A modular, feature-rich static site generator
 slug: middleman
 date: 2009/10/22
+---
 
 [StaticMatic]: http://staticmatic.rubyforge.org/
 [Nanoc]:       http://nanoc.stoneship.org/

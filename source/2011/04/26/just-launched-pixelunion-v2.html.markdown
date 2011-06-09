@@ -1,6 +1,7 @@
 --- 
 title: "Just Launched: PixelUnion v2"
 date: 26/04/2011
+---
 
 A project I've been working on has just launched. Check out the release post from the Metalab blog below:
 

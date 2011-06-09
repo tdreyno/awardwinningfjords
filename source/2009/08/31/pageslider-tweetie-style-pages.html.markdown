@@ -1,6 +1,8 @@
+---
 title: Tweetie-style paging with pageSlider
 slug: pageslider-tweetie-style-pages
 date: 2009/08/31
+---
 
 [Tweetie for Mac]: http://www.atebits.com/tweetie-mac/
 [JiveWorld09]:     http://www.jivesoftware.com/jiveworld/faqs

@@ -1,6 +1,7 @@
 --- 
 title: Middleman v1.1
 date: 15/04/2011
+---
 
 [I introduced Middleman on this blog]: /2009/10/22/middleman
 ["Future of Middleman Survey"]: /2011/02/06/future-of-middleman-survey

@@ -1,6 +1,7 @@
 --- 
 title: "Middleman Feature: Config.rb can setup Rack middleware"
 date: 11/10/2010
+---
 
 [Middleman]: http://github.com/tdreyno/middleman
 [rack-codehighlighter]: http://github.com/wbzyl/rack-codehighlighter

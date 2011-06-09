@@ -1,6 +1,7 @@
 --- 
 title: HTML5 localStorage for JavascriptMVC
 date: 21/05/2010
+---
 
 [John Resig's blog post]: http://ejohn.org/blog/javascript-micro-templating/
 [OpenAjax]: http://www.openajax.org/index.php

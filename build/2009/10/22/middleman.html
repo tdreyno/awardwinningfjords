@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+<!-- Google Setup --><meta content="VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=" name="verify-v1">
+<!-- OpenID Setup --><link href="http://www.myopenid.com/server" rel="openid.server">
+<link href="http://tdreyno.myopenid.com/" rel="openid.delegate">
+<link href="http://tdreyno.myopenid.com" rel="openid2.local_id">
+<link href="http://www.myopenid.com/server" rel="openid2.provider">
+<meta content="http://www.myopenid.com/xrds?username=tdreyno.myopenid.com" http-equiv="X-XRDS-Location">
+<title>The Middleman. A modular, feature-rich static site generator « Thomas Reynolds</title>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--><!-- Stylesheet --><link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
+<!-- RSS --><link href="http://feeds2.feedburner.com/awf-allposts" rel="alternate" title="Award Winning Fjords" type="application/rss+xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script><!--script type="text/javascript" src="/javascripts/jqwidont.js"></script-->
+</head>
+<body class="post">
+    <header><div class="center">
+        <h1><a href="/">Award-Winning Fjords</a></h1>
+        <h2 class="byline author vcard">
+          Words &amp; Wisdom by 
+          <span class="fn">Thomas Reynolds</span>
+        </h2>
+
+        <p id="social">
+          <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br><a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
+        </p>
+      </div>
+    </header><div id="frame">
+      <div id="post">
+        
+          
+          <article class="hentry"><h1 class="entry-title">
+    The Middleman. A modular, feature-rich static site generator 
+    <time class="updated" pubdate>Oct 22 2009</time>
+</h1>
+
+  <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
+  (function() {
+      var s     = document.getElementsByTagName('script')[0],
+          rdb   = document.createElement('script');
+      rdb.type  = 'text/javascript';
+      rdb.async = true;
+      rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+      s.parentNode.insertBefore(rdb, s);
+  })();
+  </script-->
+  
+  <div class="entry-content">
+    <p><strong>Update: <a href="/2011/04/15/middleman-v11.html">Middleman version 1.1 has been released</a></strong><br><strong>Update: New <a href="https://convore.com/middleman/">Middleman Support Forum</a></strong></p>
+
+<p>Developing large sites can be a tedious process. First of all, a large portion of each page will contain some amount of shared code. You have site-wide navigation, footers, javascript and CSS. Within those sections you may have other common data such as color schemes, asset paths and tracking codes. Experienced developers will see this problem coming from a mile away and start the project with site-wide constants and common components separated into their own reusable files. This works pretty well if you are developing in the same framework or language that the site will eventually operate under in production, but what if your job is strictly front-end and you have no advanced knowledge of the backend which will display your pages?</p>
+
+<p>The two most common approaches I've encountered are to develop every page statically with shared components repeated in each and every file. Alternatively, many developers assume global familiarity with PHP or ASP and use some form of Server-Side Include for shared components. The situation gets a bit trickier for global constants and shared paths. I've seen PHP variables scattered throughout a site. I've also seen IDE-specific includes (like Textmate's) used for shared content and variables.</p>
+
+<p>These approaches have a couple problems. First, they assume the client cares what technology you use. Second, they require you to deploy the site to a web-server before the client can preview the design. And finally, the backend team will probably be frustrated with your PHP unless they just so happen to use it as well.</p>
+
+<p>The solution is to use strong backend tools and concepts like variables, helper functions, layouts (or MasterPages) and javascript/css minifiers while still delivering plain old, static HTML to the client.</p>
+
+<h2>Existing solutions</h2>
+
+<p>The Ruby world already has a handful of tools which accomplish this. The two most common, in my opinion, are <a href="http://staticmatic.rubyforge.org/">StaticMatic</a> and <a href="http://nanoc.stoneship.org/">Nanoc</a>. I have far more experience with StaticMatic so I'll talk about that first.</p>
+
+<p>StaticMatic is heavily inspired by Ruby on Rails and performs it's task in a similar, but still slightly different, way. I've used StaticMatic for years, contributed to it's codebase and converted anyone who would listen to using it. It allowed me to use Haml &amp; Sass in static pages and I loved it. However, I have my own opinions and StaticMatic does a lot of little things differently than I'd like. Rather than fork that project or complain online, I wrote my own replacement which fits my style of development more closely. Apples and oranges in my opinion, but maybe other developers will be more at home with Middleman, like I am.</p>
+
+<p>Nanoc, on the other hand, looks very, very powerful. Unfortunately, I've been frequently overwhelmed by the <a href="http://nanoc.stoneship.org/manual/">documentation</a> and feature set. Like I said above, I'm scratching my own itch and Nanoc provided a lot more than I needed while requiring a lot of Ruby-writing to work with. I see Middleman as the Sinatra of the static deployment world. There are bigger, and arguably better, systems out there, but my niche is small, easy to learn and fast.</p>
+
+<h2>Middleman</h2>
+
+<p>The best way to describe Middleman is to show you how I use it. I'll show you how to install it a little further down. The <tt>mm-init</tt> command takes a single argument, the directory which will contain your new project. If I run that command from the terminal, I will get the following:</p>
+
+<pre class="CodeRay"># mm-init .
+Generating with setup generator:
+     [ADDED]  init.rb
+     [ADDED]  views/index.html.haml
+     [ADDED]  views/layout.haml
+     [ADDED]  views/stylesheets/site.css.sass
+     [ADDED]  public/stylesheets
+     [ADDED]  public/javascripts
+     [ADDED]  public/images
+</pre>
+
+<p>The initializer creates a homepage (index.html.haml), a layout to contain shared interface elements and a site-wide stylesheet. As you can see, Haml and Sass are the default templating languages. However, you're free to replace .haml with .erb and use Erb templates or enable additional renderers like Markdown (more on this later). The Sass support comes with Compass bundled to provide a large number of css frameworks such as YUI, Blueprint, 960.gs, Susy and more.</p>
+
+<p>The init.rb file allows customization and enabling or disabling specific features. The default init.rb looks like this:</p>
+
+<pre class="CodeRay"><span class="c"># Helpers</span>
+helpers <span class="r">do</span>
+<span class="r">end</span>
+
+<span class="c"># Generic configuration</span>
+<span class="c"># enable :slickmap</span>
+
+<span class="c"># Build-specific configuration</span>
+configure <span class="sy">:build</span> <span class="r">do</span>
+  <span class="c"># For example, change the Compass output style for deployment</span>
+  <span class="c"># enable :minified_css</span>
+
+  <span class="c"># Or use a different image path</span>
+  <span class="c"># set :http_path, "/Content/images/"</span>
+
+  <span class="c"># Disable cache buster</span>
+  <span class="c"># disable :cache_buster</span>
+<span class="r">end</span>
+</pre>
+
+<p>Helpers are functions which can be called from your templates and allow you to abstract frequently repeated code. Middleman comes with a handful, most for asset management, but you can write your own within the helpers block in the init.rb.</p>
+
+<p>Next is the commented-out <a href="http://astuteo.com/slickmap/">Slickmap</a> feature. If you remove the comment, your structure will be parsed and a sitemap will automatically be generated for you. There are many other features you can enable or disable and this is the place to do it.</p>
+
+<p>Finally, there is the configure block which allows variables, helpers and features to be modified only during the final static HTML build process. The example init.rb offers css minification, cache busting and changing the location of your assets in production (if you're using a CDN).</p>
+
+<h2>Configuration &amp; an Example</h2>
+
+<p>The <tt>mm-init</tt> command creates an init.rb which will contain your customizations and configuration.</p>
+
+<p>Below is an example init.rb that I am using on a live client site. First, I include a couple files with helper definitions. Next I enable php files to be previewed and choose the default template for directory requests. For this project, I have chosen to place all static files under the "assets" folder. The asset_url helper is overridden to ignore a couple cases specific to this site. Finally, I setup the directory under which the site will live in production. That's it! Nearly 200 pages with a shared layout, simple Haml templates, Blueprint-base CSS grids, minified CSS, Javascript dependency management and minification, CDN support and cache busting query strings.</p>
+
+<pre class="CodeRay">require <span class="s"><span class="dl">'</span><span class="k">config/path_helpers</span><span class="dl">'</span></span>
+require <span class="s"><span class="dl">'</span><span class="k">config/haml_helpers</span><span class="dl">'</span></span>
+
+mime <span class="sy">:php</span>, <span class="s"><span class="dl">"</span><span class="k">text/html</span><span class="dl">"</span></span>
+set <span class="sy">:index_file</span>, <span class="s"><span class="dl">"</span><span class="k">index.php</span><span class="dl">"</span></span>
+set <span class="sy">:images_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/images</span><span class="dl">"</span></span>
+set <span class="sy">:css_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/stylesheets</span><span class="dl">"</span></span>
+set <span class="sy">:videos_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/videos</span><span class="dl">"</span></span>
+set <span class="sy">:js_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/javascripts</span><span class="dl">"</span></span>
+
+configure <span class="sy">:build</span> <span class="r">do</span>
+  set <span class="sy">:http_prefix</span>, <span class="s"><span class="dl">"</span><span class="k">/sites/billboard</span><span class="dl">"</span></span>
+  enable <span class="sy">:automatic_image_sizes</span>
+<span class="r">end</span>
+</pre>
+
+<h2>Features</h2>
+
+<p>As you can see, the basic project is quite sparse and you get to choose which features your project needs.
+The current list of features is as follows:</p>
+
+<pre class="CodeRay"><span class="c"># Features enabled by default</span>
+enable <span class="sy">:compass</span>
+enable <span class="sy">:sprockets</span>
+
+<span class="c"># Features disabled by default</span>
+disable <span class="sy">:slickmap</span>
+disable <span class="sy">:cache_buster</span>
+disable <span class="sy">:minify_css</span>
+disable <span class="sy">:minify_javascript</span>
+disable <span class="sy">:relative_assets</span>
+disable <span class="sy">:maruku</span>
+disable <span class="sy">:automatic_image_sizes</span>
+disable <span class="sy">:minify_css</span>
+disable <span class="sy">:minify_javascript</span>
+disable <span class="sy">:cache_buster</span>
+</pre>
+
+<p>More documentation on these features and what they enable can be found <a href="http://wiki.github.com/tdreyno/middleman/configuration">on the project website</a>.</p>
+
+<h2>Development Process</h2>
+
+<p>So, the quickest way to get started is to run <tt>mm-init</tt> and point it at a location for your new project. Then change directories into that project and run <tt>mm-server</tt>. Now you can develop your site and preview the results on localhost:4567. Finally, when you're ready to deliver raw HTML, run <tt>mm-build</tt> from the project folder. Here's an example.</p>
+
+<pre class="CodeRay">Gir:~ tdreyno$ mm-init new_project
+Generating with setup generator:
+     [ADDED]  init.rb
+     [ADDED]  views/index.haml
+     [ADDED]  views/layout.haml
+     [ADDED]  views/stylesheets/site.sass
+     [ADDED]  public/stylesheets
+     [ADDED]  public/javascripts
+     [ADDED]  public/images
+
+Gir:~ tdreyno$ cd new_project/
+Gir:new_project tdreyno$ mm-server 
+== Local config at: /Users/tdreyno/new_project/init.rb
+== The Middleman is standing watch on port 4567
+&gt;&gt; Thin web server (v1.2.4 codename Flaming Astroboy)
+&gt;&gt; Maximum connections set to 1024
+&gt;&gt; Listening on 0.0.0.0:4567, CTRL+C to stop
+
+Gir:new_project tdreyno$ mm-build 
+== Local config at: /Users/tdreyno/new_project/init.rb
+Generating with build generator:
+     [ADDED]  index.html
+     [ADDED]  stylesheets/site.css
+
+     &gt;&gt; Thin web server (v1.2.4 codename Flaming Astroboy)
+     &gt;&gt; Maximum connections set to 1024
+     &gt;&gt; Listening on 0.0.0.0:4567, CTRL+C to stop
+</pre>
+
+<h2>Source &amp; bug reports</h2>
+
+<p>The code, as always, is on GitHub at: <a href="http://github.com/tdreyno/middleman">http://github.com/tdreyno/middleman</a>.<br>
+There is also a wiki at: <a href="http://wiki.github.com/tdreyno/middleman">http://wiki.github.com/tdreyno/middleman</a>.<br>
+And finally, please report bugs to: <a href="http://github.com/tdreyno/middleman/issues">http://github.com/tdreyno/middleman/issues</a>.</p>
+
+  </div>
+</article><div id="comments">
+  <div class="block">
+    <h2>Comments</h2>
+
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d1d09583a6522e4"></script><!-- AddThis Button END -->
+</div>
+  
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'awf';
+
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      var disqus_url = 'http://example.org/2009/10/22/middleman.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+</div>
+
+        
+      </div>
+      <aside id="previously"><p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
+        
+        <h2>Projects</h2>
+        <ol>
+<li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
+          <li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/jqueryChop/">jQuery Image Chop</a></li>
+          <li><a href="https://github.com/tdreyno/javascriptmvc-pure">Pure templates for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/compass-slickmap">Slickmap for Compass</a></li>
+          <li><a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a></li>
+        </ol>
+<h2>Previously</h2>
+        <ol>
+<li>
+<a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
+</li>
+          
+            <li>
+<a href="/2011/05/09/javascript-microframeworks-and-the-future.html">Javascript Microframeworks and The Future</a> <span>May  9</span>
+</li>
+          
+            <li>
+<a href="/2011/05/06/trigger-css3-animations-with-jquery.html">Trigger CSS3 Animations with jQuery</a> <span>May  6</span>
+</li>
+          
+            <li>
+<a href="/2011/05/03/jquerydeferred-image-preloader.html">jQuery.Deferred Image Preloader</a> <span>May  3</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-launched-pixelunion-v2.html">Just Launched: PixelUnion v2</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-give-a-damn-about-something.html">Just Give a Damn About Something</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/24/crossfit-is-for-nerds.html">CrossFit is for Nerds</a> <span>Apr 24</span>
+</li>
+          
+            <li>
+<a href="/2011/04/23/branching-out-opening-up-and-publishing-more.html">Branching Out, Opening Up and Publishing More</a> <span>Apr 23</span>
+</li>
+          
+            <li>
+<a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
+</li>
+          
+            <li>
+<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
+</li>
+          
+            <li>
+<a href="/2011/04/08/announcing-wouldhirecom.html">Announcing: WouldHire.com</a> <span>Apr  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/18/model-and-data-store-javascriptmvc.html">Model and Data Store: JavascriptMVC</a> <span>Feb 18</span>
+</li>
+          
+            <li>
+<a href="/2011/02/11/aaron-quint-on-javascript-hash-urls.html">Aaron Quint on Javascript Hash URLs</a> <span>Feb 11</span>
+</li>
+          
+            <li>
+<a href="/2011/02/08/andy-rutledge-on-kickstarter.html">Andy Rutledge on Kickstarter</a> <span>Feb  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/06/future-of-middleman-survey.html">Future of Middleman Survey</a> <span>Feb  6</span>
+</li>
+          
+        
+      </ol></aside>
+</div>
+    
+    <script type="text/javascript">
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script><!-- Google Analytics --><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-9']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+</body>
+</html>

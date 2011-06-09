@@ -1,6 +1,8 @@
+---
 title: iPhone-style Checkboxes for Prototype
 slug: prototype-iphone-style-checkboxes
 date: 2009/06/29
+---
 
 [Elijah Miller]:        http://jqr.github.com/
 [download the package]: http://github.com/tdreyno/iphone-style-checkboxes/zipball/master

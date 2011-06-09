@@ -1,6 +1,7 @@
 --- 
 title: Handling Touch Events in jQuery Tools Scrollable
 date: 22/09/2010
+---
 
 [jQuery Tools Scrollable]: http://flowplayer.org/tools/scrollable/index.html
 [DoubleTap for jQuery]: http://github.com/technoweenie/jquery.doubletap

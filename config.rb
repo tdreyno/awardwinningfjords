@@ -2,34 +2,13 @@ require "susy"
 
 # page "/*", :layout_engine => 'erb', :layout => :article_layout
 
+page "/feed.xml", :layout => false
 
 activate :blog
 # set :blog_permalink, "/:year/:month/:day/:title.html"
 set :disqus, "awf"
 
 #set :summary,   :max => 150, :delim => /READMORE/
-data_content :blog, {
-  :article => {
-    :title => "Sup",
-    :url   => "/hi",
-    :path  => "/hi",
-    :date  => Date.today
-  },
-  :articles => [
-    {
-      :title => "Sup",
-      :url   => "/hi",
-      :path  => "/hi",
-      :date  => Date.today
-    }
-  ]
-}
-
-helpers do 
-  def title
-    "hi"
-  end
-end
 
 require 'coderay'
 require 'rack/codehighlighter'

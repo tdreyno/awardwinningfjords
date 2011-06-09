@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+<!-- Google Setup --><meta content="VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=" name="verify-v1">
+<!-- OpenID Setup --><link href="http://www.myopenid.com/server" rel="openid.server">
+<link href="http://tdreyno.myopenid.com/" rel="openid.delegate">
+<link href="http://tdreyno.myopenid.com" rel="openid2.local_id">
+<link href="http://www.myopenid.com/server" rel="openid2.provider">
+<meta content="http://www.myopenid.com/xrds?username=tdreyno.myopenid.com" http-equiv="X-XRDS-Location">
+<title>State Machine Controller for JavascriptMVC « Thomas Reynolds</title>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--><!-- Stylesheet --><link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
+<!-- RSS --><link href="http://feeds2.feedburner.com/awf-allposts" rel="alternate" title="Award Winning Fjords" type="application/rss+xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script><!--script type="text/javascript" src="/javascripts/jqwidont.js"></script-->
+</head>
+<body class="post">
+    <header><div class="center">
+        <h1><a href="/">Award-Winning Fjords</a></h1>
+        <h2 class="byline author vcard">
+          Words &amp; Wisdom by 
+          <span class="fn">Thomas Reynolds</span>
+        </h2>
+
+        <p id="social">
+          <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br><a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
+        </p>
+      </div>
+    </header><div id="frame">
+      <div id="post">
+        
+          
+          <article class="hentry"><h1 class="entry-title">
+    State Machine Controller for JavascriptMVC 
+    <time class="updated" pubdate>May 27 2010</time>
+</h1>
+
+  <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
+  (function() {
+      var s     = document.getElementsByTagName('script')[0],
+          rdb   = document.createElement('script');
+      rdb.type  = 'text/javascript';
+      rdb.async = true;
+      rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+      s.parentNode.insertBefore(rdb, s);
+  })();
+  </script-->
+  
+  <div class="entry-content">
+    <p><strong>[Updated]: The repository has moved to http://github.com/secondstory/secondstoryjs-statemachine. The main class has been renamed to SS.Controller.StateMachine</strong></p>
+
+<p><strong>[Edit]: The SecondStoryJS State Machine now has a documentation website at <a href="http://secondstory.github.com/secondstoryjs-statemachine/">http://secondstory.github.com/secondstoryjs-statemachine/</a></strong></p>
+
+<p>I've been attempting to write this article for a week, but I've been unable to justify the usefulness of Finite State Machines in words. I tried written up some typical examples, such as the classic vending machine, but it kept getting very obtuse very quickly. Instead, let me just say, that I love Finite State Machines. I think they are the only technique I learned at school and when I am able to replace dozens of <tt>if</tt> statements with a Finite State Machine, it makes me very happy and feel secure. Being able to monitor an object's state, rather than just querying its instance variables, makes testing simpler and helps me find bugs.</p>
+
+<p>If you need a Finite State Machine for JavascriptMVC, I've got one for you. In fact, every controller in my application uses it. The most common use-case is asyncronous loading, rendering and eventually interaction. Here's an example:</p>
+
+<h2>Finite State Machine Implementation</h2>
+
+<p>The goal of the following controller is to have widgets or panels which are made visible by clicking a link. Only one of the widgets may be visible at the same time and if you click the link for the currently open widget, it should toggle off. Each widget also contains a link for closing itself (<tt>a.close</tt>).</p>
+
+<p>A state machine can respond to jQuery events, global OpenAjax messages and internal "publishState" commands. The destination states define which state we are moved into on an event. Finally, "onEnter" and "onExit" can point to either instance methods or global OpenAjax messages.</p>
+
+<pre class="CodeRay">SS.Controller.StateMachine.extend(<span class="s"><span class="dl">"</span><span class="k">MyNavigation</span><span class="dl">"</span></span>, {}, {
+  <span class="ke">states</span>: {
+    <span class="c">// Any click of the a.close element will close everything</span>
+    <span class="ke">global</span>:         { <span class="ke"><span class="dl">"</span><span class="k">a.close click</span><span class="dl">"</span></span>:            <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span> },
+
+    <span class="c">// Initial is the default state.</span>
+    <span class="c">// It will also represent "all closed"</span>
+    <span class="ke">initial</span>:        { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">closeDrawers</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">threadIsOpen</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">timelineIsOpen</span><span class="dl">"</span></span> },
+
+    <span class="ke">threadIsOpen</span>:   { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">drawers.toggle.thread</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">timelineIsOpen</span><span class="dl">"</span></span> },
+
+    <span class="ke">timelineIsOpen</span>: { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">drawers.toggle.timeline</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span>,
+                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">threadIsOpen</span><span class="dl">"</span></span> }
+  },
+
+  <span class="ke"><span class="dl">"</span><span class="k">drawers.toggle.* subscribe</span><span class="dl">"</span></span>: <span class="kw">function</span>(event_name) {
+    <span class="lv">this</span>.closeDrawers();
+    <span class="kw">var</span> elem_name = <span class="s"><span class="dl">"</span><span class="k">#</span><span class="dl">"</span></span> + event_name.split(<span class="s"><span class="dl">"</span><span class="k">.</span><span class="dl">"</span></span>).pop();
+    <span class="pd">$</span>(elem_name).show();
+  },
+
+  <span class="fu">closeDrawers</span>: <span class="kw">function</span>() {
+    <span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">#thread, #timeline</span><span class="dl">"</span></span>).hide();
+  }
+});
+</pre>
+
+<p>Clicking on #header-thread, #header-timeline and then #header-timeline again will print the following debug output:</p>
+
+<pre class="CodeRay">steal.js INFO: FSM (MyNavigation.instance0): initial -&gt; threadsOpen
+steal.js INFO: FSM (MyNavigation.instance0): threadsOpen -&gt; timelineOpen
+steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
+</pre>
+
+<h2>How Do I Get It?</h2>
+
+<p>First, get the <a href="http://v3.javascriptmvc.com/index.html">current version of JavascriptMVC 3 from their site</a>.</p>
+
+<p>Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:</p>
+
+<pre class="CodeRay">./steal/js steal/getjs ss/state_machine
+</pre>
+
+<p>Next, create a Site and a Controller (see the <a href="http://v3.javascriptmvc.com/index.html#&amp;who=getstarted">JavascriptMVC Getting Started Guide</a>).</p>
+
+<p>We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:</p>
+
+<pre class="CodeRay">.plugins(<span class="s"><span class="dl">"</span><span class="k">ss/controller/state_machine</span><span class="dl">"</span></span>)
+</pre>
+
+<p>Now you can extend your Controllers from <tt>SS.Controller.StateMachine</tt>.</p>
+
+<h2>Other/Better Examples?</h2>
+
+<p>I would love a chance to show how this works will a less contrived example. If you've a complex controller and think something like this would be useful, then please email me and I'll port your code to using a state machine.</p>
+
+  </div>
+</article><div id="comments">
+  <div class="block">
+    <h2>Comments</h2>
+
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d1d09583a6522e4"></script><!-- AddThis Button END -->
+</div>
+  
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'awf';
+
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      var disqus_url = 'http://example.org/2010/05/27/state-machine-controller-for-javascriptmvc.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+</div>
+
+        
+      </div>
+      <aside id="previously"><p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
+        
+        <h2>Projects</h2>
+        <ol>
+<li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
+          <li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/jqueryChop/">jQuery Image Chop</a></li>
+          <li><a href="https://github.com/tdreyno/javascriptmvc-pure">Pure templates for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/compass-slickmap">Slickmap for Compass</a></li>
+          <li><a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a></li>
+        </ol>
+<h2>Previously</h2>
+        <ol>
+<li>
+<a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
+</li>
+          
+            <li>
+<a href="/2011/05/09/javascript-microframeworks-and-the-future.html">Javascript Microframeworks and The Future</a> <span>May  9</span>
+</li>
+          
+            <li>
+<a href="/2011/05/06/trigger-css3-animations-with-jquery.html">Trigger CSS3 Animations with jQuery</a> <span>May  6</span>
+</li>
+          
+            <li>
+<a href="/2011/05/03/jquerydeferred-image-preloader.html">jQuery.Deferred Image Preloader</a> <span>May  3</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-launched-pixelunion-v2.html">Just Launched: PixelUnion v2</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-give-a-damn-about-something.html">Just Give a Damn About Something</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/24/crossfit-is-for-nerds.html">CrossFit is for Nerds</a> <span>Apr 24</span>
+</li>
+          
+            <li>
+<a href="/2011/04/23/branching-out-opening-up-and-publishing-more.html">Branching Out, Opening Up and Publishing More</a> <span>Apr 23</span>
+</li>
+          
+            <li>
+<a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
+</li>
+          
+            <li>
+<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
+</li>
+          
+            <li>
+<a href="/2011/04/08/announcing-wouldhirecom.html">Announcing: WouldHire.com</a> <span>Apr  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/18/model-and-data-store-javascriptmvc.html">Model and Data Store: JavascriptMVC</a> <span>Feb 18</span>
+</li>
+          
+            <li>
+<a href="/2011/02/11/aaron-quint-on-javascript-hash-urls.html">Aaron Quint on Javascript Hash URLs</a> <span>Feb 11</span>
+</li>
+          
+            <li>
+<a href="/2011/02/08/andy-rutledge-on-kickstarter.html">Andy Rutledge on Kickstarter</a> <span>Feb  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/06/future-of-middleman-survey.html">Future of Middleman Survey</a> <span>Feb  6</span>
+</li>
+          
+        
+      </ol></aside>
+</div>
+    
+    <script type="text/javascript">
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script><!-- Google Analytics --><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-9']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 --- 
 title: "Model and Data Store: Sencha"
 date: 28/01/2011
+---
 
 I'm in the process of writing up how the Model and Data Store works in JavascriptMVC and Sproutcore. In the mean-time, check out Ed Spencer's fantastic article about the ExtJS/Sencha Data Package on the official Sencha blog.
 

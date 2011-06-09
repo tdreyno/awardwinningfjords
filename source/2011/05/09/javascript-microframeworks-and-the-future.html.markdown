@@ -1,6 +1,7 @@
 --- 
 title: "Javascript Microframeworks and The Future"
 date: 09/05/2011
+---
 
 [jsconf]: http://2011.jsconf.us/
 [Thomas Fuchs]: http://mir.aculo.us/

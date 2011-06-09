@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+<!-- Google Setup --><meta content="VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=" name="verify-v1">
+<!-- OpenID Setup --><link href="http://www.myopenid.com/server" rel="openid.server">
+<link href="http://tdreyno.myopenid.com/" rel="openid.delegate">
+<link href="http://tdreyno.myopenid.com" rel="openid2.local_id">
+<link href="http://www.myopenid.com/server" rel="openid2.provider">
+<meta content="http://www.myopenid.com/xrds?username=tdreyno.myopenid.com" http-equiv="X-XRDS-Location">
+<title>HTML5 localStorage for JavascriptMVC « Thomas Reynolds</title>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--><!-- Stylesheet --><link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
+<!-- RSS --><link href="http://feeds2.feedburner.com/awf-allposts" rel="alternate" title="Award Winning Fjords" type="application/rss+xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script><!--script type="text/javascript" src="/javascripts/jqwidont.js"></script-->
+</head>
+<body class="post">
+    <header><div class="center">
+        <h1><a href="/">Award-Winning Fjords</a></h1>
+        <h2 class="byline author vcard">
+          Words &amp; Wisdom by 
+          <span class="fn">Thomas Reynolds</span>
+        </h2>
+
+        <p id="social">
+          <a href="http://github.com/tdreyno">GitHub</a>, <a href="http://twitter.com/tdreyno">Twitter</a> &amp; <a href="http://portfolio.awardwinningfjords.com">Portfolio</a><br><a id="contact" href="mailto:thomas@awardwinningfjords.com">Contact me</a>
+        </p>
+      </div>
+    </header><div id="frame">
+      <div id="post">
+        
+          
+          <article class="hentry"><h1 class="entry-title">
+    HTML5 localStorage for JavascriptMVC 
+    <time class="updated" pubdate>May 21 2010</time>
+</h1>
+
+  <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
+  (function() {
+      var s     = document.getElementsByTagName('script')[0],
+          rdb   = document.createElement('script');
+      rdb.type  = 'text/javascript';
+      rdb.async = true;
+      rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
+      s.parentNode.insertBefore(rdb, s);
+  })();
+  </script-->
+  
+  <div class="entry-content">
+    <p><strong>[Updated]: The new Github repository location is: http://github.com/secondstory/secondstoryjs-html5storage. The new class names are SS.Model.HTML5Store.Local and SS.Model.HTML5Store.Session</strong></p>
+
+<p>For those who don't know, JavascriptMVC 3 is a framework for building complex web applications based on jQuery. jQuery is a wonderful tool for manipulating the DOM, but it doesn't provide any system for dependency resolution, file organization or a separation of concerns. JavascriptMVC 3, which is currently in a very solid alpha form, provides a strong MVC foundation for oragnizing your code.</p>
+
+<p>The View component supports Ejs (a javascript variant of Erb), Jaml (a javascript templating system inspired by Haml) and a basic template implementation based on <a href="http://ejohn.org/blog/javascript-micro-templating/">John Resig's blog post</a> called Micro.</p>
+
+<p>The Controller layer is based on responding to events, both normal jQuery DOM events (and special events) as well as OpenAjax events.</p>
+
+<p>Finally, the Model component is basically just a Class which you can wire into your existing REST API with the help of some plugins and a little code. The Model component comes with a backing data store that can be swapped out. The default is an in-memory object that's provided as a placeholder for future data stores.</p>
+
+<p>I suggest reading this <a href="http://jupiterjs.com/pages/javascriptmvc#news/too-enterprisey">blog post on JavascriptMVC's impressed unit/functional testing system</a>.</p>
+
+<p>HTML5 is the new hotness and so I've implemented <tt>localStorage</tt> and <tt>sessionStorage</tt> backends for the JavascriptMVC 3 Model system. This means that once data is loaded into your model (via Ajax) it can be cached on the local machine until the end of the session or "forever" (until the localStorage cache is cleared). The difference between <tt>sessionStorage</tt> and browser cookies is that cookies are sent on every request so they are not well suited for storing lots of data.</p>
+
+<h2>How Do I Use It?</h2>
+
+<p>First, get the <a href="http://v3.javascriptmvc.com/index.html">current version of JavascriptMVC 3 from their site</a>.</p>
+
+<p>Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:</p>
+
+<pre class="CodeRay">./steal/js steal/getjs ss/model/html5store
+</pre>
+
+<p>Next, create a Site and a Model (see the <a href="http://v3.javascriptmvc.com/index.html#&amp;who=getstarted">JavascriptMVC Getting Started Guide</a>).</p>
+
+<p>We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:</p>
+
+<pre class="CodeRay">.plugins(<span class="s"><span class="dl">"</span><span class="k">ss/model/html5store</span><span class="dl">"</span></span>)
+</pre>
+
+<p>Okay, so we have a model and now we need to add the new store system:</p>
+
+<pre class="CodeRay">jQuery.Model.extend(<span class="s"><span class="dl">"</span><span class="k">MyModel</span><span class="dl">"</span></span>,
+{
+  <span class="fu">setup</span>: <span class="kw">function</span>(){
+    <span class="c">// Alternatively, use SS.Model.HTML5Store.Local</span>
+    <span class="lv">this</span>.storeType = SS.Model.HTML5Store.Session; 
+    <span class="lv">this</span>._super.apply(<span class="lv">this</span>, <span class="lv">arguments</span>);
+  }
+},
+{
+}
+);
+</pre>
+
+<p>Now, whenever you create a MyModel with a unique id, it will be added to the HTML5 sessionStorage. You're responsible for updating the store if the model changes and for querying the store to see if it has a copy of the model we're looking for. Here's some boilerplate code to do that:</p>
+
+<pre class="CodeRay"><span class="kw">function</span> <span class="fu">updateModel</span>(params) {
+  MyModel.store.destroy(params.id);
+  MyModel.store.create(params);
+}
+
+<span class="kw">function</span> <span class="fu">isInStore</span>(id) {
+  <span class="kw">return</span> MyModel.store.findOne(id);
+}
+</pre>
+
+<p>Using this plugin, I've been able to decrease the number of Ajax requests in my data-heavy webapp to 0 after the initial load. You could also preload data in the background using this technique to vastly improve the speed of your site.</p>
+
+<h2>Browser Support</h2>
+
+<p>HTML5 localStorage is supported in IE8, Firefox 3.5+, Safari 4+, Chrome 4+ and Opera 10.50+. If localStorage is unavailable, the plugin will degrade to the default in-memory store.</p>
+
+<h2>jQuery-offline</h2>
+
+<p>For a framework-agnostic version of this plugin, please take a look at <a href="http://github.com/wycats/jquery-offline">Yahuda Katz' jquery-offline</a>.</p>
+
+  </div>
+</article><div id="comments">
+  <div class="block">
+    <h2>Comments</h2>
+
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <a class="addthis_button_tweet"></a>
+    </div>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4d1d09583a6522e4"></script><!-- AddThis Button END -->
+</div>
+  
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'awf';
+
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      var disqus_url = 'http://example.org/2010/05/21/html5-localstorage-for-javascriptmvc.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+</div>
+
+        
+      </div>
+      <aside id="previously"><p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
+        
+        <h2>Projects</h2>
+        <ol>
+<li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
+          <li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a></li>
+          <li><a href="http://secondstory.github.com/jqueryChop/">jQuery Image Chop</a></li>
+          <li><a href="https://github.com/tdreyno/javascriptmvc-pure">Pure templates for JavascriptMVC</a></li>
+          <li><a href="https://github.com/tdreyno/compass-slickmap">Slickmap for Compass</a></li>
+          <li><a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a></li>
+        </ol>
+<h2>Previously</h2>
+        <ol>
+<li>
+<a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
+</li>
+          
+            <li>
+<a href="/2011/05/09/javascript-microframeworks-and-the-future.html">Javascript Microframeworks and The Future</a> <span>May  9</span>
+</li>
+          
+            <li>
+<a href="/2011/05/06/trigger-css3-animations-with-jquery.html">Trigger CSS3 Animations with jQuery</a> <span>May  6</span>
+</li>
+          
+            <li>
+<a href="/2011/05/03/jquerydeferred-image-preloader.html">jQuery.Deferred Image Preloader</a> <span>May  3</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-launched-pixelunion-v2.html">Just Launched: PixelUnion v2</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/26/just-give-a-damn-about-something.html">Just Give a Damn About Something</a> <span>Apr 26</span>
+</li>
+          
+            <li>
+<a href="/2011/04/24/crossfit-is-for-nerds.html">CrossFit is for Nerds</a> <span>Apr 24</span>
+</li>
+          
+            <li>
+<a href="/2011/04/23/branching-out-opening-up-and-publishing-more.html">Branching Out, Opening Up and Publishing More</a> <span>Apr 23</span>
+</li>
+          
+            <li>
+<a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
+</li>
+          
+            <li>
+<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
+</li>
+          
+            <li>
+<a href="/2011/04/08/announcing-wouldhirecom.html">Announcing: WouldHire.com</a> <span>Apr  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/18/model-and-data-store-javascriptmvc.html">Model and Data Store: JavascriptMVC</a> <span>Feb 18</span>
+</li>
+          
+            <li>
+<a href="/2011/02/11/aaron-quint-on-javascript-hash-urls.html">Aaron Quint on Javascript Hash URLs</a> <span>Feb 11</span>
+</li>
+          
+            <li>
+<a href="/2011/02/08/andy-rutledge-on-kickstarter.html">Andy Rutledge on Kickstarter</a> <span>Feb  8</span>
+</li>
+          
+            <li>
+<a href="/2011/02/06/future-of-middleman-survey.html">Future of Middleman Survey</a> <span>Feb  6</span>
+</li>
+          
+        
+      </ol></aside>
+</div>
+    
+    <script type="text/javascript">
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script><!-- Google Analytics --><script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-90027-9']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+
+      (function() {
+      var ga = document.createElement('script');
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+        'http://www') + '.google-analytics.com/ga.js';
+      ga.setAttribute('async', 'true');
+      document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+</body>
+</html>

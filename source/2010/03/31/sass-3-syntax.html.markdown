@@ -1,6 +1,7 @@
 --- 
 title: Sass 3 Syntax
 date: 31/03/2010
+---
 
 [Sass 3 Changelog]: http://beta.sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0-syntax-changes
 [Chris Eppstein]: http://twitter.com/chriseppstein
