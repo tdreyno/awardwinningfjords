@@ -4,8 +4,8 @@
   <subtitle>Words &amp;amp; Wisdom by Thomas Reynolds</subtitle>
   <id>http://awardwinningfjords.com/</id>
   <link href="http://awardwinningfjords.com/"/>
-  <link href="http://awardwinningfjords.com/atom.xml" rel="self"/>
-  <updated>2011-05-13</updated>
+  <link href="http://awardwinningfjords.com/feed.xml" rel="self"/>
+  <updated>2011-05-13T00:00:00-07:00</updated>
   <author>
     <name>Thomas Reynolds</name>
   </author>
@@ -13,8 +13,8 @@
     <title>CoffeeScript-specific Style Guide</title>
     <link rel="alternate" href="/2011/05/13/coffeescript-specific-style-guide.html"/>
     <id>/2011/05/13/coffeescript-specific-style-guide.html</id>
-    <published>2011-05-13</published>
-    <updated>2011-05-13</updated>
+    <published>2011-05-13T00:00:00-07:00</published>
+    <updated>2011-05-13T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -69,8 +69,8 @@ expect(elem.id).toEqual "myselector"
     <title>Javascript Microframeworks and The Future</title>
     <link rel="alternate" href="/2011/05/09/javascript-microframeworks-and-the-future.html"/>
     <id>/2011/05/09/javascript-microframeworks-and-the-future.html</id>
-    <published>2011-05-09</published>
-    <updated>2011-05-09</updated>
+    <published>2011-05-09T00:00:00-07:00</published>
+    <updated>2011-05-09T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -184,8 +184,8 @@ expect(elem.id).toEqual "myselector"
     <title>Trigger CSS3 Animations with jQuery</title>
     <link rel="alternate" href="/2011/05/06/trigger-css3-animations-with-jquery.html"/>
     <id>/2011/05/06/trigger-css3-animations-with-jquery.html</id>
-    <published>2011-05-06</published>
-    <updated>2011-05-06</updated>
+    <published>2011-05-06T00:00:00-07:00</published>
+    <updated>2011-05-06T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -265,8 +265,8 @@ $('.left').click(function() {
     <title>jQuery.Deferred Image Preloader</title>
     <link rel="alternate" href="/2011/05/03/jquerydeferred-image-preloader.html"/>
     <id>/2011/05/03/jquerydeferred-image-preloader.html</id>
-    <published>2011-05-03</published>
-    <updated>2011-05-03</updated>
+    <published>2011-05-03T00:00:00-07:00</published>
+    <updated>2011-05-03T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -307,8 +307,8 @@ var loadImage = function(imageSrc) {
     <title>Just Launched: PixelUnion v2</title>
     <link rel="alternate" href="/2011/04/26/just-launched-pixelunion-v2.html"/>
     <id>/2011/04/26/just-launched-pixelunion-v2.html</id>
-    <published>2011-04-26</published>
-    <updated>2011-04-26</updated>
+    <published>2011-04-26T00:00:00-07:00</published>
+    <updated>2011-04-26T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -323,8 +323,8 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <title>Just Give a Damn About Something</title>
     <link rel="alternate" href="/2011/04/26/just-give-a-damn-about-something.html"/>
     <id>/2011/04/26/just-give-a-damn-about-something.html</id>
-    <published>2011-04-26</published>
-    <updated>2011-04-26</updated>
+    <published>2011-04-26T00:00:00-07:00</published>
+    <updated>2011-04-26T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -336,8 +336,8 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <title>CrossFit is for Nerds</title>
     <link rel="alternate" href="/2011/04/24/crossfit-is-for-nerds.html"/>
     <id>/2011/04/24/crossfit-is-for-nerds.html</id>
-    <published>2011-04-24</published>
-    <updated>2011-04-24</updated>
+    <published>2011-04-24T00:00:00-07:00</published>
+    <updated>2011-04-24T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -353,8 +353,8 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <title>Branching Out, Opening Up and Publishing More</title>
     <link rel="alternate" href="/2011/04/23/branching-out-opening-up-and-publishing-more.html"/>
     <id>/2011/04/23/branching-out-opening-up-and-publishing-more.html</id>
-    <published>2011-04-23</published>
-    <updated>2011-04-23</updated>
+    <published>2011-04-23T00:00:00-07:00</published>
+    <updated>2011-04-23T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -366,8 +366,8 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <title>Middleman v1.1</title>
     <link rel="alternate" href="/2011/04/15/middleman-v11.html"/>
     <id>/2011/04/15/middleman-v11.html</id>
-    <published>2011-04-15</published>
-    <updated>2011-04-15</updated>
+    <published>2011-04-15T00:00:00-07:00</published>
+    <updated>2011-04-15T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -568,8 +568,8 @@ run Middleman::Server
     <title>Adjustable Animations with Sliders</title>
     <link rel="alternate" href="/2011/04/13/adjustable-animations-with-sliders.html"/>
     <id>/2011/04/13/adjustable-animations-with-sliders.html</id>
-    <published>2011-04-13</published>
-    <updated>2011-04-13</updated>
+    <published>2011-04-13T00:00:00-07:00</published>
+    <updated>2011-04-13T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -694,8 +694,8 @@ run Middleman::Server
     <title>Announcing: WouldHire.com</title>
     <link rel="alternate" href="/2011/04/08/announcing-wouldhirecom.html"/>
     <id>/2011/04/08/announcing-wouldhirecom.html</id>
-    <published>2011-04-08</published>
-    <updated>2011-04-08</updated>
+    <published>2011-04-08T00:00:00-07:00</published>
+    <updated>2011-04-08T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -738,8 +738,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Model and Data Store: JavascriptMVC</title>
     <link rel="alternate" href="/2011/02/18/model-and-data-store-javascriptmvc.html"/>
     <id>/2011/02/18/model-and-data-store-javascriptmvc.html</id>
-    <published>2011-02-18</published>
-    <updated>2011-02-18</updated>
+    <published>2011-02-18T00:00:00-08:00</published>
+    <updated>2011-02-18T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -751,8 +751,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Aaron Quint on Javascript Hash URLs</title>
     <link rel="alternate" href="/2011/02/11/aaron-quint-on-javascript-hash-urls.html"/>
     <id>/2011/02/11/aaron-quint-on-javascript-hash-urls.html</id>
-    <published>2011-02-11</published>
-    <updated>2011-02-11</updated>
+    <published>2011-02-11T00:00:00-08:00</published>
+    <updated>2011-02-11T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -764,8 +764,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Andy Rutledge on Kickstarter</title>
     <link rel="alternate" href="/2011/02/08/andy-rutledge-on-kickstarter.html"/>
     <id>/2011/02/08/andy-rutledge-on-kickstarter.html</id>
-    <published>2011-02-08</published>
-    <updated>2011-02-08</updated>
+    <published>2011-02-08T00:00:00-08:00</published>
+    <updated>2011-02-08T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -777,8 +777,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Future of Middleman Survey</title>
     <link rel="alternate" href="/2011/02/06/future-of-middleman-survey.html"/>
     <id>/2011/02/06/future-of-middleman-survey.html</id>
-    <published>2011-02-06</published>
-    <updated>2011-02-06</updated>
+    <published>2011-02-06T00:00:00-08:00</published>
+    <updated>2011-02-06T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -792,8 +792,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Model and Data Store: Sencha</title>
     <link rel="alternate" href="/2011/01/28/model-and-data-store-sencha.html"/>
     <id>/2011/01/28/model-and-data-store-sencha.html</id>
-    <published>2011-01-28</published>
-    <updated>2011-01-28</updated>
+    <published>2011-01-28T00:00:00-08:00</published>
+    <updated>2011-01-28T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -807,8 +807,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Client-side MVC+S Part 1: The Model and Data Store</title>
     <link rel="alternate" href="/2011/01/25/client-side-mvcs-part-1-the-model-and-data-store.html"/>
     <id>/2011/01/25/client-side-mvcs-part-1-the-model-and-data-store.html</id>
-    <published>2011-01-25</published>
-    <updated>2011-01-25</updated>
+    <published>2011-01-25T00:00:00-08:00</published>
+    <updated>2011-01-25T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -820,8 +820,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>SecondStoryJS State Machine now has a documentation website</title>
     <link rel="alternate" href="/2010/12/31/secondstoryjs-state-machine-now-has-a-documentation-website.html"/>
     <id>/2010/12/31/secondstoryjs-state-machine-now-has-a-documentation-website.html</id>
-    <published>2010-12-31</published>
-    <updated>2010-12-31</updated>
+    <published>2010-12-31T00:00:00-08:00</published>
+    <updated>2010-12-31T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -837,8 +837,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Best Albums of the Year: 2010</title>
     <link rel="alternate" href="/2010/12/09/best-albums-of-the-year-2010.html"/>
     <id>/2010/12/09/best-albums-of-the-year-2010.html</id>
-    <published>2010-12-09</published>
-    <updated>2010-12-09</updated>
+    <published>2010-12-09T00:00:00-08:00</published>
+    <updated>2010-12-09T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -852,8 +852,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>PubSub, Evented Programming and Javascript</title>
     <link rel="alternate" href="/2010/10/27/pubsub-evented-programming-and-javascript.html"/>
     <id>/2010/10/27/pubsub-evented-programming-and-javascript.html</id>
-    <published>2010-10-27</published>
-    <updated>2010-10-27</updated>
+    <published>2010-10-27T00:00:00-07:00</published>
+    <updated>2010-10-27T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -865,8 +865,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Slides from my jQuery Conference Presentation</title>
     <link rel="alternate" href="/2010/10/18/slides-from-my-jquery-conference-presentation.html"/>
     <id>/2010/10/18/slides-from-my-jquery-conference-presentation.html</id>
-    <published>2010-10-18</published>
-    <updated>2010-10-18</updated>
+    <published>2010-10-18T00:00:00-07:00</published>
+    <updated>2010-10-18T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -878,8 +878,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>SecondStoryJS Router now has a documentation website</title>
     <link rel="alternate" href="/2010/10/11/secondstoryjs-router-now-has-a-documentation-website.html"/>
     <id>/2010/10/11/secondstoryjs-router-now-has-a-documentation-website.html</id>
-    <published>2010-10-11</published>
-    <updated>2010-10-11</updated>
+    <published>2010-10-11T00:00:00-07:00</published>
+    <updated>2010-10-11T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -895,8 +895,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Middleman Feature: Config.rb can setup Rack middleware</title>
     <link rel="alternate" href="/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html"/>
     <id>/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html</id>
-    <published>2010-10-11</published>
-    <updated>2010-10-11</updated>
+    <published>2010-10-11T00:00:00-07:00</published>
+    <updated>2010-10-11T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -910,8 +910,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Handling Touch Events in jQuery Tools Scrollable</title>
     <link rel="alternate" href="/2010/09/22/handling-touch-events-in-jquery-tools-scrollable.html"/>
     <id>/2010/09/22/handling-touch-events-in-jquery-tools-scrollable.html</id>
-    <published>2010-09-22</published>
-    <updated>2010-09-22</updated>
+    <published>2010-09-22T00:00:00-07:00</published>
+    <updated>2010-09-22T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -923,8 +923,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Speaking at jQuery Conference: Boston 2010</title>
     <link rel="alternate" href="/2010/09/08/speaking-at-jquery-conference-boston-2010.html"/>
     <id>/2010/09/08/speaking-at-jquery-conference-boston-2010.html</id>
-    <published>2010-09-08</published>
-    <updated>2010-09-08</updated>
+    <published>2010-09-08T00:00:00-07:00</published>
+    <updated>2010-09-08T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -936,8 +936,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Mustache for JavascriptMVC 3</title>
     <link rel="alternate" href="/2010/08/09/mustache-for-javascriptmvc-3.html"/>
     <id>/2010/08/09/mustache-for-javascriptmvc-3.html</id>
-    <published>2010-08-09</published>
-    <updated>2010-08-09</updated>
+    <published>2010-08-09T00:00:00-07:00</published>
+    <updated>2010-08-09T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -951,8 +951,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>The jQuery Tools API Pattern</title>
     <link rel="alternate" href="/2010/08/06/the-jquery-tools-api-pattern.html"/>
     <id>/2010/08/06/the-jquery-tools-api-pattern.html</id>
-    <published>2010-08-06</published>
-    <updated>2010-08-06</updated>
+    <published>2010-08-06T00:00:00-07:00</published>
+    <updated>2010-08-06T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -964,8 +964,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Style Guides Using Sass @extend</title>
     <link rel="alternate" href="/2010/07/30/style-guides-using-sass-extend.html"/>
     <id>/2010/07/30/style-guides-using-sass-extend.html</id>
-    <published>2010-07-30</published>
-    <updated>2010-07-30</updated>
+    <published>2010-07-30T00:00:00-07:00</published>
+    <updated>2010-07-30T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -977,8 +977,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Sass @extend Introduction</title>
     <link rel="alternate" href="/2010/07/27/sass-extend-introduction.html"/>
     <id>/2010/07/27/sass-extend-introduction.html</id>
-    <published>2010-07-27</published>
-    <updated>2010-07-27</updated>
+    <published>2010-07-27T00:00:00-07:00</published>
+    <updated>2010-07-27T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -990,8 +990,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>JavascriptMVC Router</title>
     <link rel="alternate" href="/2010/07/23/javascriptmvc-router.html"/>
     <id>/2010/07/23/javascriptmvc-router.html</id>
-    <published>2010-07-23</published>
-    <updated>2010-07-23</updated>
+    <published>2010-07-23T00:00:00-07:00</published>
+    <updated>2010-07-23T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1003,8 +1003,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>UINavigationController implementation for SenchaTouch</title>
     <link rel="alternate" href="/2010/07/02/uinavigationcontroller-implementation-for-senchatouch.html"/>
     <id>/2010/07/02/uinavigationcontroller-implementation-for-senchatouch.html</id>
-    <published>2010-07-02</published>
-    <updated>2010-07-02</updated>
+    <published>2010-07-02T00:00:00-07:00</published>
+    <updated>2010-07-02T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1016,8 +1016,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>State Machine Controller for JavascriptMVC</title>
     <link rel="alternate" href="/2010/05/27/state-machine-controller-for-javascriptmvc.html"/>
     <id>/2010/05/27/state-machine-controller-for-javascriptmvc.html</id>
-    <published>2010-05-27</published>
-    <updated>2010-05-27</updated>
+    <published>2010-05-27T00:00:00-07:00</published>
+    <updated>2010-05-27T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1029,8 +1029,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>HTML5 localStorage for JavascriptMVC</title>
     <link rel="alternate" href="/2010/05/21/html5-localstorage-for-javascriptmvc.html"/>
     <id>/2010/05/21/html5-localstorage-for-javascriptmvc.html</id>
-    <published>2010-05-21</published>
-    <updated>2010-05-21</updated>
+    <published>2010-05-21T00:00:00-07:00</published>
+    <updated>2010-05-21T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1042,8 +1042,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Apple-style Gradient Text Headlines in SCSS/SASS</title>
     <link rel="alternate" href="/2010/04/13/apple-style-gradient-text-headlines-in-scsssass.html"/>
     <id>/2010/04/13/apple-style-gradient-text-headlines-in-scsssass.html</id>
-    <published>2010-04-13</published>
-    <updated>2010-04-13</updated>
+    <published>2010-04-13T00:00:00-07:00</published>
+    <updated>2010-04-13T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1063,8 +1063,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Sass 3 Color Manipulation</title>
     <link rel="alternate" href="/2010/04/12/sass-3-color-manipulation.html"/>
     <id>/2010/04/12/sass-3-color-manipulation.html</id>
-    <published>2010-04-12</published>
-    <updated>2010-04-12</updated>
+    <published>2010-04-12T00:00:00-07:00</published>
+    <updated>2010-04-12T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1076,8 +1076,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Example SCSS (Sassy CSS) File</title>
     <link rel="alternate" href="/2010/04/09/example-scss-sassy-css-file.html"/>
     <id>/2010/04/09/example-scss-sassy-css-file.html</id>
-    <published>2010-04-09</published>
-    <updated>2010-04-09</updated>
+    <published>2010-04-09T00:00:00-07:00</published>
+    <updated>2010-04-09T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1089,8 +1089,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Sass 3 Syntax</title>
     <link rel="alternate" href="/2010/03/31/sass-3-syntax.html"/>
     <id>/2010/03/31/sass-3-syntax.html</id>
-    <published>2010-03-31</published>
-    <updated>2010-03-31</updated>
+    <published>2010-03-31T00:00:00-07:00</published>
+    <updated>2010-03-31T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1102,8 +1102,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>A Learning Experience. iPhone-style checkboxes in Coffee-Script</title>
     <link rel="alternate" href="/2010/03/01/a-learning-experience-iphone-style-checkboxes-in-coffee-script.html"/>
     <id>/2010/03/01/a-learning-experience-iphone-style-checkboxes-in-coffee-script.html</id>
-    <published>2010-03-01</published>
-    <updated>2010-03-01</updated>
+    <published>2010-03-01T00:00:00-08:00</published>
+    <updated>2010-03-01T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1115,8 +1115,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Using RVM to Manage Multiple Ruby Interpreters</title>
     <link rel="alternate" href="/2010/02/17/using-rvm-to-manage-multiple-ruby-interpreters.html"/>
     <id>/2010/02/17/using-rvm-to-manage-multiple-ruby-interpreters.html</id>
-    <published>2010-02-17</published>
-    <updated>2010-02-17</updated>
+    <published>2010-02-17T00:00:00-08:00</published>
+    <updated>2010-02-17T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1128,8 +1128,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Best Albums of the Decade. Top 25</title>
     <link rel="alternate" href="/2009/12/14/best-of-the-decade-pt2.html"/>
     <id>/2009/12/14/best-of-the-decade-pt2.html</id>
-    <published>2009-12-14</published>
-    <updated>2009-12-14</updated>
+    <published>2009-12-14T00:00:00-08:00</published>
+    <updated>2009-12-14T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1153,8 +1153,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Best Albums of the Decade</title>
     <link rel="alternate" href="/2009/12/04/best-of-the-decade.html"/>
     <id>/2009/12/04/best-of-the-decade.html</id>
-    <published>2009-12-04</published>
-    <updated>2009-12-04</updated>
+    <published>2009-12-04T00:00:00-08:00</published>
+    <updated>2009-12-04T00:00:00-08:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1169,8 +1169,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>The Middleman. A modular, feature-rich static site generator</title>
     <link rel="alternate" href="/2009/10/22/middleman.html"/>
     <id>/2009/10/22/middleman.html</id>
-    <published>2009-10-22</published>
-    <updated>2009-10-22</updated>
+    <published>2009-10-22T00:00:00-07:00</published>
+    <updated>2009-10-22T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1182,8 +1182,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Tweetie-style paging with pageSlider</title>
     <link rel="alternate" href="/2009/08/31/pageslider-tweetie-style-pages.html"/>
     <id>/2009/08/31/pageslider-tweetie-style-pages.html</id>
-    <published>2009-08-31</published>
-    <updated>2009-08-31</updated>
+    <published>2009-08-31T00:00:00-07:00</published>
+    <updated>2009-08-31T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1195,8 +1195,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Speaking at RefreshPDX on Sass</title>
     <link rel="alternate" href="/2009/07/22/speaking-at-refreshpdx.html"/>
     <id>/2009/07/22/speaking-at-refreshpdx.html</id>
-    <published>2009-07-22</published>
-    <updated>2009-07-22</updated>
+    <published>2009-07-22T00:00:00-07:00</published>
+    <updated>2009-07-22T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1208,8 +1208,8 @@ Person A: Ah, man, you should have told me you were looking.
     <title>Easy Google Maps with jQuery</title>
     <link rel="alternate" href="/2009/07/22/google-maps-with-jquery.html"/>
     <id>/2009/07/22/google-maps-with-jquery.html</id>
-    <published>2009-07-22</published>
-    <updated>2009-07-22</updated>
+    <published>2009-07-22T00:00:00-07:00</published>
+    <updated>2009-07-22T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1229,8 +1229,8 @@ $.fn.googleMap = function(address, options) {
     <title>Simplifying CSS with Sass Presentation</title>
     <link rel="alternate" href="/2009/07/22/simplifying-css-presentation.html"/>
     <id>/2009/07/22/simplifying-css-presentation.html</id>
-    <published>2009-07-22</published>
-    <updated>2009-07-22</updated>
+    <published>2009-07-22T00:00:00-07:00</published>
+    <updated>2009-07-22T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1248,8 +1248,8 @@ $.fn.googleMap = function(address, options) {
     <title>Rapha&amp;euml;l. The Return of Browser SVG</title>
     <link rel="alternate" href="/2009/07/13/return-of-svg.html"/>
     <id>/2009/07/13/return-of-svg.html</id>
-    <published>2009-07-13</published>
-    <updated>2009-07-13</updated>
+    <published>2009-07-13T00:00:00-07:00</published>
+    <updated>2009-07-13T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1261,8 +1261,8 @@ $.fn.googleMap = function(address, options) {
     <title>iPhone-style Checkboxes for Prototype</title>
     <link rel="alternate" href="/2009/06/29/prototype-iphone-style-checkboxes.html"/>
     <id>/2009/06/29/prototype-iphone-style-checkboxes.html</id>
-    <published>2009-06-29</published>
-    <updated>2009-06-29</updated>
+    <published>2009-06-29T00:00:00-07:00</published>
+    <updated>2009-06-29T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1274,8 +1274,8 @@ $.fn.googleMap = function(address, options) {
     <title>Introducing iPhone-style Checkboxes</title>
     <link rel="alternate" href="/2009/06/16/iphone-style-checkboxes.html"/>
     <id>/2009/06/16/iphone-style-checkboxes.html</id>
-    <published>2009-06-16</published>
-    <updated>2009-06-16</updated>
+    <published>2009-06-16T00:00:00-07:00</published>
+    <updated>2009-06-16T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1287,8 +1287,8 @@ $.fn.googleMap = function(address, options) {
     <title>WWDC 2009 Predictions</title>
     <link rel="alternate" href="/2009/06/04/wwdc-2009-predictions.html"/>
     <id>/2009/06/04/wwdc-2009-predictions.html</id>
-    <published>2009-06-04</published>
-    <updated>2009-06-04</updated>
+    <published>2009-06-04T00:00:00-07:00</published>
+    <updated>2009-06-04T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1318,8 +1318,8 @@ $.fn.googleMap = function(address, options) {
     <title>Simplify image paths with image_url()</title>
     <link rel="alternate" href="/2009/05/11/simplify-image-paths-with-image_url.html"/>
     <id>/2009/05/11/simplify-image-paths-with-image_url.html</id>
-    <published>2009-05-11</published>
-    <updated>2009-05-11</updated>
+    <published>2009-05-11T00:00:00-07:00</published>
+    <updated>2009-05-11T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1333,8 +1333,8 @@ $.fn.googleMap = function(address, options) {
     <title>Using Compass to implement the Blueprint grid-system &amp;amp; consistent vertical-rhythm</title>
     <link rel="alternate" href="/2009/05/07/blueprint-grids-vertical-rhythm.html"/>
     <id>/2009/05/07/blueprint-grids-vertical-rhythm.html</id>
-    <published>2009-05-07</published>
-    <updated>2009-05-07</updated>
+    <published>2009-05-07T00:00:00-07:00</published>
+    <updated>2009-05-07T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1356,8 +1356,8 @@ a
     <title>NHaml idiosyncrasies</title>
     <link rel="alternate" href="/2009/04/30/nhaml-idiosyncrasies.html"/>
     <id>/2009/04/30/nhaml-idiosyncrasies.html</id>
-    <published>2009-04-30</published>
-    <updated>2009-04-30</updated>
+    <published>2009-04-30T00:00:00-07:00</published>
+    <updated>2009-04-30T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1369,8 +1369,8 @@ a
     <title>A Compass &amp;amp; Sass Screencast via Chris Eppstein</title>
     <link rel="alternate" href="/2009/04/26/a-compass-sass-screencast-via-chris-eppstein.html"/>
     <id>/2009/04/26/a-compass-sass-screencast-via-chris-eppstein.html</id>
-    <published>2009-04-26</published>
-    <updated>2009-04-26</updated>
+    <published>2009-04-26T00:00:00-07:00</published>
+    <updated>2009-04-26T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1386,8 +1386,8 @@ a
     <title>Creating bullet-proof HTML emails</title>
     <link rel="alternate" href="/2009/04/06/creating-bullet-proof-html-emails.html"/>
     <id>/2009/04/06/creating-bullet-proof-html-emails.html</id>
-    <published>2009-04-06</published>
-    <updated>2009-04-06</updated>
+    <published>2009-04-06T00:00:00-07:00</published>
+    <updated>2009-04-06T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1399,8 +1399,8 @@ a
     <title>Sass Introduction slides</title>
     <link rel="alternate" href="/2009/04/02/sass-introduction-slides.html"/>
     <id>/2009/04/02/sass-introduction-slides.html</id>
-    <published>2009-04-02</published>
-    <updated>2009-04-02</updated>
+    <published>2009-04-02T00:00:00-07:00</published>
+    <updated>2009-04-02T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1416,8 +1416,8 @@ a
     <title>Don't repeat yourself, use Sass mixins</title>
     <link rel="alternate" href="/2009/04/02/dont-repeat-yourself-use-sass-modules.html"/>
     <id>/2009/04/02/dont-repeat-yourself-use-sass-modules.html</id>
-    <published>2009-04-02</published>
-    <updated>2009-04-02</updated>
+    <published>2009-04-02T00:00:00-07:00</published>
+    <updated>2009-04-02T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1429,8 +1429,8 @@ a
     <title>Refactoring with Sass</title>
     <link rel="alternate" href="/2009/03/14/refactoring-with-sass.html"/>
     <id>/2009/03/14/refactoring-with-sass.html</id>
-    <published>2009-03-14</published>
-    <updated>2009-03-14</updated>
+    <published>2009-03-14T00:00:00-07:00</published>
+    <updated>2009-03-14T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
@@ -1442,8 +1442,8 @@ a
     <title>Compass, the future of Sass development</title>
     <link rel="alternate" href="/2009/03/11/compass-the-future-of-sass-development.html"/>
     <id>/2009/03/11/compass-the-future-of-sass-development.html</id>
-    <published>2009-03-11</published>
-    <updated>2009-03-11</updated>
+    <published>2009-03-11T00:00:00-07:00</published>
+    <updated>2009-03-11T00:00:00-07:00</updated>
     <author>
       <name>Thomas Reynolds</name>
     </author>
