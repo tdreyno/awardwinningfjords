@@ -5,7 +5,7 @@ date: 09/12/2010
 
 <link rel="stylesheet" href="/stylesheets/best-of-2010.css?v2" type="text/css" media="screen" />
 
-It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a "Top 14" list, but instead it's "Top 10" and some honorable mentions. Let's get started.
+It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a "Top 14" list, but instead it's "Top 10" and some honorable mentions. Let's  get started.
 
 ## Top 10:
 
