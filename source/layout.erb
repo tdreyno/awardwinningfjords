@@ -65,10 +65,13 @@
       <aside id="previously">
         <p>My name is Thomas Reynolds. I'm a developer at <a href="http://metalabdesign.com">Metalab</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
         
-        <h2>Projects</h2>
+        <h2>
+          Projects
+          <a href="http://github.com/tdreyno">GitHub</a>
+        </h2>
         <ol>
-          <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+          <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
           <li><a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a></li>
@@ -78,9 +81,12 @@
           <li><a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a></li>
         </ol>
         
-        <h2>Previously</h2>
+        <h2>
+          Recent Articles
+          <a href="/archives">Archive</a>
+        </h2>
         <ol>
-          <% data.blog.articles[0...15].each do |article| %>
+          <% data.blog.articles[0...10].each do |article| %>
             <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span></li>
           <% end %>
         </li>
