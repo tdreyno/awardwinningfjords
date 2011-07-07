@@ -38,7 +38,6 @@ Examples
     </tr>
   </table>
 </div>
-<script src='/iphone-style-checkboxes/jquery/jquery-1.4.js' type='text/javascript'></script>
 <script src='/iphone-style-checkboxes/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
 <link href='/iphone-style-checkboxes/style.css' media='screen' rel='stylesheet' type='text/css'>
 <script type='text/javascript'>

@@ -5,7 +5,7 @@ require "susy"
 page "/feed.xml", :layout => false
 
 activate :blog
-# set :blog_permalink, "/:year/:month/:day/:title.html"
+# set :blog_permalink, ":year/:month/:day/:title.html"
 set :disqus, "awf"
 
 #set :summary,   :max => 150, :delim => /READMORE/
