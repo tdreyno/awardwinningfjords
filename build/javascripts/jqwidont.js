@@ -20,4 +20,4 @@
  * implementation, visit:
  *   * http://davecardwell.co.uk/javascript/jquery/plugins/jquery-widont/
  */
-new function(){function b(){$("h1,h2,h3,h4,h5,h6").widont()}function a(a){return a.replace(d.regexp,"&#160;$1")}var c={auto:function(a){return a!=undefined?d.auto=a:d.auto},init:function(){return d.init()},transform:function(a){return d.widont(a)}};$.jqwidont=c;var d={auto:!0,init:b,widont:a,regexp:new RegExp("[\\n\\r\\s]+([^\\n\\r\\s(?:&#160;)]+[\\n\\r\\s]*)$","m")};$(document).ready(function(){d.auto&&b()}),$.fn.widont=function(){return $(this).each(function(){var a=$(this);a.html(d.widont(a.html()))})}}
+new function(){function d(a){return a.replace(b.regexp,"&#160;$1")}function c(){$("h1,h2,h3,h4,h5,h6").widont()}var a={auto:function(a){return a!=undefined?b.auto=a:b.auto},init:function(){return b.init()},transform:function(a){return b.widont(a)}};$.jqwidont=a;var b={auto:!0,init:c,widont:d,regexp:new RegExp("[\\n\\r\\s]+([^\\n\\r\\s(?:&#160;)]+[\\n\\r\\s]*)$","m")};$(document).ready(function(){b.auto&&c()}),$.fn.widont=function(){return $(this).each(function(){var a=$(this);a.html(b.widont(a.html()))})}}

@@ -4,7 +4,7 @@ date: 09/04/2010
 ---
 
 [Anthony Short's CSScaffold project]: http://github.com/anthonyshort/csscaffold
-[shoot me an email]: mailto:thomas@awardwinningfjords.com
+[shoot me an email]: mailto:me@tdreyno.com
 [SCSS]: http://nex-3.com/posts/96-scss-sass-is-a-css-extension
 
 I'm working on a new site which will eventually run on PHP5. Going back to raw CSS isn't really an option because I value my time and sanity. Thankfully there may be a way to run Sass' new format, [SCSS], under PHP using [Anthony Short's CSScaffold project]. The project provides a CSS preprocessor, like Sass, which runs on PHP. Currently, the project's syntax is similar, but different, than either Less or SCSS. Thankfully, Anthony has said he is working on bringing CSScaffold in-line with the SCSS syntax.

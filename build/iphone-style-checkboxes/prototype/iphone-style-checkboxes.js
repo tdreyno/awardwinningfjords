@@ -1,1 +1,151 @@
-var iPhoneStyle=function(a,b){b=Object.extend(Object.clone(iPhoneStyle.defaults),b||{});var c;Object.isString(a)?c=$$(a):c=[a].flatten();return c.each(function(a){if(!!a.match("input[type=checkbox]")){if(a.hasClassName(b.statusClass))return;a.addClassName(b.statusClass),a.setOpacity(0),a.wrap("div",{"class":b.containerClass}),a.insert({after:'<div class="'+b.handleClass+'"><div class="'+b.handleRightClass+'"><div class="'+b.handleCenterClass+'"></div></div></div>'}).insert({after:'<label class="'+b.labelOnClass+'"><span>'+b.checkedLabel+"</span></label>"}).insert({after:'<label class="'+b.labelOffClass+'"><span>'+b.uncheckedLabel+"</span></label>"});var c=a.up().down("."+b.handleClass),d=a.adjacent("."+b.labelOffClass).first(),e=d.down("span"),f=a.adjacent("."+b.labelOnClass).first(),g=f.down("span"),h=a.up();if(b.resizeHandle){var i=f.getWidth()<d.getWidth()?f.getWidth():d.getWidth();c.setStyle({width:i+"px"})}if(b.resizeContainer){var j=f.getWidth()>d.getWidth()?f.getWidth():d.getWidth();h.setStyle({width:j+c.getWidth()+12+"px"})}d.setStyle({width:h.getWidth()-5+"px"});var k=h.getWidth()-c.getWidth()-3;a.checked?(c.setStyle({left:k+"px"}),f.setStyle({width:k+4+"px"}),e.setStyle({marginRight:k+"px"})):(c.setStyle({left:0}),f.setStyle({width:0}),g.setStyle({marginLeft:-k+"px"})),a.change=function(){var h=a.checked,i=c.positionedOffset().first()/k;new Effect.Tween(null,i,Number(h),{duration:b.duration/1e3},function(a){c.setStyle({left:a*k+"px"}),f.setStyle({width:a*k+4+"px"}),d.setStyle({width:(1-a)*k+4+"px"}),e.setStyle({marginRight:-a*k+"px"}),g.setStyle({marginLeft:-(1-a)*k+"px"})}),b.statusChange(a)},a.observe("change",a.change);var l=function(a){a.stop(),iPhoneStyle.clicking=c;var b=Event.pointerX(a)||a.changedTouches[0].pageX;iPhoneStyle.dragStartPosition=b-(Number(c.style.left.replace(/px$/,""))||0),Event.stop(a)};h.observe("mousedown",l),h.observe("touchstart",l);var m=function(a){if(iPhoneStyle.clicking==c){a.stop();var b=Event.pointerX(a)||a.changedTouches[0].pageX;b!=iPhoneStyle.dragStartPosition&&(iPhoneStyle.dragging=!0);var h=(b-iPhoneStyle.dragStartPosition)/k;h<0&&(h=0),h>1&&(h=1),c.setStyle({left:h*k+"px"}),f.setStyle({width:h*k+4+"px"}),d.setStyle({width:(1-h)*k+4+"px"}),e.setStyle({marginRight:-h*k+"px"}),g.setStyle({marginLeft:-(1-h)*k+"px"})}};document.observe("mousemove",m),document.observe("touchmove",m),h.observe("mousedown",function(a){a.stop(),iPhoneStyle.clicking=c,iPhoneStyle.dragStartPosition=Event.pointerX(a)-(Number(c.style.left.replace(/px$/,""))||0);return!1});var n=function(b){if(iPhoneStyle.clicking==c){b.stop();if(!iPhoneStyle.dragging){var d=a.checked;a.writeAttribute("checked",!d)}else{var e=Event.pointerX(b)||b.changedTouches[0].pageX,f=(e-iPhoneStyle.dragStartPosition)/k;a.writeAttribute("checked",f>=.5)}iPhoneStyle.clicking=null,iPhoneStyle.dragging=null,a.change()}};document.observe("touchend",n),document.observe("mouseup",n),[h,f,d,c].invoke("observe","mousedown",function(a){a.preventDefault();return!1}),Prototype.Browser.IE&&[h,f,d,c].invoke("observe","startselect",function(a){Event.stop(a);return!1})}})};iPhoneStyle.defaults={duration:200,checkedLabel:"ON",uncheckedLabel:"OFF",resizeHandle:!0,resizeContainer:!0,background:"#fff",statusClass:"checkRendered",containerClass:"iPhoneCheckContainer",labelOnClass:"iPhoneCheckLabelOn",labelOffClass:"iPhoneCheckLabelOff",handleClass:"iPhoneCheckHandle",handleCenterClass:"iPhoneCheckHandleCenter",handleRightClass:"iPhoneCheckHandleRight",statusChange:function(){}}
+var iPhoneStyle = function(selector_or_elems, options) {
+  options = Object.extend(Object.clone(iPhoneStyle.defaults), options || {});
+  var elems;
+  if (Object.isString(selector_or_elems)) {
+    elems = $$(selector_or_elems);
+  } else {
+    elems = [selector_or_elems].flatten();
+  }
+  return(elems.each(function(elem) {
+    
+    if (!elem.match('input[type=checkbox]')) {
+      return;
+    }
+    
+    if (elem.hasClassName(options.statusClass)) {
+        return;
+    }
+    
+    elem.addClassName(options.statusClass);
+    elem.setOpacity(0);
+    elem.wrap('div', { 'class': options.containerClass});
+    elem.insert({ 'after': '<div class="' + options.handleClass + '"><div class="' + options.handleRightClass + '"><div class="' + options.handleCenterClass + '"></div></div></div>' })
+        .insert({ 'after': '<label class="' + options.labelOnClass + '"><span>' + options.checkedLabel   + '</span></label>' })
+        .insert({ 'after': '<label class="' + options.labelOffClass + '"><span>'+ options.uncheckedLabel + '</span></label>' });
+    
+    var handle  = elem.up().down('.' + options.handleClass),
+      offlabel  = elem.adjacent('.' + options.labelOffClass).first(),
+      offspan   = offlabel.down('span'),
+      onlabel   = elem.adjacent('.' + options.labelOnClass).first(),
+      onspan    = onlabel.down('span'),
+      container = elem.up();
+      
+    if (options.resizeHandle) {
+      var min = (onlabel.getWidth() < offlabel.getWidth()) ? onlabel.getWidth() : offlabel.getWidth();
+      handle.setStyle({width: min + 'px'});
+    }
+    if (options.resizeContainer) {
+      var max = (onlabel.getWidth() > offlabel.getWidth()) ? onlabel.getWidth() : offlabel.getWidth();
+      container.setStyle({width: max + handle.getWidth() + 12 + 'px'});
+    }
+    offlabel.setStyle({width: container.getWidth() - 5  + 'px'});
+
+    var rightside = container.getWidth() - handle.getWidth() - 3;
+
+    if (elem.checked) {
+      handle.setStyle({ left: rightside + 'px' });
+      onlabel.setStyle({ width: rightside + 4 + 'px' });
+      offspan.setStyle({ 'marginRight': rightside + 'px' });
+    } else {
+      handle.setStyle({ left: 0 });
+      onlabel.setStyle({ width: 0 });
+      onspan.setStyle({ 'marginLeft': -rightside + 'px' });
+    }    
+
+    elem.change = function() {
+      var is_onstate = elem.checked;
+      var p = handle.positionedOffset().first() / rightside;
+      new Effect.Tween(null, p, Number(is_onstate), { duration: options.duration / 1000 }, function(p) {
+        handle.setStyle({ left: p * rightside + 'px' });
+        onlabel.setStyle({ width: p * rightside + 4 + 'px' });
+        offlabel.setStyle({ width: (1 - p) * rightside + 4 + 'px' });
+        offspan.setStyle({ 'marginRight': -p * rightside + 'px' });
+        onspan.setStyle({ 'marginLeft': -(1 - p) * rightside + 'px' });
+      });
+      options.statusChange(elem);
+    };
+    elem.observe('change', elem.change);
+    
+    var down = function(e) {
+      e.stop();
+      iPhoneStyle.clicking = handle;
+      var x = Event.pointerX(e) || e.changedTouches[0].pageX;
+      iPhoneStyle.dragStartPosition = x - (Number(handle.style.left.replace(/px$/, "")) || 0);
+      Event.stop(e);
+    };
+
+    container.observe('mousedown', down);
+    container.observe('touchstart', down);
+    
+    
+    var move = function(e) {
+      if (iPhoneStyle.clicking == handle) {
+        e.stop();
+        var x = Event.pointerX(e) || e.changedTouches[0].pageX;
+        if (x != iPhoneStyle.dragStartPosition) {
+          iPhoneStyle.dragging = true;
+        }
+        var p = (x - iPhoneStyle.dragStartPosition) / rightside;
+        if (p < 0) { p = 0; }
+        if (p > 1) { p = 1; }
+        handle.setStyle({ left: p * rightside + 'px' });
+        onlabel.setStyle({ width: p * rightside + 4 + 'px' });
+        offlabel.setStyle({ width: (1 - p) * rightside + 4 + 'px' });
+        offspan.setStyle({ 'marginRight': -p * rightside + 'px' });
+        onspan.setStyle({ 'marginLeft': -(1 - p) * rightside + 'px' });
+      }
+    };
+
+    document.observe('mousemove', move);
+    document.observe('touchmove', move);
+    
+    container.observe('mousedown', function(e) {
+      e.stop();
+      iPhoneStyle.clicking = handle;
+      iPhoneStyle.dragStartPosition = Event.pointerX(e) - (Number(handle.style.left.replace(/px$/, "")) || 0);
+      return false;
+    });
+    
+    var up = function(e) {
+      if (iPhoneStyle.clicking == handle) {
+        e.stop();
+        if (!iPhoneStyle.dragging) {
+          var is_onstate = elem.checked;
+          elem.writeAttribute('checked', !is_onstate);
+        } else {
+          var x = Event.pointerX(e) || e.changedTouches[0].pageX;
+          var p = (x - iPhoneStyle.dragStartPosition) / rightside;
+          elem.writeAttribute('checked', (p >= 0.5));
+        }
+        iPhoneStyle.clicking = null;
+        iPhoneStyle.dragging = null;
+        elem.change();
+      }
+    };
+    document.observe('touchend', up);
+    document.observe('mouseup', up);
+
+    // Disable text selection
+    [container, onlabel, offlabel, handle].invoke('observe', 'mousedown', function(e) { e.preventDefault(); return false; });
+    if (Prototype.Browser.IE) {
+      [container, onlabel, offlabel, handle].invoke('observe', 'startselect', function(e) { Event.stop(e); return false; });
+    }
+  }));
+};
+
+iPhoneStyle.defaults = {
+  duration:          200,
+  checkedLabel:      'ON', 
+  uncheckedLabel:    'OFF', 
+  resizeHandle:      true,
+  resizeContainer:   true,
+  background:        '#fff',
+  statusClass:       'checkRendered',
+  containerClass:    'iPhoneCheckContainer',
+  labelOnClass:      'iPhoneCheckLabelOn',
+  labelOffClass:     'iPhoneCheckLabelOff',
+  handleClass:       'iPhoneCheckHandle',
+  handleCenterClass: 'iPhoneCheckHandleCenter',
+  handleRightClass:  'iPhoneCheckHandleRight',
+  statusChange: function(){}
+};

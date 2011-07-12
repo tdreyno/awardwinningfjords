@@ -1,8 +1,59 @@
 // script.aculo.us sound.js v1.8.3, Thu Oct 08 11:23:33 +0200 2009
+
 // Copyright (c) 2005-2009 Thomas Fuchs (http://script.aculo.us, http://mir.aculo.us)
 //
 // Based on code created by Jules Gravinese (http://www.webveteran.com/)
 //
 // script.aculo.us is freely distributable under the terms of an MIT-style license.
 // For details, see the script.aculo.us web site: http://script.aculo.us/
-Sound={tracks:{},_enabled:!0,template:new Template('<embed style="height:0" id="sound_#{track}_#{id}" src="#{url}" loop="false" autostart="true" hidden="true"/>'),enable:function(){Sound._enabled=!0},disable:function(){Sound._enabled=!1},play:function(a){if(!!Sound._enabled){var b=Object.extend({track:"global",url:a,replace:!1},arguments[1]||{});b.replace&&this.tracks[b.track]&&($R(0,this.tracks[b.track].id).each(function(a){var c=$("sound_"+b.track+"_"+a);c.Stop&&c.Stop(),c.remove()}),this.tracks[b.track]=null),this.tracks[b.track]?this.tracks[b.track].id++:this.tracks[b.track]={id:0},b.id=this.tracks[b.track].id,$$("body")[0].insert(Prototype.Browser.IE?new Element("bgsound",{id:"sound_"+b.track+"_"+b.id,src:b.url,loop:1,autostart:!0}):Sound.template.evaluate(b))}}},Prototype.Browser.Gecko&&navigator.userAgent.indexOf("Win")>0&&(navigator.plugins&&$A(navigator.plugins).detect(function(a){return a.name.indexOf("QuickTime")!=-1})?Sound.template=new Template('<object id="sound_#{track}_#{id}" width="0" height="0" type="audio/mpeg" data="#{url}"/>'):navigator.plugins&&$A(navigator.plugins).detect(function(a){return a.name.indexOf("Windows Media")!=-1})?Sound.template=new Template('<object id="sound_#{track}_#{id}" type="application/x-mplayer2" data="#{url}"></object>'):navigator.plugins&&$A(navigator.plugins).detect(function(a){return a.name.indexOf("RealPlayer")!=-1})?Sound.template=new Template('<embed type="audio/x-pn-realaudio-plugin" style="height:0" id="sound_#{track}_#{id}" src="#{url}" loop="false" autostart="true" hidden="true"/>'):Sound.play=function(){})
+
+Sound = {
+  tracks: {},
+  _enabled: true,
+  template:
+    new Template('<embed style="height:0" id="sound_#{track}_#{id}" src="#{url}" loop="false" autostart="true" hidden="true"/>'),
+  enable: function(){
+    Sound._enabled = true;
+  },
+  disable: function(){
+    Sound._enabled = false;
+  },
+  play: function(url){
+    if(!Sound._enabled) return;
+    var options = Object.extend({
+      track: 'global', url: url, replace: false
+    }, arguments[1] || {});
+
+    if(options.replace && this.tracks[options.track]) {
+      $R(0, this.tracks[options.track].id).each(function(id){
+        var sound = $('sound_'+options.track+'_'+id);
+        sound.Stop && sound.Stop();
+        sound.remove();
+      });
+      this.tracks[options.track] = null;
+    }
+
+    if(!this.tracks[options.track])
+      this.tracks[options.track] = { id: 0 };
+    else
+      this.tracks[options.track].id++;
+
+    options.id = this.tracks[options.track].id;
+    $$('body')[0].insert(
+      Prototype.Browser.IE ? new Element('bgsound',{
+        id: 'sound_'+options.track+'_'+options.id,
+        src: options.url, loop: 1, autostart: true
+      }) : Sound.template.evaluate(options));
+  }
+};
+
+if(Prototype.Browser.Gecko && navigator.userAgent.indexOf("Win") > 0){
+  if(navigator.plugins && $A(navigator.plugins).detect(function(p){ return p.name.indexOf('QuickTime') != -1 }))
+    Sound.template = new Template('<object id="sound_#{track}_#{id}" width="0" height="0" type="audio/mpeg" data="#{url}"/>');
+  else if(navigator.plugins && $A(navigator.plugins).detect(function(p){ return p.name.indexOf('Windows Media') != -1 }))
+    Sound.template = new Template('<object id="sound_#{track}_#{id}" type="application/x-mplayer2" data="#{url}"></object>');
+  else if(navigator.plugins && $A(navigator.plugins).detect(function(p){ return p.name.indexOf('RealPlayer') != -1 }))
+    Sound.template = new Template('<embed type="audio/x-pn-realaudio-plugin" style="height:0" id="sound_#{track}_#{id}" src="#{url}" loop="false" autostart="true" hidden="true"/>');
+  else
+    Sound.play = function(){};
+} 
