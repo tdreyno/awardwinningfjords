@@ -9,7 +9,7 @@ date: 15/04/2011
 [Frank project]: https://github.com/blahed/frank
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 [Pow webserver]: http://pow.cx/
-[Middleman version 2.0 has been released]: /2011/08/08/introducing-middleman-2-0.html
+[Middleman version 2.0 has been released]: /2011/08/08/middleman-2-0.html
 
 **Update: [Middleman version 2.0 has been released]**
 

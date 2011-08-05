@@ -8,7 +8,7 @@ date: 2009/10/22
 [nanoc-docs]:  http://nanoc.stoneship.org/manual/
 [Slickmap]:    http://astuteo.com/slickmap/
 [on the project website]:   http://middlemanapp.com
-[Middleman version 2.0 has been released]: /2011/08/08/introducing-middleman-2-0.html
+[Middleman version 2.0 has been released]: /2011/08/08/middleman-2-0.html
 [Middleman version 1.1 has been released]: /2011/04/15/middleman-v11.html
 [Middleman Support Forum]: https://convore.com/middleman/
 
