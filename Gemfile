@@ -10,11 +10,9 @@ end
 
 group :development do
   gem "builder"
-  gem "rdiscount"
-  gem "middleman", "2.0.0.rc97"
+  gem "redcarpet"
+  gem "middleman", "2.0.0.rc98"
   gem "heroku"
-  gem "foreman"
   gem "compass-susy-plugin"
   gem "rack-codehighlighter"
-  gem "coderay"
 end
