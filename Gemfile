@@ -11,7 +11,7 @@ end
 group :development do
   gem "builder"
   gem "rdiscount"
-  # gem "middleman", :git => "git://github.com/tdreyno/middleman.git"
+  gem "middleman", "2.0.0.rc97"
   gem "heroku"
   gem "foreman"
   gem "compass-susy-plugin"
