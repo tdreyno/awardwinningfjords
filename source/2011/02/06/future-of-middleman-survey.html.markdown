@@ -7,4 +7,4 @@ I've created a brief survey about [Middleman]. If you've used the project, I wou
 
 <a href="http://www.surveymonkey.com/s/5P9B92Q">http://www.surveymonkey.com/s/5P9B92Q</a>
 
-[Middleman]: https://github.com/tdreyno/middleman
+[Middleman]: http://middlemanapp.com

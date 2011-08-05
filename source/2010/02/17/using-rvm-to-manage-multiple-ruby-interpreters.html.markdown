@@ -4,7 +4,7 @@ date: 2010/02/17
 ---
 
 [Ruby Version Manager]: http://rvm.beginrescueend.com/rvm/install/
-[Middleman]:            http://awardwinningfjords.com/2009/10/22/middleman.html
+[Middleman]:            http://middlemanapp.com
 
 I've been hearing a bit of buzz about the [Ruby Version Manager] project on Twitter and from other Rubyists I know. Basically, the project provides a command-line tool which can download and compile a large number of Ruby implementations and swap between the active implementation on a per-terminal basis.
 

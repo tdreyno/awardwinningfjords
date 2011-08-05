@@ -1,6 +1,5 @@
 ---
 title: The Middleman. A modular, feature-rich static site generator
-slug: middleman
 date: 2009/10/22
 ---
 
@@ -8,10 +7,12 @@ date: 2009/10/22
 [Nanoc]:       http://nanoc.stoneship.org/
 [nanoc-docs]:  http://nanoc.stoneship.org/manual/
 [Slickmap]:    http://astuteo.com/slickmap/
-[mm-config]:   http://wiki.github.com/tdreyno/middleman/configuration
+[on the project website]:   http://middlemanapp.com
+[Middleman version 2.0 has been released]: /2011/08/08/introducing-middleman-2-0.html
 [Middleman version 1.1 has been released]: /2011/04/15/middleman-v11.html
 [Middleman Support Forum]: https://convore.com/middleman/
 
+**Update: [Middleman version 2.0 has been released]**<br />
 **Update: [Middleman version 1.1 has been released]**<br />
 **Update: New [Middleman Support Forum]**
 
@@ -123,7 +124,7 @@ The current list of features is as follows:
     disable :minify_javascript
     disable :cache_buster
 
-More documentation on these features and what they enable can be found [on the project website][mm-config].
+More documentation on these features and what they enable can be found [on the project website].
   
 Development Process
 -------------------

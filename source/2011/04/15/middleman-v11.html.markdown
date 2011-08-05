@@ -9,6 +9,9 @@ date: 15/04/2011
 [Frank project]: https://github.com/blahed/frank
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 [Pow webserver]: http://pow.cx/
+[Middleman version 2.0 has been released]: /2011/08/08/introducing-middleman-2-0.html
+
+**Update: [Middleman version 2.0 has been released]**
 
 It's been a long time since [I introduced Middleman on this blog] in 2009. Since then, RubyGems reports that there have been 27,518 downloads, <a href="https://github.com/tdreyno/middleman/contributors">several great contributors</a> to the source code and even a mention in a printed book.
 

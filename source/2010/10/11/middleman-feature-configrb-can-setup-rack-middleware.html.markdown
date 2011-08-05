@@ -3,7 +3,7 @@ title: "Middleman Feature: Config.rb can setup Rack middleware"
 date: 11/10/2010
 ---
 
-[Middleman]: http://github.com/tdreyno/middleman
+[Middleman]: http://middlemanapp.com
 [rack-codehighlighter]: http://github.com/wbzyl/rack-codehighlighter
 
 Did you know that since [Middleman]'s <tt>config.rb</tt> is evaluated by Sinatra that it can initialize Rack middleware?
