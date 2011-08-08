@@ -52,7 +52,7 @@
   <div class="entry-content">
     <p>There are quite a few situations in CSS where you are simply copy &amp; pasting the same set of styles in multiple places. If at some point, you want to tweak these styles, you'll need to track down and update each set of styles. Sass introduces the concept of mixins which are blocks of nested Sass code which can be applied to any selector in your Sass document. Think of them as variables which can hold multiple levels of information. The syntax for defining a module is simple:</p>
 
-<pre class="CodeRay">=module-name
+<pre>=module-name
   style1: value1
   style2: value2
   .wrapper
@@ -61,13 +61,13 @@
 
 <p>Then you can inject this module into a selector:</p>
 
-<pre class="CodeRay">#frame #left
+<pre>#frame #left
   +module-name
 </pre>
 
 <p>Which will generate CSS that looks like this:</p>
 
-<pre class="CodeRay">#frame #left {
+<pre>#frame #left {
   style1: value1;
   style2: value2; }
   #frame #left .wrapper {
@@ -80,7 +80,7 @@
 
 <p>The Sass definition for clearfix—pulled from the Compass project—is declared as such:</p>
 
-<pre class="CodeRay">=clearfix
+<pre>=clearfix
   :overflow auto
   :overflow -moz-scrollbars-none
   // This makes ie6 get layout
@@ -92,13 +92,13 @@
 
 <p>Many developers create a .clearfix class and apply it on the HTML-side to blocks which need the hack. I've never been a huge fan of this as you are making presentational changes to the content-side of the equation. The old-school .clearfix class can be accomplished pretty simply though, so it is worth showing:</p>
 
-<pre class="CodeRay">.clearfix
+<pre>.clearfix
   +clearfix
 </pre>
 
 <p>On the other hand, I prefer to include the clearfix directly on the selectors that need it:</p>
 
-<pre class="CodeRay">#left
+<pre>#left
   +clearfix
   div
     float: left
@@ -106,7 +106,7 @@
 
 <p>And since this is a new concept, here is the CSS which will be generated:</p>
 
-<pre class="CodeRay">#left {
+<pre>#left {
   overflow: auto;
   overflow: -moz-scrollbars-none;
   display: inline-block; }
@@ -122,7 +122,7 @@
 
 <p>Sass mixins can also take parameters that are used when generating the CSS. Here is the Sass definition for the often-used trick of displaying an image behind text (usually a H1-H6 tag) and shifting the text out of view.</p>
 
-<pre class="CodeRay">=replace-text( !img, !x = 50%, !y = 50% )
+<pre>=replace-text( !img, !x = 50%, !y = 50% )
   :text-indent -9999em
   :overflow    hidden
   :background
@@ -133,13 +133,13 @@
 
 <p>As you can see, we must pass in the location of the replacement image and optionally the background position. The simplest usage of this module looks something like this:</p>
 
-<pre class="CodeRay">#header h1
+<pre>#header h1
   +replace-text("/images/welcome.jpg")
 </pre>
 
 <p>And for completeness, here is the generated CSS:</p>
 
-<pre class="CodeRay">#header h1 {
+<pre>#header h1 {
   text-indent: -9999em;
   overflow: hidden;
   background-image: url("/images/welcome.jpg");
@@ -190,7 +190,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -206,6 +206,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -239,10 +243,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

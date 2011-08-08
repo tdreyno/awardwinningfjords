@@ -52,85 +52,25 @@
   <div class="entry-content">
     <p>A common pattern for initializing jQuery plugins is by selecting all the instances of the target in the DOM and running the plugin once. For example:</p>
 
-<pre class="CodeRay"><span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">:input</span><span class="dl">"</span></span>).myPlugin();
-</pre>
+
 
 <p>But what if you need to inspect the plugin later or are only interested in one instance of the plugin. A friend of mine <a href="http://forum.jquery.com/topic/return-customized-default-values-for-each-in-a-plugin">recently asked this question</a> and my suggestion was to look at the way the <a href="http://flowplayer.org/tools/">jQuery Tools</a> project does it. For each of their plugins, they build an API object which only interacts with one specific element and they attach it to the element once the plugin has been initialized using the jQuery.data method. This also provides a clean way of checking if the plugin has already been initialized on a specific element.</p>
 
 <p>Here's how they run their scrollable plugin when called by jQuery:</p>
 
-<pre class="CodeRay">  <span class="c">// jQuery plugin implementation</span>
-  <span class="pd">$</span>.fn.<span class="fu">scrollable</span> = <span class="kw">function</span>(conf) { 
 
-      <span class="c">// already constructed --&gt; return API</span>
-      <span class="kw">var</span> el = <span class="lv">this</span>.data(<span class="s"><span class="dl">"</span><span class="k">scrollable</span><span class="dl">"</span></span>);
-      <span class="kw">if</span> (el) { <span class="kw">return</span> el; }         
-
-      conf = <span class="pd">$</span>.extend({}, <span class="pd">$</span>.tools.scrollable.conf, conf); 
-
-      <span class="lv">this</span>.each(<span class="kw">function</span>() {            
-          el = <span class="kw">new</span> Scrollable(<span class="pd">$</span>(<span class="lv">this</span>), conf);
-          <span class="pd">$</span>(<span class="lv">this</span>).data(<span class="s"><span class="dl">"</span><span class="k">scrollable</span><span class="dl">"</span></span>, el);   
-      });
-
-      <span class="kw">return</span> conf.api ? el: <span class="lv">this</span>; 
-
-  };
-</pre>
 
 <p>The <tt>Scrollable</tt> function handles plugin initialization on a per-element basis and returns scoped methods for interacting with that object. Its implementation looks like this:</p>
 
-<pre class="CodeRay">  <span class="kw">function</span> <span class="fu">Scrollable</span>(root, conf) {   
-      <span class="c">// Setup variables</span>
 
-      <span class="c">// methods</span>
-      <span class="pd">$</span>.extend(self, {
-          <span class="fu">getConf</span>: <span class="kw">function</span>() {
-              <span class="kw">return</span> conf;  
-          },            
-        <span class="c">// et cetera</span>
-      });
-
-      <span class="c">// callbacks  </span>
-      <span class="pd">$</span>.each([<span class="s"><span class="dl">'</span><span class="k">onBeforeSeek</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">onSeek</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">onAddItem</span><span class="dl">'</span></span>], <span class="kw">function</span>(i, name) {
-
-          <span class="c">// configuration</span>
-          <span class="kw">if</span> (<span class="pd">$</span>.isFunction(conf[name])) { 
-              <span class="pd">$</span>(self).bind(name, conf[name]); 
-          }
-
-          self[name] = <span class="kw">function</span>(fn) {
-              <span class="pd">$</span>(self).bind(name, fn);
-              <span class="kw">return</span> self;
-          };
-      });  
-
-      <span class="c">// run methods</span>
-    }
-</pre>
 
 <p>Now, let's assume we have applied this pattern to our <tt>myPlugin</tt> plugin. The interaction would look like this.</p>
 
-<pre class="CodeRay"><span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">:input</span><span class="dl">"</span></span>).myPlugin();
 
-<span class="kw">var</span> specificInput = <span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">#myinput</span><span class="dl">"</span></span>);
-<span class="kw">var</span> api = specificInput.data(<span class="s"><span class="dl">"</span><span class="k">myPlugin</span><span class="dl">"</span></span>);
-
-api.getConf()     <span class="c">// See the original config variables</span>
-api.doSomething() <span class="c">// run some code</span>
-api.destroy()     <span class="c">// remove the plugin</span>
-
-<span class="c">// Run a callback on this specific instance</span>
-api.onClick(<span class="kw">function</span>() { 
-  <span class="c">// Click handler</span>
-});
-</pre>
 
 <p>The pattern would also handle accidently running the plugin twice on a single element. For example, in the following script the plugin would only initialize the <tt>#myinput</tt> element once:</p>
 
-<pre class="CodeRay"><span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">#myinput</span><span class="dl">"</span></span>).myPlugin();
-<span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">:input</span><span class="dl">"</span></span>).myPlugin();
-</pre>
+
 
 <p>The <a href="http://flowplayer.org/tools/documentation/scripting.html#api">full jQuery Tools API documentation</a> is available on their website.</p>
 
@@ -173,7 +113,7 @@ api.onClick(<span class="kw">function</span>() {
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -189,6 +129,10 @@ api.onClick(<span class="kw">function</span>() {
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -222,10 +166,6 @@ api.onClick(<span class="kw">function</span>() {
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

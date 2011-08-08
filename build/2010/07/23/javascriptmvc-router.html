@@ -60,59 +60,27 @@
 
 <p>Here's a matching example from the Sherpa docs:</p>
 
-<pre class="CodeRay">Router.add(<span class="s"><span class="dl">'</span><span class="k">/test/:variable</span><span class="dl">'</span></span>).to(<span class="s"><span class="dl">'</span><span class="k">testing</span><span class="dl">'</span></span>)
-Router.recognize(<span class="s"><span class="dl">'</span><span class="k">/test/iloveyou</span><span class="dl">'</span></span>) -&gt;
-  {
-    <span class="ke"><span class="dl">"</span><span class="k">destination</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">testing</span><span class="dl">"</span></span>,
-    <span class="ke"><span class="dl">"</span><span class="k">params</span><span class="dl">"</span></span>: {
-      <span class="ke"><span class="dl">"</span><span class="k">variable</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">iloveyou</span><span class="dl">"</span></span>
-    }
-  }
-</pre>
+
 
 <p>You can also generate routes from parameters if you give the route a name:</p>
 
-<pre class="CodeRay">Router.add(<span class="s"><span class="dl">'</span><span class="k">/test/:variable</span><span class="dl">'</span></span>).to(<span class="s"><span class="dl">'</span><span class="k">testing</span><span class="dl">'</span></span>).name(<span class="s"><span class="dl">'</span><span class="k">testRoute</span><span class="dl">'</span></span>)
-Router.generate(<span class="s"><span class="dl">'</span><span class="k">testRoute</span><span class="dl">'</span></span>, { <span class="ke"><span class="dl">"</span><span class="k">variable</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">iloveyou</span><span class="dl">"</span></span> }) -&gt;
-  <span class="s"><span class="dl">"</span><span class="k">/test/iloveyou</span><span class="dl">"</span></span>
-</pre>
+
 
 <h2>Using in JavascriptMVC</h2>
 
 <p>First, grab a copy of the Sherpa library and put it in your resources directory. Then, in your JavascriptMVC project file you intialize Sherpa:</p>
 
-<pre class="CodeRay">steal.resources(<span class="s"><span class="dl">"</span><span class="k">sherpa</span><span class="dl">"</span></span>)
-     .then(<span class="kw">function</span>(<span class="pd">$</span>) {
 
-  <span class="kw">var</span> Router = <span class="kw">new</span> Sherpa.Router();
-});
-</pre>
 
 <p>Now you have to choose how tightly you want to couple routes and controllers. I've approached this in a two different ways.</p>
 
 <p>First, you can initialize a new controller on the document element when the route is matched:</p>
 
-<pre class="CodeRay">Router.add(<span class="s"><span class="dl">"</span><span class="k">/articles/:article_name</span><span class="dl">"</span></span>).to(<span class="s"><span class="dl">"</span><span class="k">project_article</span><span class="dl">"</span></span>);
 
-<span class="kw">var</span> key        = window.location.pathname,
-    foundRoute = Router.recognize(key);
-
-<span class="kw">if</span> (foundRoute &amp;&amp; <span class="pd">$</span>(document)[foundRoute.destination]) {
-  <span class="pd">$</span>(document)[foundRoute.destination](foundRoute.params);
-}
-</pre>
 
 <p>Alternatively, you could fire an OpenAjax event instead:</p>
 
-<pre class="CodeRay">Router.add(<span class="s"><span class="dl">"</span><span class="k">/articles/:article_name</span><span class="dl">"</span></span>).to(<span class="s"><span class="dl">"</span><span class="k">project_article</span><span class="dl">"</span></span>);
 
-<span class="kw">var</span> key        = window.location.pathname,
-    foundRoute = Router.recognize(key);
-
-<span class="kw">if</span> (foundRoute) {
-  OpenAjax.hub.publish(foundRoute.destination, foundRoute.params);
-}
-</pre>
 
 <p>Unfortunately, this will only run once, during the inital load of your project. In reality, you will want to watch the location bar throughout the usage of your application and either run controllers or publish events for each location change. JavascriptMVC provides the <tt>jquery/controller/history</tt> which publishes <tt>history./current/url</tt> OpenAjax events when the location changes. You could wire this up on your own, or you could use the class we've developed and written tests for.</p>
 
@@ -122,17 +90,12 @@ Router.generate(<span class="s"><span class="dl">'</span><span class="k">testRou
 
 <p>First, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:</p>
 
-<pre class="CodeRay">./steal/js steal/getjs ss/router
+<pre>./steal/js steal/getjs ss/router
 </pre>
 
 <p>So let's go back to our project configuration file:</p>
 
-<pre class="CodeRay">steal.plugins(<span class="s"><span class="dl">"</span><span class="k">ss/router</span><span class="dl">"</span></span>)
-     .then(<span class="kw">function</span>(<span class="pd">$</span>) {
 
-  Router.add(<span class="s"><span class="dl">"</span><span class="k">/articles/:article_name</span><span class="dl">"</span></span>).to(<span class="s"><span class="dl">"</span><span class="k">project_article</span><span class="dl">"</span></span>);
-});
-</pre>
 
 <p>That's it! When <tt>#/articles/my-first-article</tt> is accessed, OpenAjax will publish a <tt>project_article</tt> event with "my-first-article" as the "article_name" parameter.</p>
 
@@ -175,7 +138,7 @@ Router.generate(<span class="s"><span class="dl">'</span><span class="k">testRou
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -191,6 +154,10 @@ Router.generate(<span class="s"><span class="dl">'</span><span class="k">testRou
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -224,10 +191,6 @@ Router.generate(<span class="s"><span class="dl">'</span><span class="k">testRou
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

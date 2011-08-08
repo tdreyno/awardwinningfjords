@@ -64,41 +64,11 @@
 
 <p>A state machine can respond to jQuery events, global OpenAjax messages and internal "publishState" commands. The destination states define which state we are moved into on an event. Finally, "onEnter" and "onExit" can point to either instance methods or global OpenAjax messages.</p>
 
-<pre class="CodeRay">SS.Controller.StateMachine.extend(<span class="s"><span class="dl">"</span><span class="k">MyNavigation</span><span class="dl">"</span></span>, {}, {
-  <span class="ke">states</span>: {
-    <span class="c">// Any click of the a.close element will close everything</span>
-    <span class="ke">global</span>:         { <span class="ke"><span class="dl">"</span><span class="k">a.close click</span><span class="dl">"</span></span>:            <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span> },
 
-    <span class="c">// Initial is the default state.</span>
-    <span class="c">// It will also represent "all closed"</span>
-    <span class="ke">initial</span>:        { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">closeDrawers</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">threadIsOpen</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">timelineIsOpen</span><span class="dl">"</span></span> },
-
-    <span class="ke">threadIsOpen</span>:   { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">drawers.toggle.thread</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">timelineIsOpen</span><span class="dl">"</span></span> },
-
-    <span class="ke">timelineIsOpen</span>: { <span class="ke">onEnter</span>:                    <span class="s"><span class="dl">"</span><span class="k">drawers.toggle.timeline</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-timeline a click</span><span class="dl">"</span></span>: <span class="s"><span class="dl">"</span><span class="k">initial</span><span class="dl">"</span></span>,
-                      <span class="ke"><span class="dl">"</span><span class="k">#header-thread a click</span><span class="dl">"</span></span>:   <span class="s"><span class="dl">"</span><span class="k">threadIsOpen</span><span class="dl">"</span></span> }
-  },
-
-  <span class="ke"><span class="dl">"</span><span class="k">drawers.toggle.* subscribe</span><span class="dl">"</span></span>: <span class="kw">function</span>(event_name) {
-    <span class="lv">this</span>.closeDrawers();
-    <span class="kw">var</span> elem_name = <span class="s"><span class="dl">"</span><span class="k">#</span><span class="dl">"</span></span> + event_name.split(<span class="s"><span class="dl">"</span><span class="k">.</span><span class="dl">"</span></span>).pop();
-    <span class="pd">$</span>(elem_name).show();
-  },
-
-  <span class="fu">closeDrawers</span>: <span class="kw">function</span>() {
-    <span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">#thread, #timeline</span><span class="dl">"</span></span>).hide();
-  }
-});
-</pre>
 
 <p>Clicking on #header-thread, #header-timeline and then #header-timeline again will print the following debug output:</p>
 
-<pre class="CodeRay">steal.js INFO: FSM (MyNavigation.instance0): initial -&gt; threadsOpen
+<pre>steal.js INFO: FSM (MyNavigation.instance0): initial -&gt; threadsOpen
 steal.js INFO: FSM (MyNavigation.instance0): threadsOpen -&gt; timelineOpen
 steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
 </pre>
@@ -109,15 +79,14 @@ steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
 
 <p>Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:</p>
 
-<pre class="CodeRay">./steal/js steal/getjs ss/state_machine
+<pre>./steal/js steal/getjs ss/state_machine
 </pre>
 
 <p>Next, create a Site and a Controller (see the <a href="http://v3.javascriptmvc.com/index.html#&amp;who=getstarted">JavascriptMVC Getting Started Guide</a>).</p>
 
 <p>We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:</p>
 
-<pre class="CodeRay">.plugins(<span class="s"><span class="dl">"</span><span class="k">ss/controller/state_machine</span><span class="dl">"</span></span>)
-</pre>
+
 
 <p>Now you can extend your Controllers from <tt>SS.Controller.StateMachine</tt>.</p>
 
@@ -164,7 +133,7 @@ steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -180,6 +149,10 @@ steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -213,10 +186,6 @@ steal.js INFO: FSM (MyNavigation.instance0): timelineOpen -&gt; initial
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

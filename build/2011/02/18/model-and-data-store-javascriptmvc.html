@@ -60,7 +60,7 @@
 
 <p>Compared to the Sencha and Sproutcore's robust data packages, JavascriptMVC's is somewhat simple. It embraces jQuery's AJAX methods and even places its classes on the jQuery "$" object. First, let's take a look at a model who's only goal is to represent a client-side object. We'll use it for organizing data and generating DOM elements, but save backend connectivity for later.</p>
 
-<pre class="CodeRay">// Setup the model definition
+<pre>// Setup the model definition
 $.Model.extend("Project",
 {
   // Static methods.
@@ -89,7 +89,7 @@ console.debug("My name is: " + myProject.name);
 
 <p>As you can see, the attributes defined on the model are relatively free-form. Simply pass them into the constructor and they'll be accessible in the model instance and to your instance methods. However, if you want to use some additional magic such an custom getters, setters and attribute conversions, you're going to need to use a jQuery-style proxy method to get and set attributes. Unsurprisingly, that method is called <tt>attr</tt>. Let's look at the same model, but with a helper method added.</p>
 
-<pre class="CodeRay">$.Model.extend("Project",
+<pre>$.Model.extend("Project",
 {
 },
 {
@@ -109,7 +109,7 @@ console.debug("My title is: " + myProject.attr("title")); // MY TITLE
 
 <p>Now, whenever you use the <tt>attr</tt> helper to get or set the title, it will run through the <tt>setTitle</tt> method first. Alternatively, you could setup this conversion at the class level.</p>
 
-<pre class="CodeRay">$.Model.extend("Project",
+<pre>$.Model.extend("Project",
 {
   attributes: {
     title: 'uppercase'
@@ -128,7 +128,7 @@ console.debug("My title is: " + myProject.attr("title")); // MY TITLE
 
 <p>Unless you're app uses something like LocalStorage to keep all the client data in the visitor's browser, you'll probably want to pull model data from a backend server. $.Model makes this shockingly easy in the basic case. Behold:</p>
 
-<pre class="CodeRay">$.Model.extend('Project',
+<pre>$.Model.extend('Project',
 { 
   findAll: "projects", 
   findOne: "projects/{id}", 
@@ -142,7 +142,7 @@ console.debug("My title is: " + myProject.attr("title")); // MY TITLE
 
 <p>Now you can interact with your server-side models very easily. For example:</p>
 
-<pre class="CodeRay">// Let's assume this returns the following JSON from "/projects":
+<pre>// Let's assume this returns the following JSON from "/projects":
 // [{ id: 1, name: "My Project" }]
 Project.findAll({ }, function(allProjects) {
   // An array of Project models
@@ -210,7 +210,7 @@ newProject.save();
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -226,6 +226,10 @@ newProject.save();
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -259,10 +263,6 @@ newProject.save();
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

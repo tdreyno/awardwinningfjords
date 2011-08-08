@@ -56,7 +56,7 @@
 
 <p>PubSub is short for "Publish and Subscribe." Any piece of code can publish an event, or message, and any other piece of code can listen for that event. This allows code that responds to events to be easily decoupled from the code that creates an event. Here's an example using jQuery's <tt>$.ajax</tt> functionality. Without PubSub you might write an AJAX request like this:</p>
 
-<pre class="CodeRay">$.ajax({ 
+<pre>$.ajax({ 
   url: "/api/login.json", 
   success: function(data) {
     // Update some HTML classes
@@ -73,7 +73,7 @@
 
 <p>For this example, we'll use a very naive version of PubSub. We'll use <tt>$.fn.trigger</tt> and <tt>$.fn.bind</tt> on the root document object. jQuery's event api already handles the nuts and bolts of allowing multiple anonymous functions to respond to a single event, like "click" or "hover." Using this technique, we can organize the AJAX success code like this:</p>
 
-<pre class="CodeRay">// Update some HTML classes
+<pre>// Update some HTML classes
 $(document).bind("userDidLogin", function(event, data) {
   $("#loginButton").hide();
   $("#logoutButton").show();
@@ -147,7 +147,7 @@ $.ajax({
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -163,6 +163,10 @@ $.ajax({
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -196,10 +200,6 @@ $.ajax({
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

@@ -62,7 +62,7 @@
 
 <p>I suggest reading this <a href="http://jupiterjs.com/pages/javascriptmvc#news/too-enterprisey">blog post on JavascriptMVC's impressed unit/functional testing system</a>.</p>
 
-<p>HTML5 is the new hotness and so I've implemented <tt>localStorage</tt> and <tt>sessionStorage</tt> backends for the JavascriptMVC 3 Model system. This means that once data is loaded into your model (via Ajax) it can be cached on the local machine until the end of the session or "forever" (until the localStorage cache is cleared). The difference between <tt>sessionStorage</tt> and browser cookies is that cookies are sent on every request so they are not well suited for storing lots of data.</p>
+<p>HTML5 is the new hotness and so I've implemented <tt>localStorage</tt> and <tt>sessionStorage</tt> backends for the JavascriptMVC 3 Model system. This means that once data is loaded into your model (via Ajax) it can be cached on the local machine until the end of the session or "forever" (until the localStorage cache is cleared). The difference between <tt>sessionStorage</tt> and browser cookies is that cookies are sent on every request so they are not well suited for storing lots of data. </p>
 
 <h2>How Do I Use It?</h2>
 
@@ -70,42 +70,22 @@
 
 <p>Second, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:</p>
 
-<pre class="CodeRay">./steal/js steal/getjs ss/model/html5store
+<pre>./steal/js steal/getjs ss/model/html5store
 </pre>
 
 <p>Next, create a Site and a Model (see the <a href="http://v3.javascriptmvc.com/index.html#&amp;who=getstarted">JavascriptMVC Getting Started Guide</a>).</p>
 
 <p>We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:</p>
 
-<pre class="CodeRay">.plugins(<span class="s"><span class="dl">"</span><span class="k">ss/model/html5store</span><span class="dl">"</span></span>)
-</pre>
+
 
 <p>Okay, so we have a model and now we need to add the new store system:</p>
 
-<pre class="CodeRay">jQuery.Model.extend(<span class="s"><span class="dl">"</span><span class="k">MyModel</span><span class="dl">"</span></span>,
-{
-  <span class="fu">setup</span>: <span class="kw">function</span>(){
-    <span class="c">// Alternatively, use SS.Model.HTML5Store.Local</span>
-    <span class="lv">this</span>.storeType = SS.Model.HTML5Store.Session; 
-    <span class="lv">this</span>._super.apply(<span class="lv">this</span>, <span class="lv">arguments</span>);
-  }
-},
-{
-}
-);
-</pre>
+
 
 <p>Now, whenever you create a MyModel with a unique id, it will be added to the HTML5 sessionStorage. You're responsible for updating the store if the model changes and for querying the store to see if it has a copy of the model we're looking for. Here's some boilerplate code to do that:</p>
 
-<pre class="CodeRay"><span class="kw">function</span> <span class="fu">updateModel</span>(params) {
-  MyModel.store.destroy(params.id);
-  MyModel.store.create(params);
-}
 
-<span class="kw">function</span> <span class="fu">isInStore</span>(id) {
-  <span class="kw">return</span> MyModel.store.findOne(id);
-}
-</pre>
 
 <p>Using this plugin, I've been able to decrease the number of Ajax requests in my data-heavy webapp to 0 after the initial load. You could also preload data in the background using this technique to vastly improve the speed of your site.</p>
 
@@ -156,7 +136,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -172,6 +152,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -205,10 +189,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

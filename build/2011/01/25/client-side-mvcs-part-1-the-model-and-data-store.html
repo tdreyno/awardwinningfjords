@@ -58,12 +58,12 @@
 
 <p>Client-side models have two important pieces. First is the traditional model which has some attributes (like name, date updated, etc) and allows you to update those attributes. The generic Javascript object handles this role perfectly. If you’re getting data from JSON, you’re getting a JavaScript Object Model (JSOM?) of the data. For example:</p>
 
-<pre class="CodeRay">{ name: "Object 1", updated_at: "2011/01/25" }
+<pre>{ name: "Object 1", updated_at: "2011/01/25" }
 </pre>
 
 <p>At some point you will want to have some helper functions that are related to each model. Maybe you want to get the name in all caps. A simple Javascript Class for this model would look like:</p>
 
-<pre class="CodeRay">var Project = function(attrs) {
+<pre>var Project = function(attrs) {
   this.name = attrs.name;
 }
 
@@ -79,9 +79,9 @@ myProject.allCapsName() =&gt; "MINE"
 
 <h2>Data Store</h2>
 
-<p>The second part of the Model is the Data Store/Source. At some point, you will need a way of getting models from a server, working with a list of models and sending updates to the server. If you have each model handle communication with the server itself, you will end up with a lot of duplication. So let’s make a data store that gets a list of project using a plain javascript model from above. I’m going to use jQuery for the AJAX portion because</p>
+<p>The second part of the Model is the Data Store/Source. At some point, you will need a way of getting models from a server, working with a list of models and sending updates to the server. If you have each model handle communication with the server itself, you will end up with a lot of duplication. So let’s make a data store that gets a list of project using a plain javascript model from above. I’m going to use jQuery for the AJAX portion because </p>
 
-<pre class="CodeRay">var ProjectList = {
+<pre>var ProjectList = {
   all: [],
   fetch: function(myCallback) {
     var self = this;
@@ -146,7 +146,7 @@ ProjectList.fetch(function(data) {
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -162,6 +162,10 @@ ProjectList.fetch(function(data) {
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -195,10 +199,6 @@ ProjectList.fetch(function(data) {
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

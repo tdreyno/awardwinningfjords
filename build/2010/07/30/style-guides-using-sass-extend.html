@@ -64,7 +64,7 @@
 
 <p>First I setup variables for our color palatte.</p>
 
-<pre class="CodeRay">$primary-orange:   #fe8a16
+<pre>$primary-orange:   #fe8a16
 $hover-orange:     #f67502
 $steel-blue:       #303b41 
 $bright-blue:      #4892bc
@@ -73,7 +73,7 @@ $dark-grey:        #4b4b48
 
 <p>Next I create some simple mixins to handle usage of custom fonts.</p>
 
-<pre class="CodeRay">=custom-font
+<pre>=custom-font
   font-family: "Droid Sans"
   font-weight: normal
 
@@ -84,7 +84,7 @@ $dark-grey:        #4b4b48
 
 <p>Finally, I start defining the styles as classes. As you can see, I am using @extend to avoid repeating myself. I'm going to omit some of the styles in the guide for the sake of brevity.</p>
 
-<pre class="CodeRay">.sg-heading-1
+<pre>.sg-heading-1
   +custom-font
   font-size: 32px
   line-height: 36px
@@ -120,9 +120,9 @@ $dark-grey:        #4b4b48
 
 <h2>Referencing the Style Guide</h2>
 
-<p>Now, when I go to implement a specific portion of the site, I can be concise by referencing the style guide.</p>
+<p>Now, when I go to implement a specific portion of the site, I can be concise by referencing the style guide. </p>
 
-<pre class="CodeRay">.info-box
+<pre>.info-box
   h2
     @extend .sg-heading-2
   ul li
@@ -135,37 +135,7 @@ $dark-grey:        #4b4b48
 
 <p>Here's the resulting CSS output:</p>
 
-<pre class="CodeRay"><span class="cl">.sg-heading-1</span>, <span class="cl">.sg-heading-2</span>, <span class="cl">.sg-heading-3</span>, <span class="cl">.info-box</span> <span class="ty">h2</span> {
-  <span class="ke">font-family</span>: <span class="s"><span class="dl">"</span><span class="k">Droid Sans</span><span class="dl">"</span></span>;
-  <span class="ke">font-weight</span>: <span class="vl">normal</span>;
-  <span class="ke">font-size</span>: <span class="fl">32px</span>;
-  <span class="ke">line-height</span>: <span class="fl">36px</span>;
-  <span class="ke">color</span>: <span class="cr">#303b41</span>; }
 
-<span class="cl">.sg-heading-2</span>, <span class="cl">.sg-heading-3</span>, <span class="cl">.info-box</span> <span class="ty">h2</span> {
-  <span class="ke">font-size</span>: <span class="fl">20px</span>;
-  <span class="ke">line-height</span>: <span class="fl">28px</span>; }
-
-<span class="cl">.sg-heading-3</span> {
-  <span class="ke">color</span>: <span class="cr">#4892bc</span>; }
-
-<span class="cl">.sg-main-body</span>, <span class="cl">.sg-secondary-body</span>, <span class="cl">.info-box</span> <span class="ty">dl</span>, <span class="cl">.info-box</span> <span class="ty">p</span> {
-  <span class="ke">font-size</span>: <span class="fl">14px</span>;
-  <span class="ke">line-height</span>: <span class="fl">24px</span>;
-  <span class="ke">font-weight</span>: <span class="vl">normal</span>;
-  <span class="ke">color</span>: <span class="cr">#4b4b48</span>; }
-
-<span class="cl">.sg-secondary-body</span>, <span class="cl">.info-box</span> <span class="ty">dl</span> {
-  <span class="ke">font-size</span>: <span class="fl">12px</span>;
-  <span class="ke">line-height</span>: <span class="fl">18px</span>; }
-
-<span class="cl">.sg-text-link-1</span>, <span class="cl">.info-box</span> <span class="ty">ul</span> <span class="ty">li</span> {
-  <span class="ke">font-weight</span>: <span class="vl">normal</span>;
-  <span class="ke">color</span>: <span class="cr">#fe8a16</span>;
-  <span class="ke">text-decoration</span>: <span class="vl">none</span>; }
-  <span class="cl">.sg-text-link-1</span><span class="ps">:hover</span>, <span class="cl">.info-box</span> <span class="ty">ul</span> <span class="ty">li</span><span class="ps">:hover</span> {
-    <span class="ke">color</span>: <span class="cr">#f67502</span>; }
-</pre>
 
 <h2>Conclusion</h2>
 
@@ -212,7 +182,7 @@ $dark-grey:        #4b4b48
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -228,6 +198,10 @@ $dark-grey:        #4b4b48
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -261,10 +235,6 @@ $dark-grey:        #4b4b48
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

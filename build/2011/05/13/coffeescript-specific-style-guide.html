@@ -58,7 +58,7 @@
 
 <p>Here's a simple piece of jQuery and a test case in plain Javascript.</p>
 
-<pre class="CodeRay">var elem = $("#myselector").addClass("testing");
+<pre>var elem = $("#myselector").addClass("testing");
 expect(elem.id).toEqual("myselector");
 </pre>
 
@@ -66,7 +66,7 @@ expect(elem.id).toEqual("myselector");
 
 <p>Simply removing semi-colons and the <tt>var</tt> keyword isn't really enough.</p>
 
-<pre class="CodeRay">elem = $("#myselector").addClass("testing")
+<pre>elem = $("#myselector").addClass("testing")
 expect(elem.id).toEqual("myselector")
 </pre>
 
@@ -74,13 +74,13 @@ expect(elem.id).toEqual("myselector")
 
 <p>First, remember that CoffeeScript doesn't require parentheses when calling functions. These two lines are rendered identically:</p>
 
-<pre class="CodeRay">myfunc("string")
+<pre>myfunc("string")
 myfunc "string"
 </pre>
 
 <p>The second version, without parentheses, is the preferred style. The general rule is: <strong>the final method call in a chain should omit the parentheses</strong>. The original, naive conversion can become:</p>
 
-<pre class="CodeRay">elem = $("#myselector").addClass "testing"
+<pre>elem = $("#myselector").addClass "testing"
 expect(elem.id).toEqual "myselector"
 </pre>
 
@@ -88,7 +88,7 @@ expect(elem.id).toEqual "myselector"
 
 <h2>Preferred Style</h2>
 
-<pre class="CodeRay">elem = ($ "#myselector").addClass "testing"
+<pre>elem = ($ "#myselector").addClass "testing"
 (expect elem.id).toEqual "myselector"
 </pre>
 
@@ -131,7 +131,7 @@ expect(elem.id).toEqual "myselector"
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -147,6 +147,10 @@ expect(elem.id).toEqual "myselector"
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -180,10 +184,6 @@ expect(elem.id).toEqual "myselector"
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

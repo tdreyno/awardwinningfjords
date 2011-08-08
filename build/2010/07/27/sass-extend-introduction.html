@@ -56,7 +56,7 @@
 
 <p>Imagine you have a sidebar with 3 boxes. The first box is logging in, the second box is for an already logged in user and the third box is simply a series of links (a tag cloud, maybe). All three boxes should be styled similarly so let's start with the basics:</p>
 
-<pre class="CodeRay">.sidebar-box
+<pre>.sidebar-box
   +clearfix
   margin: 0 0 10px 0
   background: #eee
@@ -66,21 +66,21 @@
 
 <p>Now, any <tt>div</tt> element we assign a class of <tt>sidebar-box</tt> will be cleared, have a bottom margin, a background color, rounded-corners and an internal padding. Now let's develop a login/logout box which has some specifics for form controls.</p>
 
-<pre class="CodeRay">.sidebar-auth-box
+<pre>.sidebar-auth-box
   @extend .sidebar-box
   input[type=text]
     padding: 10px
     border: 1px solid #ccc
 </pre>
 
-<p>Now, any <tt>div</tt> element we assign a class of <tt>sidebar-auth-box</tt> will behave identically to the standard <tt>sidebar-box</tt>, but will also have custom styling for form inputs. Finally, the logout box will be a darker color to help it stand out. Before @extend, we might have ended up with a tag like this:</p>
+<p>Now, any <tt>div</tt> element we assign a class of <tt>sidebar-auth-box</tt> will behave identically to the standard <tt>sidebar-box</tt>, but will also have custom styling for form inputs. Finally, the logout box will be a darker color to help it stand out. Before @extend, we might have ended up with a tag like this: </p>
 
-<pre class="CodeRay">&lt;div id="logout-box" class="sidebar-box sidebar-auth-box"&gt;
+<pre>&lt;div id="logout-box" class="sidebar-box sidebar-auth-box"&gt;
 </pre>
 
 <p>Now, we can keep our HTML simple and continue with another @extend:</p>
 
-<pre class="CodeRay">#login-box
+<pre>#login-box
   @extend .sidebar-auth-box
 #logout-box
   @extend .sidebar-auth-box
@@ -89,40 +89,9 @@
   @extend .sidebar-box
 </pre>
 
-<p>This requires only an <tt>id</tt> on the three boxes, but we don't repeat ourselves. You'll also notice that the plain CSS classes are still available to place on <tt>div</tt> elements for rapid development or if custom id attributes are not needed. For those who are curious what the output looks like, here it is:</p>
+<p>This requires only an <tt>id</tt> on the three boxes, but we don't repeat ourselves. You'll also notice that the plain CSS classes are still available to place on <tt>div</tt> elements for rapid development or if custom id attributes are not needed. For those who are curious what the output looks like, here it is: </p>
 
-<pre class="CodeRay"><span class="cl">.sidebar-box</span>, 
-<span class="cl">.sidebar-auth-box</span>, 
-<span class="co">#login-box</span>, 
-<span class="co">#logout-box</span>, 
-<span class="co">#links-box</span> {
-  <span class="ke">overflow</span>: <span class="vl">hidden</span>;
-  <span class="ke">display</span>: <span class="vl">inline-block</span>;
-  <span class="ke">margin</span>: <span class="fl">0</span> <span class="fl">0</span> <span class="fl">10px</span> <span class="fl">0</span>;
-  <span class="ke">background</span>: <span class="cr">#eeeeee</span>;
-  <span class="ke">-moz-border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">-webkit-border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">-o-border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">-ms-border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">-khtml-border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">border-radius</span>: <span class="fl">5px</span>;
-  <span class="ke">padding</span>: <span class="fl">10px</span>; }
-  <span class="cl">.sidebar-box</span>, 
-  <span class="cl">.sidebar-auth-box</span>, 
-  <span class="co">#login-box</span>, 
-  <span class="co">#logout-box</span>, 
-  <span class="co">#links-box</span> {
-    <span class="ke">display</span>: <span class="vl">block</span>; }
 
-<span class="cl">.sidebar-auth-box</span> <span class="ty">input</span><span class="s"><span class="dl">[</span><span class="k">type=text</span><span class="dl">]</span></span>, 
-<span class="co">#login-box</span> <span class="ty">input</span><span class="s"><span class="dl">[</span><span class="k">type=text</span><span class="dl">]</span></span>, 
-<span class="co">#logout-box</span> <span class="ty">input</span><span class="s"><span class="dl">[</span><span class="k">type=text</span><span class="dl">]</span></span> {
-  <span class="ke">padding</span>: <span class="fl">10px</span>;
-  <span class="ke">border</span>: <span class="fl">1px</span> <span class="vl">solid</span> <span class="cr">#cccccc</span>; }
-
-<span class="co">#logout-box</span> {
-  <span class="ke">background</span>: <span class="cr">#bbbbbb</span>; }
-</pre>
 
   </div>
 </article><div id="comments">
@@ -163,7 +132,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -179,6 +148,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -212,10 +185,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

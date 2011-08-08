@@ -50,7 +50,9 @@
   </script-->
   
   <div class="entry-content">
-    <p>It's been a long time since <a href="/2009/10/22/middleman">I introduced Middleman on this blog</a> in 2009. Since then, RubyGems reports that there have been 27,518 downloads, <a href="https://github.com/tdreyno/middleman/contributors">several great contributors</a> to the source code and even a mention in a printed book.</p>
+    <p><strong>Update: <a href="/2011/08/08/middleman-2-0.html">Middleman version 2.0 has been released</a></strong></p>
+
+<p>It's been a long time since <a href="/2009/10/22/middleman">I introduced Middleman on this blog</a> in 2009. Since then, RubyGems reports that there have been 27,518 downloads, <a href="https://github.com/tdreyno/middleman/contributors">several great contributors</a> to the source code and even a mention in a printed book.</p>
 
 <p>I've been working hard on documentation as it was the most requested feature from the <a href="/2011/02/06/future-of-middleman-survey">"Future of Middleman Survey"</a>. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: <a href="http://middlemanapp.com/">http://middlemanapp.com/</a></p>
 
@@ -81,7 +83,7 @@
 
 <p>All the "features" of Middleman can be enabled or disabled from your <tt>config.rb</tt> file. These features are now all using the Sinatra extension API which means it is very easy to add your own features or include features from other RubyGems. Here is an example Feature:</p>
 
-<pre class="CodeRay"># In your config.rb or an external file/gem required in config.rb
+<pre># In your config.rb or an external file/gem required in config.rb
 module MyMiddlemanFeature
   class &lt;&lt; self
     def registered(app)
@@ -120,7 +122,7 @@ activate MyMiddlemanFeature
 </ol>
 <p>For example:</p>
 
-<pre class="CodeRay">// In PROJECT_ROOT/data/people.yml
+<pre>// In PROJECT_ROOT/data/people.yml
 friends:
   - tom
   - dick
@@ -139,7 +141,7 @@ friends:
 
 <p>The <a href="https://github.com/blahed/frank">Frank project</a>, a static tool also inspired by Sinatra, has a wonderful set of helpers for generating random text content and placeholder images. I'm adapted this code for Middleman (god bless the MIT license). The API is as follows:</p>
 
-<pre class="CodeRay">lorem.sentence      # returns a single sentence
+<pre>lorem.sentence      # returns a single sentence
 lorem.words 5       # returns 5 individual words
 lorem.word
 lorem.paragraphs 10 # returns 10 paragraphs 
@@ -153,7 +155,7 @@ lorem.email
 
 <p>And to use placeholder images:</p>
 
-<pre class="CodeRay">lorem.image('300x400')
+<pre>lorem.image('300x400')
 #=&gt; http://placehold.it/300x400
 
 lorem.image('300x400', :background_color =&gt; '333', :color =&gt; 'fff')
@@ -172,7 +174,7 @@ lorem.image('300x400', :text =&gt; 'blah')
 
 <p>I've abstracted the templates used in <tt>mm-init</tt> so that it is easy to add new ones, but right now those templates have to live in the Middleman gem to work. In the future, I'll add support for extra templates in external gems or somewhere on the local machine like <tt>~/.middleman</tt>. For now, enjoy the new template option, the wonderful <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>. It is used like this:</p>
 
-<pre class="CodeRay">$ mm-init my_boilerplate_project --template=html5
+<pre>$ mm-init my_boilerplate_project --template=html5
     create  my_boilerplate_project/config.rb
     create  my_boilerplate_project/public
     create  my_boilerplate_project/public/404.html
@@ -199,7 +201,7 @@ lorem.image('300x400', :text =&gt; 'blah')
 
 <p>Finally, a very simple Rack <tt>config.ru</tt> file is included in the default template. It's contents are:</p>
 
-<pre class="CodeRay">require 'rubygems'
+<pre>require 'rubygems'
 require 'middleman'
 
 run Middleman::Server
@@ -211,7 +213,7 @@ run Middleman::Server
 
 <p>As easy as ever:</p>
 
-<pre class="CodeRay">gem install middleman
+<pre>gem install middleman
 </pre>
 
 <p>Please direct all questions and bugs to Github:
@@ -256,7 +258,7 @@ run Middleman::Server
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -272,6 +274,10 @@ run Middleman::Server
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -305,10 +311,6 @@ run Middleman::Server
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

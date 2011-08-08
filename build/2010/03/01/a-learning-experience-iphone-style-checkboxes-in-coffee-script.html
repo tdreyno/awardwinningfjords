@@ -54,23 +54,23 @@
 
 <p>Basically, Coffee Script is compiled into Javascript and attempts to make basic operations simpler and safe. For example, in Ruby you can add a conditional to the end of the current line as a short-hand for a full <tt>if</tt> statement. In Coffee Script this looks like:</p>
 
-<pre class="CodeRay">number = -42 if opposite_day
+<pre>number = -42 if opposite_day
 </pre>
 
 <p>Which compiles to:</p>
 
-<pre class="CodeRay">if (opposite_day) {
+<pre>if (opposite_day) {
   number = -42;
 }
 </pre>
 
-<p>Pretty simple, right? If you're familiar with Javascript, you'll recognize Coffee Script's attempt to fix little annoyances. I dove right in and ported my iPhone-style Checkboxes for jQuery to Coffee Script. <a href="http://github.com/tdreyno/iphone-style-checkboxes/blob/master/coffee/iphone-style-checkboxes.coffee">The code can be found on GitHub</a>. Here are a few thoughts and examples I discovered.</p>
+<p>Pretty simple, right? If you're familiar with Javascript, you'll recognize Coffee Script's attempt to fix little annoyances. I dove right in and ported my iPhone-style Checkboxes for jQuery to Coffee Script. <a href="http://github.com/tdreyno/iphone-style-checkboxes/blob/master/coffee/iphone-style-checkboxes.coffee">The code can be found on GitHub</a>. Here are a few thoughts and examples I discovered. </p>
 
 <h2>Basic Features</h2>
 
 <p>A lot of the convenience of Coffee Script is only really apparent if you're quite familiar with Javascript. The following three features are fairly common and useful in Ruby, but trying something similar in Javascript requires a bit more error-checking and code. Coffee Script hides this.</p>
 
-<pre class="CodeRay"># Conditional assignments
+<pre># Conditional assignments
 expensive ||= do_the_math()
 
 # Treating function arguments as a real array
@@ -83,7 +83,7 @@ solipsism = true if mind? and not world?
 
 <p>These are compiled to their Javascript representations.</p>
 
-<pre class="CodeRay"># Conditional assignments
+<pre># Conditional assignments
 expensive = expensive || do_the_math();
 
 # Treating function arguments as a real array
@@ -105,7 +105,7 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>From here on out, I'll omit the Javascript version. Let's just look at some cool features and trust they will work when compiled. To begin, function definitions, and anonymous functions, are even simpler in Coffee Script. It's as simple as:</p>
 
-<pre class="CodeRay">method_name: (parameter1, parameter1, other_params...) -&gt;
+<pre>method_name: (parameter1, parameter1, other_params...) -&gt;
   "Thanks for coming"
 </pre>
 
@@ -113,14 +113,14 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>A class is just a variation of a function in Javascript. Usually capitalized, it looks like this:</p>
 
-<pre class="CodeRay">Account = (customer, cart) -&gt;
+<pre>Account = (customer, cart) -&gt;
   @customer = customer
   @cart     = cart
 </pre>
 
 <p>The Account class takes two parameters on it's constructor. The @ sign is used for accessing instance variables. In raw Javascript, this is usually handled by the <tt>this</tt> value. Maybe Javascript event libraries allow anonymous functions as callbacks, but the value of <tt>this</tt> inside these callbacks can be hard to ensure. In Coffee Script, we can force the value of <tt>this</tt>, called binding, to the current object by using a =&gt; symbol instead of -&gt;</p>
 
-<pre class="CodeRay">  $('.shopping_cart').bind 'click', (event) =&gt;
+<pre>  $('.shopping_cart').bind 'click', (event) =&gt;
     @customer.purchase @cart
 </pre>
 
@@ -130,7 +130,7 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>Next up is Pattern Matching, also known as Destructuring Assignment in the ECMAScript 4 syntax. Basically, we have an object or array and we want to pull some pieces out and into variables to work with. The simplest example is having a method that returns an array of three items.</p>
 
-<pre class="CodeRay">weather_report: (location) -&gt;
+<pre>weather_report: (location) -&gt;
   # Make an Ajax request to fetch the weather...
   [location, 72, "Mostly Sunny"]
 
@@ -141,7 +141,7 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>Now lets get very complicated. Let's destructure nested objects. This can be very powerful. Here's an example nested object:</p>
 
-<pre class="CodeRay">futurists: {
+<pre>futurists: {
   sculptor: "Umberto Boccioni"
   painter:  "Vladimir Burliuk"
   poet: {
@@ -156,7 +156,7 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>Now, we'll pull out the pieces we want into local variables:</p>
 
-<pre class="CodeRay">{poet: {name: poet_name, address: [street, city]}} = futurists
+<pre>{poet: {name: poet_name, address: [street, city]}} = futurists
 </pre>
 
 <p>This results in poet_name="F.T. Marinetti", street="Via Roma 42R" and city="Bellagio, Italy 22021"</p>
@@ -165,9 +165,9 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <h2>Features I Love #3: Indentation-aware Heredocs</h2>
 
-<p>The triple quote (from Python, I think?) starts a block of text which will be turned into a single string which has the indentation you'd expect rather than including all of the prefixed whitespace.</p>
+<p>The triple quote (from Python, I think?) starts a block of text which will be turned into a single string which has the indentation you'd expect rather than including all of the prefixed whitespace. </p>
 
-<pre class="CodeRay">html: '''
+<pre>html: '''
       &lt;strong&gt;
         cup of coffeescript
       &lt;/strong&gt;
@@ -176,7 +176,7 @@ if ( (typeof mind !== "undefined" &amp;&amp; mind !== null) &amp;&amp;
 
 <p>Compiles to:</p>
 
-<pre class="CodeRay">var html;
+<pre>var html;
 html = "&lt;strong&gt;\n  cup of coffeescript\n&lt;/strong&gt;";
 </pre>
 
@@ -186,7 +186,7 @@ html = "&lt;strong&gt;\n  cup of coffeescript\n&lt;/strong&gt;";
 
 <h2>Welcome to the Year 2010, it's ASCII art time!</h2>
 
-<pre class="CodeRay">        {                   
+<pre>        {                   
      }   }   {              
     {   {  }  }             
      }   }{  {               
@@ -246,7 +246,7 @@ html = "&lt;strong&gt;\n  cup of coffeescript\n&lt;/strong&gt;";
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -262,6 +262,10 @@ html = "&lt;strong&gt;\n  cup of coffeescript\n&lt;/strong&gt;";
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -295,10 +299,6 @@ html = "&lt;strong&gt;\n  cup of coffeescript\n&lt;/strong&gt;";
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

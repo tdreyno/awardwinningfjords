@@ -50,7 +50,7 @@
   </script-->
   
   <div class="entry-content">
-    <p>Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way.</p>
+    <p>Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way. </p>
 
 <p>However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web.  Back in the day, 37Signals would just set the background of an element to yellow and call it a day. If you take a look at <a href="http://getflow.com">Flow</a>, you'll see some very designed motion. Closing a task results in the checkbox animating to a state, then it picks up and animates along an arc to drop into the "completed" box in your sidebar.</p>
 
@@ -60,13 +60,13 @@
 
 <p>Here, below is the most basic example. I have a square that is animating back and forth and changing width and height. In a more complicated example, it might arc or have several animations queued up. I've used a shiny new HTML5 <tt>range</tt> element and each time the animation loops, it checks the value to define it's duration.</p>
 
-<pre class="CodeRay">&lt;!-- Ranges from 0-4000, with integer steps. Defaults to 400 --&gt;
+<pre>&lt;!-- Ranges from 0-4000, with integer steps. Defaults to 400 --&gt;
 &lt;input type="range" min="0" max="4000" step="1" value="400"&gt;
 </pre>
 
 <p>The animation looks like:</p>
 
-<pre class="CodeRay">$elem.animate({ left: 480, width: 100, height: 100 }, {
+<pre>$elem.animate({ left: 480, width: 100, height: 100 }, {
   duration: $("input[type=range]").val()
 });
 </pre>
@@ -151,8 +151,9 @@
 <option>easeInBounce</option>
 <option selected>easeOutBounce</option>
 <option>easeInOutBounce</option></select><br><div class="box" style="width: 50px; height: 50px; background: red; position: absolute; top: 75px; left: 10px;"></div>
-</div>
 
+<p></p>
+</div>
 
   </div>
 </article><div id="comments">
@@ -193,7 +194,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -209,6 +210,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -242,10 +247,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

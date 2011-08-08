@@ -10,7 +10,7 @@
 <link href="http://tdreyno.myopenid.com" rel="openid2.local_id">
 <link href="http://www.myopenid.com/server" rel="openid2.provider">
 <meta content="http://www.myopenid.com/xrds?username=tdreyno.myopenid.com" http-equiv="X-XRDS-Location">
-<title>Introducing iPhone-style Checkboxes « Thomas Reynolds</title>
+<title>Middleman 2.0 « Thomas Reynolds</title>
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]--><!-- Stylesheet --><link rel="stylesheet" type="text/css" href="/stylesheets/style.css?v2">
@@ -34,8 +34,8 @@
         
           
           <article class="hentry"><h1 class="entry-title">
-    Introducing iPhone-style Checkboxes 
-    <time class="updated" pubdate>Jun 16 2009</time>
+    Middleman 2.0 
+    <time class="updated" pubdate>Aug  8 2011</time>
 </h1>
 
   <!--div id='rdbWrapper' style="float: right; display: inline; width: 150px; height: 50px;"></div><br clear="all" /><script type='text/javascript'>
@@ -50,91 +50,117 @@
   </script-->
   
   <div class="entry-content">
-    <p>Ever wanted those flash iPhone on/off toggle switches on your webpage? Love jQuery? Well then I've got something special for you. iphone-style-checkboxes implements the iPhone toggles as replacements for standard HTML checkboxes. Simply run the script and your site will be updated with these specialized controls. Best of all, the underlying checkbox is not touched and backend system will never know the difference. The change is purely visual.</p>
+    <p>Middleman 2.0 is a huge release featuring a refactored core, a unified source folder, a unified command line, tons of new features and a <a href="http://middlemanapp.com">full documentation website</a>.</p>
 
-<p><a href="/2009/06/29/prototype-iphone-style-checkboxes.html">UPDATED: Now with Prototype-based version here.</a></p>
+<p>As always, install via RubyGems:</p>
 
-<p><a href="http://github.com/steelThread/ExtJs-ToggleSlide">UPDATED2: Now with ExtJS-based version here.</a></p>
-
-<h2>Examples</h2>
-
-<div class="table">
-  <table>
-<tr>
-<td style="vertical-align: middle !important;">
-        A checkbox defaulting to <strong>checked</strong>
-      </td>
-      <td>
-        <input checked class="normal" type="checkbox">
-</td>
-    </tr>
-<tr>
-<td style="vertical-align: middle !important;">
-        A checkbox defaulting to <strong>unchecked</strong>
-      </td>
-      <td>
-        <input class="normal" type="checkbox">
-</td>
-    </tr>
-</table>
-</div>
-
-<script src="/iphone-style-checkboxes/jquery/iphone-style-checkboxes.js" type="text/javascript"></script><p><link href="/iphone-style-checkboxes/style.css" media="screen" rel="stylesheet" type="text/css"></p>
-
-<script type="text/javascript">
-  $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
-</script><h2>Download and implement</h2>
-
-<p>In keeping with the jQuery philosophy, using the iphone-style-checkboxes library is very simple.
-<a href="http://github.com/tdreyno/iphone-style-checkboxes/zipball/master">Download the package</a>,
-unzip it and place the javascript, images and stylesheet where you please. You'll need to update the stylesheet to point to the new location of your images if they have changed relative to the stylesheet.</p>
-
-<p>Once the files are available to your site, activating the script is very easy:</p>
+<div class="highlight"><pre>gem install middleman
+</pre></div>
 
 
+<p>For more information, read the <a href="http://middlemanapp.com/guides/getting-started">Getting Started</a> guide.</p>
 
-<p>The initialization method takes a handful of options.</p>
+<p>Here's an overview of everything that's changed.</p>
+
+<p></p>
+
+<h2>Unified Source Folder</h2>
+
+<p>The <code>public</code> and <code>views</code> folders have been combined into a single <code>source</code> folder which contains all of your files. Use the <a href="http://middlemanapp.com/guides/migrating">migration tool</a> to quickly update your folder structure, or manually combine the folders.</p>
+
+<h2>Unified Command</h2>
+
+<p>The old commands, <code>mm-init</code>, <code>mm-server</code> and <code>mm-build</code>, have been combined into a single <code>middleman</code> command with the following subcommands:</p>
 
 <ul>
-<li>
-<tt>checkedLabel</tt> sets the text of the "on" state. Defaults to: <strong>ON</strong>
-</li>
-  <li>
-<tt>uncheckedLabel</tt> sets the text of the "off" state. Defaults to: <strong>OFF</strong>
-</li>
+<li><code>middleman init</code></li>
+<li><code>middleman server</code></li>
+<li><code>middleman build</code></li>
 </ul>
-<p>For example:</p>
+<h2>New Features</h2>
+
+<p>Here are the most interesting new features of Middleman 2.0.</p>
+
+<h3>Sprockets</h3>
+
+<p>Sprockets is a tool for Javascript dependency management. Using Sprockets you can include other Javascript and CoffeeScript files into your scripts. </p>
+
+<div class="highlight"><pre><span class="c1">//= require "another_file"</span>
+
+<span class="kd">function</span> <span class="nx">my_javascript</span><span class="p">()</span> <span class="p">{</span>
+
+<span class="p">}</span>
+</pre></div>
 
 
+<p>Read more in the <a href="http://middlemanapp.com/guides/coffeescript-sprockets">Javascript, CoffeeScript and Sprockets</a> guide.</p>
 
-<div class="table">
-  <table>
-<tr>
-<td style="vertical-align: middle !important;">
-        A checkbox defaulting to <strong>checked</strong>
-      </td>
-      <td>
-        <input checked class="yesno" type="checkbox">
-</td>
-    </tr>
-<tr>
-<td style="vertical-align: middle !important;">
-        A checkbox defaulting to <strong>unchecked</strong>
-      </td>
-      <td>
-        <input class="yesno" type="checkbox">
-</td>
-    </tr>
-</table>
-</div>
+<h3>Dynamic Pages</h3>
 
-<script type="text/javascript">
-  $('#post :checkbox.yesno').iphoneStyle({ checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
-</script><h2>Contribute</h2>
+<p>Dynamic pages allow you to generate HTML for files which share a single template. </p>
 
-<p>The source is available, and forkable, on GitHub at
-<a href="https://github.com/tdreyno/iphone-style-checkboxes">https://github.com/tdreyno/iphone-style-checkboxes</a>.
-Please direct comments, support requests, bug reporting and pull requests to there.</p>
+<div class="highlight"><pre><span class="o">[</span><span class="s2">"tom"</span><span class="p">,</span> <span class="s2">"dick"</span><span class="p">,</span> <span class="s2">"harry"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+  <span class="n">page</span> <span class="s2">"/about/</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">.html"</span><span class="p">,</span> <span class="ss">:proxy</span> <span class="o">=&gt;</span> <span class="s2">"/about/template.html"</span> <span class="k">do</span>
+    <span class="vi">@person_name</span> <span class="o">=</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+
+
+<p>Read more in the <a href="http://middlemanapp.com/guides/dynamic-pages">Dynamic Pages</a> guide.</p>
+
+<h3>Pretty URLs</h3>
+
+<p>Pretty URLs (aka Directory Indexes) let you generate folders for each HTML file in your project which results in a pretty, extension-less URL in common web-servers.</p>
+
+<div class="highlight"><pre><span class="n">activate</span> <span class="ss">:directory_indexes</span>
+</pre></div>
+
+
+<p>Now <code>source/my-page.html</code> will generate <code>build/my-page/index.html</code>.</p>
+
+<p>Read more in the <a href="http://middlemanapp.com/guides/pretty-urls">Pretty URLs</a> guide.</p>
+
+<h3>YAML Frontmatter</h3>
+
+<p>YAML Frontmatter lets you add in-template variables at the top of a page, which are also available in the layout, and to configure which layout the page uses.</p>
+
+<div class="highlight"><pre><span class="x">---</span>
+<span class="x">layout: "login"</span>
+<span class="x">page_name: "Login"</span>
+<span class="x">---</span>
+
+<span class="x">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="n">data</span><span class="o">.</span><span class="n">page</span><span class="o">.</span><span class="n">page_name</span> <span class="cp">%&gt;</span><span class="x">&lt;/h1&gt;</span>
+</pre></div>
+
+
+<p>The above <code>login.html.erb</code> file will be rendered using the <code>login.erb</code> layout file.</p>
+
+<p>Read more in the <a href="http://middlemanapp.com/guides/individual-page-configuration">Individual Page Configuration</a> guide.</p>
+
+<h3>LiveReload</h3>
+
+<p>By default, LiveReload will monitor your <code>config.rb</code> file and automatically restart the Middleman server if it changes. This means, activating new features no longer requires a server restart.</p>
+
+<p>In addition, you can have LiveReload monitor your project files as well and instruct the web-browser to reload when they change using the <a href="https://github.com/mockko/livereload#readme">LiveReload Extension</a> and the <code>--livereload</code> flag.</p>
+
+<div class="highlight"><pre>middleman server --livereload
+</pre></div>
+
+
+<h2>Migrating to 2.0</h2>
+
+<p>Updating old projects to Middleman 2.0 is very easy. Simply use the new <code>migrate</code> command:</p>
+
+<div class="highlight"><pre>middleman migrate
+</pre></div>
+
+
+<p>Read more about the migration edge cases in the <a href="http://middlemanapp.com/guides/migrating">Migrating to Middleman 2.0</a> guide.</p>
+
+<h2>Support</h2>
+
+<p>If there are any issues or regressions, please log bugs on the <a href="https://github.com/tdreyno/middleman/issues">Github Issue Tracker</a>.</p>
 
   </div>
 </article><div id="comments">
@@ -155,7 +181,7 @@ Please direct comments, support requests, bug reporting and pull requests to the
       var disqus_shortname = 'awf';
 
       // var disqus_identifier = 'unique_dynamic_id_1234';
-      var disqus_url = 'http://example.org/2009/06/16/iphone-style-checkboxes.html';
+      var disqus_url = 'http://example.org/2011/08/08/middleman-2-0.html';
 
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {

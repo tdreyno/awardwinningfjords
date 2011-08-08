@@ -52,9 +52,9 @@
   <div class="entry-content">
     <p>I've been hearing a bit of buzz about the <a href="http://rvm.beginrescueend.com/rvm/install/">Ruby Version Manager</a> project on Twitter and from other Rubyists I know. Basically, the project provides a command-line tool which can download and compile a large number of Ruby implementations and swap between the active implementation on a per-terminal basis.</p>
 
-<p>This is especially useful for me as I have Ruby tools, like <a href="http://awardwinningfjords.com/2009/10/22/middleman.html">Middleman</a>, which I need to maintain on multiple VMs. In the past, you'd have to install each VM to it's own namespace and be very careful when running them to make sure you were in the right VM. For example:</p>
+<p>This is especially useful for me as I have Ruby tools, like <a href="http://middlemanapp.com">Middleman</a>, which I need to maintain on multiple VMs. In the past, you'd have to install each VM to it's own namespace and be very careful when running them to make sure you were in the right VM. For example:</p>
 
-<pre class="CodeRay">ruby: The default OSX ruby 1.8.7
+<pre>ruby: The default OSX ruby 1.8.7
 ruby19: My custom-compiled ruby 1.9.1
 jruby: My custom-compiled jRuby
 macruby: My custom-compiled MacRuby
@@ -64,17 +64,17 @@ macruby: My custom-compiled MacRuby
 
 <h2>Install the gem</h2>
 
-<pre class="CodeRay">gem install rvm
+<pre>gem install rvm
 </pre>
 
 <h2>Run the installer</h2>
 
-<pre class="CodeRay">rvm-install
+<pre>rvm-install
 </pre>
 
 <p>Follow instructions and append the output of the install to your terminal profile</p>
 
-<pre class="CodeRay">In ~/.profile
+<pre>In ~/.profile
 Add to the bottom:
 
 if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/scripts/rvm ; fi
@@ -82,7 +82,7 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
 
 <p>Then, save and close ~/.profile and run:</p>
 
-<pre class="CodeRay">source ~/.profile
+<pre>source ~/.profile
 </pre>
 
 <p>Now, you are ready to go.</p>
@@ -91,19 +91,19 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
 
 <p>First, lets see which Ruby VMs the tool detected.</p>
 
-<pre class="CodeRay">rvm list
+<pre>rvm list
 </pre>
 
 <p>My output includes the built-in OSX VM.</p>
 
-<pre class="CodeRay">System Ruby
+<pre>System Ruby
 
    system [ x86_64 i386 ppc ]
 </pre>
 
 <p>Now, I want to install some more Rubies.</p>
 
-<pre class="CodeRay">rvm install 1.9.1,rbx,jruby,macruby
+<pre>rvm install 1.9.1,rbx,jruby,macruby
 </pre>
 
 <p>A couple of minutes later, you'll have 5 different Ruby VMs installed. RBX is Rubinius and the others should be self-explanatory.</p>
@@ -112,7 +112,7 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
 
 <p>To change between the active VM, simply run:</p>
 
-<pre class="CodeRay">rvm use 1.9.1
+<pre>rvm use 1.9.1
 </pre>
 
 <p>And now <code>ruby -v</code> returns "ruby 1.9.1p378 (2010-01-10 revision 26273) [i386-darwin10.2.0]"</p>
@@ -121,7 +121,7 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
 
 <p>To return to your original VM, run:</p>
 
-<pre class="CodeRay">rvm use system
+<pre>rvm use system
 </pre>
 
 <p>Be aware that each VM probably has it's own gems. So you'll need to be aware of that and try to keep each VM's gems in sync.</p>
@@ -165,7 +165,7 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -181,6 +181,10 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -214,10 +218,6 @@ if [[ -s /Users/tdreyno/.rvm/scripts/rvm ]] ; then source /Users/tdreyno/.rvm/sc
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

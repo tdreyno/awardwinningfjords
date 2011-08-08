@@ -54,20 +54,18 @@
 
 <p>When you start a new project using the compass command-line tool, it will generate a config.rb file which contains options specific to your new project. There is a variable called http_images_path which is used by Compass to generate the correct image paths. I have the value setup for this site as such</p>
 
-<pre class="CodeRay">http_images_path = "/wp-content/themes/default/images/"
+<pre>http_images_path = "/wp-content/themes/default/images/"
 </pre>
 
 <p>Now when I use the image_url() method for the header on this site:</p>
 
-<pre class="CodeRay">h1
+<pre>h1
   background= image_url("title-embellishment.gif") "no-repeat" 17px 7px
 </pre>
 
 <p>It will generate this CSS:</p>
 
-<pre class="CodeRay"><span class="ty">h1</span> {
-  <span class="ke">background</span>: <span class="s"><span class="dl">url(</span><span class="k">/images/title-embellishment.gif</span><span class="dl">)</span></span> <span class="vl">no-repeat</span> <span class="fl">17px</span> <span class="fl">7px</span>; }
-</pre>
+
 
 <p>This makes it trivial to change image paths for the entire site with one line in config.rb. Never again worry about relative paths, ../../images/ and the like.</p>
 
@@ -110,7 +108,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -126,6 +124,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -159,10 +161,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

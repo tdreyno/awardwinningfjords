@@ -58,7 +58,7 @@
 
 <p>Go ahead and grab the Sass 3 prerelease by running:</p>
 
-<pre class="CodeRay">gem install haml --pre
+<pre>gem install haml --pre
 </pre>
 
 <h2>Converting Old Sass Files to New Syntax</h2>
@@ -67,7 +67,7 @@
 
 <p>Converting from Sass 2 to Sass 3 is as easy as:</p>
 
-<pre class="CodeRay">sass-convert --in-place --from sass2 style.sass
+<pre>sass-convert --in-place --from sass2 style.sass
 </pre>
 
 <p>There is also a <tt>--to</tt> flag which Sass 3 is the default. You could also convert <tt>--to scss</tt> if you wanted to experiment with that format.</p>
@@ -78,13 +78,13 @@
 
 <p>Before:</p>
 
-<pre class="CodeRay">body
+<pre>body
   background= image_url("background.png")
 </pre>
 
 <p>After:</p>
 
-<pre class="CodeRay">body
+<pre>body
   background: image_url("background.png")
 </pre>
 
@@ -94,24 +94,24 @@
 
 <p>Before:</p>
 
-<pre class="CodeRay">!background_color= #ffffff
+<pre>!background_color= #ffffff
 </pre>
 
 <p>After:</p>
 
-<pre class="CodeRay">$background_color: #ffffff
+<pre>$background_color: #ffffff
 </pre>
 
 <p>One nice side effect of this change is the ability to mix quoted and unquoted strings on the same line. Something I do often for font declarations and now I no longer need to wrap the whole section in an additional level of quotes.</p>
 
 <p>Before:</p>
 
-<pre class="CodeRay">!font_family= "'Lucida Sans', 'Lucida Grande', arial, sans-serif"
+<pre>!font_family= "'Lucida Sans', 'Lucida Grande', arial, sans-serif"
 </pre>
 
 <p>After:</p>
 
-<pre class="CodeRay">$font_family: 'Lucida Sans', 'Lucida Grande', arial, sans-serif
+<pre>$font_family: 'Lucida Sans', 'Lucida Grande', arial, sans-serif
 </pre>
 
 <h2>New Syntax #3: Default variable values</h2>
@@ -120,12 +120,12 @@
 
 <p>Before:</p>
 
-<pre class="CodeRay">!font_size ||= 12px
+<pre>!font_size ||= 12px
 </pre>
 
 <p>After:</p>
 
-<pre class="CodeRay">$font_size: 12px !default
+<pre>$font_size: 12px !default
 </pre>
 
 <h2>New Syntax #4: Interchangeable underscores and hyphens</h2>
@@ -134,7 +134,7 @@
 
 <p>Before:</p>
 
-<pre class="CodeRay">!body_background_color= #000000
+<pre>!body_background_color= #000000
 
 body
   background= !body_background_color
@@ -142,7 +142,7 @@ body
 
 <p>After (either will work):</p>
 
-<pre class="CodeRay">$body_background_color: #000000
+<pre>$body_background_color: #000000
 $text-color: #ffffff
 
 body
@@ -154,7 +154,7 @@ body
 
 <h2>Conclusion</h2>
 
-<p>That's all for now. There are several other nice features in Sass 3 such as the integration of compass-colors, a new mixin definition and inclusion syntax and the SCSS syntax. You can read about these in the <a href="http://beta.sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0-syntax-changes">Sass 3 Changelog</a>. I may write about SCSS later, but I'm not a huge fan and will probably wait and let someone who has a bigger stake in the issue (those using LESS or those who adore single-line CSS) address it.</p>
+<p>That's all for now. There are several other nice features in Sass 3 such as the integration of compass-colors, a new mixin definition and inclusion syntax and the SCSS syntax. You can read about these in the <a href="http://beta.sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0-syntax-changes">Sass 3 Changelog</a>. I may write about SCSS later, but I'm not a huge fan and will probably wait and let someone who has a bigger stake in the issue (those using LESS or those who adore single-line CSS) address it. </p>
 
   </div>
 </article><div id="comments">
@@ -195,7 +195,7 @@ body
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -211,6 +211,10 @@ body
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -244,10 +248,6 @@ body
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

@@ -62,25 +62,11 @@
 
 <p>Finally, you'll need to write the glue:</p>
 
-<pre class="CodeRay"><span class="pd">$</span>.fn.<span class="fu">handleSwipes</span> = <span class="kw">function</span>() {
-  <span class="kw">return</span> <span class="lv">this</span>.each(<span class="kw">function</span>() {
-    <span class="kw">var</span> api = <span class="pd">$</span>(<span class="lv">this</span>).data(<span class="s"><span class="dl">"</span><span class="k">scrollable</span><span class="dl">"</span></span>);
 
-    api.getRoot().addSwipeEvents()
-       .bind(<span class="s"><span class="dl">'</span><span class="k">swipeleft</span><span class="dl">'</span></span>, <span class="kw">function</span>() {
-         api.next();
-       })
-       .bind(<span class="s"><span class="dl">'</span><span class="k">swiperight</span><span class="dl">'</span></span>, <span class="kw">function</span>() {
-         api.prev();
-       });
-  });
-};
-</pre>
 
 <p>Once you have all three of these components on a page, initialize them like so:</p>
 
-<pre class="CodeRay"><span class="pd">$</span>(<span class="s"><span class="dl">"</span><span class="k">.scrollable</span><span class="dl">"</span></span>).scrollable().handleSwipes();
-</pre>
+
 
 <p>Now touch swipes will trigger the next and previous behavious built into the widget. Enjoy.</p>
 
@@ -123,7 +109,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -139,6 +125,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -172,10 +162,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

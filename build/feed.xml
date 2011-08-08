@@ -5,10 +5,145 @@
   <id>http://awardwinningfjords.com/</id>
   <link href="http://awardwinningfjords.com/"/>
   <link href="http://awardwinningfjords.com/feed.xml" rel="self"/>
-  <updated>2011-05-13T00:00:00-07:00</updated>
+  <updated>2011-08-08T00:00:00-07:00</updated>
   <author>
     <name>Thomas Reynolds</name>
   </author>
+  <entry>
+    <title>Middleman 2.0</title>
+    <link rel="alternate" href="/2011/08/08/middleman-2-0.html"/>
+    <id>/2011/08/08/middleman-2-0.html</id>
+    <published>2011-08-08T00:00:00-07:00</published>
+    <updated>2011-08-08T00:00:00-07:00</updated>
+    <author>
+      <name>Thomas Reynolds</name>
+    </author>
+    <summary type="html">&lt;p&gt;Middleman 2.0 is a huge release featuring a refactored core, a unified source folder, a unified command line, tons of new features and a &lt;a href="http://middlemanapp.com"&gt;full documentation website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As always, install via RubyGems:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::bash
+gem install middleman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more information, read the &lt;a href="http://middlemanapp.com/guides/getting-started"&gt;Getting Started&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;p&gt;Here's an overview of everything that's changed.&lt;/p&gt;
+</summary>
+    <content type="html">&lt;p&gt;Middleman 2.0 is a huge release featuring a refactored core, a unified source folder, a unified command line, tons of new features and a &lt;a href="http://middlemanapp.com"&gt;full documentation website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As always, install via RubyGems:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::bash
+gem install middleman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For more information, read the &lt;a href="http://middlemanapp.com/guides/getting-started"&gt;Getting Started&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;p&gt;Here's an overview of everything that's changed.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2&gt;Unified Source Folder&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;public&lt;/code&gt; and &lt;code&gt;views&lt;/code&gt; folders have been combined into a single &lt;code&gt;source&lt;/code&gt; folder which contains all of your files. Use the &lt;a href="http://middlemanapp.com/guides/migrating"&gt;migration tool&lt;/a&gt; to quickly update your folder structure, or manually combine the folders.&lt;/p&gt;
+
+&lt;h2&gt;Unified Command&lt;/h2&gt;
+
+&lt;p&gt;The old commands, &lt;code&gt;mm-init&lt;/code&gt;, &lt;code&gt;mm-server&lt;/code&gt; and &lt;code&gt;mm-build&lt;/code&gt;, have been combined into a single &lt;code&gt;middleman&lt;/code&gt; command with the following subcommands:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;middleman init&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;middleman server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;middleman build&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;New Features&lt;/h2&gt;
+
+&lt;p&gt;Here are the most interesting new features of Middleman 2.0.&lt;/p&gt;
+
+&lt;h3&gt;Sprockets&lt;/h3&gt;
+
+&lt;p&gt;Sprockets is a tool for Javascript dependency management. Using Sprockets you can include other Javascript and CoffeeScript files into your scripts. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::javascript
+//= require &amp;quot;another_file&amp;quot;
+
+function my_javascript() {
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Read more in the &lt;a href="http://middlemanapp.com/guides/coffeescript-sprockets"&gt;Javascript, CoffeeScript and Sprockets&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;h3&gt;Dynamic Pages&lt;/h3&gt;
+
+&lt;p&gt;Dynamic pages allow you to generate HTML for files which share a single template. &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+[&amp;quot;tom&amp;quot;, &amp;quot;dick&amp;quot;, &amp;quot;harry&amp;quot;].each do |name|
+  page &amp;quot;/about/#{name}.html&amp;quot;, :proxy =&amp;gt; &amp;quot;/about/template.html&amp;quot; do
+    @person_name = name
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Read more in the &lt;a href="http://middlemanapp.com/guides/dynamic-pages"&gt;Dynamic Pages&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;h3&gt;Pretty URLs&lt;/h3&gt;
+
+&lt;p&gt;Pretty URLs (aka Directory Indexes) let you generate folders for each HTML file in your project which results in a pretty, extension-less URL in common web-servers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::ruby
+activate :directory_indexes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now &lt;code&gt;source/my-page.html&lt;/code&gt; will generate &lt;code&gt;build/my-page/index.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Read more in the &lt;a href="http://middlemanapp.com/guides/pretty-urls"&gt;Pretty URLs&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;h3&gt;YAML Frontmatter&lt;/h3&gt;
+
+&lt;p&gt;YAML Frontmatter lets you add in-template variables at the top of a page, which are also available in the layout, and to configure which layout the page uses.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::erb
+---
+layout: &amp;quot;login&amp;quot;
+page_name: &amp;quot;Login&amp;quot;
+---
+
+&amp;lt;h1&amp;gt;&amp;lt;%= data.page.page_name %&amp;gt;&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above &lt;code&gt;login.html.erb&lt;/code&gt; file will be rendered using the &lt;code&gt;login.erb&lt;/code&gt; layout file.&lt;/p&gt;
+
+&lt;p&gt;Read more in the &lt;a href="http://middlemanapp.com/guides/individual-page-configuration"&gt;Individual Page Configuration&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;h3&gt;LiveReload&lt;/h3&gt;
+
+&lt;p&gt;By default, LiveReload will monitor your &lt;code&gt;config.rb&lt;/code&gt; file and automatically restart the Middleman server if it changes. This means, activating new features no longer requires a server restart.&lt;/p&gt;
+
+&lt;p&gt;In addition, you can have LiveReload monitor your project files as well and instruct the web-browser to reload when they change using the &lt;a href="https://github.com/mockko/livereload#readme"&gt;LiveReload Extension&lt;/a&gt; and the &lt;code&gt;--livereload&lt;/code&gt; flag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::bash
+middleman server --livereload
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Migrating to 2.0&lt;/h2&gt;
+
+&lt;p&gt;Updating old projects to Middleman 2.0 is very easy. Simply use the new &lt;code&gt;migrate&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;:::bash
+middleman migrate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Read more about the migration edge cases in the &lt;a href="http://middlemanapp.com/guides/migrating"&gt;Migrating to Middleman 2.0&lt;/a&gt; guide.&lt;/p&gt;
+
+&lt;h2&gt;Support&lt;/h2&gt;
+
+&lt;p&gt;If there are any issues or regressions, please log bugs on the &lt;a href="https://github.com/tdreyno/middleman/issues"&gt;Github Issue Tracker&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>CoffeeScript-specific Style Guide</title>
     <link rel="alternate" href="/2011/05/13/coffeescript-specific-style-guide.html"/>
@@ -30,38 +165,38 @@
 
 &lt;p&gt;Here's a simple piece of jQuery and a test case in plain Javascript.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;var elem = $("#myselector").addClass("testing");
-expect(elem.id).toEqual("myselector");
+&lt;pre&gt;&lt;code&gt;var elem = $(&amp;quot;#myselector&amp;quot;).addClass(&amp;quot;testing&amp;quot;);
+expect(elem.id).toEqual(&amp;quot;myselector&amp;quot;);
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2&gt;Naive Conversion to CoffeeScript:&lt;/h2&gt;
 
 &lt;p&gt;Simply removing semi-colons and the &lt;tt&gt;var&lt;/tt&gt; keyword isn't really enough.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;elem = $("#myselector").addClass("testing")
-expect(elem.id).toEqual("myselector")
+&lt;pre&gt;&lt;code&gt;elem = $(&amp;quot;#myselector&amp;quot;).addClass(&amp;quot;testing&amp;quot;)
+expect(elem.id).toEqual(&amp;quot;myselector&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2&gt;Lisp-y Function Grouping/Calling &amp;amp; Omitting Final parentheses&lt;/h2&gt;
 
 &lt;p&gt;First, remember that CoffeeScript doesn't require parentheses when calling functions. These two lines are rendered identically:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;myfunc("string")
-myfunc "string"
+&lt;pre&gt;&lt;code&gt;myfunc(&amp;quot;string&amp;quot;)
+myfunc &amp;quot;string&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The second version, without parentheses, is the preferred style. The general rule is: &lt;strong&gt;the final method call in a chain should omit the parentheses&lt;/strong&gt;. The original, naive conversion can become:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;elem = $("#myselector").addClass "testing"
-expect(elem.id).toEqual "myselector"
+&lt;pre&gt;&lt;code&gt;elem = $(&amp;quot;#myselector&amp;quot;).addClass &amp;quot;testing&amp;quot;
+expect(elem.id).toEqual &amp;quot;myselector&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Finally, CoffeeScript prefers to use parentheses to group methods, rather than group method parameters. This subtle difference is best illustrated by the final code. I think seeing the jQuery &lt;tt&gt;$&lt;/tt&gt; without a parenthesis was off-putting at first, but I'm slowly learning to like it. The resulting code feels more math-y (or Lisp-y).&lt;/p&gt;
 
 &lt;h2&gt;Preferred Style&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;elem = ($ "#myselector").addClass "testing"
-(expect elem.id).toEqual "myselector"
+&lt;pre&gt;&lt;code&gt;elem = ($ &amp;quot;#myselector&amp;quot;).addClass &amp;quot;testing&amp;quot;
+(expect elem.id).toEqual &amp;quot;myselector&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
@@ -74,23 +209,23 @@ expect(elem.id).toEqual "myselector"
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;Last week at &lt;a href="http://2011.jsconf.us/"&gt;jsconf&lt;/a&gt;, &lt;a href="http://mir.aculo.us/"&gt;Thomas Fuchs&lt;/a&gt; continued his argument for small frameworks with the release of &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt; which acts as a listing of tiny, single-purpose libraries. The idea being that freedom and choice, combined with optimizing for size will result in a better product than using a larger, monolithic "framework."&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Last week at &lt;a href="http://2011.jsconf.us/"&gt;jsconf&lt;/a&gt;, &lt;a href="http://mir.aculo.us/"&gt;Thomas Fuchs&lt;/a&gt; continued his argument for small frameworks with the release of &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt; which acts as a listing of tiny, single-purpose libraries. The idea being that freedom and choice, combined with optimizing for size will result in a better product than using a larger, monolithic &amp;quot;framework.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;But what are we talking about when we say "framework" and what kind of applications can be built with microframeworks?&lt;/p&gt;
+&lt;p&gt;But what are we talking about when we say &amp;quot;framework&amp;quot; and what kind of applications can be built with microframeworks?  &lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Last week at &lt;a href="http://2011.jsconf.us/"&gt;jsconf&lt;/a&gt;, &lt;a href="http://mir.aculo.us/"&gt;Thomas Fuchs&lt;/a&gt; continued his argument for small frameworks with the release of &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt; which acts as a listing of tiny, single-purpose libraries. The idea being that freedom and choice, combined with optimizing for size will result in a better product than using a larger, monolithic "framework."&lt;/p&gt;
+    <content type="html">&lt;p&gt;Last week at &lt;a href="http://2011.jsconf.us/"&gt;jsconf&lt;/a&gt;, &lt;a href="http://mir.aculo.us/"&gt;Thomas Fuchs&lt;/a&gt; continued his argument for small frameworks with the release of &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt; which acts as a listing of tiny, single-purpose libraries. The idea being that freedom and choice, combined with optimizing for size will result in a better product than using a larger, monolithic &amp;quot;framework.&amp;quot;&lt;/p&gt;
 
-&lt;p&gt;But what are we talking about when we say "framework" and what kind of applications can be built with microframeworks?&lt;/p&gt;
+&lt;p&gt;But what are we talking about when we say &amp;quot;framework&amp;quot; and what kind of applications can be built with microframeworks?  &lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
 &lt;h2&gt;The Two Types of HTML Applications&lt;/h2&gt;
 
-&lt;p&gt;It is useful to denominate the two kinds of web applications that exist on the web. First, there is the traditional "Progressive Enhancement" apps. These use Javascript to bring additional interaction, animation and life to static HTML/CSS. The benefit is that even if the client has problems with Javascript due to some esoteric IE bug, or their phone doesn't support Javascript, that they can still interact with the site normally. The majority of large sites using jQuery act in this way. They output HTML from the backend and then jQuery adds interaction.&lt;/p&gt;
+&lt;p&gt;It is useful to denominate the two kinds of web applications that exist on the web. First, there is the traditional &amp;quot;Progressive Enhancement&amp;quot; apps. These use Javascript to bring additional interaction, animation and life to static HTML/CSS. The benefit is that even if the client has problems with Javascript due to some esoteric IE bug, or their phone doesn't support Javascript, that they can still interact with the site normally. The majority of large sites using jQuery act in this way. They output HTML from the backend and then jQuery adds interaction.&lt;/p&gt;
 
 &lt;p&gt;The second type is the MVC application. These frameworks start from a blank slate and use their own Views (templates) to build up the components of an app. This view layer certainly adds complexity (and lines of code) to the framework, but the result is usually a more Desktop-like user experience. The big frameworks of this type are &lt;a href="http://blog.sproutcore.com/"&gt;Sproutcore&lt;/a&gt;, &lt;a href="http://cappuccino.org/"&gt;Cappuccino&lt;/a&gt; and to a lesser degree, &lt;a href="http://documentcloud.github.com/backbone/"&gt;Backbone.js&lt;/a&gt;. &lt;a href="http://skilldrick.co.uk/2011/05/javascript-and-the-end-of-progressive-enhancement/comment-page-1/"&gt;Nick Morgan argues that these types of app are the future&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;We'll need to keep in mind both types of applications as we think about optimization. What benefits one might not benefit the other and it's important to figure out the kind of app a person is talking about when they are discussing "microframeworks."&lt;/p&gt;
+&lt;p&gt;We'll need to keep in mind both types of applications as we think about optimization. What benefits one might not benefit the other and it's important to figure out the kind of app a person is talking about when they are discussing &amp;quot;microframeworks.&amp;quot;&lt;/p&gt;
 
 &lt;h2&gt;The Problem&lt;/h2&gt;
 
@@ -102,19 +237,19 @@ expect(elem.id).toEqual "myselector"
 
 &lt;p&gt;The jQuery project and Google both offer to serve jQuery from their respective CDNs. These CDNs are heavily optimized to get clients a copy of jQuery as quickly as possible and they have the added bonus of using a consistent URL. That means if domaina.com and domainb.com both point to Google's copy of jQuery, then they will share the same file in the cache. This means domainb.com and all subsequent domains you visit using the Google CDN copy of jQuery won't have to be delayed waiting for jQuery to download, it will already be in the cache.&lt;/p&gt;
 
-&lt;p&gt;This is a great idea. With jQuery on 44% of the web, it's time to admit that it is the "standard library" of the web. Personally, I think Google Chrome should ship with the last dozen versions of jQuery embedded and have an option to prefer the local copies over downloading a new one. The standard library should ship with the language (in the browser). I think this will happen some day, but until then...&lt;/p&gt;
+&lt;p&gt;This is a great idea. With jQuery on 44% of the web, it's time to admit that it is the &amp;quot;standard library&amp;quot; of the web. Personally, I think Google Chrome should ship with the last dozen versions of jQuery embedded and have an option to prefer the local copies over downloading a new one. The standard library should ship with the language (in the browser). I think this will happen some day, but until then...&lt;/p&gt;
 
 &lt;h3&gt;Load Asynchronously&lt;/h3&gt;
 
 &lt;p&gt;There are a handful of popular new tools for loading your Javascript without blocking such as LABjs, RequireJS, StealJS, yepnope and script.js. Of course, these tools are themselves written in Javascript and must be first loaded in a blocking fashion. However, they are usually small enough that this isn't a real issue. Once the script loader is ready, it will begin pulling in your other Javascript files.&lt;/p&gt;
 
-&lt;p&gt;Asynchronous script loading works great for apps using "progressive enhancement", you can off-load almost all the Javascript, including jQuery, until later and when it finally loads the page simply gets a little nicer and interactive. However, to the user it looks like the page is loaded and they can begin interacting immediately.&lt;/p&gt;
+&lt;p&gt;Asynchronous script loading works great for apps using &amp;quot;progressive enhancement&amp;quot;, you can off-load almost all the Javascript, including jQuery, until later and when it finally loads the page simply gets a little nicer and interactive. However, to the user it looks like the page is loaded and they can begin interacting immediately.&lt;/p&gt;
 
-&lt;p&gt;"MVC Applications" require more complicated organization and packaging to work asynchronously. They need to know which parts of the app can be loaded later and which are needed immediately. The larger frameworks, like &lt;a href="http://blog.sproutcore.com/"&gt;Sproutcore&lt;/a&gt; and &lt;a href="http://javascriptmvc.com/"&gt;JavascriptMVC&lt;/a&gt;, have already solved this problem, but it does add some conceptual overhead.&lt;/p&gt;
+&lt;p&gt;&amp;quot;MVC Applications&amp;quot; require more complicated organization and packaging to work asynchronously. They need to know which parts of the app can be loaded later and which are needed immediately. The larger frameworks, like &lt;a href="http://blog.sproutcore.com/"&gt;Sproutcore&lt;/a&gt; and &lt;a href="http://javascriptmvc.com/"&gt;JavascriptMVC&lt;/a&gt;, have already solved this problem, but it does add some conceptual overhead.&lt;/p&gt;
 
 &lt;h3&gt;Use Less Code&lt;/h3&gt;
 
-&lt;p&gt;Simply put: send less data to the client. Sounds easy? Remember that jQuery is 130k before you even start writing your own code. This is where Thomas Fuchs (and &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt;) come in. He argues that "frameworks" are too big and include stuff that you probably don't need. He, and others, seem purposefully vague about which framework they are rebelling against, but let's be honest: it's jQuery.&lt;/p&gt;
+&lt;p&gt;Simply put: send less data to the client. Sounds easy? Remember that jQuery is 130k before you even start writing your own code. This is where Thomas Fuchs (and &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt;) come in. He argues that &amp;quot;frameworks&amp;quot; are too big and include stuff that you probably don't need. He, and others, seem purposefully vague about which framework they are rebelling against, but let's be honest: it's jQuery.&lt;/p&gt;
 
 &lt;p&gt;I've built some large applications of both the Progressive Enhancement and MVC varieties and initially I couldn't understand how a seasoned developer could possibly argue that glueing a dozen plugins together is better than a consistent application framework. Tom Dale, of the Sproutcore team, &lt;a href="http://tomdale.net/2011/04/imagine-a-beowulf-cluster-of-javascript-frameworks/"&gt;was similarly flabbergasted&lt;/a&gt;. While I agree with everything Tom writes in that article, I think he got hung up on terminology. Thomas Fuchs isn't arguing against Sproutcore, he is covertly arguing against jQuery. I, Thomas Reynolds (let's call this the Mexican Standoff of Javacript Toms), personally love Sproutcore and so I'll spend the rest of this article talking about replacing jQuery for Progressively Enhanced apps.&lt;/p&gt;
 
@@ -134,7 +269,6 @@ expect(elem.id).toEqual "myselector"
 &lt;li&gt;Deferreds (5k)&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;Take a look at that list and then take a look at &lt;a href="http://microjs.com/"&gt;MicroJS&lt;/a&gt;. Look familiar? The majority of these micro libraries take aim at a specific portion of jQuery and attempt to do it in a smaller file size. Sound great? If you're optimizing for size it does, but let me issue a word of warning.&lt;/p&gt;
 
 &lt;p&gt;jQuery is used on 44% of the web. It is better tested, has more users and has better browser support than any other framework. It is a very well organized project which is continuing to improve and increase performance on every release. I agree with Yehuda Katz, the most important piece of any framework is the size, age and knowledge of its community. Therefore, I believe these new micro libraries will be forced to re-learn the same lessons (whether it be browser support or speed optimization) that jQuery has already solved.&lt;/p&gt;
@@ -143,7 +277,7 @@ expect(elem.id).toEqual "myselector"
 
 &lt;p&gt;&lt;a href="http://ender.no.de/"&gt;Ender.js&lt;/a&gt; is a framework framework. It attempts to provide a scaffold roughly shaped like jQuery with places to plugin micro libraries of your choice to fill in the features. Then Ender.js will glue those parts together and produce either a single output file or a file which loads each component asynchronously.&lt;/p&gt;
 
-&lt;p&gt;The default jQuery-like bundle is called "jeesh" and includes:&lt;/p&gt;
+&lt;p&gt;The default jQuery-like bundle is called &amp;quot;jeesh&amp;quot; and includes:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Selector Engine (Qwery)&lt;/li&gt;
@@ -156,14 +290,13 @@ expect(elem.id).toEqual "myselector"
 &lt;li&gt;Events (Bean)&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;p&gt;These pieces fit together nicely and create an almost drop-in replacement for jQuery. The edges are a little rough and you will have to rewrite some code to use it. &lt;a href="http://www.dustindiaz.com/"&gt;Dustin Diaz&lt;/a&gt; wrote almost all of theses default libraries, so atleast there is some consistency. As Ender.js gets more popular and more libraries are integrated which weren't written by Dustin, I expect the API will get more and more awkward. As I said above, while Dustin is a very smart person (and he's had help from Thomas Fuchs as well), neither can match jQuery's maturity, test suite and institutional knowledge.&lt;/p&gt;
 
-&lt;p&gt;Still, if you're optimizing for size on a Progressively Enhanced app, Ender.js is a nice fit. If you're optimizing for consistency and the ability to hire and bring new developers up-to-speed quickly, then you should probably stick with jQuery.&lt;/p&gt;
+&lt;p&gt;Still, if you're optimizing for size on a Progressively Enhanced app, Ender.js is a nice fit. If you're optimizing for consistency and the ability to hire and bring new developers up-to-speed quickly, then you should probably stick with jQuery.  &lt;/p&gt;
 
-&lt;h3&gt;Anecdotal "Evidence"&lt;/h3&gt;
+&lt;h3&gt;Anecdotal &amp;quot;Evidence&amp;quot;&lt;/h3&gt;
 
-&lt;p&gt;I'm working on a small Progressively Enhanced portfolio site. I've completed the homepage, which uses 2 "plugins" for some slideshows and some helper functions. The initial build was with jQuery and the jQueryUI widget factory. Minified: &lt;u&gt;109k&lt;/u&gt;, the majority of that being jQuery which I wasn't really using that many features of.&lt;/p&gt;
+&lt;p&gt;I'm working on a small Progressively Enhanced portfolio site. I've completed the homepage, which uses 2 &amp;quot;plugins&amp;quot; for some slideshows and some helper functions. The initial build was with jQuery and the jQueryUI widget factory. Minified: &lt;u&gt;109k&lt;/u&gt;, the majority of that being jQuery which I wasn't really using that many features of.&lt;/p&gt;
 
 &lt;p&gt;Next, I ported the site to JavascriptMVC which has a very nice dependency management system and only pulls in the pieces you need (and jQuery). The coding-style was nicer, the code modularized and the minified output was: &lt;u&gt;110k&lt;/u&gt;. Makes sense, it has all of jQuery plus a 1k of glue code (Class system + Controllers). I'd really like to see JavascriptMVC (and Sproutcore too), break up jQuery into it's components and rely on those directly. Their dependency management systems can handle this and it should reduce the file system for relatively simple apps.&lt;/p&gt;
 
@@ -175,7 +308,7 @@ expect(elem.id).toEqual "myselector"
 
 &lt;p&gt;People are going to keep talking about microframeworks, but I don't see jQuery's usage decreasing at all. Developer Happiness should be the primary goal, but we can't work on that until these technical issues of memory, cpu usage, gpu usage and blocking scripts are solved. They will be solved and looking back, these will feel like the dark ages.&lt;/p&gt;
 
-&lt;p&gt;Here's what I'm looking forward to in the "future." I'd like to see an end-to-end framework written in CoffeeScript. Models, Views and Controllers are the same code and the decision whether to execute code on the client or the server can be optimized. Doing the same database requests? Optimize and cache it on the backend. Rendering the same views? Do it on the backend. I'd like to see the client open a connection to the node.js backend and pipeline scripts and data as needed. If something would be faster on the client side, build it into a module and pipe it to the client on demand.&lt;/p&gt;
+&lt;p&gt;Here's what I'm looking forward to in the &amp;quot;future.&amp;quot; I'd like to see an end-to-end framework written in CoffeeScript. Models, Views and Controllers are the same code and the decision whether to execute code on the client or the server can be optimized. Doing the same database requests? Optimize and cache it on the backend. Rendering the same views? Do it on the backend. I'd like to see the client open a connection to the node.js backend and pipeline scripts and data as needed. If something would be faster on the client side, build it into a module and pipe it to the client on demand.&lt;/p&gt;
 
 &lt;p&gt;Honestly, I don't think we'll be waiting too much longer for such a system. A first step can be seen in Shopify's &lt;a href="http://batmanjs.org/"&gt;batman.js&lt;/a&gt; which made a huge splash at jsconf. Property binding is huge (also at the heart of Sproutcore) and reduces the need for jQuery's DOM manipulation hammer. Can't wait to play with it!&lt;/p&gt;
 </content>
@@ -207,17 +340,17 @@ expect(elem.id).toEqual "myselector"
 
 &lt;pre&gt;&lt;code&gt;$.cssHooks['pirateBackground'] = {
   get: function(elem, computed, extra) {
-    return "yaarrr";
+    return &amp;quot;yaarrr&amp;quot;;
   },
   set: function(elem, value) {
-    elem.style.background = value + " url(pirates.png)";
+    elem.style.background = value + &amp;quot; url(pirates.png)&amp;quot;;
   }
 };
 
 $(elem).css({ pirateBackground: 'red' });
 // elem now has a red background and the pirates.png pattern
 
-$(elem).css('pirateBackground') == "yaarrr"
+$(elem).css('pirateBackground') == &amp;quot;yaarrr&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Included in David DeSandro's excellent &lt;a href="http://isotope.metafizzy.co/"&gt;Isotope&lt;/a&gt; library are &lt;a href="https://github.com/desandro/isotope/blob/a2a238968347199842dd7e2d552741d5a63c90b9/jquery.isotope.js"&gt;csshooks for CSS3 scale and translate&lt;/a&gt;. These hooks correctly use the fast 3d-transforms if available. I've included the full implementation below, but the important part is that you can include the following gist and use it like this:&lt;/p&gt;
@@ -250,15 +383,11 @@ $('.left').click(function() {
 
 &lt;iframe width="300" height="450" src="/images/iso/demo.html"&gt;&lt;/iframe&gt;
 
-
 &lt;h2&gt;Full Implementation&lt;/h2&gt;
 
 &lt;p&gt;Download: https://gist.github.com/959860&lt;/p&gt;
 
 &lt;script src="https://gist.github.com/959860.js?file=isoTransform.js"&gt;&lt;/script&gt;
-
-
-
 </content>
   </entry>
   <entry>
@@ -278,7 +407,7 @@ $('.left').click(function() {
 
 &lt;pre&gt;&lt;code&gt;var loadImageCache = {}
 var loadImage = function(imageSrc) {
-  if (typeof loadImageCache[imageSrc] === "undefined") {
+  if (typeof loadImageCache[imageSrc] === &amp;quot;undefined&amp;quot;) {
     deferred = $.Deferred();
 
     preloader         = new Image();
@@ -295,7 +424,7 @@ var loadImage = function(imageSrc) {
 
 &lt;p&gt;Requires jQuery 1.5 or newer:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;loadImage("http://my/image.jpg").then(function(url) {
+&lt;pre&gt;&lt;code&gt;loadImage(&amp;quot;http://my/image.jpg&amp;quot;).then(function(url) {
   alert(url + ' is preloaded');
 });
 &lt;/code&gt;&lt;/pre&gt;
@@ -313,10 +442,10 @@ var loadImage = function(imageSrc) {
       <name>Thomas Reynolds</name>
     </author>
     <summary type="html">&lt;p&gt;A project I've been working on has just launched. Check out the release post from the Metalab blog below:&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;&lt;iframe src="http://player.vimeo.com/video/22873653" width="500" height="281" frameborder="0"&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;br /&gt;
-About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45royale&lt;/a&gt; to create &lt;a href="http://pixelunion.net"&gt;Pixel Union&lt;/a&gt;, a premium Tumblr theme marketplace showcasing designs by some of the world’s best designers. It’s been immensely successful. What began as four themes dedicated to better showcasing photographs and videos has rapidly turned into a library of nearly twenty, multipurpose themes. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;/blockquote&gt;
-</summary>
+&lt;blockquote&gt;
+&lt;p&gt;&lt;iframe src="http://player.vimeo.com/video/22873653" width="500" height="281" frameborder="0"&gt;&lt;/iframe&gt;&lt;br /&gt;&lt;br /&gt;
+About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45royale&lt;/a&gt; to create &lt;a href="http://pixelunion.net"&gt;Pixel Union&lt;/a&gt;, a premium Tumblr theme marketplace showcasing designs by some of the world’s best designers. It’s been immensely successful. What began as four themes dedicated to better showcasing photographs and videos has rapidly turned into a library of nearly twenty, multipurpose themes. &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -328,9 +457,10 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;I just want everyone to care about something. [...] I just think it's sad when people seem to have no passion in life.
-&lt;strong&gt;- Marco Arment&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
-</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;I just want everyone to care about something. [...] I just think it's sad when people seem to have no passion in life.
+&lt;strong&gt;- Marco Arment&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -372,9 +502,11 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;It's been a long time since &lt;a href="/2009/10/22/middleman"&gt;I introduced Middleman on this blog&lt;/a&gt; in 2009. Since then, RubyGems reports that there have been 27,518 downloads, &lt;a href="https://github.com/tdreyno/middleman/contributors"&gt;several great contributors&lt;/a&gt; to the source code and even a mention in a printed book.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Update: &lt;a href="/2011/08/08/middleman-2-0.html"&gt;Middleman version 2.0 has been released&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I've been working hard on documentation as it was the most requested feature from the &lt;a href="/2011/02/06/future-of-middleman-survey"&gt;"Future of Middleman Survey"&lt;/a&gt;. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: &lt;a href="http://middlemanapp.com/"&gt;http://middlemanapp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been a long time since &lt;a href="/2009/10/22/middleman"&gt;I introduced Middleman on this blog&lt;/a&gt; in 2009. Since then, RubyGems reports that there have been 27,518 downloads, &lt;a href="https://github.com/tdreyno/middleman/contributors"&gt;several great contributors&lt;/a&gt; to the source code and even a mention in a printed book.&lt;/p&gt;
+
+&lt;p&gt;I've been working hard on documentation as it was the most requested feature from the &lt;a href="/2011/02/06/future-of-middleman-survey"&gt;&amp;quot;Future of Middleman Survey&amp;quot;&lt;/a&gt;. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: &lt;a href="http://middlemanapp.com/"&gt;http://middlemanapp.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I know, I need better, more tutorial-style written documentation for actual people. I'll be working on it as time permits, but I'd also love any assistance.&lt;/p&gt;
 
@@ -393,11 +525,12 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
 &lt;li&gt;RubyGems-test support&lt;/li&gt;
 &lt;li&gt;Using Bundler for packaging&lt;/li&gt;
 &lt;/ul&gt;
-
 </summary>
-    <content type="html">&lt;p&gt;It's been a long time since &lt;a href="/2009/10/22/middleman"&gt;I introduced Middleman on this blog&lt;/a&gt; in 2009. Since then, RubyGems reports that there have been 27,518 downloads, &lt;a href="https://github.com/tdreyno/middleman/contributors"&gt;several great contributors&lt;/a&gt; to the source code and even a mention in a printed book.&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;strong&gt;Update: &lt;a href="/2011/08/08/middleman-2-0.html"&gt;Middleman version 2.0 has been released&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;I've been working hard on documentation as it was the most requested feature from the &lt;a href="/2011/02/06/future-of-middleman-survey"&gt;"Future of Middleman Survey"&lt;/a&gt;. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: &lt;a href="http://middlemanapp.com/"&gt;http://middlemanapp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It's been a long time since &lt;a href="/2009/10/22/middleman"&gt;I introduced Middleman on this blog&lt;/a&gt; in 2009. Since then, RubyGems reports that there have been 27,518 downloads, &lt;a href="https://github.com/tdreyno/middleman/contributors"&gt;several great contributors&lt;/a&gt; to the source code and even a mention in a printed book.&lt;/p&gt;
+
+&lt;p&gt;I've been working hard on documentation as it was the most requested feature from the &lt;a href="/2011/02/06/future-of-middleman-survey"&gt;&amp;quot;Future of Middleman Survey&amp;quot;&lt;/a&gt;. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: &lt;a href="http://middlemanapp.com/"&gt;http://middlemanapp.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I know, I need better, more tutorial-style written documentation for actual people. I'll be working on it as time permits, but I'd also love any assistance.&lt;/p&gt;
 
@@ -416,7 +549,6 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
 &lt;li&gt;RubyGems-test support&lt;/li&gt;
 &lt;li&gt;Using Bundler for packaging&lt;/li&gt;
 &lt;/ul&gt;
-
 
 &lt;p&gt;&lt;/p&gt;
 
@@ -426,7 +558,7 @@ About a year ago, we teamed up with &lt;a href="http://www.45royale.com/"&gt;45r
 
 &lt;h2&gt;Feature/Extension API&lt;/h2&gt;
 
-&lt;p&gt;All the "features" of Middleman can be enabled or disabled from your &lt;tt&gt;config.rb&lt;/tt&gt; file. These features are now all using the Sinatra extension API which means it is very easy to add your own features or include features from other RubyGems. Here is an example Feature:&lt;/p&gt;
+&lt;p&gt;All the &amp;quot;features&amp;quot; of Middleman can be enabled or disabled from your &lt;tt&gt;config.rb&lt;/tt&gt; file. These features are now all using the Sinatra extension API which means it is very easy to add your own features or include features from other RubyGems. Here is an example Feature:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;# In your config.rb or an external file/gem required in config.rb
 module MyMiddlemanFeature
@@ -439,7 +571,7 @@ module MyMiddlemanFeature
 
   module Helpers
     def my_custom_helper
-      "Hello World"
+      &amp;quot;Hello World&amp;quot;
     end
   end
 end
@@ -461,9 +593,8 @@ activate MyMiddlemanFeature
 &lt;ol&gt;
 &lt;li&gt;Create a folder in the root of your project named &lt;tt&gt;data&lt;/tt&gt;&lt;/li&gt;
 &lt;li&gt;Create as many &lt;tt&gt;.yml&lt;/tt&gt; YAML files as you want&lt;/li&gt;
-&lt;li&gt;Their contents will be made available in your templates as &lt;tt&gt;data["filename"]&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Their contents will be made available in your templates as &lt;tt&gt;data[&amp;quot;filename&amp;quot;]&lt;/tt&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 
 &lt;p&gt;For example:&lt;/p&gt;
 
@@ -574,38 +705,38 @@ run Middleman::Server
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way. &lt;/p&gt;
 
-&lt;p&gt;However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web.&lt;/p&gt;
+&lt;p&gt;However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web. &lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Quick question? What is the perfect amount of time to animate an element on a page? jQuery defaults to 400ms, which sounds short, but ends up being pretty perfect for most occasions. It gets the job done and then it gets out of the way. &lt;/p&gt;
 
-&lt;p&gt;However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web.  Back in the day, 37Signals would just set the background of an element to yellow and call it a day. If you take a look at &lt;a href="http://getflow.com"&gt;Flow&lt;/a&gt;, you'll see some very designed motion. Closing a task results in the checkbox animating to a state, then it picks up and animates along an arc to drop into the "completed" box in your sidebar.&lt;/p&gt;
+&lt;p&gt;However, it shouldn't surprise you that designers have opinions on motion and we're just now reaching the point where motion is becoming important on the web.  Back in the day, 37Signals would just set the background of an element to yellow and call it a day. If you take a look at &lt;a href="http://getflow.com"&gt;Flow&lt;/a&gt;, you'll see some very designed motion. Closing a task results in the checkbox animating to a state, then it picks up and animates along an arc to drop into the &amp;quot;completed&amp;quot; box in your sidebar.&lt;/p&gt;
 
-&lt;p&gt;Okay, so, what's the perfect timing for that animation? There are tools for prototyping motion, most notably Adobe Flash, but usually you're designer is going to want to look over your shoulder and tweak the animation until it "feels right."&lt;/p&gt;
+&lt;p&gt;Okay, so, what's the perfect timing for that animation? There are tools for prototyping motion, most notably Adobe Flash, but usually you're designer is going to want to look over your shoulder and tweak the animation until it &amp;quot;feels right.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;The solution is something I've seen friends in the old-school OpenGL motion build into their dev workflow. Every time they've got a motion variable (duration, size, color, wobble, randomness, etc), they setup a control to adjust the variable. Who wants to change integers in OpenGL and recompile? Like so many things, it's time to re-learn tricks from the desktop world if we're going to move forward.&lt;/p&gt;
 
 &lt;p&gt;Here, below is the most basic example. I have a square that is animating back and forth and changing width and height. In a more complicated example, it might arc or have several animations queued up. I've used a shiny new HTML5 &lt;tt&gt;range&lt;/tt&gt; element and each time the animation loops, it checks the value to define it's duration.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;!-- Ranges from 0-4000, with integer steps. Defaults to 400 --&amp;gt;
-&amp;lt;input type="range" min="0" max="4000" step="1" value="400"&amp;gt;
+&amp;lt;input type=&amp;quot;range&amp;quot; min=&amp;quot;0&amp;quot; max=&amp;quot;4000&amp;quot; step=&amp;quot;1&amp;quot; value=&amp;quot;400&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The animation looks like:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$elem.animate({ left: 480, width: 100, height: 100 }, {
-  duration: $("input[type=range]").val()
+  duration: $(&amp;quot;input[type=range]&amp;quot;).val()
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Simple enough. If I were implementing an animation, vaguely defined in a PSD, I'd setup something like this and then let the designer have a field day. Developers love round numbers and math, but the "best" timing may actually be the combination of an esoteric easing function and a duration of 962.&lt;/p&gt;
+&lt;p&gt;Simple enough. If I were implementing an animation, vaguely defined in a PSD, I'd setup something like this and then let the designer have a field day. Developers love round numbers and math, but the &amp;quot;best&amp;quot; timing may actually be the combination of an esoteric easing function and a duration of 962.&lt;/p&gt;
 
 &lt;p&gt;This gets even more interesting if you're using something like WebGL, Three.js or Box2d.js. Adjust physics engines on the fly makes finding the perfect balance a cinch.&lt;/p&gt;
 
 &lt;h1&gt;Demo&lt;/h1&gt;
 
-&lt;p&gt;Here we have a little animating square, a slider to control the duration and a bunch of easing options. Go ahead, play around and find the "sweet spot."&lt;/p&gt;
+&lt;p&gt;Here we have a little animating square, a slider to control the duration and a bunch of easing options. Go ahead, play around and find the &amp;quot;sweet spot.&amp;quot;&lt;/p&gt;
 
 &lt;script type="text/javascript" charset="utf-8"&gt;
   $.getScript("/javascripts/jquery.easing.1.3.js", function() {
@@ -648,7 +779,6 @@ run Middleman::Server
   });
 &lt;/script&gt;
 
-
 &lt;div class="demo" style="width: 600px; height: 300px; position: relative; overflow: hidden;"&gt;
   Duration: &lt;span class="speed"&gt;&lt;/span&gt;&lt;br /&gt;
   &lt;input class="range" type="range" min="0" max="4000" step="1" value="1400" style="width: 300;" /&gt;&lt;br /&gt;
@@ -687,8 +817,8 @@ run Middleman::Server
   &lt;/select&gt;&lt;br /&gt;
 
   &lt;div class="box" style="width: 50px; height: 50px; background: red; position: absolute; top: 75px; left: 10px;"&gt;&lt;/div&gt;
-&lt;/div&gt;
 
+&lt;p&gt;&lt;/div&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -700,7 +830,7 @@ run Middleman::Server
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;This year at SXSW I was either involved in or overheard the same conversation several times.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;This year at SXSW I was either involved in or overheard the same conversation several times. &lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Person A: So where do you work now?
 Person B: Just started a new job at Company X.
@@ -708,9 +838,9 @@ Person A: Ah, man, you should have told me you were looking.
           I'd love to work with you.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Somehow, despite all of our constant communication and over-sharing on Twitter, we still like to avoid "serious" conversations about jobs, salaries and what it would take to get your friend/buddy/idol to work with you. So, to scratch this itch, &lt;a href="http://pixelmatrixdesign.com/"&gt;Josh Pyles&lt;/a&gt; and I spent the last weekend putting together &lt;a href="http://wouldhire.com"&gt;WouldHire.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Somehow, despite all of our constant communication and over-sharing on Twitter, we still like to avoid &amp;quot;serious&amp;quot; conversations about jobs, salaries and what it would take to get your friend/buddy/idol to work with you. So, to scratch this itch, &lt;a href="http://pixelmatrixdesign.com/"&gt;Josh Pyles&lt;/a&gt; and I spent the last weekend putting together &lt;a href="http://wouldhire.com"&gt;WouldHire.com&lt;/a&gt;.&lt;/p&gt;
 </summary>
-    <content type="html">&lt;p&gt;This year at SXSW I was either involved in or overheard the same conversation several times.&lt;/p&gt;
+    <content type="html">&lt;p&gt;This year at SXSW I was either involved in or overheard the same conversation several times. &lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Person A: So where do you work now?
 Person B: Just started a new job at Company X.
@@ -718,7 +848,7 @@ Person A: Ah, man, you should have told me you were looking.
           I'd love to work with you.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Somehow, despite all of our constant communication and over-sharing on Twitter, we still like to avoid "serious" conversations about jobs, salaries and what it would take to get your friend/buddy/idol to work with you. So, to scratch this itch, &lt;a href="http://pixelmatrixdesign.com/"&gt;Josh Pyles&lt;/a&gt; and I spent the last weekend putting together &lt;a href="http://wouldhire.com"&gt;WouldHire.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Somehow, despite all of our constant communication and over-sharing on Twitter, we still like to avoid &amp;quot;serious&amp;quot; conversations about jobs, salaries and what it would take to get your friend/buddy/idol to work with you. So, to scratch this itch, &lt;a href="http://pixelmatrixdesign.com/"&gt;Josh Pyles&lt;/a&gt; and I spent the last weekend putting together &lt;a href="http://wouldhire.com"&gt;WouldHire.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
@@ -728,7 +858,7 @@ Person A: Ah, man, you should have told me you were looking.
 
 &lt;p&gt;&lt;a href="http://who.wouldhire.com/pixelmatrix"&gt;&lt;img src="/images/WouldHire-who.png" alt="Who WouldHire @pixelmatrix"&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Finally, if you're looking to let someone know that you're interested, simply login (using Twitter) and add some Twitter usernames to your "dream team."&lt;/p&gt;
+&lt;p&gt;Finally, if you're looking to let someone know that you're interested, simply login (using Twitter) and add some Twitter usernames to your &amp;quot;dream team.&amp;quot;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="/images/WouldHire-admin.png" alt="WouldHire Admin"&gt;&lt;/p&gt;
 
@@ -757,8 +887,9 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;Sammy and the ‘#’ are for applications. It provides a way to maintain state in a world where you can require JavaScript and even require the presence of certain browsers. If you’re an application, that requires login/signup you can make a number of demands of your users. You also probably dont even want the crawlability. You’re using ‘#’ to maintain state for a specific user in a specific session.&lt;/p&gt;&lt;/blockquote&gt;
-</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Sammy and the ‘#’ are for applications. It provides a way to maintain state in a world where you can require JavaScript and even require the presence of certain browsers. If you’re an application, that requires login/signup you can make a number of demands of your users. You also probably dont even want the crawlability. You’re using ‘#’ to maintain state for a specific user in a specific session.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -770,8 +901,9 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;By taking the professional-to-client approach for what should be a merchant-to-customer context, Mr. Chimero has abdicated ownership of his idea/genius and the results that will come of it. Having bought and paid for it, the collective investors now own his genius in this project. By selling out first before he created the product he promises, he’s now working for the investors instead of working for himself.&lt;br /&gt;&lt;/p&gt;&lt;/blockquote&gt;
-</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;By taking the professional-to-client approach for what should be a merchant-to-customer context, Mr. Chimero has abdicated ownership of his idea/genius and the results that will come of it. Having bought and paid for it, the collective investors now own his genius in this project. By selling out first before he created the product he promises, he’s now working for the investors instead of working for himself.&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -783,7 +915,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;I've created a brief survey about &lt;a href="https://github.com/tdreyno/middleman"&gt;Middleman&lt;/a&gt;. If you've used the project, I would love your input. Thanks!&lt;/p&gt;
+    <summary type="html">&lt;p&gt;I've created a brief survey about &lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt;. If you've used the project, I would love your input. Thanks!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="http://www.surveymonkey.com/s/5P9B92Q"&gt;http://www.surveymonkey.com/s/5P9B92Q&lt;/a&gt;&lt;/p&gt;
 </summary>
@@ -813,7 +945,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;Like it or not, the Apple iPhone and iPad have changed people&amp;rsquo;s expectations for how apps and even websites should behave. As designers begin porting native application concepts to the web, we front-end developers have got to become more organized and application-oriented to survive. More and more, websites should be categorized as "simple applications." Building sites as a collection of jQuery plugins is a bad idea in this new, complex web-application world.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Like it or not, the Apple iPhone and iPad have changed people&amp;rsquo;s expectations for how apps and even websites should behave. As designers begin porting native application concepts to the web, we front-end developers have got to become more organized and application-oriented to survive. More and more, websites should be categorized as &amp;quot;simple applications.&amp;quot; Building sites as a collection of jQuery plugins is a bad idea in this new, complex web-application world.&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -845,7 +977,7 @@ Person A: Ah, man, you should have told me you were looking.
     </author>
     <summary type="html">&lt;p&gt;&lt;link rel="stylesheet" href="/stylesheets/best-of-2010.css?v2" type="text/css" media="screen" /&gt;&lt;/p&gt;
 
-&lt;p&gt;It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a "Top 14" list, but instead it's "Top 10" and some honorable mentions. Let's  get started.&lt;/p&gt;
+&lt;p&gt;It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a &amp;quot;Top 14&amp;quot; list, but instead it's &amp;quot;Top 10&amp;quot; and some honorable mentions. Let's  get started.&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -858,7 +990,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;One of the buzzwords at jQuery Conference 2010 Boston (that mouthful makes Microsoft product names sound elegant), was "PubSub." At least three speakers referenced the concept in different contexts and I overheard quite a bit of chatter about it in the hallways. I was surprised to see so many people getting their first introduction to the concept, especially given how event-oriented jQuery is. So, let's take a look at what PubSub means, how you can use it in jQuery and some very naive example code.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;One of the buzzwords at jQuery Conference 2010 Boston (that mouthful makes Microsoft product names sound elegant), was &amp;quot;PubSub.&amp;quot; At least three speakers referenced the concept in different contexts and I overheard quite a bit of chatter about it in the hallways. I was surprised to see so many people getting their first introduction to the concept, especially given how event-oriented jQuery is. So, let's take a look at what PubSub means, how you can use it in jQuery and some very naive example code.&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -872,6 +1004,21 @@ Person A: Ah, man, you should have told me you were looking.
       <name>Thomas Reynolds</name>
     </author>
     <summary type="html">&lt;p&gt;Here are the slides which went along with my JavascriptMVC presentation at jQuery Conference Boston. You can avoid the nasty flash widget and &lt;a href="http://dl.dropbox.com/u/102356/organizing-code-with-javascriptmvc.pdf"&gt;download the PDF directly&lt;/a&gt; if you prefer.&lt;/p&gt;
+</summary>
+    <content type="html"></content>
+  </entry>
+  <entry>
+    <title>Middleman Feature: Config.rb can setup Rack middleware</title>
+    <link rel="alternate" href="/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html"/>
+    <id>/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html</id>
+    <published>2010-10-11T00:00:00-07:00</published>
+    <updated>2010-10-11T00:00:00-07:00</updated>
+    <author>
+      <name>Thomas Reynolds</name>
+    </author>
+    <summary type="html">&lt;p&gt;Did you know that since &lt;a href="http://middlemanapp.com"&gt;Middleman&lt;/a&gt;'s &lt;tt&gt;config.rb&lt;/tt&gt; is evaluated by Sinatra that it can initialize Rack middleware?&lt;/p&gt;
+
+&lt;p&gt;In the code sample below, I use the &lt;a href="http://github.com/wbzyl/rack-codehighlighter"&gt;rack-codehighlighter&lt;/a&gt; middleware to add syntax highlighting to a Middleman project.&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -893,21 +1040,6 @@ Person A: Ah, man, you should have told me you were looking.
     <content type="html"></content>
   </entry>
   <entry>
-    <title>Middleman Feature: Config.rb can setup Rack middleware</title>
-    <link rel="alternate" href="/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html"/>
-    <id>/2010/10/11/middleman-feature-configrb-can-setup-rack-middleware.html</id>
-    <published>2010-10-11T00:00:00-07:00</published>
-    <updated>2010-10-11T00:00:00-07:00</updated>
-    <author>
-      <name>Thomas Reynolds</name>
-    </author>
-    <summary type="html">&lt;p&gt;Did you know that since &lt;a href="http://github.com/tdreyno/middleman"&gt;Middleman&lt;/a&gt;'s &lt;tt&gt;config.rb&lt;/tt&gt; is evaluated by Sinatra that it can initialize Rack middleware?&lt;/p&gt;
-
-&lt;p&gt;In the code sample below, I use the &lt;a href="http://github.com/wbzyl/rack-codehighlighter"&gt;rack-codehighlighter&lt;/a&gt; middleware to add syntax highlighting to a Middleman project.&lt;/p&gt;
-</summary>
-    <content type="html"></content>
-  </entry>
-  <entry>
     <title>Handling Touch Events in jQuery Tools Scrollable</title>
     <link rel="alternate" href="/2010/09/22/handling-touch-events-in-jquery-tools-scrollable.html"/>
     <id>/2010/09/22/handling-touch-events-in-jquery-tools-scrollable.html</id>
@@ -916,8 +1048,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -957,8 +1088,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -970,7 +1100,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;There are some very common front-end development patterns that drive me crazy. CSS with every style related to a specific selector on one line and IE-only stylesheets with conditional comments are both common place and even encouraged by some. But the worst, in my opinion, is breaking our CSS into multiple files in an attempt to make them "themable." Usually this results in something like a &lt;tt&gt;main.css&lt;/tt&gt; and a &lt;tt&gt;fonts.css&lt;/tt&gt; or &lt;tt&gt;colors.css&lt;/tt&gt;. Having a go-to file for designers to manipulate fonts and colors is very useful, but usually the structure of this secondary file mirrors the primary file and you end up with a lot of repetition. Furthermore, if your DOM structure changes, then you will need to update multiple files (&lt;tt&gt;ie.css&lt;/tt&gt; results in a similar problem).&lt;/p&gt;
+    <summary type="html">&lt;p&gt;There are some very common front-end development patterns that drive me crazy. CSS with every style related to a specific selector on one line and IE-only stylesheets with conditional comments are both common place and even encouraged by some. But the worst, in my opinion, is breaking our CSS into multiple files in an attempt to make them &amp;quot;themable.&amp;quot; Usually this results in something like a &lt;tt&gt;main.css&lt;/tt&gt; and a &lt;tt&gt;fonts.css&lt;/tt&gt; or &lt;tt&gt;colors.css&lt;/tt&gt;. Having a go-to file for designers to manipulate fonts and colors is very useful, but usually the structure of this secondary file mirrors the primary file and you end up with a lot of repetition. Furthermore, if your DOM structure changes, then you will need to update multiple files (&lt;tt&gt;ie.css&lt;/tt&gt; results in a similar problem).&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -996,8 +1126,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1022,8 +1151,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1035,8 +1163,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1069,8 +1196,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1108,8 +1234,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1138,15 +1263,13 @@ Person A: Ah, man, you should have told me you were looking.
 
 &lt;p&gt;And now for the top 25.&lt;/p&gt;
 
-
-&lt;ul&gt;
+&lt;p&gt;&lt;ul&gt;
   &lt;li&gt;
     &lt;div class='cover'&gt;
       &lt;img src='/albums/25.jpg' /&gt;
     &lt;/div&gt;
     &lt;div class='content'&gt;
-      &lt;h6&gt;2008&lt;/h6&gt;&lt;h2&gt;Of Montreal - Skeletal Lamping&lt;/h2&gt;
-
+      &lt;h6&gt;2008&lt;/h6&gt;&lt;h2&gt;Of Montreal - Skeletal Lamping&lt;/h2&gt;&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1162,7 +1285,6 @@ Person A: Ah, man, you should have told me you were looking.
     <summary type="html">&lt;p&gt;&lt;link rel="stylesheet" href="/stylesheets/best-of-2010.css?v2" type="text/css" media="screen" /&gt;&lt;/p&gt;
 
 &lt;p&gt;In 1990, I was 7 years old. Needless to say, by 17 I still didn't have the most refined musical tastes. I'm just now getting into Pavement, Jawbox and My Bloody Valentine. So, this past decade has been my first where I can remember listening to each of the following albums when they were released. Most of the lists I've seen so far are exceptionally myopic, with albums mostly from the past 3-4 years and enjoy Radiohead to look cool. My list is hopefully more diverse. I've also used my actual listening habits (courtesy of last.fm) for ranking, rather than pretending I actually listened to The White Stripes ever single day like some lists.&lt;/p&gt;
-
 </summary>
     <content type="html"></content>
   </entry>
@@ -1175,8 +1297,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1201,8 +1322,7 @@ Person A: Ah, man, you should have told me you were looking.
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1239,9 +1359,8 @@ $.fn.googleMap = function(address, options) {
 
 &lt;p&gt;&lt;a href="http://www.slideshare.net/tdreyno/simplifying-css-with-sass"&gt;Simplifying CSS With Sass&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class='flash'&gt;
-  &lt;object height='355' style='margin:0px' width='425'&gt;
-
+&lt;p&gt;&lt;div class='flash'&gt;
+  &lt;object height='355' style='margin:0px' width='425'&gt;&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1254,7 +1373,7 @@ $.fn.googleMap = function(address, options) {
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;Maybe we've all been too hasty in declaring the &lt;tt&gt;canvas&lt;/tt&gt; tag the new king of web interaction. I've just stumbled upon &lt;a href="http://raphaeljs.com/"&gt;Rapha&amp;euml;l&lt;/a&gt;&amp;mdash;a javascript library for interacting with SVG. The library is cross-browser thanks to VML on Internet Explorer.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Maybe we've all been too hasty in declaring the &lt;tt&gt;canvas&lt;/tt&gt; tag the new king of web interaction. I've just stumbled upon &lt;a href="http://raphaeljs.com/"&gt;Rapha&amp;euml;l&lt;/a&gt;&amp;mdash;a javascript library for interacting with SVG. The library is cross-browser thanks to VML on Internet Explorer. &lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1267,8 +1386,7 @@ $.fn.googleMap = function(address, options) {
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1280,8 +1398,7 @@ $.fn.googleMap = function(address, options) {
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
   <entry>
@@ -1295,7 +1412,6 @@ $.fn.googleMap = function(address, options) {
     </author>
     <summary type="html">&lt;h2&gt;iPhone&lt;/h2&gt;
 
-
 &lt;ul&gt;
   &lt;li&gt;✓ New model&lt;/li&gt;
   &lt;li&gt;✓ Video support&lt;/li&gt;
@@ -1305,13 +1421,10 @@ $.fn.googleMap = function(address, options) {
   &lt;li&gt;✓ iTunes WiFi Video Store&lt;/li&gt;
 &lt;/ul&gt;
 
-
 &lt;h2&gt;Snow Leopard&lt;/h2&gt;
 
-
-&lt;ul&gt;
-  &lt;li&gt;Secret sauce released: theme updates, ✓ Cocoa/64bit magic, ✓ Safari 4&lt;/li&gt;
-
+&lt;p&gt;&lt;ul&gt;
+  &lt;li&gt;Secret sauce released: theme updates, ✓ Cocoa/64bit magic, ✓ Safari 4&lt;/li&gt;&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1339,7 +1452,7 @@ $.fn.googleMap = function(address, options) {
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;Using Sass &amp;amp; Compass I updated the css on this site to use Blueprint's 950px grid system and their typography for consistent vertical rhythm.
+    <summary type="html">&lt;p&gt;Using Sass &amp;amp; Compass I updated the css on this site to use Blueprint's 950px grid system and their typography for consistent vertical rhythm. 
 The full Sass is included below:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;@import base.sass
@@ -1377,9 +1490,8 @@ a
     </author>
     <summary type="html">&lt;p&gt;Compass author—and Sass contributor—Chris Eppstein has put a screencast together showing how to use Compass. Enjoy.&lt;/p&gt;
 
-&lt;div class='flash'&gt;
-  &lt;object data='http://vimeo.com/moogaloop.swf?clip_id=4335944&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=00ADEF&amp;amp;fullscreen=1' height='225' type='application/x-shockwave-flash' width='400'&gt;
-
+&lt;p&gt;&lt;div class='flash'&gt;
+  &lt;object data='http://vimeo.com/moogaloop.swf?clip_id=4335944&amp;amp;server=vimeo.com&amp;amp;show_title=1&amp;amp;show_byline=1&amp;amp;show_portrait=0&amp;amp;color=00ADEF&amp;amp;fullscreen=1' height='225' type='application/x-shockwave-flash' width='400'&gt;&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1407,9 +1519,8 @@ a
     </author>
     <summary type="html">&lt;p&gt;Here's the slides I will be presenting at Jive Software:&lt;/p&gt;
 
-&lt;div class='flash'&gt;
-  &lt;object data='http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=sass-090402192738-phpapp01&amp;amp;rel=0&amp;amp;stripped_title=sass-introduction' height='355' type='application/x-shockwave-flash' width='425'&gt;
-
+&lt;p&gt;&lt;div class='flash'&gt;
+  &lt;object data='http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=sass-090402192738-phpapp01&amp;amp;rel=0&amp;amp;stripped_title=sass-introduction' height='355' type='application/x-shockwave-flash' width='425'&gt;&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1435,7 +1546,7 @@ a
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">&lt;p&gt;I had intended to jump right into Compass modules and user-defined "functions," but that's a rather high-level concept and requires a relatively strong understanding of Sass which I shouldn't assume readers have because Sass isn't really that popular. I'll save the complicated stuff for the next article. Instead, I'll look at how you can take an existing CSS document and convert to Sass in preparation for the article on more-complicated techniques.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;I had intended to jump right into Compass modules and user-defined &amp;quot;functions,&amp;quot; but that's a rather high-level concept and requires a relatively strong understanding of Sass which I shouldn't assume readers have because Sass isn't really that popular. I'll save the complicated stuff for the next article. Instead, I'll look at how you can take an existing CSS document and convert to Sass in preparation for the article on more-complicated techniques.&lt;/p&gt;
 </summary>
     <content type="html"></content>
   </entry>
@@ -1448,8 +1559,7 @@ a
     <author>
       <name>Thomas Reynolds</name>
     </author>
-    <summary type="html">
-</summary>
+    <summary type="html"></summary>
     <content type="html"></content>
   </entry>
 </feed>

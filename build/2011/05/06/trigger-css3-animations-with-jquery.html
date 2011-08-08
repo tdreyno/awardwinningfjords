@@ -52,14 +52,14 @@
   <div class="entry-content">
     <p>Did you know that jQuery 1.4.3 added a system for adding custom css attributes? For example, any normal style can be applied like so:</p>
 
-<pre class="CodeRay">$(elem).css({ background: 'red' })
+<pre>$(elem).css({ background: 'red' })
 </pre>
 
 <p>But what about more complicated styles? Complicated polyfills and vendor-prefixed styles? What if you could add a custom handler for <tt>border-radius</tt>? It's pretty simple and I'll show you a strawman example.</p>
 
 <p></p>
 
-<pre class="CodeRay">$.cssHooks['pirateBackground'] = {
+<pre>$.cssHooks['pirateBackground'] = {
   get: function(elem, computed, extra) {
     return "yaarrr";
   },
@@ -76,7 +76,7 @@ $(elem).css('pirateBackground') == "yaarrr"
 
 <p>Included in David DeSandro's excellent <a href="http://isotope.metafizzy.co/">Isotope</a> library are <a href="https://github.com/desandro/isotope/blob/a2a238968347199842dd7e2d552741d5a63c90b9/jquery.isotope.js">csshooks for CSS3 scale and translate</a>. These hooks correctly use the fast 3d-transforms if available. I've included the full implementation below, but the important part is that you can include the following gist and use it like this:</p>
 
-<pre class="CodeRay">// Double the size using CSS3 transform scale 
+<pre>// Double the size using CSS3 transform scale 
 $(elem).css({ scale: [2] })
 
 // Move the element 100px right and 200px down
@@ -85,7 +85,7 @@ $(elem).css({ translate: [ 100, 200 ] })
 
 <h2>Demo</h2>
 
-<pre class="CodeRay">$('.2x').click(function() {
+<pre>$('.2x').click(function() {
   $('.square').css({ scale: [2] })
 });
 
@@ -103,7 +103,6 @@ $('.left').click(function() {
 </pre>
 
 <iframe width="300" height="450" src="/images/iso/demo.html"></iframe>
-
 
 <h2>Full Implementation</h2>
 
@@ -149,7 +148,7 @@ $('.left').click(function() {
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -165,6 +164,10 @@ $('.left').click(function() {
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -198,10 +201,6 @@ $('.left').click(function() {
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

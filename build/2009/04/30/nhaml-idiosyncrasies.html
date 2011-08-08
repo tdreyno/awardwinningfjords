@@ -56,20 +56,20 @@
 
 <p>This means Ruby's symbols (prefixed with a colon) are now just plain keys. Similarly, the hashrocket (=&gt;) becomes a normal equals sign</p>
 
-<pre class="CodeRay">Before: %link{ :type =&gt; "text/css", :rel =&gt; "stylesheet", :src =&gt; "style.css" }
+<pre>Before: %link{ :type =&gt; "text/css", :rel =&gt; "stylesheet", :src =&gt; "style.css" }
 After:  %link{ type="text/css", rel="stylesheet", src="style.css" }
 </pre>
 
 <p><strong>[Edit: As of NHaml 2.0 beta 2, the syntax for attributes has changed and now appears exactly like normal HTML attributes (no commas are used). The above code would now be written is as follows:]</strong></p>
 
-<pre class="CodeRay">%link{ type="text/css" rel="stylesheet" src="style.css" }
+<pre>%link{ type="text/css" rel="stylesheet" src="style.css" }
 </pre>
 
 <h2>Single-quotes are not allowed</h2>
 
 <p>C# apparently uses single-quotes to denote a character, not a string.</p>
 
-<pre class="CodeRay">Before: %input{ :type =&gt; 'text' }
+<pre>Before: %input{ :type =&gt; 'text' }
 After:  %input{ type="text" }
 </pre>
 
@@ -77,7 +77,7 @@ After:  %input{ type="text" }
 
 <p>NHaml has a special meaning for lines like this. Apparently it is for automatically escaping the contents of that line. You will need to escape the ampersand:</p>
 
-<pre class="CodeRay">Before: &amp;ldquo;Hi&amp;rdquo;
+<pre>Before: &amp;ldquo;Hi&amp;rdquo;
 After:  \&amp;ldquo;Hi&amp;rdquo;
 </pre>
 
@@ -87,7 +87,7 @@ After:  \&amp;ldquo;Hi&amp;rdquo;
 
 <p>Given the following Haml</p>
 
-<pre class="CodeRay">%ul
+<pre>%ul
   %li
     Text
 
@@ -97,15 +97,7 @@ After:  \&amp;ldquo;Hi&amp;rdquo;
 
 <p>NHaml will render this as:</p>
 
-<pre class="CodeRay"><span class="ta">&lt;ul&gt;</span>
-  <span class="ta">&lt;li&gt;</span>
-    Text
-  <span class="ta">&lt;/li&gt;</span>
-<span class="ta">&lt;/ul&gt;</span>
-<span class="ta">&lt;li&gt;</span>
-  Text2
-<span class="ta">&lt;/li&gt;</span>
-</pre>
+
 
 <p>So remember to remove white-space-only lines until this issue is resolved.</p>
 
@@ -154,7 +146,7 @@ After:  \&amp;ldquo;Hi&amp;rdquo;
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -170,6 +162,10 @@ After:  \&amp;ldquo;Hi&amp;rdquo;
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -203,10 +199,6 @@ After:  \&amp;ldquo;Hi&amp;rdquo;
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

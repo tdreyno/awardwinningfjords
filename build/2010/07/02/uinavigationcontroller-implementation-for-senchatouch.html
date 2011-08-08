@@ -60,25 +60,7 @@
 
 <h2>How to use PanelStack</h2>
 
-<pre class="CodeRay"><span class="kw">var</span> bottomLevel = <span class="kw">new</span> Ext.Panel({ <span class="ke">title</span>: <span class="s"><span class="dl">"</span><span class="k">Start page</span><span class="dl">"</span></span> });
-<span class="kw">var</span> firstLevel  = <span class="kw">new</span> Ext.Panel({ <span class="ke">title</span>: <span class="s"><span class="dl">"</span><span class="k">Tier 1</span><span class="dl">"</span></span> });
-<span class="kw">var</span> secondLevel = <span class="kw">new</span> Ext.Panel({ <span class="ke">title</span>: <span class="s"><span class="dl">"</span><span class="k">Tier 2</span><span class="dl">"</span></span> });
 
-<span class="kw">var</span> controller  = <span class="kw">new</span> PanelStack({ <span class="ke">items</span>: [bottomLevel] });
-<span class="c">// Showing the bottomLevel, a title of "Start page" and no back button</span>
-
-controller.pushPanel(firstLevel);
-<span class="c">// Showing the firstLevel, a title of "Tier 1" and a "back" button</span>
-
-controller.pushPanel(secondLevel);
-<span class="c">// Showing the secondLevel, a title of "Tier 2" and a "back" button</span>
-
-controller.popPanel();
-<span class="c">// Showing the firstLevel, a title of "Tier 1" and a "back" button</span>
-
-<span class="c">// Manually tapping the "back" button</span>
-<span class="c">// Showing the bottomLevel, a title of "Start page" and no back button</span>
-</pre>
 
 <h2>The current code for the class is below.</h2>
 
@@ -122,7 +104,7 @@ controller.popPanel();
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -138,6 +120,10 @@ controller.popPanel();
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -171,10 +157,6 @@ controller.popPanel();
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

@@ -63,7 +63,6 @@ vertical slide. This is similar to the various carousel scripts around the web, 
 <embed allowfullscreen="true" allowscriptaccess="always" height="404" src="http://vimeo.com/moogaloop.swf?clip_id=6371313&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" width="400"></embed></object>
 </div>
 
-
 <h2>The Source</h2>
 
 <p>You can grab the code on Github at<a href="http://github.com/tdreyno/pageSlider">http://github.com/tdreyno/pageSlider</a>
@@ -77,34 +76,7 @@ or in <a href="http://cloud.github.com/downloads/tdreyno/pageSlider/pageSlider.z
 
 <p>There are also some CSS caveats. The containing element must be set to <tt>overflow: hidden;</tt>. Additionally, calculating heights on the pages can be difficult. The best way is to set a padding on the <tt>.page</tt> so margins don't leak outside it's box.</p>
 
-<pre class="CodeRay"><span class="ta">&lt;head&gt;</span>
-  <span class="ta">&lt;style</span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/css</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-    #maincontent {
-      overflow: hidden; }
-    .page {
-      padding: 5px; }
-  <span class="ta">&lt;/style&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">jquery-1.3.2.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">jquery.history.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">jquery.page-slider.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-    $(document).ready(function() {
-      $('.page').pageSlider();
-    });
-  <span class="ta">&lt;/script&gt;</span>
-<span class="ta">&lt;/head&gt;</span>
 
-<span class="ta">&lt;body&gt;</span>
-  <span class="ta">&lt;div</span> <span class="an">id</span>=<span class="s"><span class="dl">"</span><span class="k">maincontent</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-    <span class="ta">&lt;div</span> <span class="an">title</span>=<span class="s"><span class="dl">"</span><span class="k">home</span><span class="dl">"</span></span> <span class="an">class</span>=<span class="s"><span class="dl">"</span><span class="k">page</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-      Home page
-    <span class="ta">&lt;/div&gt;</span>
-    <span class="ta">&lt;div</span> <span class="an">title</span>=<span class="s"><span class="dl">"</span><span class="k">page2</span><span class="dl">"</span></span> <span class="an">class</span>=<span class="s"><span class="dl">"</span><span class="k">page</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-      Page number two
-    <span class="ta">&lt;/div&gt;</span>
-  <span class="ta">&lt;/div&gt;</span>
-<span class="ta">&lt;/body&gt;</span>
-</pre>
 
 <p>Now, whenever the "history" hash (the #page location in the URL) is changed, the javascript will slide to the requested piece. Normal links such as &lt;a href="#page2"&gt; can be used to trigger the effect. The back-button will also change the history and thus trigger the animation.</p>
 
@@ -115,19 +87,12 @@ or in <a href="http://cloud.github.com/downloads/tdreyno/pageSlider/pageSlider.z
 <ul><li>
 <tt>containerSelector</tt> sets the text of the "on" state. Defaults to: <strong>#maincontent</strong>
 </li></ul>
-<pre class="CodeRay"><span class="pd">$</span>(<span class="s"><span class="dl">'</span><span class="k">.page</span><span class="dl">'</span></span>).pageSlider({
-  <span class="ke">containerSelector</span>: <span class="s"><span class="dl">"</span><span class="k">#frame</span><span class="dl">"</span></span>
-});
-</pre>
 
 <h2>Events</h2>
 
 <p>The plugin calls a <tt>changingPage</tt> event whenever the animation begins. If you have dependent elements you want to update together with the slide, you can attach them to the event via the normal jQuery event model. This callback is used in the video above to update the sidebar navigation when the history changes.</p>
 
-<pre class="CodeRay"><span class="pd">$</span>(document).bind(<span class="s"><span class="dl">'</span><span class="k">changingPage</span><span class="dl">'</span></span>, <span class="kw">function</span>(anchor_name) {
-  <span class="c">// Update some other dependent element based on anchor_name</span>
-});
-</pre>
+
 
 <h2>Demo</h2>
 
@@ -172,7 +137,7 @@ or in <a href="http://cloud.github.com/downloads/tdreyno/pageSlider/pageSlider.z
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -188,6 +153,10 @@ or in <a href="http://cloud.github.com/downloads/tdreyno/pageSlider/pageSlider.z
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -221,10 +190,6 @@ or in <a href="http://cloud.github.com/downloads/tdreyno/pageSlider/pageSlider.z
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

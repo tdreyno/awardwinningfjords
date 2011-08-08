@@ -11,7 +11,7 @@ end
 group :development do
   gem "builder"
   gem "redcarpet"
-  gem "middleman", "2.0.0.rc98"
+  gem "middleman", "2.0.0"
   gem "heroku"
   gem "compass-susy-plugin"
   gem "rack-codehighlighter"

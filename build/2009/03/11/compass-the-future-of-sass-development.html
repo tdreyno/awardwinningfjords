@@ -56,14 +56,14 @@
 
 <h2>Enter Compass</h2>
 
-<p>Compass is a new Sass-centric library from <a href="http://github.com/chriseppstein">Chris Eppstein</a>.
+<p>Compass is a new Sass-centric library from <a href="http://github.com/chriseppstein">Chris Eppstein</a>. 
 There are two components of Compass. The first is a handful of libraries and code snippets implemented in Sass so you can easily apply the rules of <a href="http://www.blueprintcss.org/">Blueprint</a>, <a href="http://960.gs/">960.gs</a> or <a href="http://developer.yahoo.com/yui/grids/">YUI grids</a> to you website entirely in Sass without dirtying up your HTML with presentational classes. The second component is the compass command-line tool which continuously watches you Sass files and compiles them to CSS on-the-fly. While I do am a huge fan of grid-based design and I do appreciate the implemented CSS grid systems, I usually code each site from scratch rather than rely on someone else's large CSS library. Therefore this article will focus on getting Compass installed and using it to generate CSS on-the-fly.</p>
 
 <h2>Getting Started</h2>
 
 <p>This will download, compile and install the Haml gem. The next step is making sure RubyGems is new enough to play nicely with GitHub-hosted gems. Then we'll be able to install compass from GitHub. From the terminal run:</p>
 
-<pre class="CodeRay">sudo gem update --system
+<pre>sudo gem update --system
 sudo gem install compass
 </pre>
 
@@ -71,7 +71,7 @@ sudo gem install compass
 
 <p>Alright, let's move to our web directory—wherever that may be. I like to keep all my CSS and Sass together so I have a base css/ directory and css/sass/ directory under that. Given that structure, I can have compass watch my Sass like so:</p>
 
-<pre class="CodeRay">cd PROJECT_DIR
+<pre>cd PROJECT_DIR
 compass --watch --css-dir css --sass-dir css/sass
 </pre>
 
@@ -119,7 +119,7 @@ compass --watch --css-dir css --sass-dir css/sass
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -135,6 +135,10 @@ compass --watch --css-dir css --sass-dir css/sass
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -168,10 +172,6 @@ compass --watch --css-dir css --sass-dir css/sass
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

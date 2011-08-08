@@ -56,30 +56,18 @@
 
 <p>There are two ways to convert an existing CSS file to Sass. The Haml gem comes with a command called css2sass which parses your CSS document, converts it to Sass-styled code and nests the selectors hierarchically to reduce repetition. You can run the conversion and save the output to a new file by running:</p>
 
-<pre class="CodeRay">css2sass OLDFILE.css &gt; NEWFILE.sass
+<pre>css2sass OLDFILE.css &gt; NEWFILE.sass
 </pre>
 
 <p>However, there is one large caveat. Because css2sass rearranges your selectors, you can run into problems with specificity and order. If you have been working quickly and not refactoring as you were developing  (aka doing real work), then you may have begun littering your CSS with more and more one-off commands that altered css defined earlier in the document. They "worked" because css overrides styles as it reads through the document. The sass produced by css2sass may have a different order and can cause your little tweaks to be ignored.</p>
 
 <p>The safer alternative is to convert from CSS to Sass by hand. Simply remove all curly braces and semicolons and you should have a valid—if not optimized—Sass document. If you've been inconsistent with using either tabs or spaces, Sass will warn you. You'll need to standardize on one or the other before moving forward. If you start out with some CSS like this:</p>
 
-<pre class="CodeRay"><span class="co">#left</span> {
-  <span class="ke">float</span>: <span class="vl">left</span>;
-  <span class="ke">display</span>: <span class="vl">inline</span>;
-  <span class="ke">width</span>: <span class="fl">242px</span>;
-}
-<span class="co">#left</span> <span class="ty">ul</span> {
-  <span class="ke">list-style-type</span>: <span class="vl">none</span>;
-  <span class="ke">margin</span>: <span class="fl">0</span> <span class="fl">8px</span> <span class="fl">0</span> <span class="fl">0</span>;
-}
-<span class="co">#left</span> <span class="ty">ul</span> <span class="ty">li</span> {
-  <span class="ke">font-size</span>: <span class="fl">13px</span>;
-}
-</pre>
+
 
 <p>The first-pass of conversion to Sass will now look like:</p>
 
-<pre class="CodeRay">#left
+<pre>#left
   float: left
   display: inline
   width: 242px
@@ -92,7 +80,7 @@
 
 <p>The next step is to start at the top (#left) and try to modify the nesting so that it only appears once in the Sass file. Simply indent anything starting with #left and remove the id selector. We will also do the same with the "ul li" selector. Exchange the explicit selector for hierarchical indentation.</p>
 
-<pre class="CodeRay">#left
+<pre>#left
   float: left
   display: inline
   width: 242px
@@ -146,7 +134,7 @@
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -162,6 +150,10 @@
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -195,10 +187,6 @@
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

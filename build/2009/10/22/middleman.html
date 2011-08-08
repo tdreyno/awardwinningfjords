@@ -50,11 +50,11 @@
   </script-->
   
   <div class="entry-content">
-    <p><strong>Update: <a href="/2011/04/15/middleman-v11.html">Middleman version 1.1 has been released</a></strong><br><strong>Update: New <a href="https://convore.com/middleman/">Middleman Support Forum</a></strong></p>
+    <p><strong>Update: <a href="/2011/08/08/middleman-2-0.html">Middleman version 2.0 has been released</a></strong><br><strong>Update: <a href="/2011/04/15/middleman-v11.html">Middleman version 1.1 has been released</a></strong><br><strong>Update: New <a href="https://convore.com/middleman/">Middleman Support Forum</a></strong></p>
 
 <p>Developing large sites can be a tedious process. First of all, a large portion of each page will contain some amount of shared code. You have site-wide navigation, footers, javascript and CSS. Within those sections you may have other common data such as color schemes, asset paths and tracking codes. Experienced developers will see this problem coming from a mile away and start the project with site-wide constants and common components separated into their own reusable files. This works pretty well if you are developing in the same framework or language that the site will eventually operate under in production, but what if your job is strictly front-end and you have no advanced knowledge of the backend which will display your pages?</p>
 
-<p>The two most common approaches I've encountered are to develop every page statically with shared components repeated in each and every file. Alternatively, many developers assume global familiarity with PHP or ASP and use some form of Server-Side Include for shared components. The situation gets a bit trickier for global constants and shared paths. I've seen PHP variables scattered throughout a site. I've also seen IDE-specific includes (like Textmate's) used for shared content and variables.</p>
+<p>The two most common approaches I've encountered are to develop every page statically with shared components repeated in each and every file. Alternatively, many developers assume global familiarity with PHP or ASP and use some form of Server-Side Include for shared components. The situation gets a bit trickier for global constants and shared paths. I've seen PHP variables scattered throughout a site. I've also seen IDE-specific includes (like Textmate's) used for shared content and variables. </p>
 
 <p>These approaches have a couple problems. First, they assume the client cares what technology you use. Second, they require you to deploy the site to a web-server before the client can preview the design. And finally, the backend team will probably be frustrated with your PHP unless they just so happen to use it as well.</p>
 
@@ -72,7 +72,7 @@
 
 <p>The best way to describe Middleman is to show you how I use it. I'll show you how to install it a little further down. The <tt>mm-init</tt> command takes a single argument, the directory which will contain your new project. If I run that command from the terminal, I will get the following:</p>
 
-<pre class="CodeRay"># mm-init .
+<pre># mm-init .
 Generating with setup generator:
      [ADDED]  init.rb
      [ADDED]  views/index.html.haml
@@ -87,25 +87,7 @@ Generating with setup generator:
 
 <p>The init.rb file allows customization and enabling or disabling specific features. The default init.rb looks like this:</p>
 
-<pre class="CodeRay"><span class="c"># Helpers</span>
-helpers <span class="r">do</span>
-<span class="r">end</span>
 
-<span class="c"># Generic configuration</span>
-<span class="c"># enable :slickmap</span>
-
-<span class="c"># Build-specific configuration</span>
-configure <span class="sy">:build</span> <span class="r">do</span>
-  <span class="c"># For example, change the Compass output style for deployment</span>
-  <span class="c"># enable :minified_css</span>
-
-  <span class="c"># Or use a different image path</span>
-  <span class="c"># set :http_path, "/Content/images/"</span>
-
-  <span class="c"># Disable cache buster</span>
-  <span class="c"># disable :cache_buster</span>
-<span class="r">end</span>
-</pre>
 
 <p>Helpers are functions which can be called from your templates and allow you to abstract frequently repeated code. Middleman comes with a handful, most for asset management, but you can write your own within the helpers block in the init.rb.</p>
 
@@ -119,51 +101,22 @@ configure <span class="sy">:build</span> <span class="r">do</span>
 
 <p>Below is an example init.rb that I am using on a live client site. First, I include a couple files with helper definitions. Next I enable php files to be previewed and choose the default template for directory requests. For this project, I have chosen to place all static files under the "assets" folder. The asset_url helper is overridden to ignore a couple cases specific to this site. Finally, I setup the directory under which the site will live in production. That's it! Nearly 200 pages with a shared layout, simple Haml templates, Blueprint-base CSS grids, minified CSS, Javascript dependency management and minification, CDN support and cache busting query strings.</p>
 
-<pre class="CodeRay">require <span class="s"><span class="dl">'</span><span class="k">config/path_helpers</span><span class="dl">'</span></span>
-require <span class="s"><span class="dl">'</span><span class="k">config/haml_helpers</span><span class="dl">'</span></span>
 
-mime <span class="sy">:php</span>, <span class="s"><span class="dl">"</span><span class="k">text/html</span><span class="dl">"</span></span>
-set <span class="sy">:index_file</span>, <span class="s"><span class="dl">"</span><span class="k">index.php</span><span class="dl">"</span></span>
-set <span class="sy">:images_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/images</span><span class="dl">"</span></span>
-set <span class="sy">:css_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/stylesheets</span><span class="dl">"</span></span>
-set <span class="sy">:videos_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/videos</span><span class="dl">"</span></span>
-set <span class="sy">:js_dir</span>, <span class="s"><span class="dl">"</span><span class="k">assets/javascripts</span><span class="dl">"</span></span>
-
-configure <span class="sy">:build</span> <span class="r">do</span>
-  set <span class="sy">:http_prefix</span>, <span class="s"><span class="dl">"</span><span class="k">/sites/billboard</span><span class="dl">"</span></span>
-  enable <span class="sy">:automatic_image_sizes</span>
-<span class="r">end</span>
-</pre>
 
 <h2>Features</h2>
 
-<p>As you can see, the basic project is quite sparse and you get to choose which features your project needs.
+<p>As you can see, the basic project is quite sparse and you get to choose which features your project needs. 
 The current list of features is as follows:</p>
 
-<pre class="CodeRay"><span class="c"># Features enabled by default</span>
-enable <span class="sy">:compass</span>
-enable <span class="sy">:sprockets</span>
 
-<span class="c"># Features disabled by default</span>
-disable <span class="sy">:slickmap</span>
-disable <span class="sy">:cache_buster</span>
-disable <span class="sy">:minify_css</span>
-disable <span class="sy">:minify_javascript</span>
-disable <span class="sy">:relative_assets</span>
-disable <span class="sy">:maruku</span>
-disable <span class="sy">:automatic_image_sizes</span>
-disable <span class="sy">:minify_css</span>
-disable <span class="sy">:minify_javascript</span>
-disable <span class="sy">:cache_buster</span>
-</pre>
 
-<p>More documentation on these features and what they enable can be found <a href="http://wiki.github.com/tdreyno/middleman/configuration">on the project website</a>.</p>
+<p>More documentation on these features and what they enable can be found <a href="http://middlemanapp.com">on the project website</a>.</p>
 
 <h2>Development Process</h2>
 
 <p>So, the quickest way to get started is to run <tt>mm-init</tt> and point it at a location for your new project. Then change directories into that project and run <tt>mm-server</tt>. Now you can develop your site and preview the results on localhost:4567. Finally, when you're ready to deliver raw HTML, run <tt>mm-build</tt> from the project folder. Here's an example.</p>
 
-<pre class="CodeRay">Gir:~ tdreyno$ mm-init new_project
+<pre>Gir:~ tdreyno$ mm-init new_project
 Generating with setup generator:
      [ADDED]  init.rb
      [ADDED]  views/index.haml
@@ -237,7 +190,7 @@ And finally, please report bugs to: <a href="http://github.com/tdreyno/middleman
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -253,6 +206,10 @@ And finally, please report bugs to: <a href="http://github.com/tdreyno/middleman
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -286,10 +243,6 @@ And finally, please report bugs to: <a href="http://github.com/tdreyno/middleman
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         

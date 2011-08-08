@@ -75,7 +75,6 @@
 </table>
 </div>
 
-
 <p><link charset="utf-8" href="/iphone-style-checkboxes/style.css" media="screen" rel="stylesheet" type="text/css"></p>
 
 <script src="/iphone-style-checkboxes/prototype/prototype-1.6.0.3.js" type="text/javascript"></script><script src="/iphone-style-checkboxes/prototype/scriptaculous-effects-1.8.2.js" type="text/javascript"></script><script src="/iphone-style-checkboxes/prototype/iphone-style-checkboxes.js" type="text/javascript"></script><script type="text/javascript">
@@ -86,18 +85,7 @@
 
 <p>Once the files are available to your site, activating the script is very easy:</p>
 
-<pre class="CodeRay"><span class="ta">&lt;head&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">prototype.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">scriptaculous.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">src</span>=<span class="s"><span class="dl">"</span><span class="k">prototype/iphone-style-checkboxes.js</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span><span class="ta">&lt;/script&gt;</span>
-  <span class="ta">&lt;link</span> <span class="an">rel</span>=<span class="s"><span class="dl">"</span><span class="k">stylesheet</span><span class="dl">"</span></span> <span class="an">href</span>=<span class="s"><span class="dl">"</span><span class="k">path_to/style.css</span><span class="dl">"</span></span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/css</span><span class="dl">"</span></span> <span class="an">media</span>=<span class="s"><span class="dl">"</span><span class="k">screen</span><span class="dl">"</span></span> <span class="ta">/&gt;</span>
-  <span class="ta">&lt;script</span> <span class="an">type</span>=<span class="s"><span class="dl">"</span><span class="k">text/javascript</span><span class="dl">"</span></span><span class="ta">&gt;</span>
-    document.observe("dom:loaded", function() {
-      new iPhoneStyle('input[type=checkbox]');
-    });
-  <span class="ta">&lt;/script&gt;</span>
-<span class="ta">&lt;/head&gt;</span>
-</pre>
+
 
 <p>The initialization method takes a handful of options.</p>
 
@@ -111,11 +99,7 @@
 </ul>
 <p>For example:</p>
 
-<pre class="CodeRay"><span class="kw">new</span> iPhoneStyle(<span class="s"><span class="dl">'</span><span class="k">input[type=checkbox]</span><span class="dl">'</span></span>, {
-  <span class="ke">checkedLabel</span>: <span class="s"><span class="dl">'</span><span class="k">YES</span><span class="dl">'</span></span>,
-  <span class="ke">uncheckedLabel</span>: <span class="s"><span class="dl">'</span><span class="k">NO</span><span class="dl">'</span></span>
-});
-</pre>
+
 
 <div class="table">
   <table>
@@ -137,7 +121,6 @@
     </tr>
 </table>
 </div>
-
 
 <script type="text/javascript">
   new iPhoneStyle('#post input[type=checkbox].yesno', { checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
@@ -185,7 +168,7 @@ Both versions are maintained using GitHub: <a href="http://github.com/tdreyno/ip
           <a href="http://github.com/tdreyno">GitHub</a>
         </h2>
         <ol>
-<li><a href="https://github.com/tdreyno/middleman">Middleman</a></li>
+<li><a href="http://middlemanapp.com">Middleman</a></li>
           <li><a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a></li>
           <li><a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a></li>
@@ -201,6 +184,10 @@ Both versions are maintained using GitHub: <a href="http://github.com/tdreyno/ip
         </h2>
         <ol>
 <li>
+<a href="/2011/08/08/middleman-2-0.html">Middleman 2.0</a> <span>Aug  8</span>
+</li>
+          
+            <li>
 <a href="/2011/05/13/coffeescript-specific-style-guide.html">CoffeeScript-specific Style Guide</a> <span>May 13</span>
 </li>
           
@@ -234,10 +221,6 @@ Both versions are maintained using GitHub: <a href="http://github.com/tdreyno/ip
           
             <li>
 <a href="/2011/04/15/middleman-v11.html">Middleman v1.1</a> <span>Apr 15</span>
-</li>
-          
-            <li>
-<a href="/2011/04/13/adjustable-animations-with-sliders.html">Adjustable Animations with Sliders</a> <span>Apr 13</span>
 </li>
           
         
