@@ -2,3 +2,5 @@
 .sass-cache
 .bundle
 .rvmrc
+build
+Gemfile.lock
