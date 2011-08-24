@@ -4,6 +4,8 @@ slug: dont-repeat-yourself-use-sass-modules
 date: 2009/04/02
 ---
 
+**Update (2011-08-23): Use to Sass 3 syntax**
+
 There are quite a few situations in CSS where you are simply copy &amp; pasting the same set of styles in multiple places. If at some point, you want to tweak these styles, you'll need to track down and update each set of styles. Sass introduces the concept of mixins which are blocks of nested Sass code which can be applied to any selector in your Sass document. Think of them as variables which can hold multiple levels of information. The syntax for defining a module is simple:
 
     =module-name
@@ -32,13 +34,13 @@ Clearfix
 The Sass definition for clearfix—pulled from the Compass project—is declared as such:
 
     =clearfix
-      :overflow auto
-      :overflow -moz-scrollbars-none
+      overflow: auto
+      overflow: -moz-scrollbars-none
       // This makes ie6 get layout
-      :display inline-block
+      display: inline-block
       // and this puts it back to block
       &amp;
-        :display block
+        display: block
 
 Many developers create a .clearfix class and apply it on the HTML-side to blocks which need the hack. I've never been a huge fan of this as you are making presentational changes to the content-side of the equation. The old-school .clearfix class can be accomplished pretty simply though, so it is worth showing:
 
@@ -69,13 +71,13 @@ Module parameters
 -----------------
 Sass mixins can also take parameters that are used when generating the CSS. Here is the Sass definition for the often-used trick of displaying an image behind text (usually a H1-H6 tag) and shifting the text out of view.
 
-    =replace-text( !img, !x = 50%, !y = 50% )
-      :text-indent -9999em
-      :overflow    hidden
-      :background
-        :image= url(!img)
-        :repeat no-repeat
-        :position= !x !y
+    =replace-text( $img, $x: 50%, $y: 50% )
+      text-indent: -9999em
+      overflow:    hidden
+      background:
+        image: url($img)
+        repeat: no-repeat
+        position: $x $y
 
 As you can see, we must pass in the location of the replacement image and optionally the background position. The simplest usage of this module looks something like this:
 
