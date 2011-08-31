@@ -5,6 +5,7 @@ set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
 # page "/*", :layout_engine => 'erb', :layout => :article_layout
 
 page "/feed.xml", :layout => false
+page "/mint/*", :layout => false
 
 activate :blog
 # set :blog_permalink, ":year/:month/:day/:title.html"
