@@ -2,6 +2,7 @@
 .sass-cache
 .bundle
 .rvmrc
+.rbenv-version
 build
 Gemfile.lock
 source/mint/config/db.php
