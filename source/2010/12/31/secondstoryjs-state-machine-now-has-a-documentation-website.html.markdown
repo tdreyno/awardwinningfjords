@@ -7,4 +7,4 @@ You can now learn everything you wanted to know about the JavascriptMVC3 state m
 
 <a href="http://secondstory.github.com/secondstoryjs-router/">http://secondstory.github.com/secondstoryjs-statemachine/</a>
 
-<img src="http://awardwinningfjords.com/images/SecondStoryJS-StateMachine.png" alt="SecondStoryJS State Machine" />
+<img src="http://src.sencha.io/http://awardwinningfjords.com/images/SecondStoryJS-StateMachine.png" alt="SecondStoryJS State Machine" />

@@ -34,8 +34,8 @@
     <script src="/mint/?js" type="text/javascript"></script>
     
     <!-- Stylesheet -->
-    <%= stylesheet_link_tag "style", :media => "screen and (min-width: 481px)" %>
-    <%= stylesheet_link_tag "mobile", :media => "only screen and (min-device-width: 320px) and (max-device-width: 480px)" %>
+    <%= stylesheet_link_tag "style", :media => "screen and (min-width: 768px)" %>
+    <%= stylesheet_link_tag "mobile", :media => "only screen and (max-width: 767px)" %>
     
     <!-- RSS -->
     <link href='http://feeds2.feedburner.com/awf-allposts' rel='alternate' title='Award Winning Fjords' type='application/rss+xml'>
@@ -48,7 +48,7 @@
   <body class="<%= body_class %>">
     <header>
       <div class="center">
-        <h1><%= link_to "Award-winning Fjords", "/" %></h1>
+        <h1><%= link_to "Award-Winning Fjords", "/" %></h1>
         <h2 class="byline author vcard">
           Words &amp; Wisdom by 
           <span class="fn">Thomas Reynolds</span>
