@@ -9,7 +9,7 @@ date: 2009/12/14
 <ul>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/25.jpg' />
+      <img src='http://awardwinningfjords.com/albums/25.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h2>Of Montreal - Skeletal Lamping</h2>
@@ -21,7 +21,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/24.jpg' />
+      <img src='http://awardwinningfjords.com/albums/24.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>Menomena - Friend and Foe</h2>
@@ -33,7 +33,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/23.jpg' />
+      <img src='http://awardwinningfjords.com/albums/23.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Gospel - The Moon is a Dead World</h2>
@@ -45,7 +45,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/22.jpg' />
+      <img src='http://awardwinningfjords.com/albums/22.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Brand New - The Devil and God Are Raging Inside Me</h2>
@@ -57,7 +57,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/21.jpg' />
+      <img src='http://awardwinningfjords.com/albums/21.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h2>A.F.I. - The Art of Drowning</h2>
@@ -71,7 +71,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/20.jpg' />
+      <img src='http://awardwinningfjords.com/albums/20.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Gorillaz - Demon Days</h2>
@@ -83,7 +83,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/19.jpg' />
+      <img src='http://awardwinningfjords.com/albums/19.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>The World/Inferno Friendship Society - Addicted to Bad Ideas</h2>
@@ -95,7 +95,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/18.jpg' />
+      <img src='http://awardwinningfjords.com/albums/18.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h2>Rx Bandits - Progress</h2>
@@ -107,7 +107,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/17.jpg' />
+      <img src='http://awardwinningfjords.com/albums/17.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Death Cab for Cutie - Plans</h2>
@@ -119,7 +119,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/16.jpg' />
+      <img src='http://awardwinningfjords.com/albums/16.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h2>La Dispute - Somewhere at the Bottom of the River Between Vega and Altair</h2>
@@ -131,7 +131,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/15.jpg' />
+      <img src='http://awardwinningfjords.com/albums/15.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h2>Girl Talk - Feed the Animals</h2>
@@ -143,7 +143,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/14.jpg' />
+      <img src='http://awardwinningfjords.com/albums/14.jpg' />
     </div>
     <div class='content'>
       <h6>2009</h6><h2>Rx Bandits - Mandala</h2>
@@ -155,7 +155,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/13.jpg' />
+      <img src='http://awardwinningfjords.com/albums/13.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h2>The Postal Service - Give Up</h2>
@@ -167,7 +167,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/12.jpg' />
+      <img src='http://awardwinningfjords.com/albums/12.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Head Automatica - Popaganda</h2>
@@ -179,7 +179,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/11.jpg' />
+      <img src='http://awardwinningfjords.com/albums/11.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h2>Deltron - Deltron 3030</h2>
@@ -191,7 +191,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/10.jpg' />
+      <img src='http://awardwinningfjords.com/albums/10.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h2>mewithoutYou - Catch For Us the Foxes</h2>
@@ -203,7 +203,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/09.jpg' />
+      <img src='http://awardwinningfjords.com/albums/09.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h2>Rx Bandits - The Resignation</h2>
@@ -215,7 +215,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/08.jpg' />
+      <img src='http://awardwinningfjords.com/albums/08.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>The Mars Volta - Frances the Mute</h2>
@@ -227,7 +227,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/07.jpg' />
+      <img src='http://awardwinningfjords.com/albums/07.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h2>Leftover Crack - Fuck World Trade</h2>
@@ -239,7 +239,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/06.jpg' />
+      <img src='http://awardwinningfjords.com/albums/06.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h2>Why? - Alopecia</h2>
@@ -252,7 +252,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/05.jpg' />
+      <img src='http://awardwinningfjords.com/albums/05.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Justin Timberlake - Futuresex/Lovesounds</h2>
@@ -264,7 +264,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/04.jpg' />
+      <img src='http://awardwinningfjords.com/albums/04.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>Bloc Party - A Weekend in the City</h2>
@@ -276,7 +276,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/03.jpg' />
+      <img src='http://awardwinningfjords.com/albums/03.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h2>At the Drive-In - Relationship of Command</h2>
@@ -288,7 +288,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/02.jpg' />
+      <img src='http://awardwinningfjords.com/albums/02.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>The Format - Dog Problems</h2>
@@ -300,7 +300,7 @@ date: 2009/12/14
   </li>
   <li>
     <div class='cover'>
-      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/01.jpg' />
+      <img src='http://awardwinningfjords.com/albums/01.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Say Anything - ...Is a Real Boy</h2>
