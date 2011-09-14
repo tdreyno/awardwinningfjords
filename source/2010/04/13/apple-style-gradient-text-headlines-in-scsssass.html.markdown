@@ -5,7 +5,7 @@ date: 13/04/2010
 
 Apple's effect looks like this:
 
-<img src="http://dl.dropbox.com/u/102356/Screenshot.png" />
+<img src="http://src.sencha.io/-15/http://dl.dropbox.com/u/102356/Screenshot.png" />
 
 This effect only works in Webkit-based browsers like Safari and Chrome at this time and requires Sass 3 and the most recent version of Compass:
 
@@ -28,4 +28,4 @@ Or, if you prefer plain CSS:
 
 Which renders as:
 
-<img src="http://dl.dropbox.com/u/102356/Screenshot-1.png" />
+<img src="http://src.sencha.io/-15/http://dl.dropbox.com/u/102356/Screenshot-1.png" />

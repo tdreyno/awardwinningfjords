@@ -12,7 +12,7 @@ It's that time of year again! I don't want a personal live journal all year, but
 <ul>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/10.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/10.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>United Nations</h6>
@@ -25,7 +25,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/9.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/9.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Envy</h6>
@@ -38,7 +38,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/8.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/8.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Portugal. The Man</h6>
@@ -51,7 +51,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/7.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/7.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>B.o.B</h6>
@@ -64,7 +64,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/6.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/6.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Cee Lo Green</h6>
@@ -77,7 +77,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/5.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/5.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Big Boi</h6>
@@ -90,7 +90,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/4.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/4.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Girl Talk</h6>
@@ -103,7 +103,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/3.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/3.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Fang Island</h6>
@@ -116,7 +116,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/2010/2.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/2.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Kanye West</h6>
@@ -130,7 +130,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li class="last">
     <div class='cover'>
-      <img src='/albums/2010/1.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/1.jpg' /><div></div>
     </div>
     <div class='content'>
       <h6>Gorillaz</h6>
@@ -149,7 +149,7 @@ It's that time of year again! I don't want a personal live journal all year, but
 <ul>
   <li>
     <div class='cover_small'>
-      <img src='/albums/2010/15.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/15.jpg' /><div></div>
     </div>
     <div class='content_small'>
       <h6>Amia Venera Landscape</h6>
@@ -159,7 +159,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover_small'>
-      <img src='/albums/2010/14.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/14.jpg' /><div></div>
     </div>
     <div class='content_small'>
       <h6>Gogol Bordello</h6>
@@ -169,7 +169,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover_small'>
-      <img src='/albums/2010/13.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/13.jpg' /><div></div>
     </div>
     <div class='content_small'>
       <h6>Janelle Monáe</h6>
@@ -179,7 +179,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li>
     <div class='cover_small'>
-      <img src='/albums/2010/12.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/12.jpg' /><div></div>
     </div>
     <div class='content_small'>
       <h6>The Black Keys</h6>
@@ -189,7 +189,7 @@ It's that time of year again! I don't want a personal live journal all year, but
   </li>
   <li class="last">
     <div class='cover_small'>
-      <img src='/albums/2010/11.jpg' /><div></div>
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/2010/11.jpg' /><div></div>
     </div>
     <div class='content_small'>
       <h6>Broken Bells</h6>

@@ -1,0 +1,108 @@
+@import "base"
+
++global-reset
++establish-baseline
+
+body
+  font-family: $font-family
+  color: $font-color
+  text-rendering: optimizeLegibility
+  background: white
+
+.antialias
+  -webkit-font-smoothing: antialiased
+
+a
+  +link-colors($link-color)
+
+h1, h2, h3
+  &, a
+    font-family: $header-font-family
+    color: $header-color
+    font-weight: 200
+    text-decoration: none
+
+h2
+  +adjust-font-size-to(22px, 1.4)
+  border-bottom: 1px solid $border-color
+  +box-shadow(transparentize(#fff, 0.95) 0 1px 0)
+  +trailer(0.5)
+  +padding-trailer(0.25)
+
+h3
+  +adjust-font-size-to(18px)
+
+p strong
+  font-weight: bold
+  
+.date
+  color: darken(#C6C6C6, 15)
+  font-size: 10px
+  white-space: nowrap
+
+#frame, .center
+  position: relative
+
+header
+  background: image-url("pixel-gray.gif")
+  +box-shadow(transparentize(black, 0.5) 0 -3px 12px 0 inset)
+  h1
+    @extend .antialias
+    a
+      color: #DADBB1
+      text-shadow: 2px 2px 2px transparentize(#000, 0.75) 
+  h2
+    color: #C6C6C6
+    margin: 0
+    border: 0
+    padding: 0
+    +box-shadow(black 0 0 0)
+  
+#post
+  h1 
+    span, time
+      @extend .date
+  p, ul, ol, pre
+    @extend .antialias
+  ul, ol
+    list-style-type: disc
+  strong
+    color: $darker-font-color
+  p img
+    border: 1px solid $border-color
+    +box-shadow(transparentize(black,0.5) 0 0 5px)
+  blockquote
+    +adjust-font-size-to(18px, 1.4)
+    border-left: 6px solid #DADBB1
+  pre
+    font-family: $fixed-font-family
+    color: $darker-font-color
+    background: #DADBB1
+    +border-radius(0.5em)
+    border: 1px solid $border-color
+    &:hover
+      overflow: visible
+    strong
+      font-weight: normal
+      color: black
+
+body.index
+  article
+    border-bottom: 1px solid $border-color
+    +box-shadow(transparentize(#fff, 0.95) 0 1px 0)
+    +leader(1)
+    +padding-trailer(1)
+    &.first, &:first-child
+      margin-top: 0 
+  
+body.archives
+  ul.archives
+    li
+      a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+      span
+        @extend .date
+  #previously
+    display: none

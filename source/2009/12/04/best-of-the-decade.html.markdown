@@ -10,7 +10,7 @@ date: 2009/12/04
 <ul>
   <li>
     <div class='cover'>
-      <img src='/albums/50.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/50.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Panic at the Disco - A Fever You Can't Sweat Out</h2>
@@ -22,7 +22,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/49.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/49.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Mogwai - Mr Beast</h2>
@@ -34,7 +34,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/48.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/48.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h2>Bad Religion - The Process of Belief</h2>
@@ -46,7 +46,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/47.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/47.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Scissor Sisters - Ta-Dah</h2>
@@ -58,7 +58,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/46.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/46.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Transplants - Haunted Cities</h2>
@@ -70,7 +70,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/45.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/45.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h2>System of a Down - Toxicity</h2>
@@ -82,7 +82,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/44.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/44.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Mindless Self Indulgence - You'll Rebel To Anything</h2>
@@ -94,7 +94,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/43.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/43.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h2>My Chemical Romance - Three Cheers for Sweet Romance</h2>
@@ -106,7 +106,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/42.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/42.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>Of Montreal - Hissing Fauna, Are You the Destroyer?</h2>
@@ -118,7 +118,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/41.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/41.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h2>Deftones - White Pony</h2>
@@ -130,7 +130,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/40.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/40.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h2>The Mae Shi - Hlllyh</h2>
@@ -142,7 +142,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/39.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/39.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h2>Sum 41 - Chuck</h2>
@@ -154,7 +154,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/38.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/38.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>Fall Out Boy - Infinity on High</h2>
@@ -166,7 +166,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/37.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/37.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h2>Queens of the Stone Age - Songs for the Deaf</h2>
@@ -178,7 +178,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/36.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/36.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>Big D and the Kids Table - Strictly Rude</h2>
@@ -190,7 +190,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/35.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/35.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h2>Ozma - Rock and Rock Part 3</h2>
@@ -202,7 +202,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/34.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/34.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h2>The Mars Volta - De-Loused in the Comatorium</h2>
@@ -214,7 +214,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/33.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/33.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h2>Common Rider - This is Unity Music</h2>
@@ -226,7 +226,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/32.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/32.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h2>The National - Boxer</h2>
@@ -238,7 +238,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/31.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/31.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>Clint Mansell (w/ Mogwai & Kronos Quartet) - The Fountain (Music from the Motion Picture)</h2>
@@ -250,7 +250,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/30.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/30.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h2>Kanye West - Late Registration</h2>
@@ -262,7 +262,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/29.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/29.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h2>The Distillers - Coral Fang</h2>
@@ -274,7 +274,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/28.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/28.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h2>The Dresden Dolls - Yes Virginia</h2>
@@ -286,7 +286,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/27.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/27.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h2>Leftover Crack - Mediocre Generica</h2>
@@ -298,7 +298,7 @@ date: 2009/12/04
   </li>
   <li>
     <div class='cover'>
-      <img src='/albums/26.jpg' />
+      <img src='http://src.sencha.io/-15/http://awardwinningfjords.com/albums/26.jpg' />
     </div>
     <div class='content'>
       <h6>2009</h6><h2>Portugal the Man - The Satanic Satanist</h2>
