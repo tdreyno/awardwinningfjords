@@ -1,6 +1,6 @@
 require "susy"
 
-set :markdown_engine, Middleman::CoreExtensions::FrontMatter::RedcarpetTemplate
+set :markdown_engine, :redcarpet
 
 # page "/*", :layout_engine => 'erb', :layout => :article_layout
 
