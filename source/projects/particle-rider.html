@@ -1,148 +1,32 @@
 <html>
 <head>
-  <title>HTML5 Particle Rider by Thomas Reynolds</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-    }
+      padding: 0; }
   </style>
-  <script src="particle-rider/javascripts/paper.js"></script>
+  <script src="particle-rider/javascripts/paper.js" type="text/javascript"></script>
+  <script src="particle-rider/javascripts/dat.gui.js" type="text/javascript"></script>
+  <title>Particle Rider by Thomas Reynolds</title>
 </head>
 <body>
-
-<canvas id="myCanvas" resize></canvas>
-
-<script type="text/paperscript" canvas="myCanvas">
-  var path = new Path();
-  path.add(view.center);
-  path.selected = true;
-  var particles = [];
+  <canvas id="myCanvas" resize></canvas>
+  <script src="particle-rider/javascripts/particle-rider.js" type="text/paperscript" canvas="myCanvas"></script>
   
-  for (var i = 0; i < 50; i++) {
-    var randomX = (Math.random() * view.width) - (view.width/2);
-    var randomY = (Math.random() * 100.0) - 50.0;
-    
-    var point = new Point(
-      randomX,
-      randomY
-    )
-    var targetPoint = view.center + (Size.random() * view.size) - (view.size/2);
-    
-    var randomSize = (Math.random() * 11.0) + 2.0;
-    var circle = new Path.Circle(targetPoint, randomSize);
-    circle.fillColor = new HsbColor(Math.random() * 360, 1, 1);
-    circle.strokeColor = "black";
-    circle.strokeWidth = 1;
-    
-    particles.push({
-      view: circle,
-      acceleration: new Point({ x: 0, y: 0 }),
-      velocity:     new Point({ x: 0, y: 0 }),
-      speed:        0.01 + Math.random() * 0.05,
-      target:       targetPoint,
-      offset:       ((Point.random() * 100.0) - 50.0)
-    });
-  }
-  
-  var debugPaths = [];
-  function onFrame(event) {
-    for (var k = 0; k < debugPaths.length; k++) {
-      debugPaths[k].remove();
-      debugPaths[k] = null;
-    }
-    debugPaths = [];
-    
-    for (var i = 0; i < particles.length; i++) {
-      var particle = particles[i];
-      
-      var direction = particle.view.position;
-      var distances = [];
-      var data = [];
-      data.push(direction.x);
-      
-      var nearestIndex = null;
-      var nearestDist = Infinity;
-      
-      for (var j = 0; j < path.segments.length; j++) {
-        var segment = path.segments[j];
-        var distance = segment.getPoint().getDistance(particle.view.position);
-        if (distance < nearestDist) {
-          nearestDist = distance;
-          nearestIndex = j;
-        }
-      }
-      
-      if (nearestDist > 200) {
-        continue;
-      }
-      
-      if (nearestIndex !== null) {
-        var nearestPoint = path.segments[nearestIndex].getPoint();
-        
-        direction += nearestPoint - particle.view.position;
-        
-        var nextPoint;
-        if (nearestIndex < path.segments.length-1){
-          nextPoint = path.segments[nearestIndex+1].getPoint();
-          
-          direction += (nextPoint - particle.view.position) * 2;
-        }
-        
-        if (nearestIndex+1 < path.segments.length-1){
-          nextPoint = path.segments[nearestIndex+2].getPoint();
-          
-          direction += (nextPoint - particle.view.position) * 3;
-        }
-        
-        if (nearestIndex+2 < path.segments.length-1){
-          nextPoint = path.segments[nearestIndex+3].getPoint();
-          
-          direction += (nextPoint - particle.view.position) * 4;
-        }
-      }
-      
-      particle.view.position += (direction + particle.offset - particle.view.position) * (particle.speed);
-    }
-  }
-  
-  tool.fixedDistance = 30;
-  function onMouseMove(event) {
-    path.add(event.point);
-    
-    if (path.segments.length > 50) {
-      path.removeSegment(0);
-    }
-    
-    path.smooth();
-    
-    for (var i = 0; i < particles.length; i++) {
-      var particle = particles[i];
-      
-      var direction = particle.view.position;
-      var distances = [];
-      for (var j = 0; j < path.segments.length; j++) {
-        var segment = path.segments[j];
-      }
-    }
-  }
-  
-</script>
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-90027-9']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-90027-9']);
-  _gaq.push(['_trackPageview']);
-  _gaq.push(['_trackPageLoadTime']);
-
-  (function() {
-  var ga = document.createElement('script');
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
-    'http://www') + '.google-analytics.com/ga.js';
-  ga.setAttribute('async', 'true');
-  document.documentElement.firstChild.appendChild(ga);
-  })();
-</script>
+    (function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+      'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+    })();
+  </script>
 </body>
 </html>
