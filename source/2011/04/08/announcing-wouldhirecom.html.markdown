@@ -18,12 +18,12 @@ READMORE
 
 The site is very simple. Go to the homepage, enter your twitter username and see if anyone has expressed interest in working with you. If they have and you're looking for a new gig, it's up to you two to figure it out.
 
-<a href="http://wouldhire.com"><img src="http://src.sencha.io/http://awardwinningfjords.com/images/WouldHire-homepage.png" alt="Homepage"></a>
+<a href="http://wouldhire.com"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/WouldHire-homepage.png" alt="Homepage"></a>
 
-<a href="http://who.wouldhire.com/pixelmatrix"><img src="http://src.sencha.io/http://awardwinningfjords.com/images/WouldHire-who.png" alt="Who WouldHire @pixelmatrix"></a>
+<a href="http://who.wouldhire.com/pixelmatrix"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/WouldHire-who.png" alt="Who WouldHire @pixelmatrix"></a>
 
 Finally, if you're looking to let someone know that you're interested, simply login (using Twitter) and add some Twitter usernames to your "dream team."
 
-<img src="http://src.sencha.io/http://awardwinningfjords.com/images/WouldHire-admin.png" alt="WouldHire Admin">
+<img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/WouldHire-admin.png" alt="WouldHire Admin">
 
 Pretty cool, eh? Please check it out, email me your ideas/comments and hopefully this will help someone, somewhere end up with their dream job.

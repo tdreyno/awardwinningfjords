@@ -23,6 +23,8 @@ configure :build do
   Compass.configuration do |config|
     config.line_comments = false
   end
+  
+  activate :cache_buster
 
   # For example, change the Compass output style for deployment
   activate :minify_css

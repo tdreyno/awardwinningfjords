@@ -7,4 +7,4 @@ Like the title says, you can now learn everything you wanted to know about the J
 
 <a href="http://secondstory.github.com/secondstoryjs-router/">http://secondstory.github.com/secondstoryjs-router/</a>
 
-<img src="http://src.sencha.io/http://awardwinningfjords.com/images/SecondStoryJS-Router.png" alt="SecondStoryJS Router" />
+<img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/SecondStoryJS-Router.png" alt="SecondStoryJS Router" />
