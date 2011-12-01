@@ -1,4 +1,4 @@
-var addParticle, debugPaths, gui, onFrame, onMouseMove, particles, path;
+var addParticle, debugPaths, gui, onFrame, onMouseMove, particles, path, self;
 
 path = new Path();
 
@@ -9,6 +9,8 @@ path.strokeColor = "black";
 path.strokeWidth = 1;
 
 this.totalParticles = 50;
+
+this.lineLength = 50;
 
 particles = [];
 
@@ -89,9 +91,17 @@ onFrame = function(event) {
 
 tool.fixedDistance = 30;
 
+self = this;
+
 onMouseMove = function(event) {
+  var diff, i;
   path.add(event.point);
-  if (path.segments.length > 50) path.removeSegment(0);
+  diff = path.segments.length - self.lineLength;
+  if (diff > 1) {
+    for (i = 0; 0 <= diff ? i < diff : i > diff; 0 <= diff ? i++ : i--) {
+      path.removeSegment(0);
+    }
+  }
   return path.smooth();
 };
 
@@ -116,3 +126,5 @@ gui = new dat.GUI();
 gui.add(this, "boom");
 
 gui.add(this, "totalParticles").min(1);
+
+gui.add(this, "lineLength").min(2);
