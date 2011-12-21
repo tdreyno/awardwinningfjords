@@ -1,6 +1,6 @@
 --- 
 title: CrossFit is for Nerds
-date: 24/04/2011
+date: 04/24/2011
 ---
 
 Yesterday I competed in the CrossFit Games Open WOD 11.5 at CrossFit HEL (in Portland, Oregon). To the majority of my readers, those words mean absolutely nothing. So, let's start at the beginning.

@@ -1,6 +1,6 @@
 --- 
 title: Aaron Quint on Javascript Hash URLs
-date: 11/02/2011
+date: 02/11/2011
 ---
 
 > Sammy and the ‘#’ are for applications. It provides a way to maintain state in a world where you can require JavaScript and even require the presence of certain browsers. If you’re an application, that requires login/signup you can make a number of demands of your users. You also probably dont even want the crawlability. You’re using ‘#’ to maintain state for a specific user in a specific session.

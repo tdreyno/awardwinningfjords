@@ -1,6 +1,6 @@
 --- 
 title: Branching Out, Opening Up and Publishing More
-date: 23/04/2011
+date: 04/23/2011
 ---
 
 [Marco Arment]: http://marco.org

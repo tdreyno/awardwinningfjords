@@ -1,6 +1,6 @@
 --- 
 title: "Client-side MVC+S Part 1: The Model and Data Store"
-date: 25/01/2011
+date: 01/25/2011
 ---
 
 Like it or not, the Apple iPhone and iPad have changed people&rsquo;s expectations for how apps and even websites should behave. As designers begin porting native application concepts to the web, we front-end developers have got to become more organized and application-oriented to survive. More and more, websites should be categorized as "simple applications." Building sites as a collection of jQuery plugins is a bad idea in this new, complex web-application world.

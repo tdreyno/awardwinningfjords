@@ -1,6 +1,6 @@
 --- 
 title: Handling Touch Events in jQuery Tools Scrollable
-date: 22/09/2010
+date: 09/22/2010
 ---
 
 [jQuery Tools Scrollable]: http://flowplayer.org/tools/scrollable/index.html

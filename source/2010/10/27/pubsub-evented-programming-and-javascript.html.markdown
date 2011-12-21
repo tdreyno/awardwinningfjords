@@ -1,6 +1,6 @@
 --- 
 title: PubSub, Evented Programming and Javascript
-date: 27/10/2010
+date: 10/27/2010
 ---
 
 One of the buzzwords at jQuery Conference 2010 Boston (that mouthful makes Microsoft product names sound elegant), was "PubSub." At least three speakers referenced the concept in different contexts and I overheard quite a bit of chatter about it in the hallways. I was surprised to see so many people getting their first introduction to the concept, especially given how event-oriented jQuery is. So, let's take a look at what PubSub means, how you can use it in jQuery and some very naive example code.

@@ -1,6 +1,6 @@
 --- 
 title: Sass @extend Introduction
-date: 27/07/2010
+date: 07/27/2010
 ---
 
 Sass (and SCSS) version 3 added support for the @extend directive which provides a means of class inheritance and combats the duplication of CSS which Sass mixins create. The earlier features of Sass were basically macros. They grabbed a piece of CSS from either a mixin definition or an external file and inserted that CSS into the output. @extend actually manipulates the selectors and uses CSS's own cascading inheritance system simplify code and avoid duplication. Let's look at some simple examples.

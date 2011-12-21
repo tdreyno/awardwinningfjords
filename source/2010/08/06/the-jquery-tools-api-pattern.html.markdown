@@ -1,6 +1,6 @@
 --- 
 title: The jQuery Tools API Pattern
-date: 06/08/2010
+date: 08/06/2010
 ---
 
 [recently asked this question]: http://forum.jquery.com/topic/return-customized-default-values-for-each-in-a-plugin

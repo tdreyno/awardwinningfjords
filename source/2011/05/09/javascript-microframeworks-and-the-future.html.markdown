@@ -1,6 +1,6 @@
 --- 
 title: "Javascript Microframeworks and The Future"
-date: 09/05/2011
+date: 05/09/2011
 ---
 
 [jsconf]: http://2011.jsconf.us/

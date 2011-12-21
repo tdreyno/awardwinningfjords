@@ -1,6 +1,6 @@
 --- 
 title: Middleman v1.1
-date: 15/04/2011
+date: 04/15/2011
 ---
 
 [I introduced Middleman on this blog]: /2009/10/22/middleman

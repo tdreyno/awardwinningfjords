@@ -1,6 +1,6 @@
 --- 
 title: "Experiment: Particle Rider"
-date: 30/11/2011
+date: 11/30/2011
 ---
 
 [Paper.js]: http://paperjs.org/

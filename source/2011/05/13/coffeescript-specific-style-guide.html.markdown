@@ -1,6 +1,6 @@
 ---
 title: CoffeeScript-specific Style Guide
-date: 13/05/2011
+date: 05/13/2011
 ---
 
 [@topfunky]: http://twitter.com/topfunky

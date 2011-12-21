@@ -1,6 +1,6 @@
 --- 
 title: "Just Launched: The License Lab"
-date: 03/11/2011
+date: 11/03/2011
 ---
 
 [Instrument]: http://weareinstrument.com
