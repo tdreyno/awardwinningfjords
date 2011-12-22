@@ -13,7 +13,7 @@ date: 04/15/2011
 
 **Update: [Middleman version 2.0 has been released]**
 
-It's been a long time since [I introduced Middleman on this blog] in 2009. Since then, RubyGems reports that there have been 27,518 downloads, <a href="https://github.com/middlemanapp/middleman/contributors">several great contributors</a> to the source code and even a mention in a printed book.
+It's been a long time since [I introduced Middleman on this blog] in 2009. Since then, RubyGems reports that there have been 27,518 downloads, <a href="https://github.com/middleman/middleman/contributors">several great contributors</a> to the source code and even a mention in a printed book.
 
 I've been working hard on documentation as it was the most requested feature from the ["Future of Middleman Survey"]. I'm a developer and I'm sorry to admit that my first documentation target is the code and generated documentation. Available at: <a href="http://middlemanapp.com/">http://middlemanapp.com/</a>
 
@@ -170,4 +170,4 @@ As easy as ever:
     gem install middleman
     
 Please direct all questions and bugs to Github:
-<a href="https://github.com/middlemanapp/middleman">https://github.com/middlemanapp/middleman</a>
+<a href="https://github.com/middleman/middleman">https://github.com/middleman/middleman</a>

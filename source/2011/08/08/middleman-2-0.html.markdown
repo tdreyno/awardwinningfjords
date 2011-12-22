@@ -12,7 +12,7 @@ date: 2011/08/08
 [LiveReload Extension]: https://github.com/mockko/livereload#readme
 [Getting Started]: http://middlemanapp.com/guides/getting-started
 [Migrating to Middleman 2.0]: http://middlemanapp.com/guides/migrating
-[Github Issue Tracker]: https://github.com/middlemanapp/middleman/issues
+[Github Issue Tracker]: https://github.com/middleman/middleman/issues
 
 Middleman 2.0 is a huge release featuring a refactored core, a unified source folder, a unified command line, tons of new features and a [full documentation website].
 

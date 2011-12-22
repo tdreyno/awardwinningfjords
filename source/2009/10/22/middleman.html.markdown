@@ -161,10 +161,10 @@ So, the quickest way to get started is to run <tt>mm-init</tt> and point it at a
 
 Source & bug reports
 --------------------
-[http://github.com/middlemanapp/middleman]:        http://github.com/middlemanapp/middleman
-[http://wiki.github.com/middlemanapp/middleman]:   http://wiki.github.com/middlemanapp/middleman
-[http://github.com/middlemanapp/middleman/issues]: http://github.com/middlemanapp/middleman/issues
+[http://github.com/middleman/middleman]:        http://github.com/middleman/middleman
+[http://wiki.github.com/middleman/middleman]:   http://wiki.github.com/middleman/middleman
+[http://github.com/middleman/middleman/issues]: http://github.com/middleman/middleman/issues
 
-The code, as always, is on GitHub at: [http://github.com/middlemanapp/middleman].<br />
-There is also a wiki at: [http://wiki.github.com/middlemanapp/middleman].<br />
-And finally, please report bugs to: [http://github.com/middlemanapp/middleman/issues].
+The code, as always, is on GitHub at: [http://github.com/middleman/middleman].<br />
+There is also a wiki at: [http://wiki.github.com/middleman/middleman].<br />
+And finally, please report bugs to: [http://github.com/middleman/middleman/issues].
