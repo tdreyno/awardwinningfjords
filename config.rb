@@ -3,7 +3,6 @@ require "susy"
 set :markdown_engine, :redcarpet
 
 page "/feed.xml", :layout => false
-page "/mint/*", :layout => false
 
 require "middleman-blog"
 activate :blog
