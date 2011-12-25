@@ -96,7 +96,7 @@ table
   thead
     tr
       th
-        padding: 8px 10 9px
+        padding: 8px 10px 9px
         +font-size(14)
         font-weight: bold
         color: #222
@@ -107,13 +107,21 @@ table
   tbody
     tr
       td
-        +font-size(12)
+        +font-size(14)
         line-height: 18px
         text-align: left
+        color: #333
+        padding: 9px 10px
+        vertical-align: top
+        border: none
+      &.even, &.alt
+        background: #f9f9f9
+      &:nth-child(even)
+        background: #f9f9f9
   tfoot
     tr
       td
-        +font-size(12)
+        +font-size(14)
         line-height: 18px
         text-align: left
         &:last-child

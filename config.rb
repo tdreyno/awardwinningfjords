@@ -3,6 +3,8 @@ page "/feed.xml", :layout => false
 require "middleman-blog"
 activate :blog
 
+set :markdown, :tables => true
+
 require "pygments"
 require 'rack/codehighlighter'
 use Rack::Codehighlighter, 

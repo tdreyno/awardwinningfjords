@@ -1,7 +1,6 @@
 @import "zurb/includes";
 @import "zurb/globals";
 @import "zurb/typography";
-@import "zurb/mobile";
 
 body {
   @include font-size(15); }
@@ -134,3 +133,4 @@ footer {
 }
 
 @import "solarized";
+@import "zurb/mobile";
