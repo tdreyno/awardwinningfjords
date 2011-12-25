@@ -25,6 +25,16 @@ header {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  header h1 {
+    text-align: center;
+    .small {
+      display: block;
+      float: none;
+    }
+  }
+}
+
 #frame, header h1 {
   margin: 0 auto;
   max-width: 600px;
@@ -68,6 +78,9 @@ article {
   margin-bottom: 24px; 
   time {
     float: right;
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -78,7 +91,11 @@ article {
       padding-top: 19px;
       display: inline;
       float: right;
-      @extend .small; }
+      @extend .small; 
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
   }
   ul.disc {
     margin-left: 0;
@@ -87,11 +104,6 @@ article {
         font-weight: bold; }
     }
   }
-}
-
-.entry-title {
-  span, time {
-    @extend .subhead; }
 }
 
 footer {
