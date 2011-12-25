@@ -14,6 +14,7 @@ READMORE
 
 Here's a simple piece of jQuery and a test case in plain Javascript.
 
+    :::javascript
     var elem = $("#myselector").addClass("testing");
     expect(elem.id).toEqual("myselector");
 

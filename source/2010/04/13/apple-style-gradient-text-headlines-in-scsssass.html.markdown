@@ -17,7 +17,7 @@ This effect only works in Webkit-based browsers like Safari and Chrome at this t
 
 Or, if you prefer plain CSS:
 
-    :::CSS
+    :::css
     h1 {
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, 
                         color-stop(0%, #999999), 

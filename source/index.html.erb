@@ -1,9 +1,52 @@
-<% data.blog.articles[0...5].each_with_index do |article, i| %>
-  <article class="<%= (i == 0) ? 'first' : '' %>">
-    <h1><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e %Y') %></span></h1>
-    
-    <%= article.summary %>
-    
-    <div class="more"><a href="<%= article.url %>">read on &raquo;</a></div>
-  </article>
-<% end %>
+<section id="recent">
+  <h2>
+    Recent Articles
+    <a href="/archives">Archive</a>
+  </h2>
+  <ul class="disc">
+    <% blog.articles[0...12].each do |article| %>
+      <li><a href="<%= article.url %>"><%= article.title %></a> <time><%= article.date.strftime('%b %e') %></time></li>
+    <% end %>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>
+    Projects
+    <a href="http://github.com/tdreyno">GitHub</a>
+  </h2>
+  <ul class="disc">
+    <li>
+      <a href="http://middlemanapp.com">Middleman</a>
+      Hand-crafted frontend development framework
+    </li>
+    <li>
+      <a href="https://github.com/tdreyno/iphone-style-checkboxes">iPhone-style Checkboxes</a>
+      Converts inputs into iPhone sliders
+    </li>
+    <li>
+      <a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a>
+      Finite State Machine for JavascriptMVC
+    </li>
+    <li>
+      <a href="http://secondstory.github.com/secondstoryjs-router/">Router for JavascriptMVC</a>
+      Frontend Router with hashbang (#!) and pushState URLs
+    </li>
+    <li>
+      <a href="https://github.com/tdreyno/mustache-javascriptmvc">Mustache templates for JavascriptMVC</a>
+      Use Mustache templates in JavascriptMVC
+    </li>
+    <li>
+      <a href="http://secondstory.github.com/jqueryChop/">jQuery Image Chop</a>
+      Break up images into many squares
+    </li>
+    <li>
+      <a href="https://github.com/tdreyno/compass-slickmap">Slickmap for Compass</a>
+      Slickmap sitemaps for Compass and Sass
+    </li>
+    <li>
+      <a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a>
+      Baseline grid for Compass and Sass
+    </li>
+  </ul>
+</section>

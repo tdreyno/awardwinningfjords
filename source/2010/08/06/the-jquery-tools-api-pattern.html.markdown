@@ -9,14 +9,14 @@ date: 08/06/2010
 
 A common pattern for initializing jQuery plugins is by selecting all the instances of the target in the DOM and running the plugin once. For example:
 
-    :::JavaScript
+    :::javascript
     $(":input").myPlugin();
 
 But what if you need to inspect the plugin later or are only interested in one instance of the plugin. A friend of mine [recently asked this question] and my suggestion was to look at the way the [jQuery Tools] project does it. For each of their plugins, they build an API object which only interacts with one specific element and they attach it to the element once the plugin has been initialized using the jQuery.data method. This also provides a clean way of checking if the plugin has already been initialized on a specific element.
 
 Here's how they run their scrollable plugin when called by jQuery:
 
-    :::JavaScript
+    :::javascript
 	  // jQuery plugin implementation
 	  $.fn.scrollable = function(conf) { 
 			
@@ -37,7 +37,7 @@ Here's how they run their scrollable plugin when called by jQuery:
 
 The <tt>Scrollable</tt> function handles plugin initialization on a per-element basis and returns scoped methods for interacting with that object. Its implementation looks like this:
 
-    :::JavaScript
+    :::javascript
 	  function Scrollable(root, conf) {   
 		  // Setup variables
 		  
@@ -68,7 +68,7 @@ The <tt>Scrollable</tt> function handles plugin initialization on a per-element 
 
 Now, let's assume we have applied this pattern to our <tt>myPlugin</tt> plugin. The interaction would look like this.
 
-    :::JavaScript
+    :::javascript
     $(":input").myPlugin();
     
     var specificInput = $("#myinput");
@@ -85,7 +85,7 @@ Now, let's assume we have applied this pattern to our <tt>myPlugin</tt> plugin. 
 
 The pattern would also handle accidently running the plugin twice on a single element. For example, in the following script the plugin would only initialize the <tt>#myinput</tt> element once:
 
-    :::JavaScript
+    :::javascript
     $("#myinput").myPlugin();
     $(":input").myPlugin();
 

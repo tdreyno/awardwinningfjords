@@ -38,12 +38,12 @@ Next, create a Site and a Model (see the [JavascriptMVC Getting Started Guide]).
 
 We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:
 
-    :::JavaScript
+    :::javascript
     .plugins("ss/model/html5store")
 
 Okay, so we have a model and now we need to add the new store system:
 
-    :::JavaScript
+    :::javascript
     jQuery.Model.extend("MyModel",
     {
       setup: function(){
@@ -58,7 +58,7 @@ Okay, so we have a model and now we need to add the new store system:
 
 Now, whenever you create a MyModel with a unique id, it will be added to the HTML5 sessionStorage. You're responsible for updating the store if the model changes and for querying the store to see if it has a copy of the model we're looking for. Here's some boilerplate code to do that:
 
-    :::JavaScript
+    :::javascript
     function updateModel(params) {
       MyModel.store.destroy(params.id);
       MyModel.store.create(params);

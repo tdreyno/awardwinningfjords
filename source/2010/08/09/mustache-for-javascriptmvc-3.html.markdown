@@ -17,10 +17,10 @@ Alternatively, you can grab the code from [the Github repository]:
 
 Include it in your app:
 
-    :::JavaScript
+    :::javascript
     steal.plugins("mustache")
 
 Create some <tt>.mustache</tt> files and use them normally:
 
-    :::JavaScript
+    :::javascript
     $("#elem").html("//views/template.mustache", { variable: "Value" })

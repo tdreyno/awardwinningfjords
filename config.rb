@@ -1,28 +1,18 @@
-require "susy"
-
-set :markdown_engine, :redcarpet
-
 page "/feed.xml", :layout => false
 
 require "middleman-blog"
 activate :blog
-set :disqus, "awf"
 
-# activate :livereload
-
+require "pygments"
 require 'rack/codehighlighter'
 use Rack::Codehighlighter, 
-  :pygments_api,
+  :pygments,
   :element => "pre>code",
   :pattern => /\A:::([-_+\w]+)\s*\n/,
   :markdown => true
 
 # Build-specific configuration
 configure :build do
-  Compass.configuration do |config|
-    config.line_comments = false
-  end
-  
   activate :cache_buster
 
   # For example, change the Compass output style for deployment

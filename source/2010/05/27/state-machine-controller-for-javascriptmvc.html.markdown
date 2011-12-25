@@ -22,7 +22,7 @@ The goal of the following controller is to have widgets or panels which are made
 
 A state machine can respond to jQuery events, global OpenAjax messages and internal "publishState" commands. The destination states define which state we are moved into on an event. Finally, "onEnter" and "onExit" can point to either instance methods or global OpenAjax messages.
 
-    :::JavaScript
+    :::javascript
     SS.Controller.StateMachine.extend("MyNavigation", {}, {
       states: {
         // Any click of the a.close element will close everything
@@ -73,7 +73,7 @@ Next, create a Site and a Controller (see the [JavascriptMVC Getting Started Gui
 
 We need to add our new plugin to the site. In appname.js, add the following to your <tt>steal</tt> command:
 
-    :::JavaScript
+    :::javascript
     .plugins("ss/controller/state_machine")
 
 Now you can extend your Controllers from <tt>SS.Controller.StateMachine</tt>.

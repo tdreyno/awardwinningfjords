@@ -18,7 +18,7 @@ At [Secondstory], we've been building upon JavascriptMVC and [Joshua Hull's wond
 
 Here's a matching example from the Sherpa docs:
 
-    :::JavaScript
+    :::javascript
     Router.add('/test/:variable').to('testing')
     Router.recognize('/test/iloveyou') ->
       {
@@ -30,7 +30,7 @@ Here's a matching example from the Sherpa docs:
 
 You can also generate routes from parameters if you give the route a name:
 
-    :::JavaScript
+    :::javascript
     Router.add('/test/:variable').to('testing').name('testRoute')
     Router.generate('testRoute', { "variable": "iloveyou" }) ->
       "/test/iloveyou"
@@ -41,7 +41,7 @@ Using in JavascriptMVC
 
 First, grab a copy of the Sherpa library and put it in your resources directory. Then, in your JavascriptMVC project file you intialize Sherpa:
 
-    :::JavaScript
+    :::javascript
     steal.resources("sherpa")
          .then(function($) {
 
@@ -52,7 +52,7 @@ Now you have to choose how tightly you want to couple routes and controllers. I'
 
 First, you can initialize a new controller on the document element when the route is matched:
 
-    :::JavaScript
+    :::javascript
     Router.add("/articles/:article_name").to("project_article");
     
     var key        = window.location.pathname,
@@ -64,7 +64,7 @@ First, you can initialize a new controller on the document element when the rout
 
 Alternatively, you could fire an OpenAjax event instead:
 
-    :::JavaScript
+    :::javascript
     Router.add("/articles/:article_name").to("project_article");
     
     var key        = window.location.pathname,
@@ -87,7 +87,7 @@ First, grab the code using JavascriptMVC's built-in <tt>getjs</tt> command:
     
 So let's go back to our project configuration file:
 
-    :::JavaScript
+    :::javascript
     steal.plugins("ss/router")
          .then(function($) {
 

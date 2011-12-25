@@ -52,7 +52,7 @@ Given the following Haml
 
 NHaml will render this as:
 
-    :::HTML
+    :::html
     <ul>
       <li>
         Text

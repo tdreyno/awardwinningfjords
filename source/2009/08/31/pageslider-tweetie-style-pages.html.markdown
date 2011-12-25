@@ -40,7 +40,7 @@ The code is implemented as a jQuery plugin which is called on a collection of pa
 
 There are also some CSS caveats. The containing element must be set to <tt>overflow: hidden;</tt>. Additionally, calculating heights on the pages can be difficult. The best way is to set a padding on the <tt>.page</tt> so margins don't leak outside it's box.
 
-    :::HTML
+    :::html
     <head>
       <style type="text/css">
         #maincontent {
@@ -78,7 +78,7 @@ The plugin needs to know the containing element to slide inside of.
 
 <ul><li><tt>containerSelector</tt> sets the text of the "on" state. Defaults to: <strong>#maincontent</strong></li></ul>
 
-    :::Javascript
+    :::javascript
     $('.page').pageSlider({
       containerSelector: "#frame"
     });
@@ -88,7 +88,7 @@ Events
 
 The plugin calls a <tt>changingPage</tt> event whenever the animation begins. If you have dependent elements you want to update together with the slide, you can attach them to the event via the normal jQuery event model. This callback is used in the video above to update the sidebar navigation when the history changes.
 
-    :::Javascript
+    :::javascript
     $(document).bind('changingPage', function(anchor_name) {
       // Update some other dependent element based on anchor_name
     });

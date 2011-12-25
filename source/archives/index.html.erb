@@ -1,14 +1,10 @@
-<h1>Archive: <%# @path %></h1>
-<ul class="archives">
-  <%# if archives.length > 0 %>
-    <% for entry in data.blog.articles %>
-      <li>
-        <a href="<%= entry.url %>"><%= entry.title %></a>
-        <span><%= entry.date.strftime('%b %e') %></span>
-      </li>
+<section id="recent">
+  <h2>
+    Archive
+  </h2>
+  <ul class="disc">
+    <% blog.articles.each do |article| %>
+      <li><a href="<%= article.url %>"><%= article.title %></a> <time><%= article.date.strftime('%b %e') %></time></li>
     <% end %>
-  <%# else %>
-    <!-- There are no articles for this date. -->
-  <%# end %>
-</ul>
-
+  </ul>
+</section>
