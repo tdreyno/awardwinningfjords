@@ -3,19 +3,23 @@ title: Ember.js Live Collections
 date: 12/27/2011
 ---
 
-If you're writing a client-side application, then you can expect to be down two different operations very frequently. First, modern web applications are expected to show updated information as quickly as possible without a full page reload. Think about Twitter or Facebook, as you're reading the updates, newer updates continue to arrive at the top of the page. Second, you'll be needing to add you personal updates to everyone else's streams. Pull and Push.
+If you're writing a client-side application, there are two common tasks you can expect to perform. First, modern web applications are expected to show updated information as quickly as possible without a full page reload. (Think about Twitter or Facebook: as you're reading the updates, newer updates continue to arrive at the top of the page.) Second, you'll be sending the current user's updates to everyone else's streams.
 
-Now that you know how important the concept is, and you can probably imagine how often you'll need to be writing such a thing (Mail clients, chat rooms, anything that updates really), let's get to the purpose of this article.
+You can probably imagine how often you'll need to implement these patterns: mail clients, chat rooms; anything that updates, really.
 
-Over the weekend, my friends at Bocoup [posted an article] called *Backbone.js Live Collections* which discussed how to use Backbone.js<sup>1</sup> to poll Twitter for new tweets and update a list of those tweets on the page. I don't know their official stance of Backbone.js, so I'm going to assume they used it as an example because it was either code extracted from one of their projects or they simply decided to use Backbone.js because of it's popularity. Go ahead and read that article… I'll wait.
+Over the weekend, my friends at Bocoup [posted an article] called *Backbone.js Live Collections* which discussed how to use Backbone.js<sup>1</sup> to poll Twitter for new tweets and update a list of those tweets on the page. I don't know their official stance on Backbone.js, so I'm going to assume they used it as an example because it was either code extracted from one of their projects or they simply decided to use Backbone.js because of its popularity. Go ahead and read that article… I'll wait.
 
 Back? Good.
 
-Assuming that Bocoup simply chose Backbone.js for familiarity sake, I glibly summed up the article as "In other words, use Ember.js :-p" and ruffled more feathers than I intended. I was invited to write this article or express my point better than a tweet ever could. So here we go.
+Assuming that Bocoup simply chose Backbone.js for familiarity's sake, I glibly summed up the article as "In other words, use Ember.js :-p" and ruffled more feathers than I intended. I was invited to write this article to express my point better than a tweet could, so here we go.
 
 ## Ember.js <strike>Amber.js</strike> <strike>Sproutcore 2.0</strike>
 
-Ember.js is what happened when SproutCore decided to be less Apple Cocoa and more jQuery. The result is a web framework which retains very import high-level concepts such as observers, bindings and state charts, while delivering a concise API. Sproutcore started its life as the development framework behind an early client-side email application. Then, later, Apple used it on MobileMe (and then iCloud) which both include email clients. Needless to say, they've figured out how important collections which update from the server are. In my opinion, Sproutcore/Ember.js are the best solution for anything needing collections of data rendered into the DOM. Thus my glib tweet above.
+[Ember.js] is what happened when SproutCore decided to be less Apple Cocoa and more jQuery. The result is a web framework which retains very important high-level concepts such as observers, bindings and state charts, while delivering a concise API. SproutCore started its life as the development framework behind an early client-side email application. Then, Apple used it to build MobileMe (and then iCloud), both of which include email clients. Needless to say, they've figured out that collections which update from the server are very important. In my opinion, SproutCore/Ember.js are the best solution for anything needing collections of data rendered into the DOM. Thus my glib tweet above.
+
+Below, I've recreated the Bocoup example using Ember.js. I think it expresses the intent of the initial application more concisely and
+understandably. You'll note that there is no code that interacts with the DOM at all; instead, making in changes in JavaScript causes
+the DOM to be updated to reflect the new state automatically.
 
 ### App
 
@@ -39,7 +43,7 @@ Ember.js is what happened when SproutCore decided to be less Apple Cocoa and mor
       }
     });
 
-The app is the core of any Ember.js project. It provides a ready event, much like jQuery's, and does fancy event handling behind the scenes. Its primary use in this example is to namespace all our classes and variables under the `Twitter` namespace.
+The app is the core of any Ember.js project. It provides a ready event, much like jQuery's, and sets up event delegation behind the scenes. Its primary use in this example is to namespace all our classes and variables under the `Twitter` namespace.
 
 ### Template View
 
@@ -52,14 +56,14 @@ The app is the core of any Ember.js project. It provides a ready event, much lik
       </ul>
     </script>
 
-Ember.js templates are written [Handlebars.js]. You can use a `text/x-handlebars` script tag anywhere in your document and it will be replaced with a live-updating View. The above code will watch for a variable called `Twitter.searchResults` and when it changes, it will update the list items in the `ul`. See what I mean about Ember.js optimizing for collections and lists?
+Ember.js templates are written in [Handlebars.js]. You can use a `text/x-handlebars` script tag anywhere in your document and it will be replaced with a live-updating View. The above code will watch for a variable called `Twitter.searchResults` and when it changes, it will update the list items in the `ul`. See what I mean about Ember.js being optimized for collections and lists?
 
 ### Model
 
     :::javascript
     Twitter.Tweet = Em.Object.extend();
 
-This is entirely a naming/convenience issue. We're not writing any custom code for handling each tweet. We simply take its JSON and use it directly. 
+This is entirely a naming/convenience issue. We're not writing any custom code for handling each tweet. We simply take its JSON and use it directly.
 
 ### Controller
 
@@ -135,7 +139,11 @@ I'm not saying Ember.js is the best solution for every problem, but when it come
 
 1. Backbone.js is a client-side Model-View-Controller framework for Javascript. It is incredibly popular. The [PeepCode screencasts] are a wonderful way to get started.
 
+2. Thanks to [Tom Dale] of the Tilde, and a developer on the Ember.js project, for proofing this article.
+
 [posted an article]: http://weblog.bocoup.com/backbone-live-collections
 [PeepCode screencasts]: http://peepcode.com/products/backbone-js
 [Handlebars.js]: http://www.handlebarsjs.com/
 [Check out the demo]: /projects/emberjs-live-collection.html
+[Tom Dale]: https://twitter.com/#!/tomdale
+[Ember.js]: http://www.emberjs.com/
