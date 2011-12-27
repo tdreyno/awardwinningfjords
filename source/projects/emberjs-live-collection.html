@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Collection Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    <ul class="tweets">
+    {{#each Twitter.searchResults}}
+      <li class="tweet">{{text}}</li>
+    {{/each}}
+    </ul>
+  </script>
+
+  <script src="emberjs-live-collection/js/jquery-1.6.1.min.js"></script>
+  <script src="emberjs-live-collection/js/ember-0.9.2.js"></script>
+  <script>
+    // Namespace
+    Twitter = Em.Application.create({
+      ready: function() {
+        // Polling
+        setInterval(function() {
+          Twitter.searchResults.refresh();
+        }, 2000);
+
+        Twitter.searchResults.set("query", "cats");
+        
+        this._super();
+      }
+    });
+
+    // Model
+    Twitter.Tweet = Em.Object.extend();
+
+    // Collection
+    Twitter.searchResults = Em.ArrayController.create({
+      content: [],
+
+      query: null,
+
+      _idCache: {},
+
+      addTweet: function(tweet) {
+        var id = tweet.get("id");
+
+        if (typeof this._idCache[id] === "undefined") {
+          this.pushObject(tweet);
+          this._idCache[id] = tweet.id;
+        }
+      },
+
+      refresh: function() {
+        var query = this.get("query");
+
+        if (Em.empty(query)) {
+          this.set("content", []);
+          return;
+        }
+
+        var self = this;
+        $.getJSON("http://search.twitter.com/search.json?q=" + query + "&callback=?", function(data) {
+          for (var i = 0; i < data.results.length; i++) {
+            self.addTweet(Twitter.Tweet.create(data.results[i]));
+          }
+        });
+      }.observes("query")
+    });
+  </script>
+</body>
+</html>
