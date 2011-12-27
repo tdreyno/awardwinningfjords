@@ -7,7 +7,7 @@ If you're writing a client-side application, there are two common tasks you can 
 
 You can probably imagine how often you'll need to implement these patterns: mail clients, chat rooms; anything that updates, really.
 
-Over the weekend, my friends at Bocoup [posted an article] called *Backbone.js Live Collections* which discussed how to use Backbone.js<sup>1</sup> to poll Twitter for new tweets and update a list of those tweets on the page. I don't know their official stance on Backbone.js, so I'm going to assume they used it as an example because it was either code extracted from one of their projects or they simply decided to use Backbone.js because of its popularity. Go ahead and read that article… I'll wait.
+Over the weekend, my friends at Bocoup [posted an article] called *Backbone.js Live Collections* which discussed how to use Backbone.js<sup>1</sup> to poll Twitter for new tweets and update a list of those tweets on the page. <strike>I don't know their official stance on Backbone.js, so I'm going to assume they used it as an example because it was either code extracted from one of their projects or they simply decided to use Backbone.js because of its popularity.</strike> __[Edit: Ben Alman of Bocoup has clarified their position saying: "FWIW, we decided to use Backbone after a ton of research and experimentation."]__ Go ahead and read that article… I'll wait.
 
 Back? Good.
 
