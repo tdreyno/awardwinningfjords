@@ -29,6 +29,8 @@ The Name of the Wind           |  672
 The Dresden Files: Storm Front |  384
 Old Man's War                  |  320
 Wise Man's Fear                |  993
+The Hunger Games               |  384
+Catching Fire                  |  391
 
-* Total Pages: __7980__
-* Average Pages per Day: __21.8__
+* Total Pages: __8755__
+* Average Pages per Day: __23.9__
