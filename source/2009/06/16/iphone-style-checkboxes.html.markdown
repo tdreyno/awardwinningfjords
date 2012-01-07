@@ -38,11 +38,6 @@ Examples
     </tr>
   </table>
 </div>
-<script src='/iphone-style-checkboxes/jquery/iphone-style-checkboxes.js' type='text/javascript'></script>
-<link href='/iphone-style-checkboxes/style.css' media='screen' rel='stylesheet' type='text/css'>
-<script type='text/javascript'>
-  $('#post :checkbox.normal').iphoneStyle({ background: '#F9F3E8' });
-</script>
 
 Download and implement
 ----------------------
@@ -100,9 +95,6 @@ For example:
     </tr>
   </table>
 </div>
-<script type='text/javascript'>
-  $('#post :checkbox.yesno').iphoneStyle({ checkedLabel: 'YES', uncheckedLabel: 'NO', background: '#F9F3E8' });
-</script>
 
 Contribute
 ----------
@@ -110,3 +102,8 @@ Contribute
 The source is available, and forkable, on GitHub at
 [https://github.com/tdreyno/iphone-style-checkboxes].
 Please direct comments, support requests, bug reporting and pull requests to there.
+
+<script src='/projects/iphone-style-checkboxes/jquery.min.js' type='text/javascript'></script>
+<script src='/projects/iphone-style-checkboxes/iphone-style-checkboxes.js' type='text/javascript'></script>
+<link href='/projects/iphone-style-checkboxes/style.css' media='screen' rel='stylesheet' type='text/css'>
+<script src='/projects/iphone-style-checkboxes/setup.js' type='text/javascript'></script>
