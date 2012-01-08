@@ -24,7 +24,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 480px) {
   header h1 {
     text-align: center;
     .small {
@@ -122,22 +122,24 @@ footer {
 
 .albums {
   @include no-bullets;
-  li {
-    @include clearfix; }
-  .cover {
-    float: left;
-    width: 220px;
-  }
+  @media only screen and (min-width: 767px) {
   
-  .content {
-    float: left;
-    width: 330px;
-  }
+    li {
+      @include pie-clearfix; }
+    .cover {
+      float: left;
+      width: 220px;
+    }
+    .content {
+      float: left;
+      width: 330px;
+    }
   
-  .player {
-    float: right;
-    width: 40px;
-    text-align: right;
+    .player {
+      float: right;
+      width: 40px;
+      text-align: right;
+    }
   }
 }
 
