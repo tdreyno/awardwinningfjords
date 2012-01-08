@@ -1,6 +1,7 @@
 @import "zurb/includes";
 @import "zurb/globals";
 @import "zurb/typography";
+@import "zurb/mobile";
 
 body {
   @include font-size(15); }
@@ -18,16 +19,16 @@ header {
     @include font-size(15);
     a {
       color: #666; }
-    .small {
+    .sub {
       float: right;
       color: #666; }
   }
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 767px) {
   header h1 {
     text-align: center;
-    .small {
+    .sub {
       display: block;
       float: none;
     }
@@ -123,7 +124,6 @@ footer {
 .albums {
   @include no-bullets;
   @media only screen and (min-width: 767px) {
-  
     li {
       @include pie-clearfix; }
     .cover {
@@ -134,7 +134,6 @@ footer {
       float: left;
       width: 330px;
     }
-  
     .player {
       float: right;
       width: 40px;
@@ -144,4 +143,3 @@ footer {
 }
 
 @import "solarized";
-@import "zurb/mobile";
