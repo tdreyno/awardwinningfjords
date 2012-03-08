@@ -1,0 +1,361 @@
+@-webkit-keyframes animate-particle {
+  0% {
+    background-position: 0 0px; }
+
+  1.695% {
+    background-position: 0 -124px; }
+
+  3.39% {
+    background-position: 0 -248px; }
+
+  5.085% {
+    background-position: 0 -372px; }
+
+  6.78% {
+    background-position: 0 -496px; }
+
+  8.475% {
+    background-position: 0 -620px; }
+
+  10.169% {
+    background-position: 0 -744px; }
+
+  11.864% {
+    background-position: 0 -868px; }
+
+  13.559% {
+    background-position: 0 -992px; }
+
+  15.254% {
+    background-position: 0 -1116px; }
+
+  16.949% {
+    background-position: 0 -1240px; }
+
+  18.644% {
+    background-position: 0 -1364px; }
+
+  20.339% {
+    background-position: 0 -1488px; }
+
+  22.034% {
+    background-position: 0 -1612px; }
+
+  23.729% {
+    background-position: 0 -1736px; }
+
+  25.424% {
+    background-position: 0 -1860px; }
+
+  27.119% {
+    background-position: 0 -1984px; }
+
+  28.814% {
+    background-position: 0 -2108px; }
+
+  30.508% {
+    background-position: 0 -2232px; }
+
+  32.203% {
+    background-position: 0 -2356px; }
+
+  33.898% {
+    background-position: 0 -2480px; }
+
+  35.593% {
+    background-position: 0 -2604px; }
+
+  37.288% {
+    background-position: 0 -2728px; }
+
+  38.983% {
+    background-position: 0 -2852px; }
+
+  40.678% {
+    background-position: 0 -2976px; }
+
+  42.373% {
+    background-position: 0 -3100px; }
+
+  44.068% {
+    background-position: 0 -3224px; }
+
+  45.763% {
+    background-position: 0 -3348px; }
+
+  47.458% {
+    background-position: 0 -3472px; }
+
+  49.153% {
+    background-position: 0 -3596px; }
+
+  50.847% {
+    background-position: 0 -3720px; }
+
+  52.542% {
+    background-position: 0 -3844px; }
+
+  54.237% {
+    background-position: 0 -3968px; }
+
+  55.932% {
+    background-position: 0 -4092px; }
+
+  57.627% {
+    background-position: 0 -4216px; }
+
+  59.322% {
+    background-position: 0 -4340px; }
+
+  61.017% {
+    background-position: 0 -4464px; }
+
+  62.712% {
+    background-position: 0 -4588px; }
+
+  64.407% {
+    background-position: 0 -4712px; }
+
+  66.102% {
+    background-position: 0 -4836px; }
+
+  67.797% {
+    background-position: 0 -4960px; }
+
+  69.492% {
+    background-position: 0 -5084px; }
+
+  71.186% {
+    background-position: 0 -5208px; }
+
+  72.881% {
+    background-position: 0 -5332px; }
+
+  74.576% {
+    background-position: 0 -5456px; }
+
+  76.271% {
+    background-position: 0 -5580px; }
+
+  77.966% {
+    background-position: 0 -5704px; }
+
+  79.661% {
+    background-position: 0 -5828px; }
+
+  81.356% {
+    background-position: 0 -5952px; }
+
+  83.051% {
+    background-position: 0 -6076px; }
+
+  84.746% {
+    background-position: 0 -6200px; }
+
+  86.441% {
+    background-position: 0 -6324px; }
+
+  88.136% {
+    background-position: 0 -6448px; }
+
+  89.831% {
+    background-position: 0 -6572px; }
+
+  91.525% {
+    background-position: 0 -6696px; }
+
+  93.22% {
+    background-position: 0 -6820px; }
+
+  94.915% {
+    background-position: 0 -6944px; }
+
+  96.61% {
+    background-position: 0 -7068px; }
+
+  98.305% {
+    background-position: 0 -7192px; }
+
+  100% {
+    background-position: 0 -7316px; } }
+
+@-moz-keyframes animate-particle {
+  0% {
+    background-position: 0 0px; }
+
+  1.695% {
+    background-position: 0 -124px; }
+
+  3.39% {
+    background-position: 0 -248px; }
+
+  5.085% {
+    background-position: 0 -372px; }
+
+  6.78% {
+    background-position: 0 -496px; }
+
+  8.475% {
+    background-position: 0 -620px; }
+
+  10.169% {
+    background-position: 0 -744px; }
+
+  11.864% {
+    background-position: 0 -868px; }
+
+  13.559% {
+    background-position: 0 -992px; }
+
+  15.254% {
+    background-position: 0 -1116px; }
+
+  16.949% {
+    background-position: 0 -1240px; }
+
+  18.644% {
+    background-position: 0 -1364px; }
+
+  20.339% {
+    background-position: 0 -1488px; }
+
+  22.034% {
+    background-position: 0 -1612px; }
+
+  23.729% {
+    background-position: 0 -1736px; }
+
+  25.424% {
+    background-position: 0 -1860px; }
+
+  27.119% {
+    background-position: 0 -1984px; }
+
+  28.814% {
+    background-position: 0 -2108px; }
+
+  30.508% {
+    background-position: 0 -2232px; }
+
+  32.203% {
+    background-position: 0 -2356px; }
+
+  33.898% {
+    background-position: 0 -2480px; }
+
+  35.593% {
+    background-position: 0 -2604px; }
+
+  37.288% {
+    background-position: 0 -2728px; }
+
+  38.983% {
+    background-position: 0 -2852px; }
+
+  40.678% {
+    background-position: 0 -2976px; }
+
+  42.373% {
+    background-position: 0 -3100px; }
+
+  44.068% {
+    background-position: 0 -3224px; }
+
+  45.763% {
+    background-position: 0 -3348px; }
+
+  47.458% {
+    background-position: 0 -3472px; }
+
+  49.153% {
+    background-position: 0 -3596px; }
+
+  50.847% {
+    background-position: 0 -3720px; }
+
+  52.542% {
+    background-position: 0 -3844px; }
+
+  54.237% {
+    background-position: 0 -3968px; }
+
+  55.932% {
+    background-position: 0 -4092px; }
+
+  57.627% {
+    background-position: 0 -4216px; }
+
+  59.322% {
+    background-position: 0 -4340px; }
+
+  61.017% {
+    background-position: 0 -4464px; }
+
+  62.712% {
+    background-position: 0 -4588px; }
+
+  64.407% {
+    background-position: 0 -4712px; }
+
+  66.102% {
+    background-position: 0 -4836px; }
+
+  67.797% {
+    background-position: 0 -4960px; }
+
+  69.492% {
+    background-position: 0 -5084px; }
+
+  71.186% {
+    background-position: 0 -5208px; }
+
+  72.881% {
+    background-position: 0 -5332px; }
+
+  74.576% {
+    background-position: 0 -5456px; }
+
+  76.271% {
+    background-position: 0 -5580px; }
+
+  77.966% {
+    background-position: 0 -5704px; }
+
+  79.661% {
+    background-position: 0 -5828px; }
+
+  81.356% {
+    background-position: 0 -5952px; }
+
+  83.051% {
+    background-position: 0 -6076px; }
+
+  84.746% {
+    background-position: 0 -6200px; }
+
+  86.441% {
+    background-position: 0 -6324px; }
+
+  88.136% {
+    background-position: 0 -6448px; }
+
+  89.831% {
+    background-position: 0 -6572px; }
+
+  91.525% {
+    background-position: 0 -6696px; }
+
+  93.22% {
+    background-position: 0 -6820px; }
+
+  94.915% {
+    background-position: 0 -6944px; }
+
+  96.61% {
+    background-position: 0 -7068px; }
+
+  98.305% {
+    background-position: 0 -7192px; }
+
+  100% {
+    background-position: 0 -7316px; } }

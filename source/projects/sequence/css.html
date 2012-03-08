@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pure CSS Animation Image Sequence</title>
+    <link rel="stylesheet" href="/projects/sequence/particle-hover-css.css">
+    <style>
+      #my-particle {
+        width: 104px;
+        height: 124px;
+        background: url(/projects/sequence/particle-hover-frames.jpg);
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: step-start;
+        -webkit-animation-name: animate-particle;
+        -moz-animation-duration: 2s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-timing-function: step-start;
+        -moz-animation-name: animate-particle;
+      }
+    </style>
+  </head>
+  <body>  
+    <div id="my-particle"></div>
+  </body>
+</head>
