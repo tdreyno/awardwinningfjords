@@ -217,4 +217,4 @@ There we go, here's a complicated example:
 
 I could go further and try things out with arcs, empty stroked rectangles, donuts and semi-transparent images, but it would work exactly the same.
 
-There's plenty of room for caching, memorization and other optimizations in this system, but conceptually this is common approach. I hope this was enlightening.
+There's plenty of room for caching, memoization and other optimizations in this system, but conceptually this is common approach. I hope this was enlightening.
