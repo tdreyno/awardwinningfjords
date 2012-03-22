@@ -3,6 +3,8 @@ page "/feed.xml", :layout => false
 require "middleman-blog"
 activate :blog
 
+set :blog_sources, ":year/:month/:day/:title.html"
+
 set :markdown, :tables => true, :autolink => true
 
 require "pygments"
