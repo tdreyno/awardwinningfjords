@@ -1,6 +1,6 @@
 --- 
 title: Style Guides Using Sass @extend
-date: 07/30/2010
+date: 2010-07-30
 ---
 
 There are some very common front-end development patterns that drive me crazy. CSS with every style related to a specific selector on one line and IE-only stylesheets with conditional comments are both common place and even encouraged by some. But the worst, in my opinion, is breaking our CSS into multiple files in an attempt to make them "themable." Usually this results in something like a <tt>main.css</tt> and a <tt>fonts.css</tt> or <tt>colors.css</tt>. Having a go-to file for designers to manipulate fonts and colors is very useful, but usually the structure of this secondary file mirrors the primary file and you end up with a lot of repetition. Furthermore, if your DOM structure changes, then you will need to update multiple files (<tt>ie.css</tt> results in a similar problem).

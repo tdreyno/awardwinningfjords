@@ -1,7 +1,7 @@
 ---
 title: Don't repeat yourself, use Sass mixins
 slug: dont-repeat-yourself-use-sass-modules
-date: 2009/04/02
+date: 2009-04-02
 ---
 
 **Update (2011-08-23): Use to Sass 3 syntax**

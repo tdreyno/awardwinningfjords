@@ -1,7 +1,7 @@
 ---
 title: iPhone-style Checkboxes for Prototype
 slug: prototype-iphone-style-checkboxes
-date: 2009/06/29
+date: 2009-06-29
 ---
 
 [Elijah Miller]:        http://jqr.github.com/

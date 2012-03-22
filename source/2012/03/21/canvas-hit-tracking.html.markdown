@@ -1,6 +1,6 @@
 ---
 title: Canvas Hit Tracking
-date: 03/21/2012
+date: 2012-03-21
 ---
 
 *NOTE: Code samples are in CoffeeScript*

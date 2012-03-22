@@ -1,7 +1,7 @@
 ---
 title: Sass Introduction slides
 slug: sass-introduction-slides
-date: 2009/04/02
+date: 2009-04-02
 ---
 
 Here's the slides I will be presenting at Jive Software:

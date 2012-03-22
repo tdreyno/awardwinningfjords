@@ -1,6 +1,6 @@
 --- 
 title: Sass 3 Color Manipulation
-date: 04/12/2010
+date: 2010-04-12
 ---
 
 [Powerful Color Manipulation with Sass]:          http://nex-3.com/posts/89-powerful-color-manipulation-with-sass

@@ -1,6 +1,6 @@
 --- 
 title: Adjustable Animations with Sliders
-date: 04/13/2011
+date: 2011-04-13
 ---
 
 [Flow]: http://getflow.com

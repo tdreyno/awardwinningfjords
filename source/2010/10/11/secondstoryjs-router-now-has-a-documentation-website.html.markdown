@@ -1,6 +1,6 @@
 --- 
 title: SecondStoryJS Router now has a documentation website
-date: 10/11/2010
+date: 2010-10-11
 ---
 
 Like the title says, you can now learn everything you wanted to know about the JavascriptMVC3 router on the project website at:

@@ -1,6 +1,6 @@
 --- 
 title: "Image Sequences: Let Me Count The Ways"
-date: 03/08/2012
+date: 2012-03-08
 ---
 
 [this]: http://lab.victorcoulon.fr/css/path-menu/

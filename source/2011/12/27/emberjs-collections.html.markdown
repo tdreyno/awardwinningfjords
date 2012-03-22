@@ -1,6 +1,6 @@
 ---
 title: Ember.js Live Collections
-date: 12/27/2011
+date: 2011-12-27
 ---
 
 If you're writing a client-side application, there are two common tasks you can expect to perform. First, modern web applications are expected to show updated information as quickly as possible without a full page reload. (Think about Twitter or Facebook: as you're reading the updates, newer updates continue to arrive at the top of the page.) Second, you'll be sending the current user's updates to everyone else's streams.

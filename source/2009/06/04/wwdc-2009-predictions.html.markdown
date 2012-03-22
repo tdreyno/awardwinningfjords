@@ -1,7 +1,7 @@
 ---
 title: WWDC 2009 Predictions
 slug: wwdc-2009-predictions
-date: 2009/06/04
+date: 2009-06-04
 ---
 
 <h2>iPhone</h2>

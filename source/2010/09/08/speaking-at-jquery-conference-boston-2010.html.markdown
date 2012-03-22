@@ -1,6 +1,6 @@
 --- 
 title: "Speaking at jQuery Conference: Boston 2010"
-date: 09/08/2010
+date: 2010-09-08
 ---
 
 [jQuery Conference: Boston 2010]: http://events.jquery.org/2010/boston/

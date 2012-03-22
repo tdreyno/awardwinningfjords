@@ -1,6 +1,6 @@
 ---
 title: The Middleman. A modular, feature-rich static site generator
-date: 2009/10/22
+date: 2009-10-22
 ---
 
 [StaticMatic]: http://staticmatic.rubyforge.org/

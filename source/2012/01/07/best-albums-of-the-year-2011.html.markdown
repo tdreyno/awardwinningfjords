@@ -1,6 +1,6 @@
 --- 
 title: "Best Albums of the Year: 2011"
-date: 01/07/2012
+date: 2012-01-07
 ---
 
 I almost didn't write this article because I was so disappointed in 2011. Here it is anyways for posterity, I couldn't even manage to find 10 albums I like enough to list.

@@ -1,7 +1,7 @@
 ---
 title: Best Albums of the Decade. Top 25
 slug: best-of-the-decade-pt2
-date: 2009/12/14
+date: 2009-12-14
 ---
 
 <p>And now for the top 25.</p>

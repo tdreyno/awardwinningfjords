@@ -1,6 +1,6 @@
 --- 
 title: Apple-style Gradient Text Headlines in SCSS/SASS
-date: 04/13/2010
+date: 2010-04-13
 ---
 
 Apple's effect looks like this:

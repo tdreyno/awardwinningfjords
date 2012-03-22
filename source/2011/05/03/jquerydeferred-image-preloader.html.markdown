@@ -1,6 +1,6 @@
 --- 
 title: jQuery.Deferred Image Preloader
-date: 05/03/2011
+date: 2011-05-03
 ---
 
 [jQuery.Deferred]: http://api.jquery.com/category/deferred-object/

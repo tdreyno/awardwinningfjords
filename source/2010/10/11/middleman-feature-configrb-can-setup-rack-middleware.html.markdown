@@ -1,6 +1,6 @@
 --- 
 title: "Middleman Feature: Config.rb can setup Rack middleware"
-date: 10/11/2010
+date: 2010-10-11
 ---
 
 [Middleman]: http://middlemanapp.com

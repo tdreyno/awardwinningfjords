@@ -1,6 +1,6 @@
 --- 
 title: "Announcing: WouldHire.com"
-date: 04/08/2011
+date: 2011-04-08
 ---
 
 [Josh Pyles]: http://pixelmatrixdesign.com/

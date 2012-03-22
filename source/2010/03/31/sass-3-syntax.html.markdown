@@ -1,6 +1,6 @@
 --- 
 title: Sass 3 Syntax
-date: 03/31/2010
+date: 2010-03-31
 ---
 
 [Sass 3 Changelog]: http://beta.sass-lang.com/docs/yardoc/file.SASS_CHANGELOG.html#3-0-0-syntax-changes

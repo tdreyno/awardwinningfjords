@@ -1,6 +1,6 @@
 ---
 title: The Tweets They Are A-Changin'
-date: 12/26/2011
+date: 2011-12-26
 ---
 
 How you do add more meaning to 140 characters optimizing for brevity over clarity? You can infer meaning and intention from what you know about the author. If you know the author in real life, often you can hear the way they would have said a certain word or imagine the way their eyes sparkled when turning a clever phrase. Even then, careless writing can confuse even those who know you best. It doesn't help that we often affect a certain style in our writing that is absent from our speaking.

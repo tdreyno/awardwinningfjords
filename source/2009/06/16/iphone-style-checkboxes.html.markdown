@@ -1,7 +1,7 @@
 ---
 title: Introducing iPhone-style Checkboxes
 slug: iphone-style-checkboxes
-date: 2009/06/16
+date: 2009-06-16
 ---
 
 [Prototype version]:    /2009/06/29/prototype-iphone-style-checkboxes.html

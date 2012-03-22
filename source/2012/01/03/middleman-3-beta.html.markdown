@@ -1,6 +1,6 @@
 ---
 title: Middleman 3.0 Beta
-date: 01/03/2012
+date: 2012-01-03
 ---
 
 [the Github issue tracker]: https://github.com/middleman/middleman/issues

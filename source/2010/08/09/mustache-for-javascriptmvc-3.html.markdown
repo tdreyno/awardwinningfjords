@@ -1,6 +1,6 @@
 --- 
 title: Mustache for JavascriptMVC 3
-date: 08/09/2010
+date: 2010-08-09
 ---
 
 [the Github repository]: http://github.com/tdreyno/mustache-javascriptmvc

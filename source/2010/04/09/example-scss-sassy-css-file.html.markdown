@@ -1,6 +1,6 @@
 --- 
 title: Example SCSS (Sassy CSS) File
-date: 04/09/2010
+date: 2010-04-09
 ---
 
 [Anthony Short's CSScaffold project]: http://github.com/anthonyshort/csscaffold

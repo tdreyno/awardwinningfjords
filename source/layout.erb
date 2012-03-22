@@ -24,7 +24,7 @@
     <meta content='http://www.myopenid.com/xrds?username=tdreyno.myopenid.com' http-equiv='X-XRDS-Location'>
     
     <% if is_blog_article? %>
-      <title><%= current_article_title %> &laquo; Thomas Reynolds</title>
+      <title><%= current_article.title %> &laquo; Thomas Reynolds</title>
     <% else %>
       <title>Award Winning Fjords &laquo; Thomas Reynolds</title>
     <% end %>
@@ -46,8 +46,8 @@
     <div id="frame">
       <% if is_blog_article? %>
         <article>
-          <h2><%= current_article_title %></h2>
-          <time><%= current_article_date.strftime('%b %e %Y') %></time>
+          <h2><%= current_article.title %></h2>
+          <time><%= current_article.date.strftime('%b %e %Y') %></time>
           <%= current_article.body %>
         </article>
       <% else %>

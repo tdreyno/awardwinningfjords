@@ -1,6 +1,6 @@
 --- 
 title: "Just Launched: Metalab Design v4"
-date: 09/11/2011
+date: 2011-09-11
 ---
 
 [Ali Bosworth]: http://twitter.com/#!/alibosworth

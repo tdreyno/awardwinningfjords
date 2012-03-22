@@ -1,6 +1,6 @@
 --- 
 title: State Machine Controller for JavascriptMVC
-date: 05/27/2010
+date: 2010-05-27
 ---
 
 [Checkout the Github repository]: http://github.com/secondstory/secondstoryjs-statemachine

@@ -1,6 +1,6 @@
 --- 
 title: Future of Middleman Survey
-date: 02/06/2011
+date: 2011-02-06
 ---
 
 I've created a brief survey about [Middleman]. If you've used the project, I would love your input. Thanks!

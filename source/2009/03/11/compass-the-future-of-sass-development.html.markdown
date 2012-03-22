@@ -1,7 +1,7 @@
 ---
 title: Compass, the future of Sass development
 slug: compass-the-future-of-sass-development
-date: 2009/03/11
+date: 2009-03-11
 ---
 
 [peepcode-haml]: http://peepcode.com/products/haml-and-sass
