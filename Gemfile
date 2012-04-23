@@ -1,5 +1,6 @@
 source :rubygems
 
+gem "sass", "3.2.0.alpha.103"
 gem "builder"
 gem "middleman", :git => "git://github.com/middleman/middleman.git"
 gem "middleman-blog", :git => "git://github.com/middleman/middleman-blog.git"
