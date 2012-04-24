@@ -35,7 +35,7 @@ init = function() {
   camera.position.z = 500;
   scene.add(camera);
   geometry2 = new THREE.PlaneGeometry(imageWidth * 1.1, imageHeight, 1, 1);
-  texture2 = THREE.ImageUtils.loadTexture("/images/image2.jpg");
+  texture2 = THREE.ImageUtils.loadTexture("/images/image2.png");
   material2 = new THREE.MeshBasicMaterial({
     map: texture2
   });
