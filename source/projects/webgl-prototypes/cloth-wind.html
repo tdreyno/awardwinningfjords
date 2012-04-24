@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Sketchup Prototypes</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Sketchup Prototypes</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="triangles.html">Triangles</a></li>
+              <li><a href="columns.html">Columns</a></li>
+              <li><a href="cloth-blinds.html">Cloth Blinds</a></li>
+              <li><a href="cloth-wind.html">Cloth Wind</a></li>
+              <li><a href="cloth-drag.html">Cloth Drag</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="container" class="container" style="padding-top: 60px">
+
+      <h1>Cloth Wind Demo</h1>
+<p>Image mapped to 3d cloth which can blows in alternating wind.</p>
+
+<script type="text/javascript" src="javascripts/Three.js"></script>
+<script type="text/javascript" src="javascripts/Tween.js"></script>
+<script type="text/javascript" src="javascripts/physics.js"></script><script type="text/javascript" src="javascripts/Integrator.js"></script>
+<script type="text/javascript" src="javascripts/Verlet.js"></script>
+<script type="text/javascript" src="javascripts/cloth-wind.js"></script>
+
+    </div> <!-- /container -->
+  </body>
+</html>

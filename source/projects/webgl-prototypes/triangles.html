@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Sketchup Prototypes</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Sketchup Prototypes</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="triangles.html">Triangles</a></li>
+              <li><a href="columns.html">Columns</a></li>
+              <li><a href="cloth-blinds.html">Cloth Blinds</a></li>
+              <li><a href="cloth-wind.html">Cloth Wind</a></li>
+              <li><a href="cloth-drag.html">Cloth Drag</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="container" class="container" style="padding-top: 60px">
+
+      <h1>Triangles Demo</h1>
+<p>Image broken into triangles.</p>
+<p>Mouseover triangle piece of image to activate</p>
+
+<script src="javascripts/Three.js"></script>
+<script src="javascripts/Tween.js"></script>
+<script>
+  var imageWidth = 980;
+  var imageHeight = 340;
+  var gridSize = 80;
+  
+  var horizRatio = gridSize / imageWidth;
+  var vertRatio  = gridSize / imageHeight;
+  
+  var rows = Math.ceil(imageHeight / gridSize);
+  var cols = Math.ceil(imageWidth / gridSize);
+  
+  
+  var normal = new THREE.Vector3( 0, 0, 1 );
+  
+  var cornerMap = [
+    [ [0, 0], [ 1,  0 ], [0, -1] ], // Top Left
+    [ [0, 0], [ 1,  0 ], [1, -1] ], // Top Right
+    [ [1, 0], [ 1, -1 ], [0, -1] ], // Bottom Right
+    [ [0, 0], [ 0, -1 ], [1, -1] ]  // Bottom Left
+  ]
+  
+  function triangle_for_grid_unit(x, y, corner) {
+    var geometry = new THREE.Geometry();
+    
+    var cornerComponents = cornerMap[corner];
+    
+    for (var k = 0; k < cornerComponents.length; k++) {
+      var cornerComponent = cornerComponents[k];
+      geometry.vertices.push(
+        new THREE.Vertex(
+          new THREE.Vector3( 
+            cornerComponent[0] * gridSize,
+            cornerComponent[1] * gridSize, 
+            0 
+          )
+        )
+      );
+    }
+    
+    var face = new THREE.Face3(0, 1, 2);
+    
+    face.normal.copy( normal );
+    face.vertexNormals.push( normal.clone(), normal.clone(), normal.clone() );
+  
+    geometry.faces.push( face );
+    
+    function uv_for_point(x, y, point) {
+      return new THREE.UV(
+        horizRatio * (x + point[0]), 
+        vertRatio * (y + -point[1])
+      );
+    }
+    
+    // points_in_box = cornerComponents
+      // [ [0, 0], [ 1,  0 ], [0, -1] ], // Top Left
+      //   [ [0, 0], [ 1,  0 ], [1, -1] ], // Top Right
+    
+    geometry.faceVertexUvs[ 0 ].push( [
+      uv_for_point(x, y, cornerComponents[0]),
+      uv_for_point(x, y, cornerComponents[1]),
+      uv_for_point(x, y, cornerComponents[2])
+    ] );
+    
+    var material = new THREE.MeshBasicMaterial({ map: imageTexture });
+
+    var mesh = new THREE.Mesh( geometry, material );
+    
+    mesh.doubleSided = true;
+    mesh.position.x = x * gridSize;
+    mesh.position.y = y * -gridSize;
+    
+    return mesh;
+  }
+  
+  function image_to_triangles() {
+    var group = new THREE.Object3D();
+    
+    for (var i = 0; i < rows; i++) {
+      for (var j = 0; j < cols; j++) {
+        group.add( triangle_for_grid_unit(j, i, 0) ); // Top Left
+        group.add( triangle_for_grid_unit(j, i, 2) ); // Bottom Right
+      }
+    }
+    
+    return group;
+  }
+
+  var camera, scene, renderer;
+
+  var imageTexture = THREE.ImageUtils.loadTexture("images/image.jpg");
+  
+  init();
+  animate();
+
+  function init() {
+
+    scene = new THREE.Scene();
+
+    camera = new THREE.PerspectiveCamera( 75, imageWidth / imageHeight, 1, 10000 );
+    camera.position.z = 222;
+    // camera.position.z = 500;
+    scene.add( camera );
+    
+    group = image_to_triangles();
+    
+    scene.add(group);
+    group.position.x = -imageWidth/2
+    group.position.y = imageHeight/2
+    
+    
+    
+    
+    
+    
+    // renderer = new THREE.CanvasRenderer();
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(imageWidth, imageHeight);
+
+    
+    document.getElementById("container").appendChild( renderer.domElement );
+
+    renderer.domElement.addEventListener("mousemove", function(e) {
+      var colIndex = Math.floor(e.offsetX / gridSize);
+      var rowIndex = Math.floor(e.offsetY / gridSize);
+      
+      var position = colIndex + (rowIndex * cols);
+      
+      var triangle = group.children[position*2];
+      var tween = new TWEEN.Tween(triangle.rotation).to({ y: 2*Math.PI }, 3000).start().onComplete(function() {
+        triangle.rotation.y = 0;
+      });
+    });
+  }
+
+  var currentTime = null;
+  function animate(t) {
+
+    var delta = 0;
+    if (currentTime) {
+      delta = t - currentTime;
+    }
+    
+    // note: three.js includes requestAnimationFrame shim
+    requestAnimationFrame( animate );
+    
+    TWEEN.update(t);
+    render(delta);
+    
+    currentTime = t;
+  }
+
+  function render() {
+
+    // imageMesh.rotation.x += 0.01;
+    // imageMesh.rotation.y += 0.02;
+    // group.rotation.y += 0.02;
+                    // 
+                    // for (var t = 0; t < group.children.length; t++) {
+                    //   group.children[t].rotation.z += 0.02;
+                    //   group.children[t].rotation.x += 0.02;
+                    //   group.children[t].rotation.y += 0.02;
+                    // }
+                    // 
+    renderer.render( scene, camera );
+
+  }
+
+</script>
+
+    </div> <!-- /container -->
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Sketchup Prototypes</title>
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Sketchup Prototypes</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="triangles.html">Triangles</a></li>
+              <li><a href="columns.html">Columns</a></li>
+              <li><a href="cloth-blinds.html">Cloth Blinds</a></li>
+              <li><a href="cloth-wind.html">Cloth Wind</a></li>
+              <li><a href="cloth-drag.html">Cloth Drag</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div id="container" class="container" style="padding-top: 60px">
+
+      <h1>Columns Demo</h1>
+<p>Image broken into columns which rotate while the camera moves.</p>
+<p>Mouseover image to activate</p>
+
+<script src="javascripts/Three.js"></script>
+<script src="javascripts/Tween.js"></script>
+<script>
+  var imageWidth = 980;
+  var imageHeight = 340;
+  var gridSize = 70;
+  
+  var horizRatio = gridSize / imageWidth;
+  var vertRatio  = gridSize / imageHeight;
+  
+  var rows = Math.ceil(imageHeight / gridSize);
+  var cols = Math.ceil(imageWidth / gridSize);
+  
+  var normal = new THREE.Vector3( 0, 0, 1 );
+  
+  function blind_cube_for_grid_unit(x) {
+    var imageMaterial = new THREE.MeshBasicMaterial({ map: imageTexture });
+    var imageMaterial2 = new THREE.MeshBasicMaterial({ map: imageTexture2 });
+    imageMaterial.overdraw = true;
+    
+    var materials = [
+      new THREE.MeshBasicMaterial({ color: 0xf1f1f1 }),
+      new THREE.MeshBasicMaterial({ color: 0xf1f1f1 }),
+      new THREE.MeshBasicMaterial({ color: 0xf1f1f1 }),
+      // new THREE.MeshBasicMaterial({ color: 0xf1f1f1 }),
+      new THREE.MeshBasicMaterial({ color: 0xf1f1f1 }),
+      imageMaterial,
+      imageMaterial2,
+    ];
+    
+    var sides = { px: false, nx: false, py: false, ny: false };
+    var cubeGeo = new THREE.CubeGeometry(gridSize, imageHeight, gridSize, 1, 1, 1, materials);//, sides);
+    
+    cubeGeo.faceVertexUvs[0][4] = [
+      new THREE.UV(horizRatio * (x), 0),
+      new THREE.UV(horizRatio * (x), 1),
+      new THREE.UV(horizRatio * (x+1), 1),
+      new THREE.UV(horizRatio * (x+1), 0)
+    ];
+    
+    cubeGeo.faceVertexUvs[0][5] = [
+      new THREE.UV(horizRatio * (x+1), 1),
+      new THREE.UV(horizRatio * (x+1), 0),
+      new THREE.UV(horizRatio * (x), 0),
+      new THREE.UV(horizRatio * (x), 1),
+    ];
+    
+    var faceMaterial = new THREE.MeshFaceMaterial();
+    var cube = new THREE.Mesh(cubeGeo, faceMaterial);
+    
+    cube.position.x = x * gridSize;
+    return cube;
+  }
+  
+  function image_to_blind_cubes() {
+    var group = new THREE.Object3D();
+
+    for (var j = 0; j < cols; j++) {
+      var c = blind_cube_for_grid_unit(j);
+      group.add(c);
+    }
+
+    return group;
+  }
+  
+  function initiate_break(x, y) {
+    var prevColIndex = Math.floor(x / gridSize);
+    var nextColIndex = prevColIndex+1;
+    
+    if (prevColIndex == 0) {
+      break_right(0);
+    } else if (prevColIndex == 8) {
+      break_left(8);
+    } else if (prevColIndex > 8) {
+      return;
+    } else {
+      break_left(prevColIndex);
+      break_right(nextColIndex);
+    }
+  }
+  
+  function break_left(colIndex, after_first, nextIndex) {
+    if (typeof nextIndex == "undefined") { nextIndex = colIndex - 1; }
+    
+    var col = group2.children[colIndex];
+    if (after_first == 1) {
+      for (var i = 0; i < col.geometry.vertices.length; i++) {
+        col.geometry.vertices[i].position.x += gridSize;
+      }
+    
+      col.position.x -= gridSize;
+    } else if (after_first == -1) {
+      for (var i = 0; i < col.geometry.vertices.length; i++) {
+        col.geometry.vertices[i].position.x -= gridSize;
+      }
+    
+      col.position.x -= gridSize;
+      col.geometry.materials[4] = new THREE.MeshBasicMaterial({ color: 0xf1f1f1 });
+    } else {
+      after_first = 1;
+      col.position.z++;
+
+      for (var i = 0; i < col.geometry.vertices.length; i++) {
+        col.geometry.vertices[i].position.x += gridSize / 2;
+      }
+    
+      col.position.x -= gridSize / 2;
+    }
+    
+    var tween = new TWEEN.Tween(col.rotation).to({ y: col.rotation.y-Math.PI }, 3000).easing(TWEEN.Easing.Quadratic.InOut).onComplete(function() {
+      // col.position.z--;
+      // col.visible = false;
+      if (nextIndex >= 0) {
+        var nextCol = group2.children[nextIndex];
+        nextCol.visible = false;
+        break_left(colIndex, -after_first, nextIndex-1);
+      }
+    }).start();
+  }
+  
+  function break_right(colIndex) {
+    return;
+    var col = group2.children[colIndex];
+    // col.position.z++;
+    
+    // for (var i = 0; i < col.geometry.vertices.length; i++) {
+    //   col.geometry.vertices[i].position.x -= gridSize;
+    // }
+    // 
+    // col.position.x += gridSize;
+    // col.alreadyShifted = true;
+    
+    var tween = new TWEEN.Tween(col.rotation).to({ y: Math.PI }, 3000).easing(TWEEN.Easing.Quadratic.In).onComplete(function() {
+      // col.visible = false;
+      // col.position.z--;
+      var nextIndex = colIndex + 1;
+      if (nextIndex <= 8) {
+        break_right(nextIndex);
+      }
+    }).start();
+  }
+
+  var camera, scene, renderer;
+
+  var imageTexture = THREE.ImageUtils.loadTexture("/images/image.jpg");
+  var imageTexture2 = THREE.ImageUtils.loadTexture("/images/image2.jpg");
+  
+  init();
+  animate();
+
+  function init() {
+
+    scene = new THREE.Scene();
+
+    camera = new THREE.PerspectiveCamera( 75, (imageWidth + gridSize) / (imageHeight + 100), 1, 10000 );
+    camera.position.z = 222;
+    camera.position.z = 300;
+    camera.position.z = 500;
+    scene.add( camera );
+    
+    var image2Geo = new THREE.PlaneGeometry(imageWidth, imageHeight);
+    var image2Material = new THREE.MeshBasicMaterial({ map: imageTexture2 });
+    image2Material.overdraw = true;
+    var image2mesh = new THREE.Mesh( image2Geo, image2Material );
+    image2mesh.receiveShadow = true;
+    image2mesh.position.x = 40;
+    // scene.add( image2mesh );
+    
+    group2 = image_to_blind_cubes();
+    // group2.position.y -= imageWidth / 4
+    group2.position.x = (-imageWidth/2)// + gridSize
+    group2.position.z = 1;
+    scene.add(group2);
+  
+    // for (var i = 0; i < cubeGeo.vertices.length; i++) {
+    //   cubeGeo.vertices[i].position.x -= gridSize / 2;
+    // }
+    
+    // renderer = new THREE.CanvasRenderer();
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize(imageWidth + gridSize, imageHeight + 100);
+
+    // document.body.appendChild( renderer.domElement );
+    document.getElementById("container").appendChild( renderer.domElement );
+
+    renderer.domElement.addEventListener("mouseover", function(e) {
+      
+      var middle = new THREE.Vector3( 0, 0, 0 );
+      
+      
+      var tweenOut = new TWEEN.Tween(camera.position)
+        .to({ 
+          x: camera.position.x + 300,
+          y: camera.position.y + 300,
+          z: camera.position.z + 100
+        }, 900)
+        .onUpdate(function() {
+          camera.lookAt(middle);
+        })
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        
+      var tweenIn = new TWEEN.Tween(camera.position)
+        .to({ 
+          x: camera.position.x - 300,
+          y: camera.position.y - 300
+        }, 900)
+        .onUpdate(function() {
+          camera.lookAt(middle);
+        })
+        .delay(1000)
+        .easing(TWEEN.Easing.Quadratic.InOut)
+        
+      var tweenIn2 = new TWEEN.Tween(camera.position)
+        .to({ 
+          x: camera.position.x,
+          y: camera.position.y,
+          z: camera.position.z
+        }, 900)
+        .onUpdate(function() {
+          camera.lookAt(middle);
+        })
+        .delay(2000)
+        .easing(TWEEN.Easing.Quadratic.InOut)
+      
+      tweenOut.chain(tweenIn.chain(tweenIn2)).start()
+      
+      for (var t = 0; t < group2.children.length; t++) {
+        var tweenIn = new TWEEN.Tween(group2.children[t].rotation)
+          .to({ x: -Math.PI }, 1200)
+          .easing(TWEEN.Easing.Back.InOut)
+          .delay(00 + (t * 75));
+        
+        var tweenOut = new TWEEN.Tween(group2.children[t].rotation)
+          .to({ x: 0 }, 1200)
+          .easing(TWEEN.Easing.Back.InOut)
+          .delay(1500)
+        
+        tweenIn.chain(tweenOut).start();
+      }
+    });
+  }
+
+  var currentTime = null;
+  function animate(t) {
+
+    var delta = 0;
+    if (currentTime) {
+      delta = t - currentTime;
+    }
+    
+    // note: three.js includes requestAnimationFrame shim
+    requestAnimationFrame( animate );
+    
+    TWEEN.update(t);
+    render(delta);
+    
+    currentTime = t;
+  }
+
+  function render(delta) {
+
+    // imageMesh.rotation.x += 0.01;
+    // imageMesh.rotation.y += 0.02;
+    // group.rotation.y += 0.02;
+    
+    // for (var t = 0; t < group.children.length; t++) {
+    //   group.children[t].rotation.z += 0.02;
+    //   group.children[t].rotation.x += 0.02;
+    //   group.children[t].rotation.y += 0.02;
+    // }
+    // 
+    renderer.render( scene, camera );
+    
+    
+    // for (var t = 0; t < group2.children.length; t++) {
+    //   group2.children[t].rotation.y -= delta * 0.002;
+    // }
+
+  }
+
+</script>
+
+    </div> <!-- /container -->
+  </body>
+</html>
