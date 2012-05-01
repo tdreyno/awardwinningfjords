@@ -6,7 +6,6 @@ date: 2009-07-22
 
 The other day I needed a simple way to include a Google Map, so I wrote this jQuery function.
 
-    :::javascript
     $.fn.googleMap = function(address, options) {
       var defaults = {
         lat: 44.081996,
@@ -41,7 +40,6 @@ This requires the latest (v3) version of the Google Map API.
 Usage
 -----
 
-    :::html
     <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'>
     </script>
     <script type='text/javascript'>

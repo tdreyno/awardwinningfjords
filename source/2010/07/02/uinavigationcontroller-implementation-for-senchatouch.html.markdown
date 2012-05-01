@@ -17,7 +17,6 @@ SenchaTouch has something similar with the NestedList class which shows a&nbsp;h
 How to use PanelStack
 ---------------------
 
-    :::javascript
     var bottomLevel = new Ext.Panel({ title: "Start page" });
     var firstLevel  = new Ext.Panel({ title: "Tier 1" });
     var secondLevel = new Ext.Panel({ title: "Tier 2" });

@@ -16,7 +16,6 @@ However, there is one large caveat. Because css2sass rearranges your selectors, 
 
 The safer alternative is to convert from CSS to Sass by hand. Simply remove all curly braces and semicolons and you should have a valid—if not optimized—Sass document. If you've been inconsistent with using either tabs or spaces, Sass will warn you. You'll need to standardize on one or the other before moving forward. If you start out with some CSS like this:
 
-    :::css
     #left {
       float: left;
       display: inline;

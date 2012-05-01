@@ -52,7 +52,6 @@ The initializer creates a homepage (index.html.haml), a layout to contain shared
   
 The init.rb file allows customization and enabling or disabling specific features. The default init.rb looks like this:
 
-    :::ruby
     # Helpers
     helpers do
     end
@@ -85,7 +84,6 @@ The <tt>mm-init</tt> command creates an init.rb which will contain your customiz
 
 Below is an example init.rb that I am using on a live client site. First, I include a couple files with helper definitions. Next I enable php files to be previewed and choose the default template for directory requests. For this project, I have chosen to place all static files under the "assets" folder. The asset_url helper is overridden to ignore a couple cases specific to this site. Finally, I setup the directory under which the site will live in production. That's it! Nearly 200 pages with a shared layout, simple Haml templates, Blueprint-base CSS grids, minified CSS, Javascript dependency management and minification, CDN support and cache busting query strings.
 
-    :::ruby
     require 'config/path_helpers'
     require 'config/haml_helpers'
 
@@ -107,7 +105,6 @@ Features
 As you can see, the basic project is quite sparse and you get to choose which features your project needs. 
 The current list of features is as follows:
 
-    :::ruby
     # Features enabled by default
     enable :compass
     enable :sprockets

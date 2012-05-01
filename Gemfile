@@ -1,8 +1,6 @@
 source :rubygems
 
-gem "sass", "3.2.0.alpha.103"
+gem "sass", "3.2.0.alpha.104"
 gem "builder"
-gem "middleman", :git => "git://github.com/middleman/middleman.git"
-gem "middleman-blog", :git => "git://github.com/middleman/middleman-blog.git"
-gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
-gem "pygments.rb"
+gem "middleman", :github => "middleman/middleman"
+gem "middleman-blog", :github => "middleman/middleman-blog"

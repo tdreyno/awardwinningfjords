@@ -67,5 +67,11 @@
     </div>
     
     <%= partial "tracking" %>
+    
+    <%= javascript_include_tag "highlight.pack" %>
+    <%= stylesheet_link_tag "solarized_light" %>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
 </html>

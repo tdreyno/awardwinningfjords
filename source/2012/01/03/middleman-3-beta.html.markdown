@@ -18,7 +18,6 @@ Middleman is a small tool for developing stand-alone, static websites. It's grea
 
 Before getting in to all the new features, here's how you can install the beta:
 
-    :::bash
     gem install middleman --pre
 
 __Remember:__ This is a beta and there are bound to be bugs and possible regressions. 3.0 should be fully backwards compatible with 2.x. Please submit any issues you run into on [the Github issue tracker].
@@ -39,8 +38,7 @@ Let's dive in.
     
     Sometimes you just want to host a directory of web assets on localhost without doing anything fancy. In 3.0, Middleman will do just this if you run it from a directory with a `config.rb` file. For example: 
 
-        :::bash
-        # Download the Zurb Foundation: http://foundation.zurb.com/
+            # Download the Zurb Foundation: http://foundation.zurb.com/
         cd foundation
         middleman server
 
@@ -51,8 +49,7 @@ Let's dive in.
 
       Sass and Scss file now have access to Sprockets dependency management and to CSS located in gems which support the Rails 3.1 Asset Pipeline. Given a "source/stylesheets/main.css.scss":
 
-        :::css
-        /**
+            /**
          *= require "some_partial"
          *
          * Using Zurb as an example: gem install zurb-foundation
@@ -68,7 +65,6 @@ Let's dive in.
 
     As an alternative to partials and content_for blocks, we've added something from the Django world. Say I have a template named "source/index.html.erb" and it's layout is located at "source/layouts/default.erb". Normally, the contents of the layout will wrap the contents of the template. With nested layouts, I can add the following to the layout and wrap the contents yet again:
 
-        :::erb
         <% wrap_layout :admin do %>
           I am the Defaul Layout
           <%= yield %>
@@ -83,21 +79,18 @@ Let's dive in.
 
     Here's a quick example for building an index page which displays an automatically updating list of it's child pages.
 
-        :::erb
         <% for page in current_page.children %>
           <%= link_to page.data.title, page.url %>
         <% end %>
 
     As you'll notice, the page object has access to that page's frontmatter. This means we can use frontmatter to provide categorization and work with that data. Say we have several pages with the following frontmatter (and several without it):
 
-        :::yaml
         ---
         category: internal
         ---
 
     Now we can select only the pages with that category to display in our list of links:
 
-        :::erb
         <h1>Internal</h1>
         <% for page in current_page.children.select { |x| x.data.category == "internal" } %>
           <%= link_to page.data.title, page.url %>

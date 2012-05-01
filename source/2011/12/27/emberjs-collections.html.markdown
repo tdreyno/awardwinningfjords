@@ -23,7 +23,6 @@ the DOM to be updated to reflect the new state automatically.
 
 ### App
 
-    :::javascript
     // Setup a global namespace for our code.
     Twitter = Em.Application.create({
 
@@ -47,7 +46,6 @@ The app is the core of any Ember.js project. It provides a ready event, much lik
 
 ### Template View
 
-    :::html
     <script type="text/x-handlebars">
       <ul class="tweets">
       {{#each Twitter.searchResults}}
@@ -60,14 +58,12 @@ Ember.js templates are written in [Handlebars.js]. You can use a `text/x-handleb
 
 ### Model
 
-    :::javascript
     Twitter.Tweet = Em.Object.extend();
 
 This is entirely a naming/convenience issue. We're not writing any custom code for handling each tweet. We simply take its JSON and use it directly.
 
 ### Controller
 
-    :::javascript
     // An instance of ArrayController which handles collections.
     Twitter.searchResults = Em.ArrayController.create({
 
@@ -121,7 +117,6 @@ This is entirely a naming/convenience issue. We're not writing any custom code f
 
 Here's the meat of the solution. Most of this is simply setting up a nice API and doing the JSON request. The simplest version of the code above would look like:
 
-    :::javascript
     Twitter.searchResults = Em.ArrayController.create();
     $.getJSON("http://search.twitter.com/search.json?q=cats&callback=?", function(d) {
        Twitter.searchResults.pushObjects(d.results);

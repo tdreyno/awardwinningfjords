@@ -43,7 +43,6 @@ Did I say CSS? I'm way too lazy for that, let's use Sass.
 
 The current versions of all desktop browsers, except IE, [support CSS3 Animations]. The syntax for this in CSS looks like the following (you'll need to add your own vendor prefixes):
 
-    :::css
     @keyframes animate-particle {
       0%   { opacity: 0; }
       100% { opacity: 1; }
@@ -51,7 +50,6 @@ The current versions of all desktop browsers, except IE, [support CSS3 Animation
 
 This will define a simple fadeIn animation which you can control on each element which implements it:
 
-    :::css
     #my-particle {
       width: 104px;
       height: 124px;
@@ -65,7 +63,6 @@ This will run the 1 second animation infinitely.
 
 So, how can we use this to animate our Sprite Sheet? We'll simply animate the background-position offset of the element 1 frame at a time. If you opened [the Sprite Sheet], you'll remember we've stacked all 60 frames vertically. So our keyframes would look something like: 
 
-    :::css
     @keyframes animate-particle {
       0%    { background-position: 0 0; }
       1.69% { background-position: 0 -124px; }
@@ -75,7 +72,6 @@ So, how can we use this to animate our Sprite Sheet? We'll simply animate the ba
 
 We need to animate across 60 frames over the 100% range of the animation, which means each frame is 1.695%. This could get nasty and verbose very quickly. Let's use Sass:
 
-    :::css
     @keyframes animate-particle {
       @for $i from 0 through 59 {
         $s: ($i * 100) / 59 + "%";
@@ -85,7 +81,6 @@ We need to animate across 60 frames over the 100% range of the animation, which 
 
 You can see [the entire output here]. Now, let's reference that on our element. We've double checked with our designer that the animation is at 30fps, so that means our 60 frames should last 2 seconds.
 
-    :::css
     #my-particle {
       width: 104px;
       height: 124px;
@@ -98,7 +93,6 @@ You can see [the entire output here]. Now, let's reference that on our element. 
 
 There is one piece of special sauce above and that is:
 
-    :::css
     animation-timing-function: step-start;
 
 Normally, CSS animations will attempt to tween between states, which is great for smooth transitions in opacity or scale, but we need the animate to jump immediately from frame to frame. That is what `step-start` does.
@@ -109,7 +103,6 @@ Normally, CSS animations will attempt to tween between states, which is great fo
 
 The Canvas element is just a blank slate you can draw pixels on to. Drawing image data from individual files or sprite sheets is very easy. We'll use the same Sprite Sheet from above.
 
-    :::javascript
     function drawFrame(ctx, image, width, height, num) {
       var offsetX = 0,
           offsetY = num * height;
@@ -123,7 +116,6 @@ The Canvas element is just a blank slate you can draw pixels on to. Drawing imag
 
 The above function will take a Canvas context, an Image object, the dimensions of each frame and the frame to draw. We'll use [requestAnimationFrame] for smooth animations.
     
-    :::javascript
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,
@@ -155,7 +147,6 @@ The above function will take a Canvas context, an Image object, the dimensions o
 
 The next solution is to implement the CSS version in Javascript. We'll use the exact same approach. Take a div element, animate its background image. The advantage here is that this will work in every browser (assuming you have the [requestAnimationFrame polyfill]).
 
-    :::css
     #my-particle2 {
       width: 104px;
       height: 124px;
@@ -164,7 +155,6 @@ The next solution is to implement the CSS version in Javascript. We'll use the e
 
 Similar CSS, minus the CSS Animation code. Now for the JS (which is similar to the Canvas implementation): 
 
-    :::javascript
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,
@@ -199,7 +189,6 @@ Traditionally, this approach has been considered too slow to smoothly animate, b
 
 Here's an implementation:
 
-    :::javascript
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,

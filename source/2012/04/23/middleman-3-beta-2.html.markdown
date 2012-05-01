@@ -21,7 +21,6 @@ Middleman is a small tool for developing stand-alone, static websites. It's grea
 
 Before getting in to all the new features, here's how you can install the beta:
 
-    :::bash
     gem install middleman --pre
 
 __Remember:__ This is a beta and there are bound to be bugs and possible regressions. 3.0 should be fully backwards compatible with 2.x. Please submit any issues you run into on [the Github issue tracker].

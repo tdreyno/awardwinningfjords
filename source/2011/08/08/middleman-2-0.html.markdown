@@ -18,7 +18,6 @@ Middleman 2.0 is a huge release featuring a refactored core, a unified source fo
 
 As always, install via RubyGems:
 
-    :::bash
     gem install middleman
     
 For more information, read the [Getting Started] guide.
@@ -47,7 +46,6 @@ Here are the most interesting new features of Middleman 2.0.
 
 Sprockets is a tool for Javascript dependency management. Using Sprockets you can include other Javascript and CoffeeScript files into your scripts. 
 
-    :::javascript
     //= require "another_file"
     
     function my_javascript() {
@@ -60,7 +58,6 @@ Read more in the [Javascript, CoffeeScript and Sprockets] guide.
 
 Dynamic pages allow you to generate HTML for files which share a single template. 
 
-    :::ruby
     ["tom", "dick", "harry"].each do |name|
       page "/about/#{name}.html", :proxy => "/about/template.html" do
         @person_name = name
@@ -73,7 +70,6 @@ Read more in the [Dynamic Pages] guide.
 
 Pretty URLs (aka Directory Indexes) let you generate folders for each HTML file in your project which results in a pretty, extension-less URL in common web-servers.
 
-    :::ruby
     activate :directory_indexes
 
 Now `source/my-page.html` will generate `build/my-page/index.html`.
@@ -84,7 +80,6 @@ Read more in the [Pretty URLs] guide.
 
 YAML Frontmatter lets you add in-template variables at the top of a page, which are also available in the layout, and to configure which layout the page uses.
 
-    :::erb
     ---
     layout: "login"
     page_name: "Login"
@@ -102,14 +97,12 @@ By default, LiveReload will monitor your `config.rb` file and automatically rest
 
 In addition, you can have LiveReload monitor your project files as well and instruct the web-browser to reload when they change using the [LiveReload Extension] and the `--livereload` flag.
 
-    :::bash
     middleman server --livereload
 
 ## Migrating to 2.0
 
 Updating old projects to Middleman 2.0 is very easy. Simply use the new `migrate` command:
 
-    :::bash
     middleman migrate
 
 Read more about the migration edge cases in the [Migrating to Middleman 2.0] guide.
