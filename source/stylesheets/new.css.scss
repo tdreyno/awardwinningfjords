@@ -74,12 +74,20 @@ article {
     //box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     //border: 4px white solid;
   }
+  code {
+    background: #eee;
+    font-family: monaco, monospace;
+    padding: 0 3px;
+    font-size: 13px;
+  }
   pre {
     background: #eee;
     padding: 24px;
     margin-bottom: 20px;
-    font-family: monaco, monospace;
-    font-size: 14px;
+    code {
+      font-size: 14px;
+      padding: 0;
+    }
   }
 }
 
