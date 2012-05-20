@@ -49,7 +49,6 @@ As with the jQuery version, [download the package], unzip it and place the javas
 
 Once the files are available to your site, activating the script is very easy:
 
-    :::html
     <head>
       <script src="prototype.js" type="text/javascript"></script>
       <script src="scriptaculous.js" type="text/javascript"></script>
@@ -68,7 +67,6 @@ The initialization method takes a handful of options.
 
 For example:
 
-    :::javascript
     new iPhoneStyle('input[type=checkbox]', {
       checkedLabel: 'YES',
       uncheckedLabel: 'NO'

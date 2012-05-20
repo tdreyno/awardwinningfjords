@@ -19,7 +19,6 @@ Next, you'll need Rick Olson's excellent [DoubleTap for jQuery] which adds touch
 
 Finally, you'll need to write the glue:
 
-    :::javascript
     $.fn.handleSwipes = function() {
       return this.each(function() {
         var api = $(this).data("scrollable");
@@ -36,7 +35,6 @@ Finally, you'll need to write the glue:
 
 Once you have all three of these components on a page, initialize them like so:
 
-    :::javascript
     $(".scrollable").scrollable().handleSwipes();
 
 Now touch swipes will trigger the next and previous behavious built into the widget. Enjoy.

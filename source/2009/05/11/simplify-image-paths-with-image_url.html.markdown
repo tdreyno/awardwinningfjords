@@ -17,7 +17,6 @@ Now when I use the image_url() method for the header on this site:
 
 It will generate this CSS:
 
-    :::css
     h1 {
       background: url(/images/title-embellishment.gif) no-repeat 17px 7px; }
 

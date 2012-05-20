@@ -48,7 +48,6 @@ unzip it and place the javascript, images and stylesheet where you please. You'l
 
 Once the files are available to your site, activating the script is very easy:
 
-    :::html
     <head>
       <script src="jquery-1.4.js" type="text/javascript"></script>
       <script src="jquery/iphone-style-checkboxes.js" type="text/javascript"></script>
@@ -69,7 +68,6 @@ The initialization method takes a handful of options.
 
 For example:
 
-    :::javascript
     $(':checkbox').iphoneStyle({
       checkedLabel: 'YES',
       uncheckedLabel: 'NO'

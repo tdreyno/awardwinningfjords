@@ -1,27 +1,22 @@
 page "/feed.xml", :layout => false
 
 require "middleman-blog"
-activate :blog
-
-set :blog_sources, ":year/:month/:day/:title.html"
+activate :blog do |blog|
+  blog.sources = ":year/:month/:day/:title.html"
+end
 
 set :markdown, :tables => true, :autolink => true
-
-require "pygments"
-require 'rack/codehighlighter'
-use Rack::Codehighlighter, 
-  :pygments,
-  :element => "pre>code",
-  :pattern => /\A:::([-_+\w]+)\s*\n/,
-  :markdown => true
 
 # Build-specific configuration
 configure :build do
   activate :cache_buster
 
   # For example, change the Compass output style for deployment
-  activate :minify_css
+  # activate :minify_css
   
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
+  
+  # Minify HTML
+  # activate :minify_html
 end

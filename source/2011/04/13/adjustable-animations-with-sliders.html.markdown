@@ -33,7 +33,8 @@ Demo
 
 Here we have a little animating square, a slider to control the duration and a bunch of easing options. Go ahead, play around and find the "sweet spot."
 
-<script type="text/javascript" charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>
   $.getScript("/javascripts/jquery.easing.1.3.js", function() {
 
     $(function($) {
@@ -73,6 +74,7 @@ Here we have a little animating square, a slider to control the duration and a b
     });
   });
 </script>
+
 <div class="demo" style="width: 600px; height: 300px; position: relative; overflow: hidden;">
   Duration: <span class="speed"></span><br />
   <input class="range" type="range" min="0" max="4000" step="1" value="1400" style="width: 300;" /><br />

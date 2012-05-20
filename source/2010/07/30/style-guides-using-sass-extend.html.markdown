@@ -86,7 +86,6 @@ Now, when I go to implement a specific portion of the site, I can be concise by 
 
 Here's the resulting CSS output:
 
-    :::css
     .sg-heading-1, .sg-heading-2, .sg-heading-3, .info-box h2 {
       font-family: "Droid Sans";
       font-weight: normal;
