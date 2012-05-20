@@ -5,6 +5,7 @@ activate :blog do |blog|
   blog.sources = ":year/:month/:day/:title.html"
 end
 
+set :markdown_engine, :redcarpet
 set :markdown, :tables => true, :autolink => true
 
 # Build-specific configuration
