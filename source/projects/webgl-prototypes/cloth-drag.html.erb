@@ -1,3 +1,6 @@
+---
+layout: false
+---
 <!doctype html>
 <html>
   <head>
@@ -30,14 +33,16 @@
     <div id="container" class="container" style="padding-top: 60px">
 
       <h1>Cloth Wind Demo</h1>
-<p>Image mapped to 3d cloth which can blows in alternating wind.</p>
+<p>Image mapped to 3d cloth which can be dragged around.</p>
+<p>Move mouse over image to drag from a single point</p>
 
 <script type="text/javascript" src="javascripts/Three.js"></script>
 <script type="text/javascript" src="javascripts/Tween.js"></script>
 <script type="text/javascript" src="javascripts/physics.js"></script><script type="text/javascript" src="javascripts/Integrator.js"></script>
 <script type="text/javascript" src="javascripts/Verlet.js"></script>
-<script type="text/javascript" src="javascripts/cloth-wind.js"></script>
+<script type="text/javascript" src="javascripts/cloth-drag.js"></script>
 
     </div> <!-- /container -->
+    <%= partial "tracking" %>
   </body>
 </html>

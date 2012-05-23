@@ -1,3 +1,7 @@
+---
+layout: false
+---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,7 +31,7 @@
           Twitter.searchResults.refresh();
         }, 2000);
 
-        Twitter.searchResults.set("query", "cats");
+        Twitter.searchResults.set("query", "emberjs");
         
         this._super();
       }
@@ -70,5 +74,7 @@
       }.observes("query")
     });
   </script>
+  
+  <%= partial "tracking" %>
 </body>
 </html>
