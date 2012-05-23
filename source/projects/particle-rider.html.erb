@@ -16,33 +16,6 @@ layout: false
   <canvas id="myCanvas" resize></canvas>
   <script src="particle-rider/javascripts/particle-rider.js" type="text/paperscript" canvas="myCanvas"></script>
   
-  <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-90027-9']);
-    _gaq.push(['_trackPageview']);
-    _gaq.push(['_trackPageLoadTime']);
-
-    (function() {
-    var ga = document.createElement('script');
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
-      'http://www') + '.google-analytics.com/ga.js';
-    ga.setAttribute('async', 'true');
-    document.documentElement.firstChild.appendChild(ga);
-    })();
-  </script>
-
-  <script>
-    var _gauges = _gauges || [];
-    (function() {
-      var t   = document.createElement('script');
-      t.type  = 'text/javascript';
-      t.async = true;
-      t.id    = 'gauges-tracker';
-      t.setAttribute('data-site-id', '4d770721192b0c4ab6000002');
-      t.src = '//secure.gaug.es/track.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(t, s);
-    })();
-  </script>
+  <%= partial "tracking" %>
 </body>
 </html>
