@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Spline Demo</title>
+    <script>THREE = {};</script>
+    <script src="Vector3.js"></script>
+    <script src="Spline.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0; }
+      
+      #demo {
+        pointer-events: none;
+      }
+      
+      #point1, #point2, #point3, #point4, #point5 {
+        position: absolute;
+        background: black;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        -webkit-user-select: none;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="601" height="401" id="demo"></canvas>
+    <div id="point1"></div>
+    <div id="point2"></div>
+    <div id="point3"></div>
+    <div id="point4"></div>
+    <div id="point5"></div>
+    <script>
+      var demo = document.getElementById('demo'),
+          ctx = demo.getContext('2d');
+
+      var p1 = document.getElementById('point1'),
+          p2 = document.getElementById('point2'),
+          p3 = document.getElementById('point3'),
+          p4 = document.getElementById('point4'),
+          p5 = document.getElementById('point5');
+    
+      function drawCanvasGrid() {
+        ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.lineWidth = 1;
+        
+        for (var i = 0; i < demo.width; i += 10) {
+          ctx.beginPath();
+          ctx.moveTo(i + 0.5, 0);
+          ctx.lineTo(i + 0.5, demo.height);
+          ctx.stroke();
+        }
+        
+        for (var j = 0; j < demo.height; j += 10) {
+          ctx.beginPath();
+          ctx.moveTo(0, j + 0.5);
+          ctx.lineTo(demo.width, j + 0.5);
+          ctx.stroke();
+        }
+      }
+      
+      function redrawArc() {
+        spline.initFromArray([
+          [p1.pointX, p1.pointY, 0],
+          [p2.pointX, p2.pointY, 0],
+          [p3.pointX, p3.pointY, 0],
+          [p4.pointX, p4.pointY, 0],
+          [p5.pointX, p5.pointY, 0]
+        ]);
+        
+        ctx.clearRect(0, 0, demo.width, demo.height);
+        drawCanvasGrid();
+        
+        ctx.save();
+        ctx.strokeStyle = 'lightblue';
+        ctx.lineWidth = 10;
+        
+        ctx.beginPath();
+        for (var i = 0.0; i <= 1.0; i += 0.002) {
+          var point = spline.getPoint(i);
+          var action = (i === 0.0) ? 'moveTo' : 'lineTo';
+          ctx[action](point.x, point.y);
+        }
+        ctx.stroke();
+        ctx.restore();
+      }
+      
+      attachEvents(p1);
+      attachEvents(p2);
+      attachEvents(p3);
+      attachEvents(p4);
+      attachEvents(p5);
+  
+      var currentHandle;
+  
+      function handleMouseDown(evt) {
+        currentHandle = evt.target;
+        document.addEventListener('mousemove', handleMouseMove, false);
+        document.addEventListener('mouseup', handleMouseUp, false);
+      }
+  
+      function handleMouseMove(evt) {
+        if (currentHandle) {
+          setPosition(currentHandle, evt.clientX, evt.clientY);
+        }
+      }
+      
+      function handleMouseUp() {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+        currentHandle = null;
+      }
+    
+      function attachEvents(elem) {
+        elem.addEventListener('mousedown', handleMouseDown, false);
+      }
+      
+      var spline = new THREE.Spline();
+      
+      function setPosition(elem, x, y, skip) {
+        if (x < 0) { x = 0; }
+        if (x > 600) { x = 600; }
+        if (y < 0) { y = 0; }
+        if (y > 400) { y = 400; }
+        
+        elem.pointX = x;
+        elem.pointY = y;
+        elem.style.WebkitTransform = 'translate3d(' + (x-10) + 'px, ' + (y-10) + 'px, 0)';
+        
+        if (!skip) {
+          redrawArc();
+        }
+      }
+      
+      setPosition(p1, 50, 100, true);
+      setPosition(p2, 250, 200, true);
+      setPosition(p3, 450, 50, true);
+      setPosition(p4, 590, 250, true);
+      setPosition(p5, 450, 350);
+    </script>
+  </body>
+</html>
