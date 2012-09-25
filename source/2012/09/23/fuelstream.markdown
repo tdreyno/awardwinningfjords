@@ -9,7 +9,7 @@ The site, actually an iframe meant to be embedded across multiple Nike sites, is
 
 ![FuelStream](/images/fuelstream.jpg)
 
-While I'm exceptional proud of the site, even though I forgot to blog about it for 3 months, what I'd really like to talk about is the process we used during development and the software & testing stack.
+While I'm exceptionally proud of the site, even though I forgot to blog about it for 3 months, what I'd really like to talk about is the process we used during development and the software & testing stack.
 
 ## Software Stack
 
@@ -70,3 +70,5 @@ On commit to GitHub, our staging/testing server (Jenkins) runs all the tests and
 ## Conclusion
 
 This project accomplished two things which I don't think many front-end developers attempt: test-driven development & heavily animated experiences. On both counts, I'm really proud of what we've accomplished. Kudos to Jared Moran & Zach Doe, the other two members of the front-end team.
+
+[Ryan Roemmich goes into the backend details on his blog](http://ast.roemmich.org/2012/09/25/nike-fuelstream-backend-stack.html).
