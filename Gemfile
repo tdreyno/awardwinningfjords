@@ -5,5 +5,5 @@ gem "sass", "~> 3.2.0"
 gem "builder"
 
 gem "middleman", "~> 3.0.0"
-gem "middleman-blog"
+gem "middleman-blog", "~> 3.1"
 gem "redcarpet", "~> 2.0.0"
