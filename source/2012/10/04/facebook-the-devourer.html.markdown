@@ -30,6 +30,6 @@ I said I wasn't going to complain about the wasted time on Facebook, but I will 
 
 ### Remember Facebook?
 
-There are websites that have become core pieces of the Internet, without which we would be left with a giant hole. Imaging an Internet without Google, Amazon or Wikipedia. Sure, they could be replaced in time, but the absence would be felt.
+There are websites that have become core pieces of the Internet, without which we would be left with a giant hole. Imagine an Internet without Google, Amazon or Wikipedia. Sure, they could be replaced in time, but the absence would be felt.
 
 If Facebook disappeared tomorrow, nobody would give a shit. They would move on, like they moved on from Myspace. They would find another instant messaging app. They would find a different calendar. They'd use email. And they'd do it overnight because they're simply a pile of communication technologies for which we have plenty of replacements already. There's nothing special about Facebook to miss and for a giant, wealthy company with a billion users… that's pretty sad.
