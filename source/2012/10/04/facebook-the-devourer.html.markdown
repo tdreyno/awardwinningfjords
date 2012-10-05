@@ -2,7 +2,7 @@
 title: "Facebook the Devourer"
 ---
 
-I can't find a way to write this article without it sounding like a rant, so why fight it?
+I can't find a way to write this article without it sounding like a rant, so why fight it? **The views and opinions expressed are my own and do not necessarily represent the views of my employer.**
 
 Facebook is a social network with 1 billion users. It devours everything it touches and produces nothing of value, including&mdash;ironically&mdash;their stock price.
 
