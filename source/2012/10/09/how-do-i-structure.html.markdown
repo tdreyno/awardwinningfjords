@@ -1,6 +1,5 @@
 ---
 title: "How Do I: Structure Applications"
-published: false
 ---
 
 This is part two in a series of "How Do I" articles ([part one, Animation, is here](/2012/10/01/how-do-i-animate.html)). These are how I, Thomas Reynolds, accompish certain tasks. This isn't about comparing multiple technique or even justifying my prefered approach. This is a brain dump.
