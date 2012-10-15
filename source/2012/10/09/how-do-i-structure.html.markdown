@@ -83,7 +83,7 @@ One of these days, I'm going to be able to write about Statecharts well. Until t
 
 Like the Statechart, the View Layer is all about centralizing code related. A view handles what content should be in a HTML area, how to show it, how to hide it and how to handle events in that area. Without a View Layer, you'll end up with jQuery-itis, spaghetti code which all different parts of your codebase are updating the same DOM elements. This provides a nice simple API to your controllers and Statecharts:
 
-	toottipView.refresh();
+	tooltipView.refresh();
 	tooltipView.show();
 	$(document).one('click', function() { tooltipView.hide(); });
 
