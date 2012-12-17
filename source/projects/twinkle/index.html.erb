@@ -1,0 +1,22 @@
+---
+layout: false
+---
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: black; }
+      .dg { z-index: 100 !important; }
+    </style>
+    <title>Twinkles by Thomas Reynolds</title>
+    <script src="requestAnimationFrame.js"></script>
+    <script src="dat.gui.js"></script>
+    <script src="twinkles.js"></script>
+  </head>
+  <body>
+    <script>new TwinkleView();</script>
+    <%= partial "tracking" %>
+  </body>
+</html>
