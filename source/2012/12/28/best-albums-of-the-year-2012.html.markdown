@@ -33,7 +33,7 @@ I think I'm getting old. Last year I only had 7 albums I like, this year is even
     <div class='content'>
       <h6>Ronald Jenkees</h6>
       <h4>Days Away</h4>
-      <p><a href="http://www.youtube.com/watch?v=P0YiWsAM0O8&feature=share&list=UUvKLrpen70sLbTe8sg5TWtQ">YouTube star</a> and heir to Ratatat's thrown.</p>
+      <p><a href="http://www.youtube.com/watch?v=P0YiWsAM0O8&feature=share&list=UUvKLrpen70sLbTe8sg5TWtQ">YouTube star</a> and heir to Ratatat's throne.</p>
     </div>
     <div class='player'>
       <h6>#4</h6>
