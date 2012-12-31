@@ -1,21 +1,21 @@
 --- 
 title: "Moar Kindle Dots"
-published: false
-
 ---
 
 ## Trends
 
-* 5 Books by Brandon Sanderson
+* 5 Books by Brandon Sanderson (plus 1 novella and an audio book)
 * 7 Vorkosigan Novels (Lois McMaster Bujold)
 * 3 Books by John Scalzi
 * 3 Trilogies (Mistborn, The First Law, The Hundred Thousand Kingdoms)
-* 2 Audio Books (Legion & Fool Moon)
+* 3 Audio Books (Legion, Fool Moon & Grave Peril)
 
 ## Books
 
 Title                          | Pages
 -------------------------------|------
+Best Served Cold               | 640
+The Emperor's Soul             | 176
 Komarr                         | 328
 Last Argument of Kings         | 639
 Before They Are Hanged         | 543
@@ -52,5 +52,5 @@ The Warrior's Apprentice       | 292
 The Rook                       | 504
 Throne of Jade                 | 432
 
-* Total Pages: __16799__
-* Average Pages per Day: __45.89__
+* Total Pages: __17615__
+* Average Pages per Day: __48__
