@@ -5,9 +5,9 @@ gem "haml", "3.2.0.beta.1"
 gem "sass", "~> 3.2.0"
 gem "builder"
 
-gem "middleman", "3.0.8.pre.1"
+gem "middleman", "~> 3.0.7"
 gem "middleman-blog", "~> 3.1"
-gem "middleman-blog-editor", "~> 0.2.3"
+gem "middleman-blog-editor", "~> 0.2.4"
 gem "redcarpet", "~> 2.0.0"
 
 gem "pry"
