@@ -1,6 +1,6 @@
 ---
-title: "How Do I: Animate"
-
+title: ! 'How Do I: Animate'
+blog_editor_id: 9
 ---
 
 This is the first piece in a series of "How Do I" articles. Since that phrase can be taken multiple ways, let me explain: this is how I, Thomas Reynolds, accompish certain tasks. This isn't about comparing multiple technique or even justifying my prefered approach. This is a brain dump.

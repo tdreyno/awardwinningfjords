@@ -1,6 +1,6 @@
 ---
-title: "Coda Pops Technical Details"
-
+title: Coda Pops Technical Details
+blog_editor_id: 13
 ---
 
 [Panic's site]: https://panic.com/coda/

@@ -1,6 +1,6 @@
 ---
-title: "Ember.js PDX: July 31, 2012 at Instrument"
-
+title: ! 'Ember.js PDX: July 31, 2012 at Instrument'
+blog_editor_id: 12
 ---
 
 I'm excited to announce the inaugural Portland Ember.js meetup!

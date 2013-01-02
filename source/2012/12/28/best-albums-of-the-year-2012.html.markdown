@@ -1,5 +1,6 @@
---- 
-title: "Best Albums of the Year: 2012"
+---
+title: ! 'Best Albums of the Year: 2012'
+blog_editor_id: 3
 ---
 
 I think I'm getting old. Last year I only had 7 albums I like, this year is even worse. I listened to a lot of Leonard Cohen and Hall & Oates this year :-p

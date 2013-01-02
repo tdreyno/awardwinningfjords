@@ -1,6 +1,7 @@
---- 
-title: "Announcing: WouldHire.com"
+---
+title: ! 'Announcing: WouldHire.com'
 date: 2011-04-08
+blog_editor_id: 42
 ---
 
 [Josh Pyles]: http://pixelmatrixdesign.com/

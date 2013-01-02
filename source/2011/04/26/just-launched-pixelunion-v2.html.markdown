@@ -1,6 +1,7 @@
---- 
-title: "Just Launched: PixelUnion v2"
+---
+title: ! 'Just Launched: PixelUnion v2'
 date: 2011-04-26
+blog_editor_id: 36
 ---
 
 A project I've been working on has just launched. Check out the release post from the Metalab blog below:

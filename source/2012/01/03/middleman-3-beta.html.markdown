@@ -1,6 +1,7 @@
 ---
 title: Middleman 3.0 Beta
 date: 2012-01-03
+blog_editor_id: 24
 ---
 
 [the Github issue tracker]: https://github.com/middleman/middleman/issues

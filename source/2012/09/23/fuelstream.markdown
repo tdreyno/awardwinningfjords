@@ -1,6 +1,6 @@
 ---
-title: "Nike+ FuelStream"
-
+title: Nike+ FuelStream
+blog_editor_id: 10
 ---
 
 The [Nike+ FuelStream](http://gameonworld.nike.com/#en_US/fuelstream) is a curated social media experience hosted, currently, on Nike's "Game On, World" site. I apologize for the marketing-speak of that last sentence, but it's a fair description of the site, even if it makes me feel dirty.

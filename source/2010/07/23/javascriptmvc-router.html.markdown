@@ -1,6 +1,7 @@
---- 
+---
 title: JavascriptMVC Router
 date: 2010-07-23
+blog_editor_id: 61
 ---
 
 [Joshua Hull's wonderful Sherpa route recognizer]: http://github.com/joshbuddy/sherpa

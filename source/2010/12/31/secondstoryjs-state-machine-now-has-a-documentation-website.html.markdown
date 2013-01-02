@@ -1,6 +1,7 @@
---- 
+---
 title: SecondStoryJS State Machine now has a documentation website
 date: 2010-12-31
+blog_editor_id: 49
 ---
 
 You can now learn everything you wanted to know about the JavascriptMVC3 state machine on the project website at:

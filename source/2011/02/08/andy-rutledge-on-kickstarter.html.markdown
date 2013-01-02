@@ -1,6 +1,7 @@
---- 
+---
 title: Andy Rutledge on Kickstarter
 date: 2011-02-08
+blog_editor_id: 45
 ---
 
 > By taking the professional-to-client approach for what should be a merchant-to-customer context, Mr. Chimero has abdicated ownership of his idea/genius and the results that will come of it. Having bought and paid for it, the collective investors now own his genius in this project. By selling out first before he created the product he promises, he’s now working for the investors instead of working for himself.<br />

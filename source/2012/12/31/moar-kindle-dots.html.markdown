@@ -1,5 +1,6 @@
---- 
-title: "Moar Kindle Dots"
+---
+title: Moar Kindle Dots
+blog_editor_id: 1
 ---
 
 ## Trends

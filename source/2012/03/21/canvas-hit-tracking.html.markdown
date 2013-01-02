@@ -1,6 +1,7 @@
 ---
 title: Canvas Hit Tracking
 date: 2012-03-21
+blog_editor_id: 21
 ---
 
 *NOTE: Code samples are in CoffeeScript*

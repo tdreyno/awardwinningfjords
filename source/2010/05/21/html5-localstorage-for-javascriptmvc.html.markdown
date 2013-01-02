@@ -1,6 +1,7 @@
---- 
+---
 title: HTML5 localStorage for JavascriptMVC
 date: 2010-05-21
+blog_editor_id: 64
 ---
 
 [John Resig's blog post]: http://ejohn.org/blog/javascript-micro-templating/

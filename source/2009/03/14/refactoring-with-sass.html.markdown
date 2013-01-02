@@ -2,6 +2,7 @@
 title: Refactoring with Sass
 slug: refactoring-with-sass
 date: 2009-03-14
+blog_editor_id: 89
 ---
 
 I had intended to jump right into Compass modules and user-defined "functions," but that's a rather high-level concept and requires a relatively strong understanding of Sass which I shouldn't assume readers have because Sass isn't really that popular. I'll save the complicated stuff for the next article. Instead, I'll look at how you can take an existing CSS document and convert to Sass in preparation for the article on more-complicated techniques.

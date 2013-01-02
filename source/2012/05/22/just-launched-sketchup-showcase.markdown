@@ -1,5 +1,6 @@
---- 
-title: "Just Launched: SketchUp Showcase"
+---
+title: ! 'Just Launched: SketchUp Showcase'
+blog_editor_id: 15
 ---
 
 [Instrument]: http://weareinstrument.com

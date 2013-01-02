@@ -2,6 +2,7 @@
 title: NHaml idiosyncrasies
 slug: nhaml-idiosyncrasies
 date: 2009-04-30
+blog_editor_id: 84
 ---
 
 [NHaml]: http://code.google.com/p/nhaml/

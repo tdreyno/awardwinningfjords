@@ -1,6 +1,6 @@
 ---
-title: "Front-end Performance Tools: Embedded Vector"
-
+title: ! 'Front-end Performance Tools: Embedded Vector'
+blog_editor_id: 18
 ---
 
 [How to write low garbage real-time Javascript]: http://www.scirra.com/blog/76/how-to-write-low-garbage-real-time-javascript

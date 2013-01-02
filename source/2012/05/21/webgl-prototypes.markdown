@@ -1,6 +1,6 @@
 ---
-title: "WebGL Prototypes"
-
+title: WebGL Prototypes
+blog_editor_id: 16
 ---
 
 [Break an image into triangles, which can be rotated individually]: /projects/webgl-prototypes/triangles.html

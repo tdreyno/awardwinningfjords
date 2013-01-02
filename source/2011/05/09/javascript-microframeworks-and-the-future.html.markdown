@@ -1,6 +1,7 @@
---- 
-title: "Javascript Microframeworks and The Future"
+---
+title: Javascript Microframeworks and The Future
 date: 2011-05-09
+blog_editor_id: 33
 ---
 
 [jsconf]: http://2011.jsconf.us/

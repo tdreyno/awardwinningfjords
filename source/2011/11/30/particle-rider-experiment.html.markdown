@@ -1,6 +1,7 @@
---- 
-title: "Experiment: Particle Rider"
+---
+title: ! 'Experiment: Particle Rider'
 date: 2011-11-30
+blog_editor_id: 28
 ---
 
 [Paper.js]: http://paperjs.org/

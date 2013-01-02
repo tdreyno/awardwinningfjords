@@ -1,6 +1,7 @@
---- 
-title: "Kindle Dots"
+---
+title: Kindle Dots
 date: 2011-12-25
+blog_editor_id: 27
 ---
 
 I used to tear through several books at a time. I'd collect and organize as many as I could get my hands on and keep them in as pristine condition as possible.

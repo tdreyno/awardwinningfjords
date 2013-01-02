@@ -2,6 +2,7 @@
 title: Sass Introduction slides
 slug: sass-introduction-slides
 date: 2009-04-02
+blog_editor_id: 87
 ---
 
 Here's the slides I will be presenting at Jive Software:

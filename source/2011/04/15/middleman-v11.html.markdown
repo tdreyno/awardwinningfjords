@@ -1,6 +1,7 @@
---- 
+---
 title: Middleman v1.1
 date: 2011-04-15
+blog_editor_id: 40
 ---
 
 [I introduced Middleman on this blog]: /2009/10/22/middleman

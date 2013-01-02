@@ -1,6 +1,7 @@
---- 
-title: "Model and Data Store: JavascriptMVC"
+---
+title: ! 'Model and Data Store: JavascriptMVC'
 date: 2011-02-18
+blog_editor_id: 43
 ---
 
 Last time, [I wrote about client-side models] in an abstract way using plain Javascript. Understanding the purpose of models and encapulating model-specific functionality is important for code organization, but you will end up having to write a bunch of code to support your models. For example, converting and parsing JSON values, figuring out how and when to push changes to the server and client-side validations.

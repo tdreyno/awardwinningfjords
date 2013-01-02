@@ -1,6 +1,7 @@
---- 
-title: "Speaking at jQuery Conference: Boston 2010"
+---
+title: ! 'Speaking at jQuery Conference: Boston 2010'
 date: 2010-09-08
+blog_editor_id: 56
 ---
 
 [jQuery Conference: Boston 2010]: http://events.jquery.org/2010/boston/

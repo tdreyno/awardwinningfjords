@@ -1,7 +1,7 @@
 ---
-title: "Beware of CoffeeScript Comprehensions"
+title: Beware of CoffeeScript Comprehensions
 date: 2012-05-08
-
+blog_editor_id: 19
 ---
 
 [Comprehensions]: http://coffeescript.org/#loops

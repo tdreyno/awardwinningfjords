@@ -1,6 +1,7 @@
---- 
+---
 title: Branching Out, Opening Up and Publishing More
 date: 2011-04-23
+blog_editor_id: 39
 ---
 
 [Marco Arment]: http://marco.org

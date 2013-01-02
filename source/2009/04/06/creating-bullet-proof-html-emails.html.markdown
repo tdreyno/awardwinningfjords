@@ -2,6 +2,7 @@
 title: Creating bullet-proof HTML emails
 slug: creating-bullet-proof-html-emails
 date: 2009-04-06
+blog_editor_id: 86
 ---
 
 [Microsoft takes email design back 5 years]: http://www.campaignmonitor.com/blog/post/2393/microsoft-takes-email-design-b/

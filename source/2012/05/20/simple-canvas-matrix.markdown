@@ -1,6 +1,6 @@
 ---
-title: "Front-end Performance Tools: Canvas Matrix"
-
+title: ! 'Front-end Performance Tools: Canvas Matrix'
+blog_editor_id: 17
 ---
 
 [Sylvester]: http://sylvester.jcoglan.com

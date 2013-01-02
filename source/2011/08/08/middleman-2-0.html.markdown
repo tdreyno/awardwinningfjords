@@ -1,6 +1,7 @@
 ---
 title: Middleman 2.0
 date: 2011-08-08
+blog_editor_id: 31
 ---
 
 [full documentation website]: http://middlemanapp.com

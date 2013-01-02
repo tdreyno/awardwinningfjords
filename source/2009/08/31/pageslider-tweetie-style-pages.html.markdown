@@ -2,6 +2,7 @@
 title: Tweetie-style paging with pageSlider
 slug: pageslider-tweetie-style-pages
 date: 2009-08-31
+blog_editor_id: 74
 ---
 
 [Tweetie for Mac]: http://www.atebits.com/tweetie-mac/

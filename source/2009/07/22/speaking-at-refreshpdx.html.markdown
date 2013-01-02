@@ -2,6 +2,7 @@
 title: Speaking at RefreshPDX on Sass
 slug: speaking-at-refreshpdx
 date: 2009-07-22
+blog_editor_id: 75
 ---
 
 [Refresh Portland]: http://refreshpdx.org/

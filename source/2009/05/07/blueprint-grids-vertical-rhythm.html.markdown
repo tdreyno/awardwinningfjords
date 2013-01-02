@@ -2,6 +2,7 @@
 title: Using Compass to implement the Blueprint grid-system &amp; consistent vertical-rhythm
 slug: blueprint-grids-vertical-rhythm
 date: 2009-05-07
+blog_editor_id: 83
 ---
 
 Using Sass &amp; Compass I updated the css on this site to use Blueprint's 950px grid system and their typography for consistent vertical rhythm. 

@@ -1,6 +1,7 @@
---- 
-title: "Just Launched: The License Lab"
+---
+title: ! 'Just Launched: The License Lab'
 date: 2011-11-03
+blog_editor_id: 29
 ---
 
 [Instrument]: http://weareinstrument.com

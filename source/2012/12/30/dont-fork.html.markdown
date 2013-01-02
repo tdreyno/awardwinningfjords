@@ -1,7 +1,7 @@
 ---
-title: "Don't Fork"
+title: Don't Fork
 published: false
-
+blog_editor_id: 2
 ---
 
 What makes an Open Source project great? Is it simply the fact that you're getting code for free? If that were true, then SourceForge and `code.google.com` wouldn't be ghost towns.

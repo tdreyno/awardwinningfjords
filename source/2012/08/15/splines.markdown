@@ -1,6 +1,6 @@
 ---
-title: "Reticulating Splines"
-
+title: Reticulating Splines
+blog_editor_id: 11
 ---
 
 The Javascript community is at a huge disadvantage. For some reason, the experience, code and community of Flash developers never quite transferred over. Maybe living in an Adobe ecosystem stifled their open source contributions, maybe we were too new to understand or maybe we just don't travel in the same circles.

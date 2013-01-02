@@ -1,5 +1,6 @@
 ---
-title: "Facebook the Devourer"
+title: Facebook the Devourer
+blog_editor_id: 8
 ---
 
 I can't find a way to write this article without it sounding like a rant, so why fight it? **The views and opinions expressed are my own and do not necessarily represent the views of my employer.**

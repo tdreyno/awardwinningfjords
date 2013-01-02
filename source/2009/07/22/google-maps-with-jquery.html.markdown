@@ -2,6 +2,7 @@
 title: Easy Google Maps with jQuery
 slug: google-maps-with-jquery
 date: 2009-07-22
+blog_editor_id: 77
 ---
 
 The other day I needed a simple way to include a Google Map, so I wrote this jQuery function.

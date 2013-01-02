@@ -1,6 +1,6 @@
 ---
 title: Window Location in UIWebView
-
+blog_editor_id: 6
 ---
 
 Which question. How do you get the current URL of a page in a `UIWebView` context (link followed from Twitter, Facebook, Gmail.app, etc)? If you said, `window.location.href`, **you'd be wrong**.

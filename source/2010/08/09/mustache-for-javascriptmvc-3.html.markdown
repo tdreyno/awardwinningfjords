@@ -1,6 +1,7 @@
---- 
+---
 title: Mustache for JavascriptMVC 3
 date: 2010-08-09
+blog_editor_id: 57
 ---
 
 [the Github repository]: http://github.com/tdreyno/mustache-javascriptmvc

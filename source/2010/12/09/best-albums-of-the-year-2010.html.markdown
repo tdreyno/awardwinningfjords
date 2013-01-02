@@ -1,6 +1,7 @@
---- 
-title: "Best Albums of the Year: 2010"
+---
+title: ! 'Best Albums of the Year: 2010'
 date: 2010-12-09
+blog_editor_id: 50
 ---
 
 It's that time of year again! I don't want a personal live journal all year, but damnit this is the one exception. I document my opinions because I think it will be really fun to look back and see what I was listening to in Ye Olde 2010. I suppose this should be a "Top 14" list, but instead it's "Top 10" and some honorable mentions. Let's  get started.

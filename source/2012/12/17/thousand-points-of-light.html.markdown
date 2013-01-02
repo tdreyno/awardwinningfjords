@@ -1,6 +1,6 @@
 ---
-title: "Sparkle Motion: A Thousand Points of Light"
-
+title: ! 'Sparkle Motion: A Thousand Points of Light'
+blog_editor_id: 4
 ---
 
 This year, we ([Instrument](http://weareinstrument.com)) had the opportunity to work on [Google's Zeitgeist site](http://www.google.com/zeitgeist/2012/). Every year, Google collects the most popular and fastest rising search results and shares them with the world. The site features the results of "The World" & 55 different countries in a multitude of different languages (including several Right-to-Left languages) and is responsive across all browser sizes. Kudos to my teammates [@stefhatcher](http://twitter.com/stefhatcher) and [@waytoocrowded](http://twitter.com/waytoocrowded) on managing this extraordinary task.
