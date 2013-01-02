@@ -7,6 +7,8 @@ activate :blog do |blog|
   blog.sources = ":year/:month/:day/:title.html"
 end
 
+activate :blog_editor
+
 set :markdown_engine, :redcarpet
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
 
