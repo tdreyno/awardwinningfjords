@@ -9,6 +9,12 @@ end
 
 activate :blog_editor
 
+activate :fjords do |config|
+  config.username = Bundler.settings["fjords_username"]
+  config.password = Bundler.settings["fjords_password"]
+  config.domain = "fjords.awardwinningfjords.com"
+end
+
 set :markdown_engine, :redcarpet
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
 
