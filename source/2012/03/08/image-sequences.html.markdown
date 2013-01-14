@@ -117,13 +117,21 @@ The Canvas element is just a blank slate you can draw pixels on to. Drawing imag
 
 The above function will take a Canvas context, an Image object, the dimensions of each frame and the frame to draw. We'll use [requestAnimationFrame] for smooth animations.
     
+    function rightNow() {
+      if (window['performance'] && window['performance']['now']) {
+        return window['performance']['now']();
+      } else {
+        return +(new Date());
+      }
+    }
+
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,
         img          = document.getElementById("frames"),
         canvas       = document.getElementById("canvas"),
         ctx          = canvas.getContext("2d"),
-        currentTime  = new Date().getTime();
+        currentTime  = rightNow();
     
     (function animloop(time){
       var delta = (time - currentTime) / 1000;
@@ -156,11 +164,19 @@ The next solution is to implement the CSS version in Javascript. We'll use the e
 
 Similar CSS, minus the CSS Animation code. Now for the JS (which is similar to the Canvas implementation): 
 
+    function rightNow() {
+      if (window['performance'] && window['performance']['now']) {
+        return window['performance']['now']();
+      } else {
+        return +(new Date());
+      }
+    }
+
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,
         elem         = document.getElementById("my-particle2"),
-        currentTime  = new Date().getTime();
+        currentTime  = rightNow();
 
     (function animloop(time){
       var delta = (time - currentTime) / 1000;
@@ -190,11 +206,19 @@ Traditionally, this approach has been considered too slow to smoothly animate, b
 
 Here's an implementation:
 
+    function rightNow() {
+      if (window['performance'] && window['performance']['now']) {
+        return window['performance']['now']();
+      } else {
+        return +(new Date());
+      }
+    }
+
     var fps          = 30,
         currentFrame = 0,
         totalFrames  = 60,
         img          = document.getElementById("myImage"),
-        currentTime  = new Date().getTime();
+        currentTime  = rightNow();
 
     (function animloop(time){
       var delta = (time - currentTime) / 1000;

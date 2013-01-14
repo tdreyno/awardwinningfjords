@@ -1,8 +1,16 @@
+function rightNow() {
+  if (window['performance'] && window['performance']['now']) {
+    return window['performance']['now']();
+  } else {
+    return +(new Date());
+  }
+}
+
 var fps          = 30,
     currentFrame = 0,
     totalFrames  = 60,
     elem         = document.getElementById("my-particle2"),
-    currentTime  = new Date().getTime();
+    currentTime  = rightNow();
 
 (function animloop(time){
   var delta = (time - currentTime) / 1000;

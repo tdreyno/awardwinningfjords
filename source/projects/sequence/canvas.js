@@ -5,6 +5,14 @@ function drawFrame(ctx, image, width, height, num) {
   ctx.drawImage(image, offsetX, offsetY, width, height, 0, 0, width, height);
 }
 
+function rightNow() {
+  if (window['performance'] && window['performance']['now']) {
+    return window['performance']['now']();
+  } else {
+    return +(new Date());
+  }
+}
+
 var img = new Image();
 img.onload = function() {
   var fps          = 30,
@@ -12,7 +20,7 @@ img.onload = function() {
       totalFrames  = 60,
       canvas       = document.getElementById("canvas"),
       ctx          = canvas.getContext("2d"),
-      currentTime  = new Date().getTime();
+      currentTime  = rightNow();
   
   (function animloop(time){
     var delta = (time - currentTime) / 1000;
