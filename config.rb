@@ -20,11 +20,11 @@ set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash, :exts => ['.css'], :ignore => [/projects\//, /solarized_light/, /3d-accordion/]
+  # activate :asset_hash, :exts => ['.css'], :ignore => [/projects\//, /solarized_light/, /3d-accordion/]
   # activate :cache_buster
 
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
   
   # Minify Javascript on build
   # activate :minify_javascript
