@@ -4,17 +4,18 @@
 @import "normalize";
 @import "modular-scale";
 @import "foundation/functions/all";
+
 @import "foundation/settings";
+
+$mainColor: #00a6fc;
+$red: #e91c21;
+$black: #141414;
+
 @import "foundation/mixins/all";
 @import "foundation/common/base";
 @import "foundation/components/grid";
-
-
-$blue: #00a6fc;
-$white: #fff;
-$black: #000;
-$red: #e91c21;
-$black: #141414;
+@import "foundation/components/modules/ui";
+@import "foundation/components/modules/mqueries";
 
 body {
   @include font-size(15); }
