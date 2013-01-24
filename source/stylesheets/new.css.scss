@@ -1,7 +1,20 @@
-@import "zurb/includes";
-@import "zurb/globals";
-@import "zurb/typography";
-@import "zurb/mobile";
+@charset "UTF-8";
+@import "compass";
+@import "compass/css3";
+@import "normalize";
+@import "modular-scale";
+@import "foundation/functions/all";
+@import "foundation/settings";
+@import "foundation/mixins/all";
+@import "foundation/common/base";
+@import "foundation/components/grid";
+
+
+$blue: #00a6fc;
+$white: #fff;
+$black: #000;
+$red: #e91c21;
+$black: #141414;
 
 body {
   @include font-size(15); }
