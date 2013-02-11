@@ -4,7 +4,7 @@
     <a href="/archives">Archive</a>
   </h2>
   <ul class="disc">
-    <% blog.articles[0...12].each do |article| %>
+    <% blog.articles[0...15].each do |article| %>
       <li><a href="<%= article.url %>"><%= article.title %></a> <time><%= article.date.strftime('%b %e') %></time></li>
     <% end %>
   </ul>
@@ -17,6 +17,10 @@
   </h2>
   <ul class="disc">
     <li>
+      <a href="http://fjords.cc">Fjords</a>
+      A simple service for sharing static websites
+    </li>
+    <li>
       <a href="http://middlemanapp.com">Middleman</a>
       Hand-crafted frontend development framework
     </li>
@@ -24,7 +28,7 @@
       <a href="http://ios-checkboxes.awardwinningfjords.com/">iPhone-style Checkboxes</a>
       Converts inputs into iPhone sliders
     </li>
-    <li>
+    <!--li>
       <a href="http://secondstory.github.com/secondstoryjs-statemachine/">State Machine for JavascriptMVC</a>
       Finite State Machine for JavascriptMVC
     </li>
@@ -47,6 +51,6 @@
     <li>
       <a href="https://github.com/tdreyno/compass-baseline">Baseline for Compass</a>
       Baseline grid for Compass and Sass
-    </li>
+    </li-->
   </ul>
 </section>
