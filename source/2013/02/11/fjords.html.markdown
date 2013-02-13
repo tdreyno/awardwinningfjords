@@ -7,7 +7,7 @@ I'm very excited to announce my new project, [Fjords](http://fjords.cc).
 
 [![Fjords](http://src.sencha.io/-30/http://awardwinningfjords.com/images/monitor-goblins.png)](http://fjords.cc)
 
-Fjords is a service that lets you upload your static websites to be hosted in the cloud. It's that simple. In less than a minute, your site will 
+Fjords is a service that lets you upload your static websites to be hosted in the cloud.
 
 ### Use Case: Agency Environment
 
