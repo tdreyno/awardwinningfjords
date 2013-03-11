@@ -140,7 +140,7 @@ footer {
 
 .albums {
   @include no-bullets;
-  @media only screen and (min-width: 767px) {
+  @media #{$small} {
     li {
       @include pie-clearfix; }
     .cover {
