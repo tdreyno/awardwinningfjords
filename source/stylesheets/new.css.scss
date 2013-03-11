@@ -2,23 +2,17 @@
 @import "compass";
 @import "compass/css3";
 @import "normalize";
-@import "modular-scale";
-@import "foundation/functions/all";
 
-@import "foundation/settings";
+$em-base: 15px;
 
-$mainColor: #00a6fc;
+$primary-color: #00a6fc;
 $red: #e91c21;
 $black: #141414;
 
-@import "foundation/mixins/all";
-@import "foundation/common/base";
-@import "foundation/components/grid";
-@import "foundation/components/modules/ui";
-@import "foundation/components/modules/mqueries";
+@import "foundation";
 
-body {
-  @include font-size(15); }
+// body {
+//   @include font-size(15); }
 
 p {
   line-height: 20px;
@@ -30,21 +24,21 @@ header {
   margin-bottom: 24px;
   h1 {
     padding: 12px 0;
-    @include font-size(15);
+    font-size: emCalc(15px);
+    text-align: center;
+    @media #{$small} {
+      text-align: left;
+    }
     a {
       color: #666; }
     .sub {
-      float: right;
-      color: #666; }
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  header h1 {
-    text-align: center;
-    .sub {
       display: block;
       float: none;
+      color: #666;
+      @media #{$small} {
+        float: right;
+        display: inline;
+      }
     }
   }
 }
@@ -63,7 +57,7 @@ h2 {
 }
 
 .small {
-  @include font-size(15);
+  font-size: 15px;
 }
 
 article {
@@ -109,22 +103,23 @@ article {
   margin-bottom: 24px; 
   time {
     float: right;
-    @media only screen and (max-width: 767px) {
-      display: none;
+    display: none;
+    @media #{$small} {
+      display: inline;
     }
   }
 }
 
 #recent, #projects {
-  @include font-size(14);
+  font-size: emCalc(14px);
   h2 {
     a {
       padding-top: 19px;
-      display: inline;
       float: right;
       @extend .small; 
-      @media only screen and (max-width: 767px) {
-        display: none;
+      display: none;
+      @media #{$small} {
+        display: inline;
       }
     }
   }

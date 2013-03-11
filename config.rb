@@ -15,6 +15,8 @@ activate :fjords do |config|
   config.username = Bundler.settings["fjords_username"]
   config.password = Bundler.settings["fjords_password"]
   config.domain = "awardwinningfjords.com"
+  config.gzip_assets = true
+  config.cdn = true
 end
 
 set :markdown_engine, :redcarpet
