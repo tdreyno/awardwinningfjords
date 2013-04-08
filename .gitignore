@@ -8,3 +8,4 @@ Gemfile.lock
 source/mint/config/db.php
 .mm-pid*
 bin
+.ruby-version
