@@ -1,6 +1,6 @@
 ---
-title: "Fjords: A Simple Service for Sharing Static Websites"
-
+title: 'Fjords: A Simple Service for Sharing Static Websites'
+blog_editor_id: 95
 ---
 
 I'm very excited to announce my new project, [Fjords](http://fjords.cc).

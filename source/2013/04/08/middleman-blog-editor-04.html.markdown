@@ -2,6 +2,7 @@
 title: Middleman Blog Editor v0.4
 tags: middleman
 published: true
+blog_editor_id: 92
 ---
 
 I'm happy to announce [Middleman Blog Editor v0.4](http://middleman-blog-editor.awardwinningfjords.com), the second feature release of the project. With this release comes two big features and a bump in price to $12. [You can purchase a license here](http://register.tdreyno.com). Existing users get free updates all the way until the 2.0 release. The next release, the price will be bumped to $18.

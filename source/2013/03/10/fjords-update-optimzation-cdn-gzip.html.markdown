@@ -1,5 +1,6 @@
 ---
-title: "New Features: Image Optimization, CDN and Gzip Support"
+title: 'New Features: Image Optimization, CDN and Gzip Support'
+blog_editor_id: 93
 ---
 
 Today I'm happy to announce the first round of new [Fjords](http://fjords.cc) features. If you're not yet a user, [find out more on the website](http://fjords.cc).

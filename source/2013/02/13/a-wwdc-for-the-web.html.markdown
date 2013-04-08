@@ -1,6 +1,6 @@
 ---
-title: "A WWDC for the Web"
-
+title: A WWDC for the Web
+blog_editor_id: 94
 ---
 
 The last few years has seen an explosion in what's possible with Web technologies. The Mobile Web will soon be the way the majority of users view your site. HTML5 applications are robust, stable and becoming ubiquitous. Simply put: the Web platform is maturing.
