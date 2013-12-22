@@ -1,5 +1,6 @@
 ---
-title: 'Best Albums of the Year: 2013'
+:title: 'Best Albums of the Year: 2013'
+blog_editor_id: 99
 ---
 
 After my disappointment with 2012, this year came back with some great albums. I'm not going to bother to rank them, but here they are.

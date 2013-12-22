@@ -1,6 +1,7 @@
 ---
-title: Still Reading
-published: false
+:title: Still Reading
+:published: false
+blog_editor_id: 97
 ---
 
 ## Trends
