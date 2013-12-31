@@ -1,35 +1,46 @@
 ---
 :title: Still Reading
-:published: false
 blog_editor_id: 97
 ---
 
-## Trends
-
-* 3 Books by Brandon Sanderson
-* 3 Vorkosigan Novels
-* 3 Trilogies (Mistborn, The First Law, The Hundred Thousand Kingdoms)
-* 5 Audio Books (remaining Codex Alera books)
+I read a lot this year. Not as much as last year, but still not too shabby.
 
 ## Books
 
-Title                          | Pages
--------------------------------|------
-Two Serpents Rise
-The Curse of Chalion
-Steelheart
-Three Parts Dead
-Captain Vorpatril's Alliance
-Abbadon's Gate
-Throne of the Crescent Moon
-Elantris
-Warbreaker
-Caliban's War
-Etiquette & Espionage
-Diplomatic Immunity
-Red Country
-The Heroes
-A Civil Campgaign
+* Best Served Cold
+* A Civil Campgaign
+* The Heroes
+* Diplomatic Immunity
+* Red Country
+* The Human Division
+* Etiquette & Espionage
+* Caliban's War
+* Warbreaker
+* The Rithmatist
+* Elantris
+* Throne of the Crescent Moon
+* Abbadon's Gate
+* Captain Vorpatril's Alliance
+* Three Parts Dead
+* The Killing Moon
+* Steelheart
+* The Curse of Chalion
+* The Thousand Names
+* The Republic of Theives
+* Two Serpents Rise
+* Ancillary Justice
+* The Black Prism
+* The Blinding Knife
+* Promise of Blood
 
-* Total Pages: __17615__
-* Average Pages per Day: __48__
+## Trends
+
+* 3 Books by Joe Abercrombie
+* 4 Books by Brandon Sanderson
+* 4 Books by Lois McMaster Bojold
+* 5 Audio Books (remaining Codex Alera books)
+
+## Stats
+
+* Total Pages: __12551__ 
+* Average Pages per Day: __34__
