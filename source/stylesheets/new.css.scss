@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import "compass";
-@import "compass/css3";
-@import "normalize";
+@import "bower_components/foundation/scss/normalize";
+@import "compass/typography/lists/bullets";
+@import "compass/utilities/general/clearfix";
 
 $em-base: 15px;
 
@@ -9,14 +9,12 @@ $primary-color: #00a6fc;
 $red: #e91c21;
 $black: #141414;
 
-@import "foundation";
+@import "bower_components/foundation/scss/foundation/components/grid";
+@import "bower_components/foundation/scss/foundation/components/type";
+@import "bower_components/foundation/scss/foundation/components/visibility";
 
-// body {
-//   @include font-size(15); }
-
-p {
-  line-height: 20px;
-  margin-bottom: 20px;
+body {
+  -webkit-font-smoothing: antialiased;
 }
   
 header {
