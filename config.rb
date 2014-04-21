@@ -22,6 +22,7 @@ set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
 
 # Build-specific configuration
 configure :build do
+  ignore "stylesheets/bower_components/*"
   # activate :asset_hash, :exts => ['.css'], :ignore => [/projects\//, /solarized_light/, /3d-accordion/]
   # activate :cache_buster
 
