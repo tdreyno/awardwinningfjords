@@ -117,11 +117,11 @@ Instead of passing anonymous functions to iterators, many Functional programmers
 Now, we have a `plus1` function which is simply the `plus` function with the first argument already filled in. An implementation of `partial` would look like this:
 
     function partial() {
-      var args = Array.prototype.slice.apply(arguments, 0);
+      var args = Array.prototype.slice.call(arguments, 0);
       var f = args.shift();
 
       return function partialExecute_() {
-        var args2 = Array.prototype.slice.apply(arguments, 0);
+        var args2 = Array.prototype.slice.call(arguments, 0);
         return f.apply(this, args.concat(args2));
       };
     }
@@ -140,7 +140,7 @@ Function composition is similar, it allows you to take two functions and create 
 A simple implementation would be:
 
     function compose() {
-      var fns = Array.prototype.slice.apply(arguments, 0);
+      var fns = Array.prototype.slice.call(arguments, 0);
 
       return function composedExecute_(value) {
         for (var i = fns.length - 1; i >= 0; --i) {
