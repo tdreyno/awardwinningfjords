@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1.1
+- 2.1.1
 script: bundle exec middleman build
 deploy:
   provider: divshot
@@ -8,4 +8,4 @@ deploy:
     master: production
   skip_cleanup: true
   api_key:
-    secure: mZva6+r4Pjy5tuys43ARB2VJ+R2k/tGbQGj9PLgjLoNsR1Rp2KezZcWkURcQSiwlO5qLBguPjsKQL05bR8mr7amij2YdWzFMIgh++3z+AqkLuTYc4eo4yMO1asAw69dsWARqe8vywiL5W40Z57bFbgLiNkfF5Omxv3EamHMTXFQ=
+    secure: ILIX/2umDVKbpx5STlbfIcAVb8B8FTT6R8w4TFPF+YBQ0ATuPAZQYbGQSHjMSgQpVqFfHbvtKCaSMcCkfO6/juXvk5ybJtCPIH4HQTc79UDOsONxUFCT9PllHhff+c4+am0WhZdXJTlVYtH3O0W6OVghzhp/mIYSMAMtp1KvMYw=
