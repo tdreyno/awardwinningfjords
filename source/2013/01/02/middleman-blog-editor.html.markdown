@@ -55,5 +55,5 @@ Please refer to the official website for documentation and support: http://middl
 
 ## Here's what it looks like:
 
-![Article List](http://src.sencha.io/-30/http://awardwinningfjords.com/images/blog-editor/list.png)
-![WYSIWYG Editor](http://src.sencha.io/-30/http://awardwinningfjords.com/images/blog-editor/wysiwyg.png)
+![Article List](/images/blog-editor/list.png)
+![WYSIWYG Editor](/images/blog-editor/wysiwyg.png)

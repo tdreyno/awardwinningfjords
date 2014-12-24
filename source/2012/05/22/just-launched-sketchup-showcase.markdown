@@ -10,4 +10,4 @@ The talented team at [Instrument] has just launched the [SketchUp Showcase]. The
 
 Go ahead and check it out!
 
-<a href="http://www.google.com/sketchup/showcase"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/sketchup.jpg"></a>
+<a href="http://www.google.com/sketchup/showcase"><img src="/images/sketchup.jpg"></a>

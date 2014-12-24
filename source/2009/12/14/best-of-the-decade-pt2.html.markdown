@@ -9,7 +9,7 @@ blog_editor_id: 71
 <ul class="albums">
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/25.jpg' />
+      <img src='/albums/25.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h4>Of Montreal - Skeletal Lamping</h4>
@@ -21,7 +21,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/24.jpg' />
+      <img src='/albums/24.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>Menomena - Friend and Foe</h4>
@@ -33,7 +33,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/23.jpg' />
+      <img src='/albums/23.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Gospel - The Moon is a Dead World</h4>
@@ -45,7 +45,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/22.jpg' />
+      <img src='/albums/22.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Brand New - The Devil and God Are Raging Inside Me</h4>
@@ -57,7 +57,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/21.jpg' />
+      <img src='/albums/21.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h4>A.F.I. - The Art of Drowning</h4>
@@ -71,7 +71,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/20.jpg' />
+      <img src='/albums/20.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Gorillaz - Demon Days</h4>
@@ -83,7 +83,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/19.jpg' />
+      <img src='/albums/19.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>The World/Inferno Friendship Society - Addicted to Bad Ideas</h4>
@@ -95,7 +95,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/18.jpg' />
+      <img src='/albums/18.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h4>Rx Bandits - Progress</h4>
@@ -107,7 +107,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/17.jpg' />
+      <img src='/albums/17.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Death Cab for Cutie - Plans</h4>
@@ -119,7 +119,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/16.jpg' />
+      <img src='/albums/16.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h4>La Dispute - Somewhere at the Bottom of the River Between Vega and Altair</h4>
@@ -131,7 +131,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/15.jpg' />
+      <img src='/albums/15.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h4>Girl Talk - Feed the Animals</h4>
@@ -143,7 +143,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/14.jpg' />
+      <img src='/albums/14.jpg' />
     </div>
     <div class='content'>
       <h6>2009</h6><h4>Rx Bandits - Mandala</h4>
@@ -155,7 +155,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/13.jpg' />
+      <img src='/albums/13.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h4>The Postal Service - Give Up</h4>
@@ -167,7 +167,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/12.jpg' />
+      <img src='/albums/12.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Head Automatica - Popaganda</h4>
@@ -179,7 +179,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/11.jpg' />
+      <img src='/albums/11.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h4>Deltron - Deltron 3030</h4>
@@ -191,7 +191,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/10.jpg' />
+      <img src='/albums/10.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h4>mewithoutYou - Catch For Us the Foxes</h4>
@@ -203,7 +203,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/09.jpg' />
+      <img src='/albums/09.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h4>Rx Bandits - The Resignation</h4>
@@ -215,7 +215,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/08.jpg' />
+      <img src='/albums/08.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>The Mars Volta - Frances the Mute</h4>
@@ -227,7 +227,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/07.jpg' />
+      <img src='/albums/07.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h4>Leftover Crack - Fuck World Trade</h4>
@@ -239,7 +239,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/06.jpg' />
+      <img src='/albums/06.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h4>Why? - Alopecia</h4>
@@ -252,7 +252,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/05.jpg' />
+      <img src='/albums/05.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Justin Timberlake - Futuresex/Lovesounds</h4>
@@ -264,7 +264,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/04.jpg' />
+      <img src='/albums/04.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>Bloc Party - A Weekend in the City</h4>
@@ -276,7 +276,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/03.jpg' />
+      <img src='/albums/03.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h4>At the Drive-In - Relationship of Command</h4>
@@ -288,7 +288,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/02.jpg' />
+      <img src='/albums/02.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>The Format - Dog Problems</h4>
@@ -300,7 +300,7 @@ blog_editor_id: 71
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/01.jpg' />
+      <img src='/albums/01.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Say Anything - ...Is a Real Boy</h4>

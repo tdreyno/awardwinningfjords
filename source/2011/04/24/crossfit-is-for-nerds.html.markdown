@@ -38,7 +38,7 @@ This year, there were nearly 30,000 registered athletes, so HQ (the folks who ru
 
 First, this further enhances the community by creating thousands of mini-competitions. Second, this is all happening live on the [CrossFit Games website], which means there is a metric fuckton of data. Check it out:
 
-<a href="http://games.crossfit.com/content/scoreboard-men"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/scoreboard.jpg"></a>
+<a href="http://games.crossfit.com/content/scoreboard-men"><img src="/images/scoreboard.jpg"></a>
 
 Now, I'm not a statistician, but [this guy is]. Drink in the data:
 

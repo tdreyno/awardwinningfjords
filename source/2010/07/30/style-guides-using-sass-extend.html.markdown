@@ -13,7 +13,7 @@ The Style Guide
 
 The designer on the project has put together a wonderful style guide PDF which I will be implementing in Sass. Here is what it looks like:
 
-<img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/style-guide-full.png" />
+<img src="/images/style-guide-full.png" />
 
 As you can see, each style has a title and some specifics for the text treatment.
 

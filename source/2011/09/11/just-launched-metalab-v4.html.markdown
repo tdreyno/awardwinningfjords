@@ -17,7 +17,7 @@ I'm happy to announce the latest version of the Metalab Design website is live! 
 
 Check it out!
 
-<a href="http://metalabdesign.com"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/metalab.jpg"></a>
+<a href="http://metalabdesign.com"><img src="/images/metalab.jpg"></a>
 
 READMORE
 

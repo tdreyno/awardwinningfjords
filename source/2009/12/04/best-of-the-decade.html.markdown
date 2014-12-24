@@ -10,7 +10,7 @@ blog_editor_id: 72
 <ul class="albums">
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/50.jpg' />
+      <img src='/albums/50.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Panic at the Disco - A Fever You Can't Sweat Out</h4>
@@ -22,7 +22,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/49.jpg' />
+      <img src='/albums/49.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Mogwai - Mr Beast</h4>
@@ -34,7 +34,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/48.jpg' />
+      <img src='/albums/48.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h4>Bad Religion - The Process of Belief</h4>
@@ -46,7 +46,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/47.jpg' />
+      <img src='/albums/47.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Scissor Sisters - Ta-Dah</h4>
@@ -58,7 +58,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/46.jpg' />
+      <img src='/albums/46.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Transplants - Haunted Cities</h4>
@@ -70,7 +70,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/45.jpg' />
+      <img src='/albums/45.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h4>System of a Down - Toxicity</h4>
@@ -82,7 +82,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/44.jpg' />
+      <img src='/albums/44.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Mindless Self Indulgence - You'll Rebel To Anything</h4>
@@ -94,7 +94,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/43.jpg' />
+      <img src='/albums/43.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h4>My Chemical Romance - Three Cheers for Sweet Romance</h4>
@@ -106,7 +106,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/42.jpg' />
+      <img src='/albums/42.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>Of Montreal - Hissing Fauna, Are You the Destroyer?</h4>
@@ -118,7 +118,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/41.jpg' />
+      <img src='/albums/41.jpg' />
     </div>
     <div class='content'>
       <h6>2000</h6><h4>Deftones - White Pony</h4>
@@ -130,7 +130,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/40.jpg' />
+      <img src='/albums/40.jpg' />
     </div>
     <div class='content'>
       <h6>2008</h6><h4>The Mae Shi - Hlllyh</h4>
@@ -142,7 +142,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/39.jpg' />
+      <img src='/albums/39.jpg' />
     </div>
     <div class='content'>
       <h6>2004</h6><h4>Sum 41 - Chuck</h4>
@@ -154,7 +154,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/38.jpg' />
+      <img src='/albums/38.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>Fall Out Boy - Infinity on High</h4>
@@ -166,7 +166,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/37.jpg' />
+      <img src='/albums/37.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h4>Queens of the Stone Age - Songs for the Deaf</h4>
@@ -178,7 +178,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/36.jpg' />
+      <img src='/albums/36.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>Big D and the Kids Table - Strictly Rude</h4>
@@ -190,7 +190,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/35.jpg' />
+      <img src='/albums/35.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h4>Ozma - Rock and Rock Part 3</h4>
@@ -202,7 +202,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/34.jpg' />
+      <img src='/albums/34.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h4>The Mars Volta - De-Loused in the Comatorium</h4>
@@ -214,7 +214,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/33.jpg' />
+      <img src='/albums/33.jpg' />
     </div>
     <div class='content'>
       <h6>2002</h6><h4>Common Rider - This is Unity Music</h4>
@@ -226,7 +226,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/32.jpg' />
+      <img src='/albums/32.jpg' />
     </div>
     <div class='content'>
       <h6>2007</h6><h4>The National - Boxer</h4>
@@ -238,7 +238,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/31.jpg' />
+      <img src='/albums/31.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Clint Mansell (w/ Mogwai & Kronos Quartet) - The Fountain (Music from the Motion Picture)</h4>
@@ -250,7 +250,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/30.jpg' />
+      <img src='/albums/30.jpg' />
     </div>
     <div class='content'>
       <h6>2005</h6><h4>Kanye West - Late Registration</h4>
@@ -262,7 +262,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/29.jpg' />
+      <img src='/albums/29.jpg' />
     </div>
     <div class='content'>
       <h6>2003</h6><h4>The Distillers - Coral Fang</h4>
@@ -274,7 +274,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/28.jpg' />
+      <img src='/albums/28.jpg' />
     </div>
     <div class='content'>
       <h6>2006</h6><h4>The Dresden Dolls - Yes Virginia</h4>
@@ -286,7 +286,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/27.jpg' />
+      <img src='/albums/27.jpg' />
     </div>
     <div class='content'>
       <h6>2001</h6><h4>Leftover Crack - Mediocre Generica</h4>
@@ -298,7 +298,7 @@ blog_editor_id: 72
   </li>
   <li>
     <div class='cover'>
-      <img src='http://awardwinningfjords.com/albums/26.jpg' />
+      <img src='/albums/26.jpg' />
     </div>
     <div class='content'>
       <h6>2009</h6><h4>Portugal the Man - The Satanic Satanist</h4>

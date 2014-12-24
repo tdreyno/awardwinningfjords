@@ -121,4 +121,4 @@ Now you can interact with your server-side models very easily. For example:
 
 Awesomely simple. Keep in mind that the <tt>findAll</tt>, <tt>findOne</tt>, <tt>create</tt>, <tt>destroy</tt> and <tt>update</tt> class methods can be defined by you to handle any kind of backend service. If you need to parse XML or work with a bizarre API you don't control, this is where you'd do it.
 
-[I wrote about client-side models]: http://awardwinningfjords.com/2011/01/25/client-side-mvcs-part-1-the-model-and-data-store.html
+[I wrote about client-side models]: /2011/01/25/client-side-mvcs-part-1-the-model-and-data-store.html

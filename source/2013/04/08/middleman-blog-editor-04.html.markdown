@@ -15,8 +15,8 @@ The second feature is a big one:
 
 Now markdown articles, `.md` and `.markdown` templates, have their own editor. The default view mirrors your content back to you and allows you to toggle between editing and previewing with a click. There is also a split-screen "focus" mode which allows you to edit articles full screen and stay focused.
 
-![Article Editor](http://src.sencha.io/-30/http://awardwinningfjords.com/images/blog-editor/markdown.png)
-![Full Screen Editor](http://src.sencha.io/-30/http://awardwinningfjords.com/images/blog-editor/fullscreen.png)
+![Article Editor](/images/blog-editor/markdown.png)
+![Full Screen Editor](/images/blog-editor/fullscreen.png)
 
 ### [Purchase a license](http://register.tdreyno.com)
 

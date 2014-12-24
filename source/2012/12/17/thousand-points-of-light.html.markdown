@@ -7,7 +7,7 @@ This year, we ([Instrument](http://weareinstrument.com)) had the opportunity to 
 
 For my part, I worked on building the [3D Map Explore](http://www.google.com/zeitgeist/2012/#explore) feature. I'll write more about what that involved later, but for now I want to discuss the static "twinkling lights" state that you'll see on the homepage.
 
-![Twinkle](http://src.sencha.io/-30/http://awardwinningfjords.com/projects/twinkle/twinkle.png)
+![Twinkle](/projects/twinkle/twinkle.png)
 
 Basically, there is a map with "lights" which pulse around the world. Here's the [code I used for this](/projects/twinkle/twinkles.js), [along with a demo](/projects/twinkle/). But I want to talk about a higher-level question. **How do you draw points which fill in a map?**
 

@@ -17,7 +17,7 @@ As the focus is on the songs, the heart of the website is the music search funct
 
 Go ahead and check it out!
 
-<a href="http://licenselab.com/search/"><img src="http://src.sencha.io/-30/http://awardwinningfjords.com/images/licenselab.jpg"></a>
+<a href="http://licenselab.com/search/"><img src="/images/licenselab.jpg"></a>
 
 READMORE
 

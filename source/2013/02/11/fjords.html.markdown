@@ -5,7 +5,7 @@ blog_editor_id: 95
 
 I'm very excited to announce my new project, [Fjords](http://fjords.cc).
 
-[![Fjords](http://src.sencha.io/-30/http://awardwinningfjords.com/images/monitor-goblins.png)](http://fjords.cc)
+[![Fjords](/images/monitor-goblins.png)](http://fjords.cc)
 
 Fjords is a service that lets you upload your static websites to be hosted in the cloud.
 
