@@ -24,7 +24,7 @@
     <% end %>
     
     <!-- Stylesheet -->
-    <%= stylesheet_link_tag "new" %>
+    <%= stylesheet_link_tag :site %>
     
     <!-- RSS -->
     <link href='/feed.xml' rel='alternate' title='Award Winning Fjords' type='application/rss+xml'>
@@ -59,8 +59,9 @@
         </p>
       </footer>
     </div>
-    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
-    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_light.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     
     <%= partial "tracking" %>
