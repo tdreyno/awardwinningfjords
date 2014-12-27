@@ -1,5 +1,5 @@
 ---
-title: Book Stuff: 2014
+title: "Book Stuff: 2014"
 ---
 
 Started some long series (Honor Harrington and Discword), while finishing others (Vorkosigan).
