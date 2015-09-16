@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem "middleman", '4.0.0.alpha.4'
-gem "middleman-blog", '3.6.0.beta.2'
+gem "middleman", github: 'middleman/middleman', branch: 'master'
+gem "middleman-blog", github: 'middleman/middleman-blog', branch: 'master'
+gem "middleman-compass", github: 'middleman/middleman-compass', branch: 'master'
 gem "redcarpet"
 gem "builder"
 gem "nokogiri"
