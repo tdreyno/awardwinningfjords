@@ -119,6 +119,6 @@ I'd love feedback! Thanks for reading.
 
 ## Further reading
 
-* [Datomic Queryies](http://docs.datomic.com/query.html#queries)
+* [Datomic Queries](http://docs.datomic.com/query.html#queries)
 * [Prolog](https://en.wikipedia.org/wiki/Prolog)
 * [Rete Network](https://en.wikipedia.org/wiki/Rete_algorithm)
