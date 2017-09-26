@@ -73,7 +73,7 @@ These queries are automatically cached/computed using a Rete network. They will 
 
 ## Rules
 
-The final piece of the puzzle is adding derived state. If Redux these live in selectors, in MobX they are computed. In this system, they are just more rows in the database.
+The final piece of the puzzle is adding derived state. With Redux these live in selectors. In MobX they are `computed`. In this system, they are just more rows in the database.
 
 Say I wanted to provide a fact about whether the user uses SSL. I can write a Rule which, when matched, will add a fact. When the facts triggering the rule change, the derived fact can be cleaned up. Other pieces of code don't need to know the difference between "real" state and derived state.
 
