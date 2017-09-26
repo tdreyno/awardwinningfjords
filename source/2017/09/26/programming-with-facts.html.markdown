@@ -83,7 +83,7 @@ Here's an example:
 
 		["?id", "url", contains("https://")]
 
-	).then((match) =>
+	).then(match =>
 
 		[match.id, "usesSSL", true]
 
