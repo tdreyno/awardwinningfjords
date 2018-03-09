@@ -3,7 +3,7 @@ title: My Weird Ruby
 tags: ruby
 ---
 
-Over the past year, I've been rewriting large portions of the Middleman codebase to better reflect how I like to write code (as opposed to the silly version of my who did the original version 6 years ago). I've learned a lot since then, spent pretty much every day writing mostly Javascript and trying to find any excuse to play with Clojure. As a result, my form of Ruby looks pretty strange these days.
+Over the past year, I've been rewriting large portions of the Middleman codebase to better reflect how I like to write code (as opposed to the silly version of me who did the original version 6 years ago). I've learned a lot since then, spent pretty much every day writing mostly Javascript and trying to find any excuse to play with Clojure. As a result, my form of Ruby looks pretty strange these days.
 
 Here's a representative piece of code from Middleman v4:
 
@@ -67,7 +67,7 @@ When I started adding Contracts to the code base, I immediately found dozens of 
 
 ## The Future
 
-Going forwards, I'd love to see some features from other languages make their way into Ruby. I agree with most everything Erik Michaels-Ober mentions in his talk: [Towards a Higher-Level Language](https://rubyconf.eventer.com/rubyconf-australia-2015-1223/towards-a-higher-level-language-by-erik-michaels-ober-1746). Replace `nil` with `Maybe` in the language. Kill Symbol. Fix the standard numbers (this goes for almost every language using IEEE floats).
+Going forward, I'd love to see some features from other languages make their way into Ruby. I agree with most everything Erik Michaels-Ober mentions in his talk: [Towards a Higher-Level Language](https://rubyconf.eventer.com/rubyconf-australia-2015-1223/towards-a-higher-level-language-by-erik-michaels-ober-1746). Replace `nil` with `Maybe` in the language. Kill Symbol. Fix the standard numbers (this goes for almost every language using IEEE floats).
 
 I also agree with the goals of [Rubinius X](http://x.rubini.us). I want Immutable Data in Ruby. We NEED a real dependency system. If not as robust as Clojure's, let's atleast reach parity with Python. Even Javascript is beating Ruby now :(
 
