@@ -1,6 +1,6 @@
 # Code Samples
 
-Below are a handful of code samples in several different languages and paradigms.
+Below are a handful of code samples in several different languages and paradigms. All code samples are from 2017, except for the final Ruby one.
 
 * [Google I/O: React and MobX](#google-i-o-react-and-mobx)
 * [Google Rainforest: Browser JS / WebAudio](#google-rainforest-browser-js-webaudio)
@@ -64,7 +64,7 @@ Built for the NYTimes Moderation Tool (http://www.instrument.com/work/moderator)
 
 An ORM/Database agnostic implementation of [JSONAPI](http://jsonapi.org) in TypeScript.
 
-https://github.com/conversationai/conversationai-moderator/tree/master/packages/jsonapi
+https://github.com/conversationai/conversationai-moderator/tree/master/packages/jsonapi/src
 
 ## Reactive Config for Middleman / Ruby
 
