@@ -5,7 +5,7 @@ activate :blog do |blog|
 end
 
 set :markdown_engine, :redcarpet
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :with_toc_data => true
 
 # Build-specific configuration
 configure :build do
