@@ -1,17 +1,10 @@
-@charset "UTF-8";
-@import "bower_components/foundation/scss/normalize";
-@import "compass/typography/lists/bullets";
-@import "compass/utilities/general/clearfix";
+@import "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-reboot.min.css";
 
-$em-base: 15px;
+$small: "(min-width: 576px)";
 
 $primary-color: #00a6fc;
 $red: #e91c21;
 $black: #141414;
-
-@import "bower_components/foundation/scss/foundation/components/grid";
-@import "bower_components/foundation/scss/foundation/components/type";
-@import "bower_components/foundation/scss/foundation/components/visibility";
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -22,7 +15,7 @@ header {
   margin-bottom: 24px;
   h1 {
     padding: 12px 0;
-    font-size: emCalc(15px);
+    font-size: 15px;
     text-align: center;
     @media #{$small} {
       text-align: left;
@@ -68,7 +61,6 @@ article {
   time {
     display: none; }
   ul {
-    @extend ul.disc;
     margin-left: 0; 
     ul {
       margin-left: 30px; 
@@ -113,7 +105,7 @@ article {
 }
 
 #recent, #projects {
-  font-size: emCalc(14px);
+  font-size: 14px;
   h2 {
     a {
       float: right;
@@ -140,10 +132,7 @@ footer {
 }
 
 .albums {
-  @include no-bullets;
   @media #{$small} {
-    li {
-      @include pie-clearfix; }
     .cover {
       float: left;
       width: 220px;

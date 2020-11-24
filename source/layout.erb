@@ -6,17 +6,9 @@
       ARTHUR DENT: No. No, I didn't.
       SLARTIBARTFAST: Pity. That was one of mine. Won an award, you know. Lovely crinkly edges.
     -->
-    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'>
     <meta charset="utf-8">
     <meta name="author" content="Thomas Reynolds">
-    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=160,minimal-ui" name="viewport">
     
-    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
-    <meta http-equiv="cleartype" content="on">
-    
-    <!-- Google Setup -->
-    <meta content='VbyiHsqFIT6NSIBRNw/TAnm+9zy0TAmFRiC68lYCoSw=' name='verify-v1'>
-
     <% if is_blog_article? %>
       <title><%= current_article.title %> &laquo; Thomas Reynolds</title>
     <% else %>
@@ -49,21 +41,15 @@
       <% end %>
     
       <footer>
-        <p class="descr">My name is Thomas Reynolds. I'm a Technical Director at <a href="http://instrument.com">Instrument</a>, lucky denizen of Portland, active Crossfitter, a foodie, a cocktail enthusiast and all-around nerd.</p>
+        <p class="descr">My name is Thomas Reynolds. I'm a Lead Architect at <a href="https://www.viasat.com">Viasat</a>, denizen of Portland, baker, engineering leader and functional programmer.</p>
     
         <p>
-          <%= link_to "Twitter", "http://twitter.com/tdreyno" %> &bull;
+          <%= link_to "Twitter", "https://twitter.com/tdreyno" %> &bull;
           <%= link_to "Email", "mailto:me@tdreyno.com" %> &bull;
           <%= link_to "Github", "https://github.com/tdreyno" %> &bull;
           <%= link_to "RSS", "/feed.xml" %>
         </p>
       </footer>
     </div>
-
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_light.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-    <%= partial "tracking" %>
   </body>
 </html>
