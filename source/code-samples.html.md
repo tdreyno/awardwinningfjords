@@ -44,7 +44,7 @@ I wrote about the API on my blog: https://awardwinningfjords.com/2017/09/26/prog
 
 I used the published paper [Production Matching for Large Learning Systems by RB Doorenbos](http://reports-archive.adm.cs.cmu.edu/anon/1995/CMU-CS-95-113.pdf) to implement the core, which is known as a [Rete Network](https://en.wikipedia.org/wiki/Rete_algorithm).
 
-Finally, [I implemented the common TodoMVC example in my new libray](http://satelite.netlify.com).
+Finally, [I implemented the common TodoMVC example in my new library](http://satelite.netlify.com).
 
 ### Code
 

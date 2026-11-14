@@ -29,7 +29,7 @@ I almost didn't write this article because I was so disappointed in 2011. Here i
     <div class='content'>
       <h6>Glassjaw</h6>
       <h4>Coloring Book / Our Color Green</h4>
-      <p>Glassjaw reemerged with 2 EPs to satisfy fans along with a handful of music videos and promises that a full-length is coming soon. Glassjaw is much darker, heavier and crushing in both theses EPs. I'm loving the direction.</p>
+      <p>Glassjaw reemerged with 2 EPs to satisfy fans along with a handful of music videos and promises that a full-length is coming soon. Glassjaw is much darker, heavier and crushing in both these EPs. I'm loving the direction.</p>
     </div>
     <div class='player'>
       <h6>#6</h6>

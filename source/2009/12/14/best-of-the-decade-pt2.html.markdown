@@ -123,7 +123,7 @@ blog_editor_id: 71
     </div>
     <div class='content'>
       <h6>2008</h6><h4>La Dispute - Somewhere at the Bottom of the River Between Vega and Altair</h4>
-      <p>Does anyone else know this band exists? The band fulfills all my 2000s requirements: post-hardcore, concept album and a cohesive listen all the way through. I don't think they've toured in Portland yet, but I'm still hopeful. I imagine the live show must be epic. This album is all about loss and anger. Here's hoping I'm never in a position where this becomes my soundtrack, but atleast it should be cathartic to scream along.</p>
+      <p>Does anyone else know this band exists? The band fulfills all my 2000s requirements: post-hardcore, concept album and a cohesive listen all the way through. I don't think they've toured in Portland yet, but I'm still hopeful. I imagine the live show must be epic. This album is all about loss and anger. Here's hoping I'm never in a position where this becomes my soundtrack, but at least it should be cathartic to scream along.</p>
     </div>
     <div class='player'>
       <h6>#16</h6>

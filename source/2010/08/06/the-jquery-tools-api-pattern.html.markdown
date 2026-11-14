@@ -80,7 +80,7 @@ Now, let's assume we have applied this pattern to our <tt>myPlugin</tt> plugin. 
       // Click handler
     });
 
-The pattern would also handle accidently running the plugin twice on a single element. For example, in the following script the plugin would only initialize the <tt>#myinput</tt> element once:
+The pattern would also handle accidentally running the plugin twice on a single element. For example, in the following script the plugin would only initialize the <tt>#myinput</tt> element once:
 
     $("#myinput").myPlugin();
     $(":input").myPlugin();

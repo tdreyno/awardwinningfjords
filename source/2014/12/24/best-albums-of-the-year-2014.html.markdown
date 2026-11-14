@@ -62,7 +62,7 @@ Another year, another handful of albums to listen to. Here's my ranking, from 10
     <div class='content'>
       <h6>Rx Bandits</h6>
       <h4>Gemini, Her Majesty</h4>
-      <p>Turns out my favorite band of all time decided they weren't quite ready to stay retired. For the first time since Progress (I think), the band has recorded a record that doesn't try to immitate their live show. Instead, Gemini is a simpler, but more varied album that the increasingly complicated albums their tried to end their career with the first time.</p>
+      <p>Turns out my favorite band of all time decided they weren't quite ready to stay retired. For the first time since Progress (I think), the band has recorded a record that doesn't try to imitate their live show. Instead, Gemini is a simpler, but more varied album that the increasingly complicated albums their tried to end their career with the first time.</p>
     </div>
   </li>
   <li>

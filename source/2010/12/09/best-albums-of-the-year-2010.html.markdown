@@ -29,7 +29,7 @@ It's that time of year again! I don't want a personal live journal all year, but
     <div class='content'>
       <h6>Envy</h6>
       <h4>Recitation</h4>
-      <p>This classic Japanese hardcore band has slowly become more melodic, trading in hardcore-riffs for post-rock landscapes. The one thing that hasn't changed are the vocals. The interaction between the absolutely beatiful music and the tortured vocals works amazingly. The vocals don't grate because the music is inspiring, but the post-rock doesn't get slow, boring and repetitive because at any moment the peace could be broken by screams.</p>
+      <p>This classic Japanese hardcore band has slowly become more melodic, trading in hardcore-riffs for post-rock landscapes. The one thing that hasn't changed are the vocals. The interaction between the absolutely beautiful music and the tortured vocals works amazingly. The vocals don't grate because the music is inspiring, but the post-rock doesn't get slow, boring and repetitive because at any moment the peace could be broken by screams.</p>
     </div>
     <div class='player'>
       <h6>#9</h6>
@@ -42,7 +42,7 @@ It's that time of year again! I don't want a personal live journal all year, but
     <div class='content'>
       <h6>Portugal. The Man</h6>
       <h4>American Ghetto</h4>
-      <p>Another year, another great Portugal. The Man album. The psychadelic sounds of last year's album are still present, but the edges are rougher. More guitars, more big rock moments and yet another perfectly sized record. The album is exactly as long as it should be, no filler.</p>
+      <p>Another year, another great Portugal. The Man album. The psychedelic sounds of last year's album are still present, but the edges are rougher. More guitars, more big rock moments and yet another perfectly sized record. The album is exactly as long as it should be, no filler.</p>
     </div>
     <div class='player'>
       <h6>#8</h6>
@@ -107,7 +107,7 @@ It's that time of year again! I don't want a personal live journal all year, but
     <div class='content'>
       <h6>Fang Island</h6>
       <h4>Fang Island</h4>
-      <p>Last year I listened to a lot of Post Rock and eventually I hit the end of my interest in the same atmosphere of dread. Fang Island flips is all around and has created a fantastically fun instrumental album which a suprising amount of complexity for something you can nod-along to. I saw the band live and the 5! guitars were pretty impressive.</p>
+      <p>Last year I listened to a lot of Post Rock and eventually I hit the end of my interest in the same atmosphere of dread. Fang Island flips is all around and has created a fantastically fun instrumental album which a surprising amount of complexity for something you can nod-along to. I saw the band live and the 5! guitars were pretty impressive.</p>
     </div>
     <div class='player'>
       <h6>#3</h6>
@@ -193,7 +193,7 @@ It's that time of year again! I don't want a personal live journal all year, but
     <div class='content_small'>
       <h6>Broken Bells</h6>
       <h4>Broken Bells</h4>
-      <p>Danger Mouse gets his due. Abandonded by two of my favorites, but still able to turn out a fantastic album with the help of The Shins' James Mercer.</p>
+      <p>Danger Mouse gets his due. Abandoned by two of my favorites, but still able to turn out a fantastic album with the help of The Shins' James Mercer.</p>
     </div>
   </li>
 </ul>

@@ -11,7 +11,7 @@ blog_editor_id: 29
 [jPlayer]: http://jplayer.org/
 [History.js]: https://github.com/balupton/History.js/
 
-My first project, that I can talk about, with [Instrument] has just launched. [The License Lab] is a searchable, music catalog which can be licensed for a variety of uses. Vistors can browse and preview hundreds of available songs. Registered users can organize songs into playlists and share them with others.
+My first project, that I can talk about, with [Instrument] has just launched. [The License Lab] is a searchable, music catalog which can be licensed for a variety of uses. Visitors can browse and preview hundreds of available songs. Registered users can organize songs into playlists and share them with others.
 
 As the focus is on the songs, the heart of the website is the music search functionality which includes: type-ahead autocomplete search, graphical tuning knobs and filtering by genre and instruments.
 

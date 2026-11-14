@@ -3,7 +3,7 @@ title: ! 'How Do I: Structure Applications'
 blog_editor_id: 7
 ---
 
-This is part two in a series of "How Do I" articles ([part one, Animation, is here](/2012/10/01/how-do-i-animate.html)). These are how I, Thomas Reynolds, accompish certain tasks. This isn't about comparing multiple technique or even justifying my prefered approach. This is a brain dump.
+This is part two in a series of "How Do I" articles ([part one, Animation, is here](/2012/10/01/how-do-i-animate.html)). These are how I, Thomas Reynolds, accomplish certain tasks. This isn't about comparing multiple technique or even justifying my preferred approach. This is a brain dump.
 
 ### Structure Philosophy
 
@@ -105,7 +105,7 @@ Applications should be deep-linkable when possible and since many Sites are beco
 
 #### Templating Library
 
-String concatination is not okay. It's ugly, hard to update, littered with double quotes, single quotes, escape characters, whitespace and plus signs. [Handlebars](http://handlebarsjs.com) is a wonderfully powerful implementation of Mustache templates. Nice clean HTML:
+String concatenation is not okay. It's ugly, hard to update, littered with double quotes, single quotes, escape characters, whitespace and plus signs. [Handlebars](http://handlebarsjs.com) is a wonderfully powerful implementation of Mustache templates. Nice clean HTML:
 	
 	<div class="entry">
 	  <h1>{{title}}</h1>

@@ -13,7 +13,7 @@ I was going to write about the Compass Colors plugin merging into Sass 3, but it
 
 Read about [Powerful Color Manipulation with Sass] on his blog.
 
-Just for kicks, here is a relavant portion of Sass colors that I use on this blog:
+Just for kicks, here is a relevant portion of Sass colors that I use on this blog:
 
     $font-color:         darken(#4e4c49, 5)
     $darker-font-color:  #4e4c49

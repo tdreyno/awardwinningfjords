@@ -67,7 +67,7 @@ Let's dive in.
     As an alternative to partials and content_for blocks, we've added something from the Django world. Say I have a template named "source/index.html.erb" and it's layout is located at "source/layouts/default.erb". Normally, the contents of the layout will wrap the contents of the template. With nested layouts, I can add the following to the layout and wrap the contents yet again:
 
         <% wrap_layout :admin do %>
-          I am the Defaul Layout
+          I am the Default Layout
           <%= yield %>
         <% end %>
 

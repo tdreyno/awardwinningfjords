@@ -3,7 +3,7 @@ title: ! 'How Do I: Animate'
 blog_editor_id: 9
 ---
 
-This is the first piece in a series of "How Do I" articles. Since that phrase can be taken multiple ways, let me explain: this is how I, Thomas Reynolds, accompish certain tasks. This isn't about comparing multiple technique or even justifying my prefered approach. This is a brain dump.
+This is the first piece in a series of "How Do I" articles. Since that phrase can be taken multiple ways, let me explain: this is how I, Thomas Reynolds, accomplish certain tasks. This isn't about comparing multiple technique or even justifying my preferred approach. This is a brain dump.
 
 ### Animation Philosophy
 
@@ -31,7 +31,7 @@ You may notice, I'm using `TWEEN.Easing.Elastic.InOut`. Its timing curve looks l
 
 ![Elastic.InOut](/images/elastic.png)
 
-You can see that it travels below and above the lines, representing 0 and 1. For a long time, this kind of timing was impossible with CSS transitions. That's changed, but some of the more mathmatically complicated easing methods still have to be done in Javascript. [Here are the timing curves for all of tween.js' built-in functions](http://sole.github.com/tween.js/examples/03_graphs.html).
+You can see that it travels below and above the lines, representing 0 and 1. For a long time, this kind of timing was impossible with CSS transitions. That's changed, but some of the more mathematically complicated easing methods still have to be done in Javascript. [Here are the timing curves for all of tween.js' built-in functions](http://sole.github.com/tween.js/examples/03_graphs.html).
 
 ### requestAnimationFrame
 
@@ -112,11 +112,11 @@ Which would make the above tween look like:
 
 ### CSS Animations
 
-The only place I would use CSS transitions are for simple, reversable hover effects. Changing the color of links or adding hover states to "clickable" elements. However, given the move to touch-based devices, I'd still do many interaction animations in Javascript which allows touch and gesture detection code to respond with the correct animation. It seems Android and iOS treat `:hover` differently. iOS makes you touch once to activate `:hover` then touch again to activate `click`. Android seems to request holding down to activate `:hover` and a single touch causes `click`. Doing this kind of work in Javascript also keeps things consistent.
+The only place I would use CSS transitions are for simple, reversible hover effects. Changing the color of links or adding hover states to "clickable" elements. However, given the move to touch-based devices, I'd still do many interaction animations in Javascript which allows touch and gesture detection code to respond with the correct animation. It seems Android and iOS treat `:hover` differently. iOS makes you touch once to activate `:hover` then touch again to activate `click`. Android seems to request holding down to activate `:hover` and a single touch causes `click`. Doing this kind of work in Javascript also keeps things consistent.
 
 ### Past Problems, Future Bug Fixes
 
-* In the past, I've seen speed conflicts between CSS animations and `requestAnimationFrame`. For some reason, using both at the same time (I was animating a game and using CSS Animations for UI), caused massive loss of framerate. I'm sure this will be, or alread is, resolved.
+* In the past, I've seen speed conflicts between CSS animations and `requestAnimationFrame`. For some reason, using both at the same time (I was animating a game and using CSS Animations for UI), caused massive loss of framerate. I'm sure this will be, or already is, resolved.
 
 * `requestAnimationFrame` is relatively new, oldIE and older versions of Safari don't support it. Using the [standard requestAnimationFrame polyfill](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) will fallback to `setInterval` for scheduling frames. This isn't great for consistent timing. Additionally, older browsers are also likely to have slower Javascript engines so the resulting effect is even further degraded.
 

@@ -71,7 +71,7 @@ Of course, existing Sinatra extensions should work too. [See more here].
 YAML Data API
 -------------
 
-Heavier static systems like Nanoc have a robust system for separating data from your HTML. This is great for sharing content across pages or having simpler files which content-focused co-workers can update without touching HTML. It's not documented, but because Middleman runs on Sinatra, it's possible to open database connections and pull data in that way already, but that's a bit must. Middleman 1.1 comes with a simple data API. Here's how it works:
+Heavier static systems like Nanoc have a robust system for separating data from your HTML. This is great for sharing content across pages or having simpler files which content-focused co-workers can update without touching HTML. It's not documented, but because Middleman runs on Sinatra, it's possible to open database connections and pull data in that way already, but that's a bit much. Middleman 1.1 comes with a simple data API. Here's how it works:
 
 1. Create a folder in the root of your project named <tt>data</tt>
 2. Create as many <tt>.yml</tt> YAML files as you want

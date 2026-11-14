@@ -25,7 +25,7 @@ I built 2 mobile toys for the Coke ahh.com campaign this summer. These, especial
 
 ## [Android.com](http://www.android.com)
 
-We rebuilt Android's home on the web, kept things simple, brought in some nice moments of suprise &amp; delight... all the while keeping the page weight very light on mobile (250kb homepage!).
+We rebuilt Android's home on the web, kept things simple, brought in some nice moments of surprise &amp; delight... all the while keeping the page weight very light on mobile (250kb homepage!).
 
 [![Android.com](/images/2013-sites/android.jpg)](http://www.android.com)
 

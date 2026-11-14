@@ -17,12 +17,12 @@ A lot of core functionality relied on a processing step such as ERb or Sass befo
 
 Then, I got ambitious. I added type definitions to the entire codebase. It was (and remains) a fantastic decision, but it made merging from stable increasingly difficult.
 
-Next, I tried to find the pieces of state that could be accidently overwritten and I turned these into Immutable Data Structures using the Hamster library.
+Next, I tried to find the pieces of state that could be accidentally overwritten and I turned these into Immutable Data Structures using the Hamster library.
 
 Finally, I replaced some old "hash with indifferent access" data with wrappers from the hashie project.
 
 All of that, and not a single user-facing feature mentioned. Sure, we added some cool stuff, but, mostly v4 is about making the Middleman core somewhere I want to work. I don't want to dread the dev environment that I need to spend hours every day in.
 
-I do have to admit to making 1 drastic change nobody will like. I've dropped support for Sprockets from core. I intend to open the existing extension to the community, but that library is really the mosy unpleasant code I've ever had to work with. Every 2 months for the past 7 years, it's caused me heartache. I never use it. If you use it, please reach out about taking over maintance of it. Personally, I'll be using Webpack with our new `external_pipeline` feature for all JS in the future.
+I do have to admit to making 1 drastic change nobody will like. I've dropped support for Sprockets from core. I intend to open the existing extension to the community, but that library is really the most unpleasant code I've ever had to work with. Every 2 months for the past 7 years, it's caused me heartache. I never use it. If you use it, please reach out about taking over maintenance of it. Personally, I'll be using Webpack with our new `external_pipeline` feature for all JS in the future.
 
 That's basically it. I hope you all enjoy v4, I know I enjoyed making it. Hopefully we don't have too make "dot oh" bugs and that migration from v3 isn't too painful.

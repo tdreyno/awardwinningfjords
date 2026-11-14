@@ -56,7 +56,7 @@ Asynchronous script loading works great for apps using "progressive enhancement"
 
 Simply put: send less data to the client. Sounds easy? Remember that jQuery is 130k before you even start writing your own code. This is where Thomas Fuchs (and [MicroJS]) come in. He argues that "frameworks" are too big and include stuff that you probably don't need. He, and others, seem purposefully vague about which framework they are rebelling against, but let's be honest: it's jQuery.
 
-I've built some large applications of both the Progressive Enhancement and MVC varieties and initially I couldn't understand how a seasoned developer could possibly argue that glueing a dozen plugins together is better than a consistent application framework. Tom Dale, of the Sproutcore team, [was similarly flabbergasted]. While I agree with everything Tom writes in that article, I think he got hung up on terminology. Thomas Fuchs isn't arguing against Sproutcore, he is covertly arguing against jQuery. I, Thomas Reynolds (let's call this the Mexican Standoff of Javacript Toms), personally love Sproutcore and so I'll spend the rest of this article talking about replacing jQuery for Progressively Enhanced apps.
+I've built some large applications of both the Progressive Enhancement and MVC varieties and initially I couldn't understand how a seasoned developer could possibly argue that glueing a dozen plugins together is better than a consistent application framework. Tom Dale, of the Sproutcore team, [was similarly flabbergasted]. While I agree with everything Tom writes in that article, I think he got hung up on terminology. Thomas Fuchs isn't arguing against Sproutcore, he is covertly arguing against jQuery. I, Thomas Reynolds (let's call this the Mexican Standoff of JavaScript Toms), personally love Sproutcore and so I'll spend the rest of this article talking about replacing jQuery for Progressively Enhanced apps.
 
 ## Replacing jQuery Piece by Piece
 
@@ -91,7 +91,7 @@ The default jQuery-like bundle is called "jeesh" and includes:
 * AJAX (Reqwest)
 * Events (Bean)
 
-These pieces fit together nicely and create an almost drop-in replacement for jQuery. The edges are a little rough and you will have to rewrite some code to use it. [Dustin Diaz] wrote almost all of theses default libraries, so atleast there is some consistency. As Ender.js gets more popular and more libraries are integrated which weren't written by Dustin, I expect the API will get more and more awkward. As I said above, while Dustin is a very smart person (and he's had help from Thomas Fuchs as well), neither can match jQuery's maturity, test suite and institutional knowledge.
+These pieces fit together nicely and create an almost drop-in replacement for jQuery. The edges are a little rough and you will have to rewrite some code to use it. [Dustin Diaz] wrote almost all of these default libraries, so at least there is some consistency. As Ender.js gets more popular and more libraries are integrated which weren't written by Dustin, I expect the API will get more and more awkward. As I said above, while Dustin is a very smart person (and he's had help from Thomas Fuchs as well), neither can match jQuery's maturity, test suite and institutional knowledge.
 
 Still, if you're optimizing for size on a Progressively Enhanced app, Ender.js is a nice fit. If you're optimizing for consistency and the ability to hire and bring new developers up-to-speed quickly, then you should probably stick with jQuery.  
 

@@ -38,11 +38,11 @@ That's just about it. Imagine your entire Redux store as a long list of facts kn
 
 Because the format is flat and simple, it would be very easy to build tooling to inspect, debug and add time traveling abilities.
 
-All values must be primitives, meaning serialization is trival. Simply `JSON.stringify` to localstorage and "offline" mode is pretty much done. Want to upload offline changes to the server? Count the number of rows on the server, count the number on the client. Fill the server in on the X number of new changes.
+All values must be primitives, meaning serialization is trivial. Simply `JSON.stringify` to localstorage and "offline" mode is pretty much done. Want to upload offline changes to the server? Count the number of rows on the server, count the number on the client. Fill the server in on the X number of new changes.
 
 ## Querying
 
-Okay, okay. So constantly searching over a massive list of rows for the data you're looking for isn't going to be very fast. It should be surprising that a solution that mimicks a database will need a query language.
+Okay, okay. So constantly searching over a massive list of rows for the data you're looking for isn't going to be very fast. It should be surprising that a solution that mimics a database will need a query language.
 
 Querying looks almost exactly like the data format, but with variables linking rows together.
 
@@ -89,7 +89,7 @@ Here's an example:
 
 	)
 
-Now, for every user `id` which has a url containing `https://`, a coresponding `usesSSL` fact will be created for that `id`.
+Now, for every user `id` which has a url containing `https://`, a corresponding `usesSSL` fact will be created for that `id`.
 
 If the value of `url` changes, or if the user is removed, the derived fact will be cleaned up.
 

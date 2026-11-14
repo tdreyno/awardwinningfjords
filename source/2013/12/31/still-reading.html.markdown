@@ -26,7 +26,7 @@ I read a lot this year. Not as much as last year, but still not too shabby.
 * Steelheart
 * The Curse of Chalion
 * The Thousand Names
-* The Republic of Theives
+* The Republic of Thieves
 * Two Serpents Rise
 * Ancillary Justice
 * The Black Prism

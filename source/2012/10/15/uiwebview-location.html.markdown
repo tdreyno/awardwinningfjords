@@ -7,7 +7,7 @@ Which question. How do you get the current URL of a page in a `UIWebView` contex
 
 In the final hours of testing before a new site launch, users with access to the soft launch reported that none of our links worked if they opened the link we sent them in the Gmail iOS app.
 
-We're using `#!` URLs throughout the single-page site so we can deep-link and support browsers all the way back to oldIE. When you link a link in the app, the URL changes and notifies our code to navigate to a new "page". Our router, the code that maps URL changes to pieces of our code, correctly recieves the `onhashchange` when someone clicks a link, but when the router goes to lookup the URL, using `window.location.href`, it gets back: `undefined`. Uh oh. In fact, all properties on `window.location` are undefined, including `hash`, `hostname`, etc.
+We're using `#!` URLs throughout the single-page site so we can deep-link and support browsers all the way back to oldIE. When you link a link in the app, the URL changes and notifies our code to navigate to a new "page". Our router, the code that maps URL changes to pieces of our code, correctly receives the `onhashchange` when someone clicks a link, but when the router goes to lookup the URL, using `window.location.href`, it gets back: `undefined`. Uh oh. In fact, all properties on `window.location` are undefined, including `hash`, `hostname`, etc.
 
 For some reason, despite the fact that `window.location.href` is **writable** and setting it will change the URL as expected, reading it is impossible with a `UIWebView`.
 
@@ -19,7 +19,7 @@ Our router code now looks like:
 
 	router.recognize(window.location.href || document.URL);
 
-And everythings working great. Crisis averted.
+And everything's working great. Crisis averted.
 
 ### The Offenders
 

@@ -56,7 +56,7 @@ So, here are some new features:
 *   
     #### Implied output extensions
     
-    Templating engines can now set a default output extension. For example, `.erb` now implies `.html` so `my-template.erb` will ouput to `my-template.html`. The 2.0 functionality, of including both the template extension and the output extension in the file name is still prefered. 
+    Templating engines can now set a default output extension. For example, `.erb` now implies `.html` so `my-template.erb` will output to `my-template.html`. The 2.0 functionality, of including both the template extension and the output extension in the file name is still preferred.
      
 *   
     #### Miscellaneous Changes

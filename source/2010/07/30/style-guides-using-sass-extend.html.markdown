@@ -17,7 +17,7 @@ The designer on the project has put together a wonderful style guide PDF which I
 
 As you can see, each style has a title and some specifics for the text treatment.
 
-First I setup variables for our color palatte.
+First I setup variables for our color palette.
 
     $primary-orange:   #fe8a16
     $hover-orange:     #f67502

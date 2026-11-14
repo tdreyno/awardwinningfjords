@@ -38,7 +38,7 @@ You can also generate routes from parameters if you give the route a name:
 Using in JavascriptMVC
 ----------------------
 
-First, grab a copy of the Sherpa library and put it in your resources directory. Then, in your JavascriptMVC project file you intialize Sherpa:
+First, grab a copy of the Sherpa library and put it in your resources directory. Then, in your JavascriptMVC project file you initialize Sherpa:
 
     steal.resources("sherpa")
          .then(function($) {
@@ -70,7 +70,7 @@ Alternatively, you could fire an OpenAjax event instead:
       OpenAjax.hub.publish(foundRoute.destination, foundRoute.params);
     }
 
-Unfortunately, this will only run once, during the inital load of your project. In reality, you will want to watch the location bar throughout the usage of your application and either run controllers or publish events for each location change. JavascriptMVC provides the <tt>jquery/controller/history</tt> which publishes <tt>history./current/url</tt> OpenAjax events when the location changes. You could wire this up on your own, or you could use the class we've developed and written tests for.
+Unfortunately, this will only run once, during the initial load of your project. In reality, you will want to watch the location bar throughout the usage of your application and either run controllers or publish events for each location change. JavascriptMVC provides the <tt>jquery/controller/history</tt> which publishes <tt>history./current/url</tt> OpenAjax events when the location changes. You could wire this up on your own, or you could use the class we've developed and written tests for.
 
 SS.Router
 ---------

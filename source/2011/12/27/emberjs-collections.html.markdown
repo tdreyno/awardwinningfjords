@@ -91,7 +91,7 @@ This is entirely a naming/convenience issue. We're not writing any custom code f
         }
       },
 
-      // Public method to fetch more data. Get's called in the loop
+      // Public method to fetch more data. Gets called in the loop
       // above as well as whenever the `query` variable changes (via
       // an observer).
       refresh: function() {

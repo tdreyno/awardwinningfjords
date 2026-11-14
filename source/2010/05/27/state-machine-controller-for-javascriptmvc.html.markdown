@@ -14,7 +14,7 @@ blog_editor_id: 63
 
 I've been attempting to write this article for a week, but I've been unable to justify the usefulness of Finite State Machines in words. I tried written up some typical examples, such as the classic vending machine, but it kept getting very obtuse very quickly. Instead, let me just say, that I love Finite State Machines. I think they are the only technique I learned at school and when I am able to replace dozens of <tt>if</tt> statements with a Finite State Machine, it makes me very happy and feel secure. Being able to monitor an object's state, rather than just querying its instance variables, makes testing simpler and helps me find bugs.
 
-If you need a Finite State Machine for JavascriptMVC, I've got one for you. In fact, every controller in my application uses it. The most common use-case is asyncronous loading, rendering and eventually interaction. Here's an example:
+If you need a Finite State Machine for JavascriptMVC, I've got one for you. In fact, every controller in my application uses it. The most common use-case is asynchronous loading, rendering and eventually interaction. Here's an example:
 
 Finite State Machine Implementation
 -----------------------------------
