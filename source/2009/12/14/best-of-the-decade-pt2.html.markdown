@@ -37,7 +37,7 @@ blog_editor_id: 71
     </div>
     <div class='content'>
       <h6>2006</h6><h4>Gospel - The Moon is a Dead World</h4>
-      <p>I've fallen hard for post-hardcore and for some reason I really enjoy listening to it in unexpected locations. I feel asleep on the plane listening to Maths on repeat. I wandered around the beach in Hawaii listening to Gospel. Something about it feels so epic, even if it's just some guy screaming. Unfortunately the band is not longer together.</p>
+      <p>I've fallen hard for post-hardcore and for some reason I really enjoy listening to it in unexpected locations. I fell asleep on the plane listening to Maths on repeat. I wandered around the beach in Hawaii listening to Gospel. Something about it feels so epic, even if it's just some guy screaming. Unfortunately the band is not longer together.</p>
     </div>
     <div class='player'>
       <h6>#23</h6>
