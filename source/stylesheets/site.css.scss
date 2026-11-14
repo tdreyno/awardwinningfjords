@@ -77,6 +77,9 @@ article {
     //box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     //border: 4px white solid;
   }
+  img, iframe {
+    max-width: 100%;
+  }
   code {
     background: #eee !important;
     padding: 0 3px;
@@ -84,6 +87,8 @@ article {
   }
   pre {
     background: #eee;
+    max-width: 100%;
+    overflow-x: auto;
     margin-bottom: 20px;
     code.hljs {
       font-size: 15px;
@@ -133,17 +138,11 @@ footer {
 
 .albums {
   @media #{$small} {
-    .cover {
-      float: left;
-      width: 220px;
-    }
-    .content {
-      float: left;
-      width: 330px;
+    li {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr) 40px;
     }
     .player {
-      float: right;
-      width: 40px;
       text-align: right;
     }
   }
